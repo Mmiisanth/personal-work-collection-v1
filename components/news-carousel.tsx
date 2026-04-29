@@ -1,6 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
+import { ExternalLink } from "lucide-react";
 import type { Banner } from "@/lib/types";
 
 type NewsCarouselProps = {
@@ -21,7 +22,7 @@ export function NewsCarousel({
 
   return (
     <section className="mx-auto flex w-full max-w-6xl flex-col items-center gap-6">
-      <div className="grid w-full grid-cols-[0.72fr_1.75fr_0.72fr] items-center gap-6 max-lg:grid-cols-1">
+      <div className="grid w-full grid-cols-[0.68fr_1.8fr_0.68fr] items-center gap-7 max-lg:grid-cols-1">
         <SideCard
           banner={banners[previous]}
           side="left"
@@ -30,24 +31,15 @@ export function NewsCarousel({
         <AnimatePresence mode="wait">
           <motion.button
             key={banners[active].id}
-            className="glass-strong min-h-[310px] rounded-[28px] p-8 text-left transition-transform hover:-translate-y-1 max-lg:min-h-[230px]"
-            initial={{ opacity: 0, scale: 0.94, y: 16 }}
+            className="group relative min-h-[390px] overflow-hidden rounded-[30px] border-[3px] border-black bg-[#f6ffef] p-0 text-left shadow-[0_24px_60px_rgba(0,0,0,0.16)] transition-transform hover:-translate-y-1 max-lg:min-h-[310px]"
+            initial={{ opacity: 0, scale: 0.94, x: 42 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.94, y: -16 }}
-            transition={{ type: "spring", stiffness: 220, damping: 25 }}
+            exit={{ opacity: 0, scale: 0.94, x: -42 }}
+            transition={{ type: "spring", stiffness: 230, damping: 24 }}
             onClick={() => onOpen(banners[active])}
             type="button"
           >
-            <div
-              className="mb-6 h-28 rounded-[22px]"
-              style={{ background: banners[active].color }}
-            />
-            <p className="display-font text-5xl leading-none max-md:text-4xl">
-              {banners[active].title}
-            </p>
-            <p className="mt-5 max-w-xl text-xl font-bold text-black/70">
-              {banners[active].dek}
-            </p>
+            <NewsWrap banner={banners[active]} />
           </motion.button>
         </AnimatePresence>
         <SideCard
@@ -88,18 +80,88 @@ function SideCard({
 }) {
   return (
     <motion.button
-      className={`glass min-h-[250px] p-6 text-center transition-transform hover:-translate-y-1 max-lg:hidden ${
+      className={`relative min-h-[280px] overflow-hidden border-2 border-black/40 bg-white/55 p-5 text-center shadow-[0_16px_34px_rgba(0,0,0,0.16)] backdrop-blur-xl transition-transform hover:-translate-y-1 max-lg:hidden ${
         side === "left" ? "slanted-left" : "slanted-right"
       }`}
       whileHover={{ scale: 1.02 }}
       onClick={onClick}
       type="button"
     >
-      <div className="flex h-full min-h-[210px] items-center justify-center">
-        <p className="display-font max-w-[160px] text-4xl leading-tight">
+      <div
+        className="absolute inset-x-0 top-0 h-20 opacity-90"
+        style={{ background: banner.color }}
+      />
+      <div className="relative flex h-full min-h-[240px] flex-col items-center justify-center gap-4 px-3">
+        <span className="rounded-full bg-black px-3 py-1 text-xs font-black uppercase text-white">
+          next wrap
+        </span>
+        <p className="display-font max-w-[170px] text-3xl leading-none">
           {banner.title}
+        </p>
+        <p className="max-w-[170px] text-sm font-black leading-tight text-black/65">
+          {banner.dek}
         </p>
       </div>
     </motion.button>
+  );
+}
+
+function NewsWrap({ banner }: { banner: Banner }) {
+  return (
+    <article className="grid h-full min-h-[390px] grid-cols-[0.9fr_1.1fr] max-md:grid-cols-1">
+      <div className="relative flex flex-col justify-between border-r-2 border-black bg-white/45 p-5 max-md:min-h-[170px] max-md:border-b-2 max-md:border-r-0">
+        <div className="flex items-center justify-between">
+          <span className="display-font rounded-full bg-black px-4 py-2 text-sm uppercase text-white">
+            RiotBus News Wrap
+          </span>
+          <span className="rounded-full bg-white/65 px-3 py-1 text-xs font-black">
+            live-ish
+          </span>
+        </div>
+        <div
+          className="my-5 flex flex-1 items-center justify-center rounded-[24px] border-2 border-black/35 shadow-inner"
+          style={{ background: banner.color }}
+        >
+          <span className="display-font rotate-[-4deg] text-5xl max-md:text-4xl">
+            {banner.id.includes("gaga")
+              ? "GAGA"
+              : banner.id.includes("olivia")
+                ? "OLIVIA"
+                : "AG8"}
+          </span>
+        </div>
+        <div className="flex items-center gap-2 text-sm font-black">
+          <ExternalLink size={16} strokeWidth={3} />
+          <span>{banner.sourceLabel}</span>
+        </div>
+      </div>
+      <div className="relative flex flex-col justify-between p-7">
+        <div>
+          <div className="mb-5 flex gap-2">
+            <span className="rounded-full bg-brat-green px-3 py-1 text-xs font-black uppercase">
+              pop emergency
+            </span>
+            <span className="rounded-full bg-riot-pink/70 px-3 py-1 text-xs font-black uppercase">
+              messy but cute
+            </span>
+          </div>
+          <h2 className="display-font text-6xl leading-[0.92] max-md:text-4xl">
+            {banner.title}
+          </h2>
+          <p className="mt-5 text-2xl font-black leading-tight text-black/76 max-md:text-xl">
+            {banner.dek}
+          </p>
+          <p className="mt-5 rounded-[20px] bg-white/60 p-4 text-lg font-bold leading-snug text-black/76">
+            {banner.body}
+          </p>
+        </div>
+        <div className="mt-5 flex items-center justify-between border-t-2 border-black/20 pt-4">
+          <span className="display-font text-lg">click for details</span>
+          <span className="display-font rounded-full bg-black px-4 py-2 text-white">
+            open
+          </span>
+        </div>
+      </div>
+    </article>
   );
 }
