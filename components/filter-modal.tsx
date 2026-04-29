@@ -32,6 +32,10 @@ export function FilterModal({
   const [apiMode, setApiMode] = useState<"default" | "custom">("default");
   const [checked, setChecked] = useState(false);
   const [error, setError] = useState("");
+  const [baseUrl, setBaseUrl] = useState("");
+  const [apiKey, setApiKey] = useState("");
+  const [model, setModel] = useState("");
+  const [checking, setChecking] = useState(false);
 
   const canSubmit = useMemo(() => {
     return (
@@ -67,6 +71,29 @@ export function FilterModal({
       metrics: selectedMetrics.join(","),
     });
     router.push(`/compare?${params.toString()}`);
+  }
+
+  async function checkCustomApi() {
+    setChecking(true);
+    setChecked(false);
+    setError("");
+    try {
+      const response = await fetch("/api/ai/check", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ baseUrl, apiKey, model }),
+      });
+      const data = (await response.json()) as { ok?: boolean; message?: string };
+      if (!response.ok || !data.ok) {
+        setError(data.message || "API 校验失败。");
+        return;
+      }
+      setChecked(true);
+    } catch {
+      setError("API 校验失败。");
+    } finally {
+      setChecking(false);
+    }
   }
 
   return (
@@ -180,29 +207,38 @@ export function FilterModal({
                 <div className="grid gap-3">
                   <input
                     className="rounded-full border border-black/25 bg-white/60 px-5 py-3 outline-none focus:border-brat-hot"
+                    onChange={(event) => setBaseUrl(event.target.value)}
                     placeholder="base_url"
+                    value={baseUrl}
                   />
                   <input
                     className="rounded-full border border-black/25 bg-white/60 px-5 py-3 outline-none focus:border-brat-hot"
+                    onChange={(event) => setApiKey(event.target.value)}
                     placeholder="api_key"
                     type="password"
+                    value={apiKey}
                   />
                   <div className="flex items-center gap-3">
                     <input
                       className="min-w-0 flex-1 rounded-full border border-black/25 bg-white/60 px-5 py-3 outline-none focus:border-brat-hot"
+                      onChange={(event) => setModel(event.target.value)}
                       placeholder="model"
+                      value={model}
                     />
                     <button
                       className="display-font rounded-full bg-black px-6 py-3 text-white"
-                      onClick={() => {
-                        setChecked(false);
-                        setError("MVP 这里先做 UI，真实校验接到 /api/ai/check 后启用。");
-                      }}
+                      disabled={checking}
+                      onClick={checkCustomApi}
                       type="button"
                     >
-                      check
+                      {checking ? "..." : "check"}
                     </button>
                   </div>
+                  {checked ? (
+                    <p className="rounded-2xl bg-brat-green/45 px-4 py-3 font-bold">
+                      API 可用，可以发车。
+                    </p>
+                  ) : null}
                   {error ? (
                     <p className="rounded-2xl bg-riot-pink/30 px-4 py-3 font-bold">
                       {error}

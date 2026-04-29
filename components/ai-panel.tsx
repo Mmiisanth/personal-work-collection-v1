@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Send, Sparkles, X } from "lucide-react";
 import type { BattleMode, MetricKey } from "@/lib/types";
 import { artists } from "@/data/artists";
@@ -8,6 +8,13 @@ import { artists } from "@/data/artists";
 type Message = {
   role: "ai" | "user";
   content: string;
+};
+
+const metricLabels: Record<MetricKey, string> = {
+  sales: "销量",
+  streaming: "流媒体",
+  awards: "奖项",
+  reviews: "乐评",
 };
 
 export function AiPanel({
@@ -25,16 +32,64 @@ export function AiPanel({
   const artistB = artists.find((artist) => artist.id === artistBId) ?? artists[1];
   const [input, setInput] = useState("");
   const [exportOpen, setExportOpen] = useState(false);
-  const opening = useMemo(() => {
-    const tone =
-      mode === "mean"
-        ? "这车一开，数据先坐稳，粉圈再系安全带。"
-        : "以下是基于已选维度的客观对比摘要。";
-    return `${tone}\n\n${artistA.name} vs ${artistB.name}：本次选择了 ${metrics.length} 个维度。${artistA.shortName} 的销量值是 ${artistA.stats.sales}，${artistB.shortName} 的销量值是 ${artistB.stats.sales}。流媒体 popularity 分别是 ${artistA.stats.streaming} 和 ${artistB.stats.streaming}。`;
-  }, [artistA, artistB, metrics.length, mode]);
-  const [messages, setMessages] = useState<Message[]>([
-    { role: "ai", content: opening },
-  ]);
+  const [loading, setLoading] = useState(true);
+  const [messages, setMessages] = useState<Message[]>([]);
+
+  useEffect(() => {
+    let ignore = false;
+
+    async function generateOpening() {
+      setLoading(true);
+      try {
+        const response = await fetch("/api/ai/generate", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            mode,
+            artistA: artistA.name,
+            artistB: artistB.name,
+            metrics,
+            dataSummary: metrics
+              .map(
+                (metric) =>
+                  `${metricLabels[metric]}：${artistA.shortName} = ${
+                    artistA.stats[metric] || "缺失"
+                  }；${artistB.shortName} = ${
+                    artistB.stats[metric] || "缺失"
+                  }`,
+              )
+              .join("\n"),
+          }),
+        });
+        const data = (await response.json()) as { message?: string };
+        if (!ignore) {
+          setMessages([
+            {
+              role: "ai",
+              content: data.message || "AI 这次没憋出话，先看左边数据。",
+            },
+          ]);
+        }
+      } catch {
+        if (!ignore) {
+          setMessages([
+            {
+              role: "ai",
+              content: "AI 暂时掉线了，先看左边数据，等下再上车。",
+            },
+          ]);
+        }
+      } finally {
+        if (!ignore) setLoading(false);
+      }
+    }
+
+    generateOpening();
+
+    return () => {
+      ignore = true;
+    };
+  }, [artistA.name, artistB.name, metrics, mode]);
 
   function send() {
     if (!input.trim()) return;
@@ -66,6 +121,11 @@ export function AiPanel({
         </button>
       </div>
       <div className="flex-1 space-y-4 overflow-y-auto pr-2">
+        {loading ? (
+          <div className="rounded-[22px] bg-white/55 p-4 text-lg font-bold leading-relaxed">
+            AI 正在发车，先别急。
+          </div>
+        ) : null}
         {messages.map((message, index) => (
           <div
             className={`rounded-[22px] p-4 text-lg font-bold leading-relaxed ${
@@ -101,6 +161,9 @@ export function AiPanel({
         <ExportModal
           artistA={artistA.shortName}
           artistB={artistB.shortName}
+          conversation={messages
+            .map((message) => `${message.role}: ${message.content}`)
+            .join("\n")}
           mode={mode}
           onClose={() => setExportOpen(false)}
         />
@@ -112,18 +175,53 @@ export function AiPanel({
 function ExportModal({
   artistA,
   artistB,
+  conversation,
   mode,
   onClose,
 }: {
   artistA: string;
   artistB: string;
+  conversation: string;
   mode: BattleMode;
   onClose: () => void;
 }) {
-  const title =
-    mode === "mean"
-      ? `${artistA} vs ${artistB}：这车开得有点颠`
-      : `${artistA} 与 ${artistB} 数据对比摘要`;
+  const [loading, setLoading] = useState(true);
+  const [title, setTitle] = useState(`${artistA} vs ${artistB}`);
+  const [content, setContent] = useState("正在把这场 PK 整理成能发出去的报告。");
+
+  useEffect(() => {
+    let ignore = false;
+
+    async function generateExport() {
+      try {
+        const response = await fetch("/api/ai/export", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ mode, artistA, artistB, conversation }),
+        });
+        const data = (await response.json()) as {
+          title?: string;
+          content?: string;
+        };
+        if (!ignore) {
+          setTitle(data.title || `${artistA} vs ${artistB}`);
+          setContent(data.content || "AI 没写出正文，稍后再试。");
+        }
+      } catch {
+        if (!ignore) {
+          setContent("AI 总结暂时失败，稍后再试。");
+        }
+      } finally {
+        if (!ignore) setLoading(false);
+      }
+    }
+
+    generateExport();
+
+    return () => {
+      ignore = true;
+    };
+  }, [artistA, artistB, conversation, mode]);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/18 p-5 backdrop-blur-sm">
@@ -131,7 +229,7 @@ function ExportModal({
         <section>
           <p className="display-font text-5xl">{title}</p>
           <p className="mt-6 rounded-[24px] bg-white/55 p-6 text-xl font-bold leading-relaxed">
-            这份报告会综合当前结构化数据、AI 首轮报告和后续追问内容，生成一份更适合分享的 PK 总结。MVP 先做预览，PDF 导出下一步接。
+            {loading ? "AI 正在总结这场乱斗。" : content}
           </p>
         </section>
         <section className="border-l border-black/30 pl-7 max-md:border-l-0 max-md:pl-0">
