@@ -1,0 +1,42 @@
+import type { Artist } from "@/lib/types";
+
+export const artists: Artist[] = [
+  ["taylor-swift", "Taylor Swift", "Taylor", "#d9d0ff", "240M", "100", "14 wins / 58 noms / 4 GF", "72 / 73"],
+  ["lady-gaga", "Lady Gaga", "Gaga", "#b8ff9c", "125M", "91", "14 wins / 38 noms / 2 GF", "74 / 78"],
+  ["katy-perry", "Katy Perry", "Katy", "#ffd2ea", "110M", "84", "0 wins / 13 noms / 0 GF", "61 / 67"],
+  ["adele", "Adele", "Adele", "#eaff3d", "190M", "86", "16 wins / 25 noms / 3 GF", "76 / 79"],
+  ["rihanna", "Rihanna", "Rihanna", "#9ce9ff", "210M", "89", "9 wins / 33 noms / 1 GF", "68 / 72"],
+  ["lana-del-rey", "Lana Del Rey", "Lana", "#cfcfcf", "45M", "88", "0 wins / 11 noms / 0 GF", "78 / 82"],
+  ["lorde", "Lorde", "Lorde", "#b4a7ff", "12M", "74", "2 wins / 4 noms / 2 GF", "82 / 79"],
+  ["beyonce", "Beyonce", "Bey", "#ffb347", "200M", "88", "35 wins / 99 noms / 1 GF", "81 / 78"],
+  ["britney-spears", "Britney Spears", "Britney", "#ff9ed8", "150M", "76", "1 win / 8 noms / 0 GF", "63 / 70"],
+  ["ariana-grande", "Ariana Grande", "Ariana", "#f5c6ff", "95M", "94", "2 wins / 17 noms / 0 GF", "75 / 77"],
+  ["olivia-rodrigo", "Olivia Rodrigo", "Olivia", "#be9cff", "24M", "87", "3 wins / 13 noms / 1 GF", "80 / 82"],
+  ["sabrina-carpenter", "Sabrina Carpenter", "Sabrina", "#ffe1a8", "8M", "86", "2 wins / 8 noms / 0 GF", "77 / 79"],
+  ["billie-eilish", "Billie Eilish", "Billie", "#a0ff72", "35M", "91", "9 wins / 32 noms / 4 GF", "82 / 80"],
+  ["dua-lipa", "Dua Lipa", "Dua", "#8de8ff", "40M", "89", "3 wins / 10 noms / 1 GF", "75 / 76"],
+  ["celine-dion", "Celine Dion", "Celine", "#e8e8e8", "200M", "70", "5 wins / 16 noms / 2 GF", "缺失"],
+  ["whitney-houston", "Whitney Houston", "Whitney", "#d6f5ff", "220M", "74", "6 wins / 25 noms / 2 GF", "缺失"],
+  ["mariah-carey", "Mariah Carey", "Mariah", "#fff0a3", "180M", "78", "5 wins / 34 noms / 1 GF", "68 / 74"],
+  ["charli-xcx", "Charli XCX", "Charli", "#8cff4f", "9M", "86", "3 wins / 11 noms / 0 GF", "83 / 79"],
+  ["madonna", "Madonna", "Madonna", "#ffb3c7", "300M", "78", "7 wins / 28 noms / 0 GF", "74 / 77"],
+  ["nicki-minaj", "Nicki Minaj", "Nicki", "#ff7ac8", "95M", "83", "0 wins / 12 noms / 0 GF", "66 / 72"],
+].map(([id, name, shortName, avatarColor, sales, streaming, awards, reviews]) => ({
+  id,
+  name,
+  shortName,
+  avatarColor,
+  stats: {
+    sales,
+    streaming,
+    awards,
+    reviews,
+  },
+  links: {
+    spotify: `https://open.spotify.com/search/${encodeURIComponent(name)}`,
+    grammy: `https://www.grammy.com/search/${encodeURIComponent(name)}`,
+    aoty: `https://www.albumoftheyear.org/search/?q=${encodeURIComponent(name)}`,
+    rym: `https://rateyourmusic.com/search?searchterm=${encodeURIComponent(name)}`,
+    cm: "内部补录 / 待补来源",
+  },
+}));
