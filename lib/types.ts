@@ -26,3 +26,9 @@ export type Banner = {
   sourceUrl: string;
   color: string;
 };
+
+export type AiProvider = {
+  baseUrl: string;
+  apiKey: string;
+  model: string;
+};

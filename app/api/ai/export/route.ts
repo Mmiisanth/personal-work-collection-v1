@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { callOpenAICompatible } from "@/lib/ai";
 import { buildExportPrompt } from "@/lib/prompts";
-import type { BattleMode } from "@/lib/types";
+import type { AiProvider, BattleMode } from "@/lib/types";
 
 export async function POST(request: Request) {
   const body = (await request.json().catch(() => null)) as
@@ -10,6 +10,7 @@ export async function POST(request: Request) {
         artistA?: string;
         artistB?: string;
         conversation?: string;
+        provider?: AiProvider;
       }
     | null;
   const mode = body?.mode ?? "mean";
@@ -19,6 +20,9 @@ export async function POST(request: Request) {
 
   try {
     const output = await callOpenAICompatible({
+      baseUrl: body?.provider?.baseUrl,
+      apiKey: body?.provider?.apiKey,
+      model: body?.provider?.model,
       messages: buildExportPrompt({ mode, artistA, artistB, conversation }),
       temperature: mode === "mean" ? 0.9 : 0.5,
     });

@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { Send, Sparkles, X } from "lucide-react";
-import type { BattleMode, MetricKey } from "@/lib/types";
+import type { AiProvider, BattleMode, MetricKey } from "@/lib/types";
 import { artists } from "@/data/artists";
 
 type Message = {
@@ -33,7 +33,35 @@ export function AiPanel({
   const [input, setInput] = useState("");
   const [exportOpen, setExportOpen] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [sending, setSending] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
+
+  const dataSummary = useMemo(
+    () =>
+      metrics
+        .map(
+          (metric) =>
+            `${metricLabels[metric]}：${artistA.shortName} = ${
+              artistA.stats[metric] || "缺失"
+            }；${artistB.shortName} = ${
+              artistB.stats[metric] || "缺失"
+            }`,
+        )
+        .join("\n"),
+    [artistA.shortName, artistA.stats, artistB.shortName, artistB.stats, metrics],
+  );
+
+  function getStoredProvider(): AiProvider | undefined {
+    const raw = sessionStorage.getItem("riotbus.aiProvider");
+    if (!raw) return undefined;
+    try {
+      const provider = JSON.parse(raw) as AiProvider;
+      if (!provider.baseUrl || !provider.apiKey || !provider.model) return undefined;
+      return provider;
+    } catch {
+      return undefined;
+    }
+  }
 
   useEffect(() => {
     let ignore = false;
@@ -49,16 +77,8 @@ export function AiPanel({
             artistA: artistA.name,
             artistB: artistB.name,
             metrics,
-            dataSummary: metrics
-              .map(
-                (metric) =>
-                  `${metricLabels[metric]}：${artistA.shortName} = ${
-                    artistA.stats[metric] || "缺失"
-                  }；${artistB.shortName} = ${
-                    artistB.stats[metric] || "缺失"
-                  }`,
-              )
-              .join("\n"),
+            dataSummary,
+            provider: getStoredProvider(),
           }),
         });
         const data = (await response.json()) as { message?: string };
@@ -89,23 +109,47 @@ export function AiPanel({
     return () => {
       ignore = true;
     };
-  }, [artistA.name, artistB.name, metrics, mode]);
+  }, [artistA.name, artistB.name, dataSummary, metrics, mode]);
 
-  function send() {
+  async function send() {
     if (!input.trim()) return;
     const userMessage = input.trim();
     setInput("");
+    setSending(true);
     setMessages((current) => [
       ...current,
       { role: "user", content: userMessage },
-      {
-        role: "ai",
-        content:
-          mode === "mean"
-            ? `收到，这个角度可以继续撕：${artistA.shortName} 和 ${artistB.shortName} 的对比里，先别急着喊赢，得看你要的是数据牌面还是口碑体面。`
-            : `可以。基于当前数据，我会继续围绕 ${artistA.shortName} 与 ${artistB.shortName} 的已选维度补充说明。`,
-      },
     ]);
+    try {
+      const response = await fetch("/api/ai/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          mode,
+          artistA: artistA.name,
+          artistB: artistB.name,
+          metrics,
+          dataSummary,
+          userQuestion: userMessage,
+          provider: getStoredProvider(),
+        }),
+      });
+      const data = (await response.json()) as { message?: string };
+      setMessages((current) => [
+        ...current,
+        {
+          role: "ai",
+          content: data.message || "AI 这次没接住，换个问法再来。",
+        },
+      ]);
+    } catch {
+      setMessages((current) => [
+        ...current,
+        { role: "ai", content: "AI 追问暂时失败，等下再试。" },
+      ]);
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -138,6 +182,11 @@ export function AiPanel({
             {message.content}
           </div>
         ))}
+        {sending ? (
+          <div className="rounded-[22px] bg-white/55 p-4 text-lg font-bold leading-relaxed">
+            AI 正在回嘴。
+          </div>
+        ) : null}
       </div>
       <div className="mt-5 flex gap-3">
         <input
@@ -165,6 +214,7 @@ export function AiPanel({
             .map((message) => `${message.role}: ${message.content}`)
             .join("\n")}
           mode={mode}
+          provider={getStoredProvider()}
           onClose={() => setExportOpen(false)}
         />
       ) : null}
@@ -177,12 +227,14 @@ function ExportModal({
   artistB,
   conversation,
   mode,
+  provider,
   onClose,
 }: {
   artistA: string;
   artistB: string;
   conversation: string;
   mode: BattleMode;
+  provider?: AiProvider;
   onClose: () => void;
 }) {
   const [loading, setLoading] = useState(true);
@@ -197,7 +249,7 @@ function ExportModal({
         const response = await fetch("/api/ai/export", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ mode, artistA, artistB, conversation }),
+          body: JSON.stringify({ mode, artistA, artistB, conversation, provider }),
         });
         const data = (await response.json()) as {
           title?: string;

@@ -16,6 +16,7 @@ export async function POST(request: Request) {
           model?: string;
         };
         dataSummary?: string;
+        userQuestion?: string;
       }
     | null;
   const mode = body?.mode ?? "mean";
@@ -36,6 +37,7 @@ export async function POST(request: Request) {
         artistB,
         metrics,
         dataSummary: body?.dataSummary ?? "暂无结构化数据。",
+        userQuestion: body?.userQuestion,
       }),
       temperature: mode === "mean" ? 0.9 : 0.5,
     });

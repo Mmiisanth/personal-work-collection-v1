@@ -13,12 +13,14 @@ export function buildReportPrompt({
   artistB,
   metrics,
   dataSummary,
+  userQuestion,
 }: {
   mode: BattleMode;
   artistA: string;
   artistB: string;
   metrics: MetricKey[];
   dataSummary: string;
+  userQuestion?: string;
 }) {
   const tone =
     mode === "mean"
@@ -42,6 +44,7 @@ export function buildReportPrompt({
 已选维度：${metrics.map((metric) => metricLabels[metric]).join("、")}
 已提供数据：
 ${dataSummary}
+${userQuestion ? `用户追问：${userQuestion}` : ""}
 
 输出要求：
 - 先给 1 句总评

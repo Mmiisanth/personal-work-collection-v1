@@ -64,6 +64,14 @@ export function FilterModal({
 
   function submit() {
     if (!canSubmit) return;
+    if (apiMode === "custom") {
+      sessionStorage.setItem(
+        "riotbus.aiProvider",
+        JSON.stringify({ baseUrl, apiKey, model }),
+      );
+    } else {
+      sessionStorage.removeItem("riotbus.aiProvider");
+    }
     const params = new URLSearchParams({
       mode,
       a: selectedArtists[0],
