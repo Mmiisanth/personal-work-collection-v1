@@ -1,0 +1,13 @@
+node_modules/
+.venv/
+rag/vector_store.json
+__pycache__/
+*.pyc
+explainabilityLLM.py
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
