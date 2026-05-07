@@ -5,13 +5,14 @@ import {
   PieChart, Pie, Cell, ResponsiveContainer,
   BarChart, Bar, XAxis, YAxis, Tooltip,
   ReferenceLine,
+  ScatterChart, Scatter, ZAxis,
   Cell as ReCell
 } from 'recharts';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import { fetchUserData, generateDiagnosis, type ChurnData } from './services/churnService';
+import { fetchClusterData, fetchUserData, generateDiagnosis, type ChurnData, type ClusterData } from './services/churnService';
 
 /**
  * Tailwind 类名合并工具
@@ -27,6 +28,7 @@ export default function App() {
   const [report, setReport] = useState('');
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [displayedReport, setDisplayedReport] = useState('');
+  const [clusterData, setClusterData] = useState<ClusterData | null>(null);
 
   /**
    * 核心逻辑：随机抽取用户并进行 AI 诊断
@@ -41,6 +43,8 @@ export default function App() {
       const churnData = await fetchUserData();
       setUserId(churnData.userId);
       setData(churnData);
+      const clusters = await fetchClusterData(churnData);
+      setClusterData(clusters);
 
       // 2. 调用 DeepSeek 生成诊断报告
       const diagnosis = await generateDiagnosis(churnData);
@@ -269,6 +273,124 @@ export default function App() {
               <span className="text-[10px] font-bold text-neon-blue uppercase tracking-tighter">← 负向贡献 (降低流失)</span>
               <span className="text-[10px] font-bold text-neon-red uppercase tracking-tighter">正向贡献 (增加流失) →</span>
             </div>
+          </section>
+
+          {/* 4. 生命周期聚类：注册时长 x 流失概率 */}
+          <section className="bg-cyber-gray border border-white/10 rounded-2xl p-6">
+            <div className="flex items-start justify-between gap-4 mb-5">
+              <h2 className="text-xl font-bold text-white flex items-center gap-2 uppercase tracking-tight">
+                <Search className="w-6 h-6 text-neon-blue" /> 生命周期聚类图
+              </h2>
+              {clusterData?.currentUser && (
+                <span
+                  className="px-3 py-1 rounded-full border text-xs font-black whitespace-nowrap"
+                  style={{
+                    color: clusterData.currentUser.color,
+                    borderColor: `${clusterData.currentUser.color}88`,
+                    backgroundColor: `${clusterData.currentUser.color}18`,
+                  }}
+                >
+                  {clusterData.currentUser.clusterName}
+                </span>
+              )}
+            </div>
+
+            <div className="h-80">
+              <ResponsiveContainer width="100%" height="100%">
+                <ScatterChart margin={{ left: 8, right: 20, top: 8, bottom: 20 }}>
+                  <XAxis
+                    type="number"
+                    dataKey="regDuration"
+                    name="注册时长"
+                    tick={{ fill: '#FFFFFF99', fontSize: 11, fontWeight: 700 }}
+                    axisLine={{ stroke: 'rgba(255,255,255,0.18)' }}
+                    tickLine={false}
+                    label={{ value: '注册时长', position: 'insideBottom', offset: -12, fill: '#FFFFFF99', fontSize: 11, fontWeight: 800 }}
+                  />
+                  <YAxis
+                    type="number"
+                    dataKey="probability"
+                    name="流失概率"
+                    domain={[0, 1]}
+                    tickFormatter={(value) => `${Math.round(value * 100)}%`}
+                    tick={{ fill: '#FFFFFF99', fontSize: 11, fontWeight: 700 }}
+                    axisLine={{ stroke: 'rgba(255,255,255,0.18)' }}
+                    tickLine={false}
+                    width={42}
+                  />
+                  <ZAxis range={[22, 22]} />
+                  <ReferenceLine y={0.5} stroke="rgba(255,255,255,0.16)" strokeDasharray="3 3" />
+                  {clusterData && (
+                    <ReferenceLine
+                      x={clusterData.medians.regDuration}
+                      stroke="rgba(255,255,255,0.16)"
+                      strokeDasharray="3 3"
+                    />
+                  )}
+                  <Tooltip
+                    cursor={{ stroke: 'rgba(255,255,255,0.2)', strokeDasharray: '3 3' }}
+                    content={({ active, payload }) => {
+                      if (!active || !payload?.length) return null;
+                      const point = payload[0].payload;
+                      const cluster = clusterData?.clusters.find((item) => item.id === point.clusterId);
+                      return (
+                        <div className="bg-[#121212] border border-white/15 rounded-lg p-3 min-w-56 shadow-2xl">
+                          <p className="font-black text-white mb-1">{point.isCurrent ? '当前用户' : cluster?.name}</p>
+                          <p className="text-xs text-white/70">注册时长：{point.regDuration.toFixed(2)}</p>
+                          <p className="text-xs text-white/70">流失概率：{(point.probability * 100).toFixed(1)}%</p>
+                          {cluster && <p className="text-xs mt-2" style={{ color: cluster.color }}>{cluster.strategy}</p>}
+                        </div>
+                      );
+                    }}
+                  />
+                  {clusterData?.clusters.map((cluster) => (
+                    <Scatter
+                      key={cluster.id}
+                      name={cluster.name}
+                      data={clusterData.points.filter((point) => point.clusterId === cluster.id)}
+                      fill={cluster.color}
+                      fillOpacity={0.48}
+                      isAnimationActive={false}
+                    />
+                  ))}
+                  {clusterData?.currentUser && (
+                    <Scatter
+                      name="当前用户"
+                      data={[{ ...clusterData.currentUser, isCurrent: true }]}
+                      fill="#FFFFFF"
+                      stroke={clusterData.currentUser.color}
+                      strokeWidth={3}
+                      isAnimationActive={false}
+                      shape="star"
+                    />
+                  )}
+                </ScatterChart>
+              </ResponsiveContainer>
+            </div>
+
+            {clusterData?.currentUser && (
+              <div className="mt-5 grid grid-cols-1 gap-3">
+                <div className="bg-black/35 border border-white/10 rounded-xl p-4">
+                  <p className="text-xs text-white/40 font-bold uppercase mb-1">当前用户位置</p>
+                  <p className="text-lg font-black" style={{ color: clusterData.currentUser.color }}>
+                    {clusterData.currentUser.clusterName}
+                  </p>
+                  <p className="text-sm text-white/70 mt-2 leading-relaxed">
+                    {clusterData.currentUser.clusterSummary}
+                  </p>
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="bg-black/30 border border-white/10 rounded-xl p-4">
+                    <p className="text-xs text-white/40 font-bold uppercase mb-1">注册时长</p>
+                    <p className="text-xl font-black text-white">{clusterData.currentUser.regDuration.toFixed(2)}</p>
+                  </div>
+                  <div className="bg-black/30 border border-white/10 rounded-xl p-4">
+                    <p className="text-xs text-white/40 font-bold uppercase mb-1">流失概率</p>
+                    <p className="text-xl font-black text-white">{(clusterData.currentUser.probability * 100).toFixed(1)}%</p>
+                  </div>
+                </div>
+              </div>
+            )}
           </section>
         </div>
 

@@ -33,6 +33,74 @@ export interface ChurnData {
   }[];
 }
 
+export interface ClusterInfo {
+  id: number;
+  labelKey: string;
+  name: string;
+  summary: string;
+  strategy: string;
+  color: string;
+  size: number;
+  avgProbability: number;
+  avgRegDuration: number;
+  center: {
+    regDuration: number;
+    probability: number;
+  };
+}
+
+export interface ClusterPoint {
+  userId: string;
+  regDuration: number;
+  probability: number;
+  clusterId: number;
+}
+
+export interface ClusterData {
+  clusters: ClusterInfo[];
+  points: ClusterPoint[];
+  medians: {
+    regDuration: number;
+    probability: number;
+  };
+  currentUser: {
+    userId: string;
+    regDuration: number;
+    probability: number;
+    clusterId: number;
+    clusterName: string;
+    clusterSummary: string;
+    strategy: string;
+    color: string;
+  };
+}
+
+export async function fetchClusterData(data: ChurnData): Promise<ClusterData> {
+  const response = await fetch(`${API_BASE}/clusters`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      userId: data.userId,
+      probability: data.probability,
+      features: data.features.map((f) => ({
+        name: f.name,
+        displayName: f.displayName,
+        value: f.value,
+        translatedValue: f.translatedValue,
+        shap: f.shap,
+      })),
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`聚类接口错误：${response.status}`);
+  }
+
+  return response.json();
+}
+
 export async function generateDiagnosis(data: ChurnData) {
   const topFeatures = [...data.features]
     .sort((a, b) => Math.abs(b.shap) - Math.abs(a.shap))

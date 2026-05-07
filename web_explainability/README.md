@@ -8,6 +8,7 @@ ChurnGuard AI 是一个面向数字化订阅业务的用户流失风险预警与
 
 - 随机抽取测试集用户并预测流失概率
 - 展示用户核心特征、流失概率环形图、模型归因条形图
+- 展示基于注册时长与流失概率的用户生命周期聚类图，并高亮当前用户位置
 - 使用项目内 DNN 模型和 CSV 数据运行本地预测
 - 使用 DashScope `text-embedding-v4` 对本地干预知识库做向量检索
 - 使用 DeepSeek `deepseek-chat` 基于预测结果、归因值和 RAG 上下文生成中文诊断报告
@@ -79,6 +80,7 @@ ChurnGuard AI is a web application for churn risk prediction and intervention di
 
 - Randomly sample a test-set user and predict churn probability
 - Display user features, churn probability donut chart, and attribution bar chart
+- Display lifecycle clustering based on registration duration and churn probability, with the current user highlighted
 - Run local prediction with the bundled DNN model and CSV data
 - Retrieve intervention knowledge with DashScope `text-embedding-v4`
 - Generate diagnosis reports with DeepSeek `deepseek-chat` using prediction results, attribution values, and retrieved RAG context
