@@ -118,7 +118,15 @@ def generate_rag_report(
         f"【{index + 1}. {doc['title']}】\n{doc['content']}"
         for index, doc in enumerate(retrieved_docs)
     )
-    feature_lines = "\n".join(
+    risk_features = [
+        item for item in features
+        if float(item.get("shap") or 0) > 0
+    ]
+    top_risk_feature_lines = "\n".join(
+        _format_feature_for_prompt(item)
+        for item in sorted(risk_features, key=lambda item: float(item.get("shap") or 0), reverse=True)[:3]
+    )
+    all_feature_lines = "\n".join(
         _format_feature_for_prompt(item)
         for item in sorted(features, key=lambda item: abs(float(item.get("shap") or 0)), reverse=True)
     )
@@ -126,25 +134,28 @@ def generate_rag_report(
 你是音乐订阅平台的用户增长与留存分析专家。请基于用户预测结果、特征值和RAG检索到的干预知识，生成一份可执行的中文流失干预报告。
 
 要求：
-1. 先说明该用户最匹配哪类干预策略，以及为什么匹配。
-2. 给出两条低成本、可自动化执行的挽留策略。
-3. 每条策略都要包含具体操作、数据依据、触发时机、ABtest分组和核心指标。
-4. 不要编造知识库外的复杂运营项目；可以基于知识库做合理组合。
-5. 不要编造历史ABtest结果、提升百分比、用户ID、生成时间、Kafka/消息队列/具体第三方推送服务等未提供的系统细节。
-6. 标准化特征解释规则：负值表示低于平台平均水平，正值表示高于平台平均水平；reg_duration 为负表示注册时长偏短，更接近新用户。
-7. 输出必须围绕当前用户特征和知识库内容，不要写“历史数据显示”“附录表”等不存在的证据。
-8. 必须引用至少 3 个 SHAP/归因值。归因值 > 0 表示该特征推高流失概率，归因值 < 0 表示该特征降低流失概率。
-9. 性别编码必须严格解释为：gender=1 是男性，gender=0 是女性，gender=-1 是未公开性别或其他原因；不要把 gender 当作连续变量解释“高/低”。
-10. 如果 gender=-1，必须使用“未公开性别或其他原因”这个表述；不要改写成“性别信息缺失”，也不要把性别作为主要可干预流失原因，只能说明画像信息有限。
-11. 报告开头必须先列出“TOP归因特征表”，包含：特征名、当前值、业务含义、SHAP/归因值、方向。
+1. 禁止寒暄、禁止写“好的”“作为...专家”“我将为您生成”等开场白；第一行必须直接输出 `## 用户流失干预报告`。
+2. 报告开头必须只列出“TOP风险归因特征”，只保留 3 个 SHAP/归因值 > 0 且最推高流失概率的特征。
+3. TOP 表只允许 4 列：特征名、当前值、业务分析、SHAP/归因值。不要输出“方向”列。
+4. 业务分析列必须解释该特征为什么会推高当前用户流失风险，不能只写“推高流失概率”。
+5. 后续先说明该用户最匹配哪类干预策略，以及为什么匹配。
+6. 给出两条低成本、可自动化执行的挽留策略。
+7. 每条策略都要包含具体操作、数据依据、触发时机、ABtest分组和核心指标。
+8. 不要编造知识库外的复杂运营项目；可以基于知识库做合理组合。
+9. 不要编造历史ABtest结果、提升百分比、用户ID、生成时间、Kafka/消息队列/具体第三方推送服务等未提供的系统细节。
+10. 标准化特征解释规则：负值表示低于平台平均水平，正值表示高于平台平均水平；reg_duration 为负表示注册时长偏短，更接近新用户。
+11. 输出必须围绕当前用户特征和知识库内容，不要写“历史数据显示”“附录表”等不存在的证据。
+12. 必须引用 TOP 3 风险特征的 SHAP/归因值。归因值 > 0 表示该特征推高流失概率，归因值 < 0 表示该特征降低流失概率。
+13. 性别编码必须严格解释为：gender=1 是男性，gender=0 是女性，gender=-1 是未公开性别或其他原因；不要把 gender 当作连续变量解释“高/低”。
+14. 如果 gender=-1，必须使用“未公开性别或其他原因”这个表述；不要改写成“性别信息缺失”，也不要把性别作为主要可干预流失原因，只能说明画像信息有限。
 
 用户流失概率：{probability:.2%}
 
-关键特征摘要：
-{top_features}
+TOP 3 风险归因特征：
+{top_risk_feature_lines}
 
-完整特征：
-{feature_lines}
+完整特征上下文（用于辅助判断，不要整表输出）：
+{all_feature_lines}
 
 RAG知识库上下文：
 {context}

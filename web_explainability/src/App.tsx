@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import { Search, Dices, Activity, User, BrainCircuit, Loader2 } from 'lucide-react';
 import {
   PieChart, Pie, Cell, ResponsiveContainer,
@@ -21,13 +21,40 @@ function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+const CurrentUserMarker = (props: any) => {
+  const { cx, cy, payload } = props;
+  if (typeof cx !== 'number' || typeof cy !== 'number') return null;
+
+  return (
+    <g>
+      <path
+        d={`M ${cx} ${cy - 18} L ${cx + 5} ${cy - 6} L ${cx + 18} ${cy - 6} L ${cx + 8} ${cy + 2} L ${cx + 12} ${cy + 15} L ${cx} ${cy + 7} L ${cx - 12} ${cy + 15} L ${cx - 8} ${cy + 2} L ${cx - 18} ${cy - 6} L ${cx - 5} ${cy - 6} Z`}
+        fill="#FFFFFF"
+        stroke={payload?.color || '#00F3FF'}
+        strokeWidth={3}
+      />
+      <text
+        x={cx + 20}
+        y={cy - 12}
+        fill="#FFFFFF"
+        fontSize={12}
+        fontWeight={900}
+        paintOrder="stroke"
+        stroke="#050505"
+        strokeWidth={4}
+      >
+        当前用户
+      </text>
+    </g>
+  );
+};
+
 export default function App() {
   // --- 状态管理 ---
   const [userId, setUserId] = useState('加载中...');
   const [data, setData] = useState<ChurnData | null>(null);
   const [report, setReport] = useState('');
   const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [displayedReport, setDisplayedReport] = useState('');
   const [clusterData, setClusterData] = useState<ClusterData | null>(null);
 
   /**
@@ -36,7 +63,6 @@ export default function App() {
   const handleRandomDraw = async () => {
     setIsAnalyzing(true);
     setReport('');
-    setDisplayedReport('');
 
     try {
       // 1. 从 Python 后端获取真实模型预测数据
@@ -56,21 +82,6 @@ export default function App() {
       setIsAnalyzing(false);
     }
   };
-
-  /**
-   * 打字机特效：让报告逐字显示，增加科技感
-   */
-  useEffect(() => {
-    if (report && !isAnalyzing) {
-      let i = 0;
-      const interval = setInterval(() => {
-        setDisplayedReport(report.slice(0, i));
-        i += 5; // 每次增加5个字符，平衡速度与观感
-        if (i > report.length) clearInterval(interval);
-      }, 20);
-      return () => clearInterval(interval);
-    }
-  }, [report, isAnalyzing]);
 
   /**
    * 初始化：页面加载时自动抽取一名用户
@@ -356,12 +367,12 @@ export default function App() {
                   {clusterData?.currentUser && (
                     <Scatter
                       name="当前用户"
-                      data={[{ ...clusterData.currentUser, isCurrent: true }]}
+                      data={[{ ...clusterData.currentUser, isCurrent: true, color: clusterData.currentUser.color }]}
                       fill="#FFFFFF"
                       stroke={clusterData.currentUser.color}
                       strokeWidth={3}
                       isAnimationActive={false}
-                      shape="star"
+                      shape={<CurrentUserMarker />}
                     />
                   )}
                 </ScatterChart>
@@ -395,7 +406,7 @@ export default function App() {
         </div>
 
         {/* 右侧：AI 诊断报告面板 */}
-        <div className="bg-cyber-gray border border-white/10 rounded-2xl p-10 relative min-h-[900px] glow-blue/5">
+        <div className="bg-cyber-gray border border-white/10 rounded-2xl p-8 relative min-h-[900px] glow-blue/5 overflow-hidden">
           <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-neon-blue via-neon-purple to-transparent opacity-50" />
 
           <h2 className="text-3xl font-black text-white border-b border-white/10 pb-6 mb-8 flex items-center gap-4">
@@ -420,28 +431,25 @@ export default function App() {
                 </p>
               </div>
             ) : (
-              <div className="text-white/95 leading-relaxed text-xl font-medium">
+              <div className="text-white/95 leading-relaxed text-base font-medium break-words overflow-wrap-anywhere">
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   components={{
-                    h1: ({node, ...props}) => <h1 className="text-2xl font-black text-neon-blue mt-8 mb-4 uppercase border-l-4 border-neon-blue pl-4" {...props} />,
-                    h2: ({node, ...props}) => <h2 className="text-xl font-extrabold text-white mt-6 mb-3 flex items-center gap-2" {...props} />,
-                    p: ({node, ...props}) => <p className="mb-4 text-white/90" {...props} />,
+                    h1: ({node, ...props}) => <h1 className="text-xl font-black text-neon-blue mt-6 mb-4 uppercase border-l-4 border-neon-blue pl-4" {...props} />,
+                    h2: ({node, ...props}) => <h2 className="text-lg font-extrabold text-white mt-5 mb-3 flex items-center gap-2" {...props} />,
+                    h3: ({node, ...props}) => <h3 className="text-base font-black text-neon-green mt-4 mb-2" {...props} />,
+                    p: ({node, ...props}) => <p className="mb-3 text-white/88" {...props} />,
                     li: ({node, ...props}) => <li className="mb-2 list-disc list-inside text-white/80" {...props} />,
                     strong: ({node, ...props}) => <strong className="text-neon-green font-black" {...props} />,
-                    table: ({node, ...props}) => <div className="overflow-x-auto my-6"><table className="w-full border-collapse text-sm" {...props} /></div>,
+                    table: ({node, ...props}) => <div className="overflow-x-auto my-5 max-w-full"><table className="w-full table-fixed border-collapse text-xs md:text-sm" {...props} /></div>,
                     thead: ({node, ...props}) => <thead className="bg-white/10" {...props} />,
-                    th: ({node, ...props}) => <th className="text-neon-blue font-black uppercase tracking-tighter p-3 text-left border border-white/10" {...props} />,
-                    td: ({node, ...props}) => <td className="p-3 border border-white/10 text-white/80" {...props} />,
+                    th: ({node, ...props}) => <th className="text-neon-blue font-black uppercase tracking-tighter p-2 text-left border border-white/10 whitespace-normal break-words" {...props} />,
+                    td: ({node, ...props}) => <td className="p-2 border border-white/10 text-white/80 align-top whitespace-normal break-words" {...props} />,
                     tr: ({node, ...props}) => <tr className="hover:bg-neon-blue/5 transition-colors" {...props} />,
                   }}
                 >
-                  {displayedReport}
+                  {report}
                 </ReactMarkdown>
-                {/* 闪烁的光标效果 */}
-                {!isAnalyzing && displayedReport.length < report.length && (
-                  <span className="inline-block w-2 h-6 bg-neon-blue animate-pulse ml-1 align-middle" />
-                )}
               </div>
             )}
           </div>

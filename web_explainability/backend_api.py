@@ -29,7 +29,7 @@ TRAIN_DATA_PATH = DATA_ROOT / "train" / "train_data.csv"
 TEST_DATA_PATH = DATA_ROOT / "test" / "test_data.csv"
 
 FEATURE_DROP_COLUMNS = ["msno", "is_churn"]
-CLUSTER_SAMPLE_SIZE = 3000
+CLUSTER_SAMPLE_SIZE = 1500
 CLUSTER_RANDOM_STATE = 42
 CLUSTER_LABELS = {
     "new_high_risk": {
