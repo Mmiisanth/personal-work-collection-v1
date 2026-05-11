@@ -22,11 +22,12 @@ export function NewsModal({
         transition={{ duration: 0.22 }}
       >
         <div>
-          <div
-            className="flex aspect-[4/5] items-center justify-center rounded-[28px]"
-            style={{ background: banner.color }}
-          >
-            <span className="display-font text-4xl">image</span>
+          <div className="flex aspect-[4/5] items-center justify-center overflow-hidden rounded-[28px] border border-black/20 bg-white/30">
+            <img
+              alt={`${banner.title} detail image`}
+              className="h-full w-full object-cover"
+              src={banner.imageSrc}
+            />
           </div>
           <a
             className="mt-5 block text-lg font-bold underline"

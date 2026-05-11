@@ -11,7 +11,7 @@ const config: Config = {
     extend: {
       colors: {
         brat: {
-          green: "#8CFF4F",
+          green: "#7FFF00",
           hot: "#7CFF2F",
           soft: "#B8FF9C",
           bg: "#E6FFDC",

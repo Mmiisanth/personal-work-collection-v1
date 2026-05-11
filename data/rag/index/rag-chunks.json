@@ -1,0 +1,2007 @@
+{
+  "version": 1,
+  "generatedAt": "2026-05-11T09:51:51.589Z",
+  "chunkCount": 229,
+  "chunks": [
+    {
+      "artistId": "taylor-swift",
+      "source": "manual",
+      "id": "taylor-swift:profile",
+      "category": "profile",
+      "mode": "all",
+      "text": "taylor-swift 艺人画像 标签：新生代五大第一 简短画像：songwriter"
+    },
+    {
+      "artistId": "taylor-swift",
+      "source": "manual",
+      "id": "taylor-swift:names:normal",
+      "category": "normal_names",
+      "mode": "all",
+      "text": "正常称呼/美称：泰勒斯；霉霉；霉女帝；世女一"
+    },
+    {
+      "artistId": "taylor-swift",
+      "source": "manual",
+      "id": "taylor-swift:names:shade",
+      "category": "shade_names",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑称/黑话：交姐：公交车梗的称呼化版本；公交车：感情经历很多；交瘤子：腋下有葡萄瘤子"
+    },
+    {
+      "artistId": "taylor-swift",
+      "source": "manual",
+      "id": "taylor-swift:fanbase",
+      "category": "fanbase",
+      "mode": "all",
+      "text": "正常粉丝名：霉粉 / 小草莓"
+    },
+    {
+      "artistId": "taylor-swift",
+      "source": "manual",
+      "id": "taylor-swift:fanbase:shade",
+      "category": "fanbase_shade",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "粉丝黑称：交迷；车迷；癌交瘤子"
+    },
+    {
+      "artistId": "taylor-swift",
+      "source": "manual",
+      "id": "taylor-swift:wordplay",
+      "category": "wordplay",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑话造句种子：交 黑话造句例句：交出完美的答卷 / 交姐交出一张商业成绩单 / 交引出版本数量84"
+    },
+    {
+      "artistId": "taylor-swift",
+      "source": "manual",
+      "id": "taylor-swift:rival:1",
+      "category": "rival",
+      "mode": "mean",
+      "text": "主要对家：lady gaga 粉丝。关系说明：撕的最开 但两者一体两面 很好磕"
+    },
+    {
+      "artistId": "taylor-swift",
+      "source": "manual",
+      "id": "taylor-swift:controversy:1",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": true,
+      "text": "事件名：时代巡演炙烤小草莓 事件简介：时代巡演巴西场有粉丝中暑死去 粉丝挽尊话术：主办方的锅不给水 黑粉攻击角度：交姐我口渴"
+    },
+    {
+      "artistId": "taylor-swift",
+      "source": "manual",
+      "id": "taylor-swift:controversy:2",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": false,
+      "text": "事件名：ttpd发行大量版本 事件简介：ttpd数字版本发行84个版本 粉丝挽尊话术：其他艺人为什么不发多版本是不想吗 黑粉攻击角度：没有集齐所有版本我祝你生活一般"
+    },
+    {
+      "artistId": "taylor-swift",
+      "source": "manual",
+      "id": "taylor-swift:controversy:3",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": false,
+      "text": "事件名：olivia rodrigo 的单曲drivers license事件 事件简介：ts控诉olivia抄袭最终olivia给出了这首歌的百分之50版权 粉丝挽尊话术：olivia一遍出道营销自己是小草莓一遍抄袭 黑粉攻击角度：行业里有很多很mean的前辈"
+    },
+    {
+      "artistId": "taylor-swift",
+      "source": "manual",
+      "id": "taylor-swift:honor:1",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：销量女性艺人全时代第一完全是世女一 粉丝怎么夸：世女一饶命 她就是音乐产业本身 黑粉怎么反驳：130个版本刷出来的销量不要脸 备注：专辑版本太多！"
+    },
+    {
+      "artistId": "taylor-swift",
+      "source": "manual",
+      "id": "taylor-swift:honor:2",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：the life of a showgirl美国首周销量400w世界第一 粉丝怎么夸：世女一饶命 她就是音乐产业本身 黑粉怎么反驳：版本数量和瘤子数量一样多，难听的要死心疼交瘤子耳朵 备注：专辑版本太多！乐评极差"
+    },
+    {
+      "artistId": "taylor-swift",
+      "source": "manual",
+      "id": "taylor-swift:honor:3",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：时代巡演20e票房世界第一巡演 粉丝怎么夸：世女一饶命 黑粉怎么反驳：交姐我口渴 备注：演唱会死了人"
+    },
+    {
+      "artistId": "taylor-swift",
+      "source": "manual",
+      "id": "taylor-swift:honor:4",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：folklore evermore民俗姐妹花艺术封神 red pitchfork 9.0 粉丝怎么夸：aoty双紫标 艺术女王 黑粉怎么反驳：忆往昔峥嵘岁月 一键查询ttpd midnights（物业大巴）the life of a showgirl最近三专的绝伦乐评 备注：最近滥伐专辑评价很差"
+    },
+    {
+      "artistId": "taylor-swift",
+      "source": "manual",
+      "id": "taylor-swift:titles",
+      "category": "title_material",
+      "mode": "all",
+      "text": "Mean 标题梗：交引出版本数量84 Neutral 标题：霉天尊商业封神 禁止说法："
+    },
+    {
+      "artistId": "lady-gaga",
+      "source": "manual",
+      "id": "lady-gaga:profile",
+      "category": "profile",
+      "mode": "all",
+      "text": "lady-gaga 艺人画像 标签：新生代五大第四 简短画像：songwriter / performer"
+    },
+    {
+      "artistId": "lady-gaga",
+      "source": "manual",
+      "id": "lady-gaga:names:normal",
+      "category": "normal_names",
+      "mode": "all",
+      "text": "正常称呼/美称：嘎天尊；嘎嘎；嘎女帝"
+    },
+    {
+      "artistId": "lady-gaga",
+      "source": "manual",
+      "id": "lady-gaga:names:shade",
+      "category": "shade_names",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑称/黑话：尖姐：尖梗的称呼化版本；死胎尖：曾经死过胎"
+    },
+    {
+      "artistId": "lady-gaga",
+      "source": "manual",
+      "id": "lady-gaga:fanbase",
+      "category": "fanbase",
+      "mode": "all",
+      "text": "正常粉丝名：嘎迷"
+    },
+    {
+      "artistId": "lady-gaga",
+      "source": "manual",
+      "id": "lady-gaga:fanbase:shade",
+      "category": "fanbase_shade",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "粉丝黑称：死胎迷；尖迷"
+    },
+    {
+      "artistId": "lady-gaga",
+      "source": "manual",
+      "id": "lady-gaga:wordplay",
+      "category": "wordplay",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑话造句种子：尖 黑话造句例句：尖出冠单 / 尖姐尖叫式挽尊 / 尖椒炒猪肉这种多家混战梗只能轻用"
+    },
+    {
+      "artistId": "lady-gaga",
+      "source": "manual",
+      "id": "lady-gaga:rival:1",
+      "category": "rival",
+      "mode": "mean",
+      "text": "主要对家：taylor swift。关系说明：撕的最开但也最相似粉丝简直是一体两面"
+    },
+    {
+      "artistId": "lady-gaga",
+      "source": "manual",
+      "id": "lady-gaga:controversy:1",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": true,
+      "text": "事件名：我不会说出他的名字 事件简介：ladygaga多次提起自己被sex offensive的事件但是从未回答到底是谁rape了她 粉丝挽尊话术：尊重创伤 黑粉攻击角度：又要弹新琴了 首谈性情 备注：谈新琴是一个谐音用来规避不好的内容"
+    },
+    {
+      "artistId": "lady-gaga",
+      "source": "manual",
+      "id": "lady-gaga:controversy:2",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": true,
+      "text": "事件名：半边身子疼 事件简介：ladygaga发了30个疾病通告说自己身子疼支气管炎红斑狼疮等等疾病，一身84病 粉丝挽尊话术：尊重创伤 黑粉攻击角度：望疾病早日战胜嘎母"
+    },
+    {
+      "artistId": "lady-gaga",
+      "source": "manual",
+      "id": "lady-gaga:controversy:3",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": false,
+      "text": "事件名：取消演唱会 事件简介：ladygaga mayhem era 演唱会两次开唱前多次取消演唱会且没有给粉丝赔偿 粉丝挽尊话术：希望嘎嘎健康 黑粉攻击角度：提我们尖迷接了，花这么多钱机票住宿最后取消"
+    },
+    {
+      "artistId": "lady-gaga",
+      "source": "manual",
+      "id": "lady-gaga:controversy:4",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": false,
+      "text": "事件名：老头乐 事件简介：ladygaga与大量老头来往比如 托尼老爷子 拜登 等等甚至还有和敏感人员相关 支持不好的行为 三毒艺人 粉丝挽尊话术：那咋了 黑粉攻击角度：老头乐"
+    },
+    {
+      "artistId": "lady-gaga",
+      "source": "manual",
+      "id": "lady-gaga:controversy:5",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": false,
+      "text": "事件名：with queen 事件简介：ladygaga solo发行的单曲大多迅速飞榜上一首solo冠单要到born this way时期后续所有冠单都是和他人合作 粉丝挽尊话术：那咋了，只有嘎女帝合作这么成功 die with smile再怎么样都是我嘎的歌 黑粉攻击角度：独立行走很难"
+    },
+    {
+      "artistId": "lady-gaga",
+      "source": "manual",
+      "id": "lady-gaga:honor:1",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：五大格莱美第一 粉丝怎么夸：再不好过如今也好过了嘎天尊流行类格莱美大满贯，格莱美wins五大第一 黑粉怎么反驳：尖引出通类挂0全是边角料 备注：只有数量没有通类"
+    },
+    {
+      "artistId": "lady-gaga",
+      "source": "manual",
+      "id": "lady-gaga:honor:2",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：巴西户外演唱会到场人数超过20w 粉丝怎么夸：嘎天尊的影响力 黑粉怎么反驳：演唱会后淹死一个粉丝，淹老鼠了 / 演唱会不用门票我尖免费女人 备注：人多免费"
+    },
+    {
+      "artistId": "lady-gaga",
+      "source": "manual",
+      "id": "lady-gaga:honor:3",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：ladygaga喊话奥巴马推动lgbt平权 粉丝怎么夸：奥巴马你在听吗！我嘎iconic 黑粉怎么反驳：同性恋之母死胎尖创办基金会说帮助少数群体结果诈捐"
+    },
+    {
+      "artistId": "lady-gaga",
+      "source": "manual",
+      "id": "lady-gaga:honor:4",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：the fame + the fame monster 五大销量第一专辑 粉丝怎么夸：嘎天尊出道星光无限 黑粉怎么反驳：灵巧把两个专辑放在一起统计销量 灵巧 二合一 而且born this way这专为了冲击销量0.99美元大甩卖"
+    },
+    {
+      "artistId": "lady-gaga",
+      "source": "manual",
+      "id": "lady-gaga:titles",
+      "category": "title_material",
+      "mode": "all",
+      "text": "Mean 标题梗：四台尖半边身子疼 Neutral 标题：嘎嘎爱with 禁止说法："
+    },
+    {
+      "artistId": "katy-perry",
+      "source": "manual",
+      "id": "katy-perry:profile",
+      "category": "profile",
+      "mode": "all",
+      "text": "katy-perry 艺人画像 标签：新生代五大第五、即将被踢出五大！ 简短画像：songwriter"
+    },
+    {
+      "artistId": "katy-perry",
+      "source": "manual",
+      "id": "katy-perry:names:normal",
+      "category": "normal_names",
+      "mode": "all",
+      "text": "正常称呼/美称：果；水果姐"
+    },
+    {
+      "artistId": "katy-perry",
+      "source": "manual",
+      "id": "katy-perry:names:shade",
+      "category": "shade_names",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑称/黑话：厕姐：厕梗的称呼化版本；粿姐"
+    },
+    {
+      "artistId": "katy-perry",
+      "source": "manual",
+      "id": "katy-perry:fanbase",
+      "category": "fanbase",
+      "mode": "all",
+      "text": "正常粉丝名：果迷"
+    },
+    {
+      "artistId": "katy-perry",
+      "source": "manual",
+      "id": "katy-perry:fanbase:shade",
+      "category": "fanbase_shade",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "粉丝黑称：果蛆"
+    },
+    {
+      "artistId": "katy-perry",
+      "source": "manual",
+      "id": "katy-perry:wordplay",
+      "category": "wordplay",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑话造句种子：厕 / 粿 黑话造句例句：厕出回冬味 / 粿姐粿然又开始忆往昔峥嵘岁月"
+    },
+    {
+      "artistId": "katy-perry",
+      "source": "manual",
+      "id": "katy-perry:rival:1",
+      "category": "rival",
+      "mode": "mean",
+      "text": "主要对家：lady gaga。关系说明：五大第四争夺"
+    },
+    {
+      "artistId": "katy-perry",
+      "source": "manual",
+      "id": "katy-perry:controversy:1",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": false,
+      "text": "事件名：修女事件 katy perry 请停下 事件简介：katyperry要买一栋房结果修女不同意上诉过程中修女晕倒死去了 粉丝挽尊话术：绞杀保守派支持果天尊了 黑粉攻击角度：我果害死人"
+    },
+    {
+      "artistId": "katy-perry",
+      "source": "manual",
+      "id": "katy-perry:controversy:2",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": false,
+      "text": "事件名：回冬素人 事件简介：katyperry自从teenage dream专辑后一路走下坡路现在专辑成绩已经变成素人了 粉丝挽尊话术：那咋了只要我果还有一专六冠我果还是贵为皇后 黑粉攻击角度：我果灵气素人"
+    },
+    {
+      "artistId": "katy-perry",
+      "source": "manual",
+      "id": "katy-perry:honor:1",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：teenage dream一转六冠军打破记录 粉丝怎么夸：春梦是ladygaga的一辈子的噩梦 黑粉怎么反驳：忆往昔峥嵘岁月"
+    },
+    {
+      "artistId": "katy-perry",
+      "source": "manual",
+      "id": "katy-perry:titles",
+      "category": "title_material",
+      "mode": "all",
+      "text": "Mean 标题梗：我果回冬 Neutral 标题：- 禁止使用的说法： 禁止说法："
+    },
+    {
+      "artistId": "adele",
+      "source": "manual",
+      "id": "adele:profile",
+      "category": "profile",
+      "mode": "all",
+      "text": "adele 艺人画像 标签：新生代五大第二 简短画像：vocalist / songwriter"
+    },
+    {
+      "artistId": "adele",
+      "source": "manual",
+      "id": "adele:names:normal",
+      "category": "normal_names",
+      "mode": "all",
+      "text": "正常称呼/美称：呆；流行至尊；A-D-E-L-E"
+    },
+    {
+      "artistId": "adele",
+      "source": "manual",
+      "id": "adele:names:shade",
+      "category": "shade_names",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑称/黑话：猪戴尔：体重高"
+    },
+    {
+      "artistId": "adele",
+      "source": "manual",
+      "id": "adele:fanbase",
+      "category": "fanbase",
+      "mode": "all",
+      "text": "正常粉丝名：呆迷"
+    },
+    {
+      "artistId": "adele",
+      "source": "manual",
+      "id": "adele:fanbase:shade",
+      "category": "fanbase_shade",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "粉丝黑称：猪仔"
+    },
+    {
+      "artistId": "adele",
+      "source": "manual",
+      "id": "adele:wordplay",
+      "category": "wordplay",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑话造句种子：猪 黑话造句例句：猪突猛进的销量 / 尖椒炒猪肉这种多家混战梗只能轻用"
+    },
+    {
+      "artistId": "adele",
+      "source": "manual",
+      "id": "adele:controversy:1",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": false,
+      "text": "事件名：adele - 30 黑胶填海 流媒体暴死 事件简介：adele 4年回归大作黑胶大量滞销 67周专辑30从billboard出榜 “六年便秘作，一年无人听，67周出榜的流行至尊” 粉丝挽尊话术：不妨碍ifpi销量冠军 黑粉攻击角度：百万吨的黑胶直销在大西洋海底污染环境很想你！"
+    },
+    {
+      "artistId": "adele",
+      "source": "manual",
+      "id": "adele:controversy:2",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": false,
+      "text": "事件名：adele - 30 提前占用黑胶产量 事件简介：为赶上30发行黑脚工厂全力生产30把其他小众艺人发行耽误了 “黑胶工厂，唯至尊命” 粉丝挽尊话术：anything for you 黑粉攻击角度：行业里有一些很mean的前辈"
+    },
+    {
+      "artistId": "adele",
+      "source": "manual",
+      "id": "adele:controversy:3",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": false,
+      "text": "事件名：adele 离婚被分家产，男朋友全是黑人 事件简介：离婚被分家产 “谈情黑哥进，往来无白丁” 粉丝挽尊话术：那咋了 黑粉攻击角度：我猪爱吃黑巧"
+    },
+    {
+      "artistId": "adele",
+      "source": "manual",
+      "id": "adele:controversy:4",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": false,
+      "text": "事件名：爸爸的癌症不给钱治疗 事件简介：“无爱爹之孝女” 粉丝挽尊话术：首谈原生家庭 黑粉攻击角度：猪孝顺"
+    },
+    {
+      "artistId": "adele",
+      "source": "manual",
+      "id": "adele:honor:1",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：adele in Munich 演唱会座无虚席，演唱会场均价极高 粉丝怎么夸：A D E L E （adele就是高级的代表） 黑粉怎么反驳：我猪嗓子不是之前不是废了吗"
+    },
+    {
+      "artistId": "adele",
+      "source": "manual",
+      "id": "adele:honor:2",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：专辑21，25两次横扫格莱美通类 粉丝怎么夸：流行至尊adele 黑粉怎么反驳：25偷奖！"
+    },
+    {
+      "artistId": "adele",
+      "source": "manual",
+      "id": "adele:honor:3",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：专辑25首周338w打破多年的首周记录 粉丝怎么夸：流行至尊adele，单版本发行的25首周338w，第四周还能逆跌 黑粉怎么反驳：不如霉霉姐400w（虽然有很多版本次周销量跳水）"
+    },
+    {
+      "artistId": "adele",
+      "source": "manual",
+      "id": "adele:titles",
+      "category": "title_material",
+      "mode": "all",
+      "text": "Mean 标题梗：流行至尊 Neutral 标题：67周出榜的流行至尊 禁止说法："
+    },
+    {
+      "artistId": "rihanna",
+      "source": "manual",
+      "id": "rihanna:profile",
+      "category": "profile",
+      "mode": "all",
+      "text": "rihanna 艺人画像 标签：新生代五大第三 简短画像：singer / performer"
+    },
+    {
+      "artistId": "rihanna",
+      "source": "manual",
+      "id": "rihanna:names:normal",
+      "category": "normal_names",
+      "mode": "all",
+      "text": "正常称呼/美称：日；日婆；美妆博主"
+    },
+    {
+      "artistId": "rihanna",
+      "source": "manual",
+      "id": "rihanna:names:shade",
+      "category": "shade_names",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑称/黑话：沙包：被男友家暴打成沙包"
+    },
+    {
+      "artistId": "rihanna",
+      "source": "manual",
+      "id": "rihanna:fanbase",
+      "category": "fanbase",
+      "mode": "all",
+      "text": "正常粉丝名：日迷"
+    },
+    {
+      "artistId": "rihanna",
+      "source": "manual",
+      "id": "rihanna:fanbase:shade",
+      "category": "fanbase_shade",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "粉丝黑称：小沙粒"
+    },
+    {
+      "artistId": "rihanna",
+      "source": "manual",
+      "id": "rihanna:wordplay",
+      "category": "wordplay",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑话造句种子：沙 / 日 黑话造句例句：沙出一条美妆赛道 / 日婆不发歌也能靠旧账压人"
+    },
+    {
+      "artistId": "rihanna",
+      "source": "manual",
+      "id": "rihanna:rival:1",
+      "category": "rival",
+      "mode": "mean",
+      "text": "主要对家：ladygaga。关系说明：争抢五大第三"
+    },
+    {
+      "artistId": "rihanna",
+      "source": "manual",
+      "id": "rihanna:controversy:1",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": true,
+      "text": "事件名：美妆博主 事件简介：多年专注美妆事业不发新专辑 粉丝挽尊话术：支持女帝事业“who sent you” 黑粉攻击角度：- 备注："
+    },
+    {
+      "artistId": "rihanna",
+      "source": "manual",
+      "id": "rihanna:honor:1",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：最保值的艺人之一 粉丝怎么夸：即使转生美妆行业多年，过去的专辑和单曲流媒体热度依然很高 黑粉怎么反驳：都是with的别的歌手"
+    },
+    {
+      "artistId": "rihanna",
+      "source": "manual",
+      "id": "rihanna:titles",
+      "category": "title_material",
+      "mode": "all",
+      "text": "Mean 标题梗：沙包第三胎不发专辑 Neutral 标题：专注美妆商人 禁止说法："
+    },
+    {
+      "artistId": "lana-del-rey",
+      "source": "manual",
+      "id": "lana-del-rey:profile",
+      "category": "profile",
+      "mode": "all",
+      "text": "lana-del-rey 艺人画像 标签：另类女帝 简短画像：songwriter / singer"
+    },
+    {
+      "artistId": "lana-del-rey",
+      "source": "manual",
+      "id": "lana-del-rey:names:normal",
+      "category": "normal_names",
+      "mode": "all",
+      "text": "正常称呼/美称：雷妈妈；雷天尊"
+    },
+    {
+      "artistId": "lana-del-rey",
+      "source": "manual",
+      "id": "lana-del-rey:names:shade",
+      "category": "shade_names",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑称/黑话：鳄鱼：嫁个了养殖鳄鱼的老头；火葬场天后：歌太丧了；雷母猪：有段时间很胖"
+    },
+    {
+      "artistId": "lana-del-rey",
+      "source": "manual",
+      "id": "lana-del-rey:fanbase",
+      "category": "fanbase",
+      "mode": "all",
+      "text": "正常粉丝名：雷迷"
+    },
+    {
+      "artistId": "lana-del-rey",
+      "source": "manual",
+      "id": "lana-del-rey:fanbase:shade",
+      "category": "fanbase_shade",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "粉丝黑称：锅盔；小鳄鱼；小骨灰"
+    },
+    {
+      "artistId": "lana-del-rey",
+      "source": "manual",
+      "id": "lana-del-rey:wordplay",
+      "category": "wordplay",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑话造句种子：鳄 / 雷 黑话造句例句：鳄出一条婚恋新闻线 / 雷出一张高分艺术牌"
+    },
+    {
+      "artistId": "lana-del-rey",
+      "source": "manual",
+      "id": "lana-del-rey:rival:1",
+      "category": "rival",
+      "mode": "mean",
+      "text": "主要对家：lorde。关系说明：竞争另类女帝"
+    },
+    {
+      "artistId": "lana-del-rey",
+      "source": "manual",
+      "id": "lana-del-rey:controversy:1",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": false,
+      "text": "事件名：嫁给鳄鱼老头 事件简介：自降身段嫁给年龄很大很老的养殖鳄鱼的老头 粉丝挽尊话术：尊重感情 黑粉攻击角度：雷母猪保守主义藏不住了"
+    },
+    {
+      "artistId": "lana-del-rey",
+      "source": "manual",
+      "id": "lana-del-rey:controversy:2",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": false,
+      "text": "事件名：0格莱美 事件简介：粉丝吹艺术女帝至今0格莱美 粉丝挽尊话术：不为奖项写歌 黑粉攻击角度：格莱美很难"
+    },
+    {
+      "artistId": "lana-del-rey",
+      "source": "manual",
+      "id": "lana-del-rey:honor:1",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：nfr封神 粉丝怎么夸：nfr 封神 pitchfork 9.4推动世界进步 黑粉怎么反驳：nfr pitchfork 9.4然后pitchfork十年榜不如melodrama，aoty才87"
+    },
+    {
+      "artistId": "lana-del-rey",
+      "source": "manual",
+      "id": "lana-del-rey:titles",
+      "category": "title_material",
+      "mode": "all",
+      "text": "Mean 标题梗：鳄鱼养殖场 Neutral 标题：- 禁止使用的说法： 禁止说法："
+    },
+    {
+      "artistId": "lorde",
+      "source": "manual",
+      "id": "lorde:profile",
+      "category": "profile",
+      "mode": "all",
+      "text": "lorde 艺人画像 标签：另类女帝 简短画像：songwriter"
+    },
+    {
+      "artistId": "lorde",
+      "source": "manual",
+      "id": "lorde:names:normal",
+      "category": "normal_names",
+      "mode": "all",
+      "text": "正常称呼/美称：洛神；洛女帝；洛奶"
+    },
+    {
+      "artistId": "lorde",
+      "source": "manual",
+      "id": "lorde:names:shade",
+      "category": "shade_names",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑称/黑话：lowde：很low；low干尸：身材纤细且长相很显老；埃及法老：像埃及法老"
+    },
+    {
+      "artistId": "lorde",
+      "source": "manual",
+      "id": "lorde:fanbase",
+      "category": "fanbase",
+      "mode": "all",
+      "text": "正常粉丝名：洛迷"
+    },
+    {
+      "artistId": "lorde",
+      "source": "manual",
+      "id": "lorde:fanbase:shade",
+      "category": "fanbase_shade",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "粉丝黑称：小干尸"
+    },
+    {
+      "artistId": "lorde",
+      "source": "manual",
+      "id": "lorde:wordplay",
+      "category": "wordplay",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑话造句种子：洛 / low 黑话造句例句：洛出一张艺术神专 / low到只能靠忆往昔续命"
+    },
+    {
+      "artistId": "lorde",
+      "source": "manual",
+      "id": "lorde:rival:1",
+      "category": "rival",
+      "mode": "mean",
+      "text": "主要对家：lana del rey。关系说明：另类女帝之争"
+    },
+    {
+      "artistId": "lorde",
+      "source": "manual",
+      "id": "lorde:controversy:1",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": false,
+      "aggressive": true,
+      "text": "事件名：low3 事件简介：lorde被指擦足别人婚内感情当小三 粉丝挽尊话术：那咋了洛女帝是清白的 黑粉攻击角度：low3"
+    },
+    {
+      "artistId": "lorde",
+      "source": "manual",
+      "id": "lorde:honor:1",
+      "category": "honor",
+      "mode": "all",
+      "verified": "出道巅峰 royals 9周冠 夺下格莱美年歌 成为最小的年歌获得者",
+      "text": "荣誉：出道巅峰最年轻格莱美年歌 粉丝怎么夸：洛女帝封神 黑粉怎么反驳：忆往昔峥嵘岁月 一步一步糊成素人"
+    },
+    {
+      "artistId": "lorde",
+      "source": "manual",
+      "id": "lorde:honor:2",
+      "category": "honor",
+      "mode": "all",
+      "verified": "年歌提名 口碑极佳 aoty critical 91是另类女性专辑最高的分数",
+      "text": "荣誉：melodrama 艺术专辑 粉丝怎么夸：melodrama 封神 黑粉怎么反驳：一键查询单曲peak"
+    },
+    {
+      "artistId": "lorde",
+      "source": "manual",
+      "id": "lorde:titles",
+      "category": "title_material",
+      "mode": "all",
+      "text": "Mean 标题梗：lowde摸霉女帝脚踝 Neutral 标题：洛女帝封神 禁止说法："
+    },
+    {
+      "artistId": "beyonce",
+      "source": "manual",
+      "id": "beyonce:profile",
+      "category": "profile",
+      "mode": "all",
+      "text": "beyonce 艺人画像 标签：中生代第一 简短画像：performer / songwriter / producer"
+    },
+    {
+      "artistId": "beyonce",
+      "source": "manual",
+      "id": "beyonce:names:normal",
+      "category": "normal_names",
+      "mode": "all",
+      "text": "正常称呼/美称：碧昂斯；碧神"
+    },
+    {
+      "artistId": "beyonce",
+      "source": "manual",
+      "id": "beyonce:names:shade",
+      "category": "shade_names",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑称/黑话：母星：有点像大猩猩；碧母猩：大猩猩"
+    },
+    {
+      "artistId": "beyonce",
+      "source": "manual",
+      "id": "beyonce:fanbase",
+      "category": "fanbase",
+      "mode": "all",
+      "text": "正常粉丝名：碧粉"
+    },
+    {
+      "artistId": "beyonce",
+      "source": "manual",
+      "id": "beyonce:fanbase:shade",
+      "category": "fanbase_shade",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "粉丝黑称：猩崽子"
+    },
+    {
+      "artistId": "beyonce",
+      "source": "manual",
+      "id": "beyonce:wordplay",
+      "category": "wordplay",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑话造句种子：猩 黑话造句例句：猩味十足的奖项统治 / 猩崽子先解释播放量再封神"
+    },
+    {
+      "artistId": "beyonce",
+      "source": "manual",
+      "id": "beyonce:rival:1",
+      "category": "rival",
+      "mode": "mean",
+      "text": "主要对家：britney spears。关系说明：争夺中生代第一"
+    },
+    {
+      "artistId": "beyonce",
+      "source": "manual",
+      "id": "beyonce:controversy:1",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": false,
+      "text": "事件名：被christina aguilera赶出化妆间 事件简介：被擦妈赶出化妆间 粉丝挽尊话术：- 黑粉攻击角度：擦妈干的好 黑粉攻击角度：擦妈干的好"
+    },
+    {
+      "artistId": "beyonce",
+      "source": "manual",
+      "id": "beyonce:controversy:2",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": false,
+      "text": "事件名：彩铃天后 事件简介：被曝出在韩国的千万销量都是销售电话彩铃 粉丝挽尊话术：那咋了 黑粉攻击角度：比木星不要脸"
+    },
+    {
+      "artistId": "beyonce",
+      "source": "manual",
+      "id": "beyonce:controversy:3",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": false,
+      "text": "事件名：lemonade偷25第二年ifpi年冠 事件简介：lemonade发行当年 25次年本身能再次拿ifpi冠军 结果最后几个月lemonade通果beyonce老公的jayz的流媒体平台注水了很多销量最后抢了年冠军 粉丝挽尊话术：那咋了 黑粉攻击角度：比木星不要脸，最水年冠"
+    },
+    {
+      "artistId": "beyonce",
+      "source": "manual",
+      "id": "beyonce:controversy:4",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": false,
+      "text": "事件名：通稿封神 事件简介：Beyonce经常在各种媒体乐评等买大量封神自己作品的通稿但最后没人愿意听这些所谓高质量的作品 粉丝挽尊话术：那咋了 星女帝文艺复兴 黑粉攻击角度：猩崽子自己听吗"
+    },
+    {
+      "artistId": "beyonce",
+      "source": "manual",
+      "id": "beyonce:honor:1",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：格莱美提名获奖全部第一 粉丝怎么夸：碧天尊奖项封神 rc（前滚石杂志主编）给出a的评价 黑粉怎么反驳：年转cowboy carter猩崽子自己听吗 pay的！ 一堆边角料 备注：全是pay的边角料"
+    },
+    {
+      "artistId": "beyonce",
+      "source": "manual",
+      "id": "beyonce:honor:2",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：高质量作品 renaissance 粉丝怎么夸：碧天尊文艺复兴封神 rc 给出a+的极高评价 黑粉怎么反驳：瘟疫复兴差不多！根本没人听 备注：太过艺术没人听"
+    },
+    {
+      "artistId": "beyonce",
+      "source": "manual",
+      "id": "beyonce:honor:3",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：巡演女帝 粉丝怎么夸：仅次于时代巡演的巡演 最好的舞美艺术性 场均过1e美元 黑粉怎么反驳：全球巡演只在北美"
+    },
+    {
+      "artistId": "beyonce",
+      "source": "manual",
+      "id": "beyonce:titles",
+      "category": "title_material",
+      "mode": "all",
+      "text": "Mean 标题梗：开榜封神 Neutral 标题：- 禁止使用的说法： 禁止说法："
+    },
+    {
+      "artistId": "britney-spears",
+      "source": "manual",
+      "id": "britney-spears:profile",
+      "category": "profile",
+      "mode": "all",
+      "text": "britney-spears 艺人画像 标签：星光出道 简短画像：sperformer / singer"
+    },
+    {
+      "artistId": "britney-spears",
+      "source": "manual",
+      "id": "britney-spears:names:normal",
+      "category": "normal_names",
+      "mode": "all",
+      "text": "正常称呼/美称：小甜甜；布兰妮"
+    },
+    {
+      "artistId": "britney-spears",
+      "source": "manual",
+      "id": "britney-spears:names:shade",
+      "category": "shade_names",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑称/黑话：光头：发疯之后把自己头发剃了；双刀流：在家拿着菜刀舞动"
+    },
+    {
+      "artistId": "britney-spears",
+      "source": "manual",
+      "id": "britney-spears:fanbase",
+      "category": "fanbase",
+      "mode": "all",
+      "text": "正常粉丝名：妮粉"
+    },
+    {
+      "artistId": "britney-spears",
+      "source": "manual",
+      "id": "britney-spears:fanbase:shade",
+      "category": "fanbase_shade",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "粉丝黑称：头屑；头迷"
+    },
+    {
+      "artistId": "britney-spears",
+      "source": "manual",
+      "id": "britney-spears:wordplay",
+      "category": "wordplay",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑话造句种子：头 黑话造句例句：头也不回地吃老本 / 头号星光出道牌还能打"
+    },
+    {
+      "artistId": "britney-spears",
+      "source": "manual",
+      "id": "britney-spears:rival:1",
+      "category": "rival",
+      "mode": "mean",
+      "text": "主要对家：beyonce。关系说明：争夺中生代第一"
+    },
+    {
+      "artistId": "britney-spears",
+      "source": "manual",
+      "id": "britney-spears:controversy:1",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": true,
+      "text": "事件名：光头 事件简介：被记者逼疯把自己头发剃光 粉丝挽尊话术：心疼 黑粉攻击角度：- 备注："
+    },
+    {
+      "artistId": "britney-spears",
+      "source": "manual",
+      "id": "britney-spears:controversy:2",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": true,
+      "text": "事件名：双刀流 事件简介：在家精神状态不好拿着刀旋转飞舞 粉丝挽尊话术：心疼 黑粉攻击角度：- 备注："
+    },
+    {
+      "artistId": "britney-spears",
+      "source": "manual",
+      "id": "britney-spears:honor:1",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：出道星光 粉丝怎么夸：继迈克尔杰克逊以来最火的全球明星 黑粉怎么反驳：不如嘎天尊"
+    },
+    {
+      "artistId": "britney-spears",
+      "source": "manual",
+      "id": "britney-spears:titles",
+      "category": "title_material",
+      "mode": "all",
+      "text": "Mean 标题梗：卡特琳娜双刀舞饶命 Neutral 标题：- 禁止使用的说法： 禁止说法："
+    },
+    {
+      "artistId": "ariana-grande",
+      "source": "manual",
+      "id": "ariana-grande:profile",
+      "category": "profile",
+      "mode": "all",
+      "text": "ariana-grande 艺人画像 标签：超声代 简短画像：vocalist / songwriter"
+    },
+    {
+      "artistId": "ariana-grande",
+      "source": "manual",
+      "id": "ariana-grande:names:normal",
+      "category": "normal_names",
+      "mode": "all",
+      "text": "正常称呼/美称：a妹"
+    },
+    {
+      "artistId": "ariana-grande",
+      "source": "manual",
+      "id": "ariana-grande:names:shade",
+      "category": "shade_names",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑称/黑话：炸姐：Manchester演唱会死人；炸干尸：吃素之后身体很纤细"
+    },
+    {
+      "artistId": "ariana-grande",
+      "source": "manual",
+      "id": "ariana-grande:fanbase",
+      "category": "fanbase",
+      "mode": "all",
+      "text": "正常粉丝名：a粉"
+    },
+    {
+      "artistId": "ariana-grande",
+      "source": "manual",
+      "id": "ariana-grande:fanbase:shade",
+      "category": "fanbase_shade",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "粉丝黑称：炸蛆"
+    },
+    {
+      "artistId": "ariana-grande",
+      "source": "manual",
+      "id": "ariana-grande:wordplay",
+      "category": "wordplay",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑话造句种子：炸 黑话造句例句：炸姐炸裂的成绩 / 炸出一串单曲数据 / 炸蛆别只拿单曲遮专辑短板"
+    },
+    {
+      "artistId": "ariana-grande",
+      "source": "manual",
+      "id": "ariana-grande:rival:1",
+      "category": "rival",
+      "mode": "mean",
+      "text": "主要对家：- 对家关系说明：。关系说明：## 黑点 / 争议 / 名场面"
+    },
+    {
+      "artistId": "ariana-grande",
+      "source": "manual",
+      "id": "ariana-grande:controversy:1",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": true,
+      "text": "事件名：Manchester 事件简介：遇到恐怖袭击 粉丝挽尊话术：这种玩笑太过分 黑粉攻击角度：炸迷攻击别人的时候好像也喜欢说时代巡演烤死人"
+    },
+    {
+      "artistId": "ariana-grande",
+      "source": "manual",
+      "id": "ariana-grande:honor:1",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：单曲天后 粉丝怎么夸：单曲成绩秒了 黑粉怎么反驳：专辑惨死"
+    },
+    {
+      "artistId": "ariana-grande",
+      "source": "manual",
+      "id": "ariana-grande:titles",
+      "category": "title_material",
+      "mode": "all",
+      "text": "Mean 标题梗：- 适合 Neutral 的标题： Neutral 标题：- 禁止使用的说法： 禁止说法："
+    },
+    {
+      "artistId": "olivia-rodrigo",
+      "source": "manual",
+      "id": "olivia-rodrigo:profile",
+      "category": "profile",
+      "mode": "all",
+      "text": "olivia-rodrigo 艺人画像 标签：超生代 简短画像：songwriter / singer"
+    },
+    {
+      "artistId": "olivia-rodrigo",
+      "source": "manual",
+      "id": "olivia-rodrigo:names:normal",
+      "category": "normal_names",
+      "mode": "all",
+      "text": "正常称呼/美称：娅娅"
+    },
+    {
+      "artistId": "olivia-rodrigo",
+      "source": "manual",
+      "id": "olivia-rodrigo:names:shade",
+      "category": "shade_names",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑称/黑话：聋姐：聋梗的称呼化版本；窑鸡：窑鸡王；菲律宾一只耳：来自菲律宾自曝自己有一只耳朵有听力问题"
+    },
+    {
+      "artistId": "olivia-rodrigo",
+      "source": "manual",
+      "id": "olivia-rodrigo:fanbase",
+      "category": "fanbase",
+      "mode": "all",
+      "text": "正常粉丝名：小棉花"
+    },
+    {
+      "artistId": "olivia-rodrigo",
+      "source": "manual",
+      "id": "olivia-rodrigo:fanbase:shade",
+      "category": "fanbase_shade",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "粉丝黑称：窑鸡迷"
+    },
+    {
+      "artistId": "olivia-rodrigo",
+      "source": "manual",
+      "id": "olivia-rodrigo:wordplay",
+      "category": "wordplay",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑话造句种子：窑 / 聋 黑话造句例句：聋不是劣势，龙可是帝王之相 / 聋姐窑出一张青春疼痛成绩单"
+    },
+    {
+      "artistId": "olivia-rodrigo",
+      "source": "manual",
+      "id": "olivia-rodrigo:rival:1",
+      "category": "rival",
+      "mode": "mean",
+      "text": "主要对家：Sabrina。关系说明：绯闻Sabrina透了olivia的男友"
+    },
+    {
+      "artistId": "olivia-rodrigo",
+      "source": "manual",
+      "id": "olivia-rodrigo:controversy:1",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": false,
+      "text": "事件名：造谣我国的新疆棉花 事件简介：olivia在不了解我国的情况下转发抹黑我国新疆棉花的帖子 粉丝挽尊话术：年纪小不懂事 黑粉攻击角度：olivia乳华！坚决抵制"
+    },
+    {
+      "artistId": "olivia-rodrigo",
+      "source": "manual",
+      "id": "olivia-rodrigo:controversy:2",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": false,
+      "text": "事件名：她是一只爱撒谎的鸡 事件简介：olivia出道以来多次首谈自己是taylor粉丝但是从未转发过任何资料也不去看时代巡演 粉丝挽尊话术：行业里有一些很mean的前辈 黑粉攻击角度：她是一只撒谎的鸡"
+    },
+    {
+      "artistId": "olivia-rodrigo",
+      "source": "manual",
+      "id": "olivia-rodrigo:honor:1",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：sour出道巅峰 粉丝怎么夸：娅女帝出道冠单，一度拿下年新 黑粉怎么反驳：抄袭霉霉姐cruel summer"
+    },
+    {
+      "artistId": "olivia-rodrigo",
+      "source": "manual",
+      "id": "olivia-rodrigo:titles",
+      "category": "title_material",
+      "mode": "all",
+      "text": "Mean 标题梗：- 适合 Neutral 的标题： Neutral 标题：- 禁止使用的说法： 禁止说法："
+    },
+    {
+      "artistId": "sabrina-carpenter",
+      "source": "manual",
+      "id": "sabrina-carpenter:profile",
+      "category": "profile",
+      "mode": "all",
+      "text": "sabrina-carpenter 艺人画像 标签：新生代 简短画像：singer / songwriter"
+    },
+    {
+      "artistId": "sabrina-carpenter",
+      "source": "manual",
+      "id": "sabrina-carpenter:names:normal",
+      "category": "normal_names",
+      "mode": "all",
+      "text": "正常称呼/美称：匠妹"
+    },
+    {
+      "artistId": "sabrina-carpenter",
+      "source": "manual",
+      "id": "sabrina-carpenter:names:shade",
+      "category": "shade_names",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑称/黑话：匠三：疑似抢了olivia男友"
+    },
+    {
+      "artistId": "sabrina-carpenter",
+      "source": "manual",
+      "id": "sabrina-carpenter:fanbase",
+      "category": "fanbase",
+      "mode": "all",
+      "text": "正常粉丝名：匠迷"
+    },
+    {
+      "artistId": "sabrina-carpenter",
+      "source": "manual",
+      "id": "sabrina-carpenter:fanbase:shade",
+      "category": "fanbase_shade",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "粉丝黑称：小三迷"
+    },
+    {
+      "artistId": "sabrina-carpenter",
+      "source": "manual",
+      "id": "sabrina-carpenter:wordplay",
+      "category": "wordplay",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑话造句种子：三 黑话造句例句：三出一条上升曲线 / 三分天下先把成绩摆出来"
+    },
+    {
+      "artistId": "sabrina-carpenter",
+      "source": "manual",
+      "id": "sabrina-carpenter:rival:1",
+      "category": "rival",
+      "mode": "mean",
+      "text": "主要对家：olivia。关系说明：抢男友"
+    },
+    {
+      "artistId": "sabrina-carpenter",
+      "source": "manual",
+      "id": "sabrina-carpenter:controversy:1",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": false,
+      "aggressive": false,
+      "text": "事件名：当小三 事件简介：从olivia drivers license歌词说自己男友被一个blonde女孩抢了结果对上了sabrina 粉丝挽尊话术：那咋了三就三了女王行为 黑粉攻击角度：当三恶心"
+    },
+    {
+      "artistId": "sabrina-carpenter",
+      "source": "manual",
+      "id": "sabrina-carpenter:honor:1",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：shorn sweet短甜开始一路封神 粉丝怎么夸：匠女帝 黑粉怎么反驳：前三张专辑不算了吗"
+    },
+    {
+      "artistId": "sabrina-carpenter",
+      "source": "manual",
+      "id": "sabrina-carpenter:titles",
+      "category": "title_material",
+      "mode": "all",
+      "text": "Mean 标题梗：- 适合 Neutral 的标题： Neutral 标题：- 禁止使用的说法： 禁止说法："
+    },
+    {
+      "artistId": "billie-eilish",
+      "source": "manual",
+      "id": "billie-eilish:profile",
+      "category": "profile",
+      "mode": "all",
+      "text": "billie-eilish 艺人画像 标签：超生代 简短画像：songwriter / singer"
+    },
+    {
+      "artistId": "billie-eilish",
+      "source": "manual",
+      "id": "billie-eilish:names:normal",
+      "category": "normal_names",
+      "mode": "all",
+      "text": "正常称呼/美称：碧梨"
+    },
+    {
+      "artistId": "billie-eilish",
+      "source": "manual",
+      "id": "billie-eilish:names:shade",
+      "category": "shade_names",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑称/黑话：死蚊子：唱歌声音像蚊子叫；伦妹：疑似与哥哥incest"
+    },
+    {
+      "artistId": "billie-eilish",
+      "source": "manual",
+      "id": "billie-eilish:fanbase",
+      "category": "fanbase",
+      "mode": "all",
+      "text": "正常粉丝名：梨粉"
+    },
+    {
+      "artistId": "billie-eilish",
+      "source": "manual",
+      "id": "billie-eilish:fanbase:shade",
+      "category": "fanbase_shade",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "粉丝黑称：孑孓（文字幼虫）；伦迷"
+    },
+    {
+      "artistId": "billie-eilish",
+      "source": "manual",
+      "id": "billie-eilish:wordplay",
+      "category": "wordplay",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑话造句种子：伦 黑话造句例句：伦出绝伦的成绩 / 伦妹再怎么压嗓也压不住奖项"
+    },
+    {
+      "artistId": "billie-eilish",
+      "source": "manual",
+      "id": "billie-eilish:rival:1",
+      "category": "rival",
+      "mode": "mean",
+      "text": "主要对家：taylor swift。关系说明：被霉霉多次踩头拿不到冠军专辑"
+    },
+    {
+      "artistId": "billie-eilish",
+      "source": "manual",
+      "id": "billie-eilish:controversy:1",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": false,
+      "text": "事件名：环保蚊 事件简介：采访中抨击音乐行业滥发黑胶唱片污染环境但自己发了一堆版本的黑胶 粉丝挽尊话术：那咋了我们是环保材料 黑粉攻击角度：谁买黑胶回来用来回收"
+    },
+    {
+      "artistId": "billie-eilish",
+      "source": "manual",
+      "id": "billie-eilish:controversy:2",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": false,
+      "aggressive": true,
+      "text": "事件名：伦 事件简介：被怀疑和哥哥有亲密关系 粉丝挽尊话术：接着造谣 黑粉攻击角度：哈雷彗星这首歌自己都写了"
+    },
+    {
+      "artistId": "billie-eilish",
+      "source": "manual",
+      "id": "billie-eilish:controversy:3",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": true,
+      "text": "事件名：如果badguy没有改规则 出道十年没有冠单 事件简介：全生涯仅有badguy一首冠单，还是借助改规则拿到的 粉丝挽尊话术：那咋了后劲有 黑粉攻击角度：大机器灌水，冠单很难"
+    },
+    {
+      "artistId": "billie-eilish",
+      "source": "manual",
+      "id": "billie-eilish:honor:1",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：作品优质 粉丝怎么夸：aoty高分 rc三张专辑全给了a 梦游十年年榜第十 黑粉怎么反驳：pay的 一键查询pitchfork评分上8很难"
+    },
+    {
+      "artistId": "billie-eilish",
+      "source": "manual",
+      "id": "billie-eilish:honor:2",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：格莱美 粉丝怎么夸：梦游第一章专辑横扫所有格莱美通类 后又三封年歌 黑粉怎么反驳：死蚊子偷奖"
+    },
+    {
+      "artistId": "billie-eilish",
+      "source": "manual",
+      "id": "billie-eilish:titles",
+      "category": "title_material",
+      "mode": "all",
+      "text": "Mean 标题梗：我伦冠单很难 Neutral 标题：- 禁止使用的说法： 禁止说法："
+    },
+    {
+      "artistId": "dua-lipa",
+      "source": "manual",
+      "id": "dua-lipa:profile",
+      "category": "profile",
+      "mode": "all",
+      "text": "dua-lipa 艺人画像 标签：超生代 简短画像：singer / performer"
+    },
+    {
+      "artistId": "dua-lipa",
+      "source": "manual",
+      "id": "dua-lipa:names:normal",
+      "category": "normal_names",
+      "mode": "all",
+      "text": "正常称呼/美称：帕姐"
+    },
+    {
+      "artistId": "dua-lipa",
+      "source": "manual",
+      "id": "dua-lipa:names:shade",
+      "category": "shade_names",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑称/黑话：dua jiba：长相像男生；帕人妖：像男生"
+    },
+    {
+      "artistId": "dua-lipa",
+      "source": "manual",
+      "id": "dua-lipa:fanbase",
+      "category": "fanbase",
+      "mode": "all",
+      "text": "正常粉丝名：帕迷"
+    },
+    {
+      "artistId": "dua-lipa",
+      "source": "manual",
+      "id": "dua-lipa:fanbase:shade",
+      "category": "fanbase_shade",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "粉丝黑称：妖迷"
+    },
+    {
+      "artistId": "dua-lipa",
+      "source": "manual",
+      "id": "dua-lipa:wordplay",
+      "category": "wordplay",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑话造句种子：妖 黑话造句例句：妖出未来乡愁的流行盘 / 妖迷先别急，三专成绩自己会说话"
+    },
+    {
+      "artistId": "dua-lipa",
+      "source": "manual",
+      "id": "dua-lipa:rival:1",
+      "category": "rival",
+      "mode": "mean",
+      "text": "主要对家：- 对家关系说明：。关系说明：## 黑点 / 争议 / 名场面"
+    },
+    {
+      "artistId": "dua-lipa",
+      "source": "manual",
+      "id": "dua-lipa:controversy:1",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": false,
+      "text": "事件名：三专回冬 事件简介：radical optimism 粉丝挽尊话术：那咋了 黑粉攻击角度：一键糊了"
+    },
+    {
+      "artistId": "dua-lipa",
+      "source": "manual",
+      "id": "dua-lipa:honor:1",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：出道巅峰，未来乡愁流行艺术均有成就 粉丝怎么夸：未来乡愁封神 黑粉怎么反驳：三专糊了"
+    },
+    {
+      "artistId": "dua-lipa",
+      "source": "manual",
+      "id": "dua-lipa:titles",
+      "category": "title_material",
+      "mode": "all",
+      "text": "Mean 标题梗：- 适合 Neutral 的标题： Neutral 标题：- 禁止使用的说法： 禁止说法："
+    },
+    {
+      "artistId": "celine-dion",
+      "source": "manual",
+      "id": "celine-dion:profile",
+      "category": "profile",
+      "mode": "all",
+      "text": "celine-dion 艺人画像 标签：老生代 简短画像：vocalist / singer"
+    },
+    {
+      "artistId": "celine-dion",
+      "source": "manual",
+      "id": "celine-dion:names:normal",
+      "category": "normal_names",
+      "mode": "all",
+      "text": "正常称呼/美称：时代之声"
+    },
+    {
+      "artistId": "celine-dion",
+      "source": "manual",
+      "id": "celine-dion:names:shade",
+      "category": "shade_names",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑称/黑话：席干尸：瘦成干尸"
+    },
+    {
+      "artistId": "celine-dion",
+      "source": "manual",
+      "id": "celine-dion:fanbase",
+      "category": "fanbase",
+      "mode": "all",
+      "text": "正常粉丝名：席林迷"
+    },
+    {
+      "artistId": "celine-dion",
+      "source": "manual",
+      "id": "celine-dion:fanbase:shade",
+      "category": "fanbase_shade",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "粉丝黑称：干尸迷"
+    },
+    {
+      "artistId": "celine-dion",
+      "source": "manual",
+      "id": "celine-dion:wordplay",
+      "category": "wordplay",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑话造句种子： 黑话造句例句："
+    },
+    {
+      "artistId": "celine-dion",
+      "source": "manual",
+      "id": "celine-dion:rival:1",
+      "category": "rival",
+      "mode": "mean",
+      "text": "主要对家：- 对家关系说明：。关系说明：## 黑点 / 争议 / 名场面"
+    },
+    {
+      "artistId": "celine-dion",
+      "source": "manual",
+      "id": "celine-dion:controversy:1",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": "- 是否有很强攻击性：",
+      "aggressive": "- 粉丝挽尊话术：",
+      "text": "事件名：炒作疾病 事件简介：患上全世界医学界都没听说过的，仅声带抽筋的僵人症，随即取消巡演 招商引入Amazon Prime为其拍摄24小时不间断纪录片治疗过程中，按摩师为其量个血压，马上开始鬼哭狼嚎声泪俱下，但鼻子里喷一下喷雾瞬间就好了 因落选百大音乐【艺术家】，8位粉丝包机从魁北克乘坐吉祥航空转机到美国洛杉矶Rolling Stone总部门口为其打抱不平，2小时后返程2023年位居全球私人飞机碳排放量第十，在声带抽搐的情况下出行次数高达70次，仅次于十亿身家的美妆大亨Kylie Jenner 粉丝挽尊话术：- 黑粉攻击角度： 黑粉攻击角度：- 备注："
+    },
+    {
+      "artistId": "celine-dion",
+      "source": "manual",
+      "id": "celine-dion:honor:1",
+      "category": "honor",
+      "mode": "all",
+      "verified": "- 粉丝怎么夸：",
+      "text": "荣誉：嗓音很好 粉丝怎么夸：- 黑粉怎么反驳： 黑粉怎么反驳：- 备注："
+    },
+    {
+      "artistId": "celine-dion",
+      "source": "manual",
+      "id": "celine-dion:titles",
+      "category": "title_material",
+      "mode": "all",
+      "text": "Mean 标题梗：- 适合 Neutral 的标题： Neutral 标题：- 禁止使用的说法： 禁止说法："
+    },
+    {
+      "artistId": "whitney-houston",
+      "source": "manual",
+      "id": "whitney-houston:profile",
+      "category": "profile",
+      "mode": "all",
+      "text": "whitney-houston 艺人画像 标签：老生代 简短画像：vocalist / singer"
+    },
+    {
+      "artistId": "whitney-houston",
+      "source": "manual",
+      "id": "whitney-houston:names:normal",
+      "category": "normal_names",
+      "mode": "all",
+      "text": "正常称呼/美称：休斯顿惠妮"
+    },
+    {
+      "artistId": "whitney-houston",
+      "source": "manual",
+      "id": "whitney-houston:names:shade",
+      "category": "shade_names",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑称/黑话：毒浴缸：吸毒过量死去"
+    },
+    {
+      "artistId": "whitney-houston",
+      "source": "manual",
+      "id": "whitney-houston:fanbase",
+      "category": "fanbase",
+      "mode": "all",
+      "text": "正常粉丝名：浴缸迷"
+    },
+    {
+      "artistId": "whitney-houston",
+      "source": "manual",
+      "id": "whitney-houston:fanbase:shade",
+      "category": "fanbase_shade",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "粉丝黑称：毒迷"
+    },
+    {
+      "artistId": "whitney-houston",
+      "source": "manual",
+      "id": "whitney-houston:wordplay",
+      "category": "wordplay",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑话造句种子： 黑话造句例句："
+    },
+    {
+      "artistId": "whitney-houston",
+      "source": "manual",
+      "id": "whitney-houston:rival:1",
+      "category": "rival",
+      "mode": "mean",
+      "text": "主要对家：- 对家关系说明：。关系说明：## 黑点 / 争议 / 名场面"
+    },
+    {
+      "artistId": "whitney-houston",
+      "source": "manual",
+      "id": "whitney-houston:controversy:1",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": "- 是否有很强攻击性：",
+      "aggressive": "- 粉丝挽尊话术：",
+      "text": "事件名：- 事件简介： 事件简介：- 是否可验证： 粉丝挽尊话术：- 黑粉攻击角度： 黑粉攻击角度：- 备注："
+    },
+    {
+      "artistId": "whitney-houston",
+      "source": "manual",
+      "id": "whitney-houston:honor:1",
+      "category": "honor",
+      "mode": "all",
+      "verified": "- 粉丝怎么夸：",
+      "text": "荣誉：- 是否可验证： 粉丝怎么夸：- 黑粉怎么反驳： 黑粉怎么反驳：- 备注："
+    },
+    {
+      "artistId": "whitney-houston",
+      "source": "manual",
+      "id": "whitney-houston:titles",
+      "category": "title_material",
+      "mode": "all",
+      "text": "Mean 标题梗：- 适合 Neutral 的标题： Neutral 标题：- 禁止使用的说法： 禁止说法："
+    },
+    {
+      "artistId": "mariah-carey",
+      "source": "manual",
+      "id": "mariah-carey:profile",
+      "category": "profile",
+      "mode": "all",
+      "text": "mariah-carey 艺人画像 标签：老生代 简短画像：songwriter / vocalist"
+    },
+    {
+      "artistId": "mariah-carey",
+      "source": "manual",
+      "id": "mariah-carey:names:normal",
+      "category": "normal_names",
+      "mode": "all",
+      "text": "正常称呼/美称：牛姐"
+    },
+    {
+      "artistId": "mariah-carey",
+      "source": "manual",
+      "id": "mariah-carey:names:shade",
+      "category": "shade_names",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑称/黑话：猪咪：太胖了"
+    },
+    {
+      "artistId": "mariah-carey",
+      "source": "manual",
+      "id": "mariah-carey:fanbase",
+      "category": "fanbase",
+      "mode": "all",
+      "text": "正常粉丝名：牛粪"
+    },
+    {
+      "artistId": "mariah-carey",
+      "source": "manual",
+      "id": "mariah-carey:fanbase:shade",
+      "category": "fanbase_shade",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "粉丝黑称：猪迷"
+    },
+    {
+      "artistId": "mariah-carey",
+      "source": "manual",
+      "id": "mariah-carey:wordplay",
+      "category": "wordplay",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑话造句种子：猪 黑话造句例句：猪咪靠圣诞账本回血 / 猪出一条年末冠单路"
+    },
+    {
+      "artistId": "mariah-carey",
+      "source": "manual",
+      "id": "mariah-carey:rival:1",
+      "category": "rival",
+      "mode": "mean",
+      "text": "主要对家：- 对家关系说明：。关系说明：## 黑点 / 争议 / 名场面"
+    },
+    {
+      "artistId": "mariah-carey",
+      "source": "manual",
+      "id": "mariah-carey:controversy:1",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": false,
+      "text": "事件名：假唱 事件简介：在多次演唱会假唱 粉丝挽尊话术：打假 黑粉攻击角度：猪咪嗓子报废"
+    },
+    {
+      "artistId": "mariah-carey",
+      "source": "manual",
+      "id": "mariah-carey:honor:1",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：圣诞单曲荣华富贵 粉丝怎么夸：每年圣代必拿冠单 黑粉怎么反驳：- 备注："
+    },
+    {
+      "artistId": "mariah-carey",
+      "source": "manual",
+      "id": "mariah-carey:titles",
+      "category": "title_material",
+      "mode": "all",
+      "text": "Mean 标题梗：- 适合 Neutral 的标题： Neutral 标题：- 禁止使用的说法： 禁止说法："
+    },
+    {
+      "artistId": "charli-xcx",
+      "source": "manual",
+      "id": "charli-xcx:profile",
+      "category": "profile",
+      "mode": "all",
+      "text": "charli-xcx 艺人画像 标签：另类女帝 简短画像：songwriter / producer"
+    },
+    {
+      "artistId": "charli-xcx",
+      "source": "manual",
+      "id": "charli-xcx:names:normal",
+      "category": "normal_names",
+      "mode": "all",
+      "text": "正常称呼/美称：查理小程序"
+    },
+    {
+      "artistId": "charli-xcx",
+      "source": "manual",
+      "id": "charli-xcx:names:shade",
+      "category": "shade_names",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑称/黑话：茶木沟：茶垢"
+    },
+    {
+      "artistId": "charli-xcx",
+      "source": "manual",
+      "id": "charli-xcx:fanbase",
+      "category": "fanbase",
+      "mode": "all",
+      "text": "正常粉丝名：茶粉"
+    },
+    {
+      "artistId": "charli-xcx",
+      "source": "manual",
+      "id": "charli-xcx:fanbase:shade",
+      "category": "fanbase_shade",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "粉丝黑称：茶垢"
+    },
+    {
+      "artistId": "charli-xcx",
+      "source": "manual",
+      "id": "charli-xcx:wordplay",
+      "category": "wordplay",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑话造句种子： 黑话造句例句："
+    },
+    {
+      "artistId": "charli-xcx",
+      "source": "manual",
+      "id": "charli-xcx:rival:1",
+      "category": "rival",
+      "mode": "mean",
+      "text": "主要对家：taylor swift。关系说明：everything is romantic vs taylor - actually romantic beef"
+    },
+    {
+      "artistId": "charli-xcx",
+      "source": "manual",
+      "id": "charli-xcx:controversy:1",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": true,
+      "text": "事件名：拿taylor在粉丝收到交通事故开玩笑 事件简介：taylor的粉丝遇到交通事故她却在网上暗指这件事 粉丝挽尊话术：支持女帝打脸交引出 黑粉攻击角度：恶毒"
+    },
+    {
+      "artistId": "charli-xcx",
+      "source": "manual",
+      "id": "charli-xcx:honor:1",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：brat专辑打开bratsummer艺术 粉丝怎么夸：brat艺术 黑粉怎么反驳：小众逼有人听吗"
+    },
+    {
+      "artistId": "charli-xcx",
+      "source": "manual",
+      "id": "charli-xcx:titles",
+      "category": "title_material",
+      "mode": "all",
+      "text": "Mean 标题梗：- 适合 Neutral 的标题： Neutral 标题：- 禁止使用的说法： 禁止说法："
+    },
+    {
+      "artistId": "madonna",
+      "source": "manual",
+      "id": "madonna:profile",
+      "category": "profile",
+      "mode": "all",
+      "text": "madonna 艺人画像 标签：老生代 简短画像：performer / songwriter / producer"
+    },
+    {
+      "artistId": "madonna",
+      "source": "manual",
+      "id": "madonna:names:normal",
+      "category": "normal_names",
+      "mode": "all",
+      "text": "正常称呼/美称：麦女帝"
+    },
+    {
+      "artistId": "madonna",
+      "source": "manual",
+      "id": "madonna:names:shade",
+      "category": "shade_names",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑称/黑话：红枣：在一次大型舞台上露出自己的胸部"
+    },
+    {
+      "artistId": "madonna",
+      "source": "manual",
+      "id": "madonna:fanbase",
+      "category": "fanbase",
+      "mode": "all",
+      "text": "正常粉丝名：麦迷"
+    },
+    {
+      "artistId": "madonna",
+      "source": "manual",
+      "id": "madonna:fanbase:shade",
+      "category": "fanbase_shade",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "粉丝黑称：红枣迷"
+    },
+    {
+      "artistId": "madonna",
+      "source": "manual",
+      "id": "madonna:wordplay",
+      "category": "wordplay",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑话造句种子： 黑话造句例句："
+    },
+    {
+      "artistId": "madonna",
+      "source": "manual",
+      "id": "madonna:rival:1",
+      "category": "rival",
+      "mode": "mean",
+      "text": "主要对家：- 对家关系说明：。关系说明：## 黑点 / 争议 / 名场面"
+    },
+    {
+      "artistId": "madonna",
+      "source": "manual",
+      "id": "madonna:controversy:1",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": "- 是否有很强攻击性：",
+      "aggressive": "- 粉丝挽尊话术：",
+      "text": "事件名：- 事件简介： 事件简介：- 是否可验证： 粉丝挽尊话术：- 黑粉攻击角度： 黑粉攻击角度：- 备注："
+    },
+    {
+      "artistId": "madonna",
+      "source": "manual",
+      "id": "madonna:honor:1",
+      "category": "honor",
+      "mode": "all",
+      "verified": true,
+      "text": "荣誉：除开Taylorswift 是销量最高的流行歌手 而且完全推动了社会进步 粉丝怎么夸：女帝 黑粉怎么反驳：红枣"
+    },
+    {
+      "artistId": "madonna",
+      "source": "manual",
+      "id": "madonna:titles",
+      "category": "title_material",
+      "mode": "all",
+      "text": "Mean 标题梗：- 适合 Neutral 的标题： Neutral 标题：- 禁止使用的说法： 禁止说法："
+    },
+    {
+      "artistId": "nicki-minaj",
+      "source": "manual",
+      "id": "nicki-minaj:profile",
+      "category": "profile",
+      "mode": "all",
+      "text": "nicki-minaj 艺人画像 标签：饶舌女 简短画像：rapper / songwriter"
+    },
+    {
+      "artistId": "nicki-minaj",
+      "source": "manual",
+      "id": "nicki-minaj:names:normal",
+      "category": "normal_names",
+      "mode": "all",
+      "text": "正常称呼/美称：麻辣鸡"
+    },
+    {
+      "artistId": "nicki-minaj",
+      "source": "manual",
+      "id": "nicki-minaj:names:shade",
+      "category": "shade_names",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑称/黑话：马垃圾：谐音"
+    },
+    {
+      "artistId": "nicki-minaj",
+      "source": "manual",
+      "id": "nicki-minaj:fanbase",
+      "category": "fanbase",
+      "mode": "all",
+      "text": "正常粉丝名：鸡迷"
+    },
+    {
+      "artistId": "nicki-minaj",
+      "source": "manual",
+      "id": "nicki-minaj:fanbase:shade",
+      "category": "fanbase_shade",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "粉丝黑称：圾迷"
+    },
+    {
+      "artistId": "nicki-minaj",
+      "source": "manual",
+      "id": "nicki-minaj:wordplay",
+      "category": "wordplay",
+      "mode": "mean",
+      "aggressive": true,
+      "text": "黑话造句种子： 黑话造句例句："
+    },
+    {
+      "artistId": "nicki-minaj",
+      "source": "manual",
+      "id": "nicki-minaj:rival:1",
+      "category": "rival",
+      "mode": "mean",
+      "text": "主要对家：cardib。关系说明：冤家"
+    },
+    {
+      "artistId": "nicki-minaj",
+      "source": "manual",
+      "id": "nicki-minaj:controversy:1",
+      "category": "controversy",
+      "mode": "mean",
+      "verified": true,
+      "aggressive": false,
+      "text": "事件名：下跪Lauryn hill女帝 事件简介：下跪说唱天后 粉丝挽尊话术：Laurynhill税务问题还完了吗 黑粉攻击角度：Lauryn hill女帝 备注：- 事件名：老公是pedophile"
+    },
+    {
+      "artistId": "nicki-minaj",
+      "source": "manual",
+      "id": "nicki-minaj:honor:1",
+      "category": "honor",
+      "mode": "all",
+      "verified": "- 粉丝怎么夸：",
+      "text": "荣誉：- 是否可验证： 粉丝怎么夸：- 黑粉怎么反驳： 黑粉怎么反驳：- 备注："
+    },
+    {
+      "artistId": "nicki-minaj",
+      "source": "manual",
+      "id": "nicki-minaj:titles",
+      "category": "title_material",
+      "mode": "all",
+      "text": "Mean 标题梗：- 适合 Neutral 的标题： Neutral 标题：- 禁止使用的说法： 禁止说法："
+    }
+  ]
+}

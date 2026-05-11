@@ -17,15 +17,29 @@ export function CompareShell() {
     .filter((item): item is MetricKey =>
       validMetrics.includes(item as MetricKey),
     );
+  const isMean = mode === "mean";
 
   return (
-    <main className="min-h-screen px-6 py-10 max-sm:px-4">
-      <div className="mx-auto max-w-7xl">
-        <div className="display-font mb-10 inline-flex rounded-[24px] bg-brat-green px-8 py-5 text-4xl">
-          {mode === "mean" ? "刻薄女孩 Mode" : "清清白白 Mode"}
+    <main
+      className={`compare-page relative min-h-screen overflow-hidden px-6 py-10 max-sm:px-4 ${
+        isMean ? "compare-page--mean bg-[#7FFF00]" : "compare-page--neutral bg-[#FF4FD8]"
+      }`}
+    >
+      <div className="relative z-10 mx-auto max-w-7xl">
+        <div
+          className={`display-font mb-10 inline-flex rounded-[24px] px-8 py-5 text-4xl ${
+            isMean ? "bg-[#9DFF55]" : "bg-[#FF8AD7]"
+          }`}
+        >
+          {mode === "mean" ? "刻薄到底" : "清清白白"}
         </div>
         <div className="grid grid-cols-[1fr_0.95fr] gap-9 max-xl:grid-cols-1">
-          <DataTable artistAId={artistA} artistBId={artistB} metrics={metrics} />
+          <DataTable
+            artistAId={artistA}
+            artistBId={artistB}
+            metrics={metrics}
+            mode={mode}
+          />
           <AiPanel
             artistAId={artistA}
             artistBId={artistB}

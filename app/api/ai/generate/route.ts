@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { callOpenAICompatible } from "@/lib/ai";
 import { buildReportPrompt } from "@/lib/prompts";
+import { buildRagContext } from "@/lib/rag";
 import type { BattleMode, MetricKey } from "@/lib/types";
 
 export async function POST(request: Request) {
@@ -38,11 +39,21 @@ export async function POST(request: Request) {
         metrics,
         dataSummary: body?.dataSummary ?? "暂无结构化数据。",
         userQuestion: body?.userQuestion,
+        ragContext: buildRagContext({ artistA, artistB, mode }),
       }),
       temperature: mode === "mean" ? 0.9 : 0.5,
     });
 
-    return NextResponse.json({ message });
+    const cleanedMessage = message
+      .replace(/^好的[，,]?\s*这是为您生成的.*?(报告|PK报告)[:：]?\s*/u, "")
+      .replace(/^以下是.*?(报告|PK报告)[:：]?\s*/u, "")
+      .replace(
+        /(^|\n)\s*(总判词|判词|数据|本地库补刀|最终补刀|补刀|总结|总评|客观说明)[:：]\s*/gu,
+        "$1",
+      )
+      .trim();
+
+    return NextResponse.json({ message: cleanedMessage });
   } catch (error) {
     return NextResponse.json(
       {

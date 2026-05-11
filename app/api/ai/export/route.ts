@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { callOpenAICompatible } from "@/lib/ai";
 import { buildExportPrompt } from "@/lib/prompts";
+import { buildRagContext, buildTitleContext } from "@/lib/rag";
 import type { AiProvider, BattleMode } from "@/lib/types";
 
 export async function POST(request: Request) {
@@ -23,14 +24,33 @@ export async function POST(request: Request) {
       baseUrl: body?.provider?.baseUrl,
       apiKey: body?.provider?.apiKey,
       model: body?.provider?.model,
-      messages: buildExportPrompt({ mode, artistA, artistB, conversation }),
+      messages: buildExportPrompt({
+        mode,
+        artistA,
+        artistB,
+        conversation,
+        ragContext: buildRagContext({ artistA, artistB, mode }),
+        titleContext: buildTitleContext(mode),
+      }),
       temperature: mode === "mean" ? 0.9 : 0.5,
     });
 
-    const [rawTitle, ...rest] = output.split("\n");
+    const normalizedOutput = output.trim();
+    const explicitTitle = normalizedOutput.match(/标题[:：]\s*([^\n]+)/u)?.[1];
+    const explicitContent = normalizedOutput.match(/正文内容?[:：]\s*([\s\S]+)/u)?.[1];
+    const [rawTitle, ...rest] = normalizedOutput.split("\n");
     return NextResponse.json({
-      title: rawTitle.replace(/^标题[:：]\s*/, "").trim() || `${artistA} vs ${artistB}`,
-      content: rest.join("\n").replace(/^正文[:：]\s*/, "").trim() || output,
+      title:
+        (explicitTitle ?? rawTitle)
+          .replace(/^标题[:：]\s*/, "")
+          .replace(/<shade>([\s\S]+?)<\/shade>/g, "$1")
+          .trim() || `${artistA} vs ${artistB}`,
+      content:
+        (explicitContent ?? rest.join("\n"))
+          .replace(/^\s*(正文|正文内容)[:：]\s*/u, "")
+          .replace(/^\s*标题[:：].*\n?/u, "")
+          .replace(/(^|\n)\s*(总判词|判词|数据|本地库补刀|最终补刀|补刀|总结)[:：]\s*/gu, "$1")
+          .trim() || output.replace(/^\s*(正文|正文内容)[:：]\s*/u, ""),
     });
   } catch (error) {
     return NextResponse.json(

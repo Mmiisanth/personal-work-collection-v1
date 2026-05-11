@@ -11,6 +11,8 @@
 - 数据和 AI 内容如何展示
 - 异常情况如何提示
 
+当前实现已经进入可运行 MVP 状态。本文档保留页面规则，同时记录当前实现口径，后续改版优先先改本文档再改代码。
+
 ## 2. 页面清单
 
 MVP 包含：
@@ -84,6 +86,10 @@ Banner 数量：
 - `刻薄女孩`：刻薄、有梗、可能使用黑话和争议素材
 - `清清白白`：客观、无黑料、适合快速了解
 
+当前实现：
+- `刻薄女孩` 使用绿色主题、mean 头像、mean 显示名和 RAG 黑话语料。
+- `清清白白` 使用粉色主题、neutral 头像、neutral 显示名和中立输出约束。
+
 ### 3.5 模式切换条
 
 交互：
@@ -134,6 +140,20 @@ Banner 3：
 ### 4.3 内容规则
 
 内容由运营者维护。
+
+当前 Banner 图片统一放在：
+
+```text
+public/assets/banners/
+```
+
+命名：
+
+```text
+gaga-cancel.png
+olivia-dropdead.png
+ariana-petal.png
+```
 
 写法方向：
 - 字少
@@ -280,15 +300,16 @@ MVP 的数据表保持极简，每个维度只展示最适合横向比较的核�
 - 数据方式：CM 艺人页采集或手工补录
 
 流媒体：Spotify
-- 展示值：Spotify popularity
-- 示例：`98`
-- 数据方式：Spotify 官方 API
-- 说明：MVP 不做月听众，优先使用官方 API 可稳定获取的 popularity 字段
+- 展示值：Spotify followers
+- 示例：`110M followers`
+- 数据方式：ChartMasters Spotify followers 总榜人工补录
+- 说明：MVP 不做月听众；流媒体人气统一看 followers
 
 奖项：GRAMMY
-- 展示值：总获奖 / 总提名 / 通类数量
+- 展示值：总获奖 / 总提名 / 通类获奖数
 - 示例：`14 wins / 52 noms / 3 GF`
 - 通类范围：年专、年制、年歌、年新
+- 口径：`GF` 只统计通类获奖，不把通类提名算进去；如果后续要展示通类提名，需要单独加 `GF noms` 字段
 
 乐评：AOTY / RYM
 - 展示值：AOTY 艺人主页 critic / user

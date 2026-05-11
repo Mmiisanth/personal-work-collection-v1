@@ -5,13 +5,30 @@ import { useRouter } from "next/navigation";
 import { Check, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { artists } from "@/data/artists";
+import { ArtistAvatar } from "@/components/artist-avatar";
+import { getArtistDisplayName } from "@/lib/artist-display";
 import type { BattleMode, MetricKey } from "@/lib/types";
 
 const metrics: Array<{ key: MetricKey; label: string; source: string }> = [
   { key: "sales", label: "销量", source: "CM" },
-  { key: "streaming", label: "流媒体", source: "Spotify" },
-  { key: "awards", label: "奖项", source: "GRAMMY" },
+  { key: "streaming", label: "流媒", source: "Spotify followers" },
+  { key: "awards", label: "奖项", source: "wins / noms / GF" },
   { key: "reviews", label: "乐评", source: "AOTY / RYM" },
+];
+
+const hotPairs = [
+  {
+    label: "Taylor vs Gaga",
+    artists: ["taylor-swift", "lady-gaga"],
+  },
+  {
+    label: "Sabrina vs Olivia",
+    artists: ["sabrina-carpenter", "olivia-rodrigo"],
+  },
+  {
+    label: "Lana vs Lorde",
+    artists: ["lana-del-rey", "lorde"],
+  },
 ];
 
 export function FilterModal({
@@ -36,6 +53,9 @@ export function FilterModal({
   const [apiKey, setApiKey] = useState("");
   const [model, setModel] = useState("");
   const [checking, setChecking] = useState(false);
+  const isMean = mode === "mean";
+  const accentClass = isMean ? "bg-brat-green" : "bg-[#FF8AD7]";
+  const accentSoftClass = isMean ? "bg-brat-green/45" : "bg-[#FF8AD7]/45";
 
   const canSubmit = useMemo(() => {
     return (
@@ -60,6 +80,10 @@ export function FilterModal({
       }
       return [...current, metric];
     });
+  }
+
+  function selectHotPair(pair: string[]) {
+    setSelectedArtists(pair);
   }
 
   function submit() {
@@ -107,7 +131,7 @@ export function FilterModal({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/18 p-5 backdrop-blur-sm">
       <motion.div
-        className="glass-strong relative w-full max-w-6xl rounded-[34px] p-8"
+        className="glass-strong relative flex max-h-[min(92dvh,920px)] w-full max-w-6xl flex-col overflow-hidden rounded-[34px] p-8"
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.22 }}
@@ -120,149 +144,161 @@ export function FilterModal({
         >
           <X strokeWidth={4} />
         </button>
-        <div className="display-font inline-flex rounded-2xl bg-brat-green px-7 py-4 text-3xl">
-          {mode === "mean" ? "刻薄女孩 Mode" : "清清白白 Mode"}
-        </div>
-        <div className="mt-8 grid grid-cols-[0.9fr_1.1fr] gap-10 max-lg:grid-cols-1">
-          <section>
-            <div className="mb-4 flex items-end justify-between">
-              <h2 className="display-font text-4xl">artists</h2>
-              <span className="rounded-full bg-white/50 px-4 py-2 font-bold">
-                已选 {selectedArtists.length}/2
-              </span>
-            </div>
-            <div className="grid grid-cols-5 gap-4 max-sm:grid-cols-3">
-              {artists.map((artist) => {
-                const selected = selectedArtists.includes(artist.id);
-                return (
-                  <button
-                    key={artist.id}
-                    className="group flex flex-col items-center gap-2"
-                    onClick={() => toggleArtist(artist.id)}
-                    type="button"
-                  >
-                    <span
-                      className="relative flex size-16 items-center justify-center rounded-full border-2 border-black/20 transition-transform group-hover:scale-105"
-                      style={{ background: artist.avatarColor }}
-                    >
-                      {selected ? (
-                        <span className="absolute -right-1 -top-1 flex size-6 items-center justify-center rounded-full bg-brat-green text-black">
-                          <Check size={16} strokeWidth={4} />
-                        </span>
-                      ) : null}
-                    </span>
-                    <span className="text-center text-sm font-bold leading-tight">
-                      {artist.shortName}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
-          </section>
-          <section>
-            <h2 className="display-font mb-4 text-4xl">维度</h2>
-            <div className="grid grid-cols-2 gap-4 max-sm:grid-cols-1">
-              {metrics.map((metric) => {
-                const selected = selectedMetrics.includes(metric.key);
-                return (
-                  <button
-                    key={metric.key}
-                    className="glass flex items-center justify-between rounded-2xl p-5 text-left transition-transform hover:scale-[1.01]"
-                    onClick={() => toggleMetric(metric.key)}
-                    type="button"
-                  >
-                    <span>
-                      <span className="display-font block text-3xl">
-                        {metric.label}
-                      </span>
-                      <span className="font-bold text-black/60">
-                        {metric.source}
-                      </span>
-                    </span>
-                    <span
-                      className={`flex size-12 items-center justify-center rounded-xl border-2 border-black ${
-                        selected ? "bg-brat-green" : "bg-white/30"
-                      }`}
-                    >
-                      {selected ? <Check strokeWidth={4} /> : null}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
-            <div className="mt-7 rounded-[24px] bg-white/35 p-5">
-              <div className="mb-4 flex gap-3">
-                <button
-                  className={`rounded-full px-5 py-2 font-bold ${
-                    apiMode === "default" ? "bg-brat-green" : "bg-white/40"
-                  }`}
-                  onClick={() => setApiMode("default")}
-                  type="button"
-                >
-                  default AI
-                </button>
-                <button
-                  className={`rounded-full px-5 py-2 font-bold ${
-                    apiMode === "custom" ? "bg-riot-pink" : "bg-white/40"
-                  }`}
-                  onClick={() => setApiMode("custom")}
-                  type="button"
-                >
-                  custom
-                </button>
+        <div className="min-h-0 overflow-y-auto pr-2">
+          <div className={`display-font inline-flex rounded-2xl px-7 py-4 text-3xl ${accentClass}`}>
+            {mode === "mean" ? "刻薄到底" : "清清白白"}
+          </div>
+          <div className="mt-5 flex flex-wrap gap-3">
+            {hotPairs.map((pair) => (
+              <button
+                className={`rounded-full border-2 border-black/35 bg-white/45 px-4 py-2 text-sm font-black transition ${
+                  isMean ? "hover:bg-brat-green" : "hover:bg-[#FF8AD7]"
+                }`}
+                key={pair.label}
+                onClick={() => selectHotPair(pair.artists)}
+                type="button"
+              >
+                {pair.label}
+              </button>
+            ))}
+          </div>
+          <div className="mt-6 grid grid-cols-[0.9fr_1.1fr] gap-10 max-lg:grid-cols-1">
+            <section>
+              <div className="mb-4 flex items-end justify-between">
+                <h2 className="display-font text-4xl">artists</h2>
+                <span className="rounded-full bg-white/50 px-4 py-2 font-bold">
+                  已选 {selectedArtists.length}/2
+                </span>
               </div>
-              {apiMode === "custom" ? (
-                <div className="grid gap-3">
-                  <input
-                    className="rounded-full border border-black/25 bg-white/60 px-5 py-3 outline-none focus:border-brat-hot"
-                    onChange={(event) => setBaseUrl(event.target.value)}
-                    placeholder="base_url"
-                    value={baseUrl}
-                  />
-                  <input
-                    className="rounded-full border border-black/25 bg-white/60 px-5 py-3 outline-none focus:border-brat-hot"
-                    onChange={(event) => setApiKey(event.target.value)}
-                    placeholder="api_key"
-                    type="password"
-                    value={apiKey}
-                  />
-                  <div className="flex items-center gap-3">
-                    <input
-                      className="min-w-0 flex-1 rounded-full border border-black/25 bg-white/60 px-5 py-3 outline-none focus:border-brat-hot"
-                      onChange={(event) => setModel(event.target.value)}
-                      placeholder="model"
-                      value={model}
-                    />
+              <div className="grid grid-cols-5 gap-4 max-sm:grid-cols-3">
+                {artists.map((artist) => {
+                  const selected = selectedArtists.includes(artist.id);
+                  return (
                     <button
-                      className="display-font rounded-full bg-black px-6 py-3 text-white"
-                      disabled={checking}
-                      onClick={checkCustomApi}
+                      key={artist.id}
+                      className="group flex flex-col items-center gap-2"
+                      onClick={() => toggleArtist(artist.id)}
                       type="button"
                     >
-                      {checking ? "..." : "check"}
+                      <span className="relative transition-transform group-hover:scale-105">
+                        <ArtistAvatar artist={artist} className="size-16" mode={mode} selected={selected} />
+                        {selected ? (
+                          <span className={`absolute -right-1 -top-1 flex size-6 items-center justify-center rounded-full text-black ${accentClass}`}>
+                            <Check size={16} strokeWidth={4} />
+                          </span>
+                        ) : null}
+                      </span>
+                      <span className="text-center text-sm font-bold leading-tight">
+                        {getArtistDisplayName(artist, mode)}
+                      </span>
                     </button>
-                  </div>
-                  {checked ? (
-                    <p className="rounded-2xl bg-brat-green/45 px-4 py-3 font-bold">
-                      API 可用，可以发车。
-                    </p>
-                  ) : null}
-                  {error ? (
-                    <p className="rounded-2xl bg-riot-pink/30 px-4 py-3 font-bold">
-                      {error}
-                    </p>
-                  ) : null}
+                  );
+                })}
+              </div>
+            </section>
+            <section>
+              <h2 className="display-font mb-4 text-4xl">维度</h2>
+              <div className="grid grid-cols-2 gap-4 max-sm:grid-cols-1">
+                {metrics.map((metric) => {
+                  const selected = selectedMetrics.includes(metric.key);
+                  return (
+                    <button
+                      key={metric.key}
+                      className="glass flex items-center justify-between rounded-2xl p-5 text-left transition-transform hover:scale-[1.01]"
+                      onClick={() => toggleMetric(metric.key)}
+                      type="button"
+                    >
+                      <span>
+                        <span className="display-font block text-3xl">
+                          {metric.label}
+                        </span>
+                        <span className="font-bold text-black/60">
+                          {metric.source}
+                        </span>
+                      </span>
+                      <span
+                        className={`flex size-12 items-center justify-center rounded-xl border-2 border-black ${
+                          selected ? accentClass : "bg-white/30"
+                        }`}
+                      >
+                        {selected ? <Check strokeWidth={4} /> : null}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+              <div className="mt-7 rounded-[24px] bg-white/35 p-5">
+                <div className="mb-4 inline-grid max-w-full grid-cols-2 overflow-hidden rounded-full border-2 border-black bg-white/35 p-1">
+                  {(["default", "custom"] as const).map((item) => (
+                    <button
+                      className={`rounded-full px-5 py-2 font-black transition ${
+                        apiMode === item
+                          ? item === "default"
+                            ? accentClass
+                            : "bg-riot-pink"
+                          : "bg-transparent"
+                      }`}
+                      key={item}
+                      onClick={() => setApiMode(item)}
+                      type="button"
+                    >
+                      {item === "default" ? "default AI" : "custom"}
+                    </button>
+                  ))}
                 </div>
-              ) : (
-                <p className="font-bold">
-                  我们先用 default AI 免费发车，额度用完再让用户自己填。
-                </p>
-              )}
-            </div>
-          </section>
+                {apiMode === "custom" ? (
+                  <div className="grid gap-3">
+                    <input
+                      className="rounded-full border border-black/25 bg-white/60 px-5 py-3 outline-none focus:border-brat-hot"
+                      onChange={(event) => setBaseUrl(event.target.value)}
+                      placeholder="base_url"
+                      value={baseUrl}
+                    />
+                    <input
+                      className="rounded-full border border-black/25 bg-white/60 px-5 py-3 outline-none focus:border-brat-hot"
+                      onChange={(event) => setApiKey(event.target.value)}
+                      placeholder="api_key"
+                      type="password"
+                      value={apiKey}
+                    />
+                    <div className="flex items-center gap-3">
+                      <input
+                        className="min-w-0 flex-1 rounded-full border border-black/25 bg-white/60 px-5 py-3 outline-none focus:border-brat-hot"
+                        onChange={(event) => setModel(event.target.value)}
+                        placeholder="model"
+                        value={model}
+                      />
+                      <button
+                        className="display-font rounded-full bg-black px-6 py-3 text-white"
+                        disabled={checking}
+                        onClick={checkCustomApi}
+                        type="button"
+                      >
+                        {checking ? "..." : "check"}
+                      </button>
+                    </div>
+                    {checked ? (
+                      <p className={`rounded-2xl px-4 py-3 font-bold ${accentSoftClass}`}>
+                        API 可用，可以发车。
+                      </p>
+                    ) : null}
+                    {error ? (
+                      <p className="rounded-2xl bg-riot-pink/30 px-4 py-3 font-bold">
+                        {error}
+                      </p>
+                    ) : null}
+                  </div>
+                ) : (
+                  <p className="font-bold">
+                    default免费发车
+                  </p>
+                )}
+              </div>
+            </section>
+          </div>
         </div>
         <button
-          className="display-font mx-auto mt-8 block w-full max-w-md rounded-full bg-black px-8 py-4 text-3xl text-white disabled:cursor-not-allowed disabled:bg-black/20 disabled:text-black/35"
+          className="display-font mx-auto mt-6 block w-full max-w-md shrink-0 rounded-full bg-black px-8 py-4 text-3xl text-white disabled:cursor-not-allowed disabled:bg-black/20 disabled:text-black/35"
           disabled={!canSubmit}
           onClick={submit}
           type="button"

@@ -6,14 +6,20 @@ export type Artist = {
   id: string;
   name: string;
   shortName: string;
+  displayNames: Record<BattleMode, string>;
   avatarColor: string;
+  avatars: {
+    mean: string;
+    neutral: string;
+  };
   stats: Record<MetricKey, string>;
   links: {
-    spotify?: string;
     grammy?: string;
     aoty?: string;
     rym?: string;
-    cm?: string;
+    RC?: string;
+    cmSales?: string;
+    cmSpotifyFollowers?: string;
   };
 };
 
@@ -22,6 +28,7 @@ export type Banner = {
   title: string;
   dek: string;
   body: string;
+  imageSrc: string;
   sourceLabel: string;
   sourceUrl: string;
   color: string;
