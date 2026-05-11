@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+dist
+.env
+.env.local
+.DS_Store
+npm-debug.log*
+tsconfig.tsbuildinfo
+__pycache__/
+*.pyc
+data/rag/index/rag-embeddings.json
+data/rag/index/chroma-export.json
+public/assets/artists/source/

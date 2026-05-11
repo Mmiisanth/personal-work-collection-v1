@@ -1,0 +1,14 @@
+{
+  "chartmasters": {
+    "sales": {
+      "label": "CM best-selling artists",
+      "url": "https://chartmasters.org/best-selling-artists-of-all-time/",
+      "notes": "所有艺人的销量都从这个总榜页面查，不按艺人拆独立页面。"
+    },
+    "spotifyFollowers": {
+      "label": "CM Spotify most followed artists",
+      "url": "https://chartmasters.org/spotify-most-followed-artists/",
+      "notes": "Spotify Followers 用这个总榜页面查，用来表示流媒平台人气。"
+    }
+  }
+}

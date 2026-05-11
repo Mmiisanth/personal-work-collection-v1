@@ -1,0 +1,142 @@
+[
+  {
+    "artistId": "taylor-swift",
+    "aoty": "https://www.albumoftheyear.org/artist/323-taylor-swift/",
+    "rym": "https://rateyourmusic.com/artist/taylor-swift",
+    "rc": "https://www.robertchristgau.com/get_artist.php?name=Taylor+swift",
+    "notes": ""
+  },
+  {
+    "artistId": "lady-gaga",
+    "aoty": "https://www.albumoftheyear.org/artist/686-lady-gaga/",
+    "rym": "https://rateyourmusic.com/artist/lady-gaga",
+    "rc": "https://www.robertchristgau.com/get_artist2.php?id=6176",
+    "notes": ""
+  },
+  {
+    "artistId": "katy-perry",
+    "aoty": "https://www.albumoftheyear.org/artist/187-katy-perry/",
+    "rym": "https://rateyourmusic.com/artist/katy-perry",
+    "rc": "https://www.robertchristgau.com/get_artist.php?name=katy+perry",
+    "notes": ""
+  },
+  {
+    "artistId": "adele",
+    "aoty": "https://www.albumoftheyear.org/artist/7-adele/",
+    "rym": "https://rateyourmusic.com/artist/adele-1",
+    "rc": "https://www.robertchristgau.com/get_artist.php?name=adele",
+    "notes": ""
+  },
+  {
+    "artistId": "rihanna",
+    "aoty": "https://www.albumoftheyear.org/artist/1365-rihanna/",
+    "rym": "https://rateyourmusic.com/artist/Rihanna",
+    "rc": "https://www.robertchristgau.com/get_artist.php?name=Rihanna",
+    "notes": "原始录入为 riana，导入时映射为 Rihanna。"
+  },
+  {
+    "artistId": "lana-del-rey",
+    "aoty": "https://www.albumoftheyear.org/artist/1969-lana-del-rey/",
+    "rym": "https://rateyourmusic.com/artist/lana-del-rey",
+    "rc": "https://www.robertchristgau.com/get_artist.php?name=Lana+Del+Rey",
+    "notes": ""
+  },
+  {
+    "artistId": "lorde",
+    "aoty": "https://www.albumoftheyear.org/artist/3963-lorde/",
+    "rym": "https://rateyourmusic.com/artist/lorde",
+    "rc": "https://www.robertchristgau.com/get_artist.php?name=Lorde",
+    "notes": ""
+  },
+  {
+    "artistId": "beyonce",
+    "aoty": "https://www.albumoftheyear.org/artist/1819-beyonce/",
+    "rym": "https://rateyourmusic.com/artist/beyonce",
+    "rc": "https://www.robertchristgau.com/get_artist.php?name=Beyonce",
+    "notes": ""
+  },
+  {
+    "artistId": "britney-spears",
+    "aoty": "https://www.albumoftheyear.org/artist/886-britney-spears/",
+    "rym": "https://rateyourmusic.com/artist/britney-spears",
+    "rc": "https://www.robertchristgau.com/get_artist.php?name=Britney+Spears",
+    "notes": ""
+  },
+  {
+    "artistId": "ariana-grande",
+    "aoty": "https://www.albumoftheyear.org/artist/4490-ariana-grande/",
+    "rym": "https://rateyourmusic.com/artist/ariana-grande",
+    "rc": "https://www.robertchristgau.com/get_artist.php?name=Ariana+Grande",
+    "notes": ""
+  },
+  {
+    "artistId": "olivia-rodrigo",
+    "aoty": "https://www.albumoftheyear.org/artist/114067-olivia-rodrigo/",
+    "rym": "https://rateyourmusic.com/artist/olivia-rodrigo",
+    "rc": "https://www.robertchristgau.com/get_artist.php?name=Olivia+Rodrigo",
+    "notes": ""
+  },
+  {
+    "artistId": "sabrina-carpenter",
+    "aoty": "https://www.albumoftheyear.org/artist/12237-sabrina-carpenter/",
+    "rym": "https://rateyourmusic.com/artist/sabrina-carpenter",
+    "rc": "https://www.robertchristgau.com/get_artist.php?name=Sabrina+Carpenter",
+    "notes": ""
+  },
+  {
+    "artistId": "billie-eilish",
+    "aoty": "https://www.albumoftheyear.org/artist/34105-billie-eilish/",
+    "rym": "https://rateyourmusic.com/artist/billie-eilish",
+    "rc": "https://www.robertchristgau.com/get_artist.php?name=Billie+Eilish",
+    "notes": ""
+  },
+  {
+    "artistId": "dua-lipa",
+    "aoty": "https://www.albumoftheyear.org/artist/20340-dua-lipa/",
+    "rym": "https://rateyourmusic.com/artist/dua-lipa",
+    "rc": "https://www.robertchristgau.com/get_artist.php?name=Dua+Lipa",
+    "notes": ""
+  },
+  {
+    "artistId": "celine-dion",
+    "aoty": "https://www.albumoftheyear.org/artist/4948-celine-dion/",
+    "rym": "https://rateyourmusic.com/artist/celine-dion",
+    "rc": "https://www.robertchristgau.com/get_artist.php?name=Celine+Dion",
+    "notes": ""
+  },
+  {
+    "artistId": "whitney-houston",
+    "aoty": "https://www.albumoftheyear.org/artist/4760-whitney-houston/",
+    "rym": "https://rateyourmusic.com/artist/whitney-houston",
+    "rc": "https://www.robertchristgau.com/get_artist.php?name=Whitney+Houston",
+    "notes": ""
+  },
+  {
+    "artistId": "mariah-carey",
+    "aoty": "https://www.albumoftheyear.org/artist/215-mariah-carey/",
+    "rym": "https://rateyourmusic.com/artist/mariah-carey",
+    "rc": "https://www.robertchristgau.com/get_artist.php?name=Mariah+Carey",
+    "notes": ""
+  },
+  {
+    "artistId": "charli-xcx",
+    "aoty": "https://www.albumoftheyear.org/artist/2255-charli-xcx/",
+    "rym": "https://rateyourmusic.com/artist/charli-xcx",
+    "rc": "https://www.robertchristgau.com/get_artist.php?name=Charli+XCX",
+    "notes": ""
+  },
+  {
+    "artistId": "madonna",
+    "aoty": "https://www.albumoftheyear.org/artist/2269-madonna/",
+    "rym": "https://rateyourmusic.com/artist/madonna",
+    "rc": "https://www.robertchristgau.com/get_artist.php?name=Madonna",
+    "notes": ""
+  },
+  {
+    "artistId": "nicki-minaj",
+    "aoty": "https://www.albumoftheyear.org/artist/1375-nicki-minaj/",
+    "rym": "https://rateyourmusic.com/artist/nicki-minaj",
+    "rc": "https://www.robertchristgau.com/get_artist.php?name=Nicki+Minaj",
+    "notes": ""
+  }
+]

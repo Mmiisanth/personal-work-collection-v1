@@ -1,0 +1,1142 @@
+[
+  {
+    "artistId": "taylor-swift",
+    "metric": "reviews",
+    "value": {
+      "aotyCritical": "75",
+      "aotyUser": "67"
+    },
+    "sourcePlatform": "aoty",
+    "sourceUrl": "https://www.albumoftheyear.org/artist/323-taylor-swift/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "AOTY 乐评均分 / 用户均分。"
+  },
+  {
+    "artistId": "taylor-swift",
+    "metric": "sales",
+    "value": {
+      "cmTotalSales": "267,199,000"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/best-selling-artists-of-all-time/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "CM 销量人工补录；所有艺人共用同一个 CM 总榜页面。"
+  },
+  {
+    "artistId": "taylor-swift",
+    "metric": "streaming",
+    "value": {
+      "spotifyFollowers": "156,317,149"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/spotify-most-followed-artists/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "流媒体人气只看 Spotify Followers，用 CM followers 总榜人工补录。"
+  },
+  {
+    "artistId": "taylor-swift",
+    "metric": "awards",
+    "value": {
+      "grammyWins": "14",
+      "grammyNominations": "58",
+      "grammyGeneralFieldTotal": "4",
+      "generalField": {
+        "albumOfTheYear": "4",
+        "recordOfTheYear": "0",
+        "songOfTheYear": "0",
+        "bestNewArtist": "0"
+      }
+    },
+    "sourcePlatform": "grammy",
+    "sourceUrl": "https://www.grammy.com/search/Taylor%20Swift",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "展示格式：wins / noms / GF(年专/年制/年歌/年新)。GF 只统计通类获奖数，不把提名算进去。"
+  },
+  {
+    "artistId": "lady-gaga",
+    "metric": "reviews",
+    "value": {
+      "aotyCritical": "69",
+      "aotyUser": "75"
+    },
+    "sourcePlatform": "aoty",
+    "sourceUrl": "https://www.albumoftheyear.org/artist/686-lady-gaga/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "AOTY 乐评均分 / 用户均分。"
+  },
+  {
+    "artistId": "lady-gaga",
+    "metric": "sales",
+    "value": {
+      "cmTotalSales": "105,002,000"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/best-selling-artists-of-all-time/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "CM 销量人工补录；所有艺人共用同一个 CM 总榜页面。"
+  },
+  {
+    "artistId": "lady-gaga",
+    "metric": "streaming",
+    "value": {
+      "spotifyFollowers": "46,188,120"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/spotify-most-followed-artists/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "流媒体人气只看 Spotify Followers，用 CM followers 总榜人工补录。"
+  },
+  {
+    "artistId": "lady-gaga",
+    "metric": "awards",
+    "value": {
+      "grammyWins": "16",
+      "grammyNominations": "45",
+      "grammyGeneralFieldTotal": "0",
+      "generalField": {
+        "albumOfTheYear": "0",
+        "recordOfTheYear": "0",
+        "songOfTheYear": "0",
+        "bestNewArtist": "0"
+      }
+    },
+    "sourcePlatform": "grammy",
+    "sourceUrl": "https://www.grammy.com/search/Lady%20Gaga",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "展示格式：wins / noms / GF(年专/年制/年歌/年新)。GF 只统计通类获奖数，不把提名算进去。"
+  },
+  {
+    "artistId": "katy-perry",
+    "metric": "reviews",
+    "value": {
+      "aotyCritical": "52",
+      "aotyUser": "53"
+    },
+    "sourcePlatform": "aoty",
+    "sourceUrl": "https://www.albumoftheyear.org/artist/187-katy-perry/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "AOTY 乐评均分 / 用户均分。"
+  },
+  {
+    "artistId": "katy-perry",
+    "metric": "sales",
+    "value": {
+      "cmTotalSales": "82,302,000"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/best-selling-artists-of-all-time/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "CM 销量人工补录；所有艺人共用同一个 CM 总榜页面。"
+  },
+  {
+    "artistId": "katy-perry",
+    "metric": "streaming",
+    "value": {
+      "spotifyFollowers": "40,296,598"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/spotify-most-followed-artists/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "流媒体人气只看 Spotify Followers，用 CM followers 总榜人工补录。"
+  },
+  {
+    "artistId": "katy-perry",
+    "metric": "awards",
+    "value": {
+      "grammyWins": "0",
+      "grammyNominations": "13",
+      "grammyGeneralFieldTotal": "0",
+      "generalField": {
+        "albumOfTheYear": "0",
+        "recordOfTheYear": "0",
+        "songOfTheYear": "0",
+        "bestNewArtist": "0"
+      }
+    },
+    "sourcePlatform": "grammy",
+    "sourceUrl": "https://www.grammy.com/search/Katy%20Perry",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "展示格式：wins / noms / GF(年专/年制/年歌/年新)。GF 只统计通类获奖数，不把提名算进去。"
+  },
+  {
+    "artistId": "adele",
+    "metric": "reviews",
+    "value": {
+      "aotyCritical": "73",
+      "aotyUser": "76"
+    },
+    "sourcePlatform": "aoty",
+    "sourceUrl": "https://www.albumoftheyear.org/artist/7-adele/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "AOTY 乐评均分 / 用户均分。"
+  },
+  {
+    "artistId": "adele",
+    "metric": "sales",
+    "value": {
+      "cmTotalSales": "122,272,000"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/best-selling-artists-of-all-time/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "CM 销量人工补录；所有艺人共用同一个 CM 总榜页面。"
+  },
+  {
+    "artistId": "adele",
+    "metric": "streaming",
+    "value": {
+      "spotifyFollowers": "70,136,046"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/spotify-most-followed-artists/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "流媒体人气只看 Spotify Followers，用 CM followers 总榜人工补录。"
+  },
+  {
+    "artistId": "adele",
+    "metric": "awards",
+    "value": {
+      "grammyWins": "16",
+      "grammyNominations": "25",
+      "grammyGeneralFieldTotal": "7",
+      "generalField": {
+        "albumOfTheYear": "2",
+        "recordOfTheYear": "2",
+        "songOfTheYear": "2",
+        "bestNewArtist": "1"
+      }
+    },
+    "sourcePlatform": "grammy",
+    "sourceUrl": "https://www.grammy.com/search/Adele",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "展示格式：wins / noms / GF(年专/年制/年歌/年新)。GF 只统计通类获奖数，不把提名算进去。"
+  },
+  {
+    "artistId": "rihanna",
+    "metric": "reviews",
+    "value": {
+      "aotyCritical": "65",
+      "aotyUser": "71"
+    },
+    "sourcePlatform": "aoty",
+    "sourceUrl": "https://www.albumoftheyear.org/artist/1365-rihanna/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "AOTY 乐评均分 / 用户均分。"
+  },
+  {
+    "artistId": "rihanna",
+    "metric": "sales",
+    "value": {
+      "cmTotalSales": "267,199,000"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/best-selling-artists-of-all-time/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "CM 销量人工补录；所有艺人共用同一个 CM 总榜页面。"
+  },
+  {
+    "artistId": "rihanna",
+    "metric": "streaming",
+    "value": {
+      "spotifyFollowers": "73,322,133"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/spotify-most-followed-artists/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "流媒体人气只看 Spotify Followers，用 CM followers 总榜人工补录。"
+  },
+  {
+    "artistId": "rihanna",
+    "metric": "awards",
+    "value": {
+      "grammyWins": "9",
+      "grammyNominations": "34",
+      "grammyGeneralFieldTotal": "0",
+      "generalField": {
+        "albumOfTheYear": "0",
+        "recordOfTheYear": "0",
+        "songOfTheYear": "0",
+        "bestNewArtist": "0"
+      }
+    },
+    "sourcePlatform": "grammy",
+    "sourceUrl": "https://www.grammy.com/search/Rihanna",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "展示格式：wins / noms / GF(年专/年制/年歌/年新)。GF 只统计通类获奖数，不把提名算进去。"
+  },
+  {
+    "artistId": "lana-del-rey",
+    "metric": "reviews",
+    "value": {
+      "aotyCritical": "73",
+      "aotyUser": "80"
+    },
+    "sourcePlatform": "aoty",
+    "sourceUrl": "https://www.albumoftheyear.org/artist/1969-lana-del-rey/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "AOTY 乐评均分 / 用户均分。"
+  },
+  {
+    "artistId": "lana-del-rey",
+    "metric": "sales",
+    "value": {
+      "cmTotalSales": "66,458,000"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/best-selling-artists-of-all-time/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "CM 销量人工补录；所有艺人共用同一个 CM 总榜页面。"
+  },
+  {
+    "artistId": "lana-del-rey",
+    "metric": "streaming",
+    "value": {
+      "spotifyFollowers": "56,896,165"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/spotify-most-followed-artists/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "流媒体人气只看 Spotify Followers，用 CM followers 总榜人工补录。"
+  },
+  {
+    "artistId": "lana-del-rey",
+    "metric": "awards",
+    "value": {
+      "grammyWins": "0",
+      "grammyNominations": "11",
+      "grammyGeneralFieldTotal": "0",
+      "generalField": {
+        "albumOfTheYear": "0",
+        "recordOfTheYear": "0",
+        "songOfTheYear": "0",
+        "bestNewArtist": "0"
+      }
+    },
+    "sourcePlatform": "grammy",
+    "sourceUrl": "https://www.grammy.com/search/Lana%20Del%20Rey",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "展示格式：wins / noms / GF(年专/年制/年歌/年新)。GF 只统计通类获奖数，不把提名算进去。"
+  },
+  {
+    "artistId": "lorde",
+    "metric": "reviews",
+    "value": {
+      "aotyCritical": "77",
+      "aotyUser": "80"
+    },
+    "sourcePlatform": "aoty",
+    "sourceUrl": "https://www.albumoftheyear.org/artist/3963-lorde/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "AOTY 乐评均分 / 用户均分。"
+  },
+  {
+    "artistId": "lorde",
+    "metric": "sales",
+    "value": {
+      "cmTotalSales": "20,723,000"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/best-selling-artists-of-all-time/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "CM 销量人工补录；所有艺人共用同一个 CM 总榜页面。"
+  },
+  {
+    "artistId": "lorde",
+    "metric": "streaming",
+    "value": {
+      "spotifyFollowers": "10,825,146"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/spotify-most-followed-artists/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "流媒体人气只看 Spotify Followers，用 CM followers 总榜人工补录。"
+  },
+  {
+    "artistId": "lorde",
+    "metric": "awards",
+    "value": {
+      "grammyWins": "2",
+      "grammyNominations": "5",
+      "grammyGeneralFieldTotal": "1",
+      "generalField": {
+        "albumOfTheYear": "0",
+        "recordOfTheYear": "0",
+        "songOfTheYear": "1",
+        "bestNewArtist": "0"
+      }
+    },
+    "sourcePlatform": "grammy",
+    "sourceUrl": "https://www.grammy.com/search/Lorde",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "展示格式：wins / noms / GF(年专/年制/年歌/年新)。GF 只统计通类获奖数，不把提名算进去。"
+  },
+  {
+    "artistId": "beyonce",
+    "metric": "reviews",
+    "value": {
+      "aotyCritical": "76",
+      "aotyUser": "80"
+    },
+    "sourcePlatform": "aoty",
+    "sourceUrl": "https://www.albumoftheyear.org/artist/1819-beyonce/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "AOTY 乐评均分 / 用户均分。"
+  },
+  {
+    "artistId": "beyonce",
+    "metric": "sales",
+    "value": {
+      "cmTotalSales": "115,155,000"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/best-selling-artists-of-all-time/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "CM 销量人工补录；所有艺人共用同一个 CM 总榜页面。"
+  },
+  {
+    "artistId": "beyonce",
+    "metric": "streaming",
+    "value": {
+      "spotifyFollowers": "42,651,410"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/spotify-most-followed-artists/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "流媒体人气只看 Spotify Followers，用 CM followers 总榜人工补录。"
+  },
+  {
+    "artistId": "beyonce",
+    "metric": "awards",
+    "value": {
+      "grammyWins": "35",
+      "grammyNominations": "99",
+      "grammyGeneralFieldTotal": "2",
+      "generalField": {
+        "albumOfTheYear": "1",
+        "recordOfTheYear": "0",
+        "songOfTheYear": "1",
+        "bestNewArtist": "0"
+      }
+    },
+    "sourcePlatform": "grammy",
+    "sourceUrl": "https://www.grammy.com/search/Beyonce",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "展示格式：wins / noms / GF(年专/年制/年歌/年新)。GF 只统计通类获奖数，不把提名算进去。"
+  },
+  {
+    "artistId": "britney-spears",
+    "metric": "reviews",
+    "value": {
+      "aotyCritical": "59",
+      "aotyUser": "71"
+    },
+    "sourcePlatform": "aoty",
+    "sourceUrl": "https://www.albumoftheyear.org/artist/886-britney-spears/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "AOTY 乐评均分 / 用户均分。"
+  },
+  {
+    "artistId": "britney-spears",
+    "metric": "sales",
+    "value": {
+      "cmTotalSales": "127,733,000"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/best-selling-artists-of-all-time/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "CM 销量人工补录；所有艺人共用同一个 CM 总榜页面。"
+  },
+  {
+    "artistId": "britney-spears",
+    "metric": "streaming",
+    "value": {
+      "spotifyFollowers": "19,107,079"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/spotify-most-followed-artists/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "流媒体人气只看 Spotify Followers，用 CM followers 总榜人工补录。"
+  },
+  {
+    "artistId": "britney-spears",
+    "metric": "awards",
+    "value": {
+      "grammyWins": "3",
+      "grammyNominations": "20",
+      "grammyGeneralFieldTotal": "0",
+      "generalField": {
+        "albumOfTheYear": "0",
+        "recordOfTheYear": "0",
+        "songOfTheYear": "0",
+        "bestNewArtist": "0"
+      }
+    },
+    "sourcePlatform": "grammy",
+    "sourceUrl": "https://www.grammy.com/search/Britney%20Spears",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "展示格式：wins / noms / GF(年专/年制/年歌/年新)。GF 只统计通类获奖数，不把提名算进去。"
+  },
+  {
+    "artistId": "ariana-grande",
+    "metric": "reviews",
+    "value": {
+      "aotyCritical": "73",
+      "aotyUser": "74"
+    },
+    "sourcePlatform": "aoty",
+    "sourceUrl": "https://www.albumoftheyear.org/artist/4490-ariana-grande/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "AOTY 乐评均分 / 用户均分。"
+  },
+  {
+    "artistId": "ariana-grande",
+    "metric": "sales",
+    "value": {
+      "cmTotalSales": "100,783,000"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/best-selling-artists-of-all-time/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "CM 销量人工补录；所有艺人共用同一个 CM 总榜页面。"
+  },
+  {
+    "artistId": "ariana-grande",
+    "metric": "streaming",
+    "value": {
+      "spotifyFollowers": "111,421,682"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/spotify-most-followed-artists/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "流媒体人气只看 Spotify Followers，用 CM followers 总榜人工补录。"
+  },
+  {
+    "artistId": "ariana-grande",
+    "metric": "awards",
+    "value": {
+      "grammyWins": "3",
+      "grammyNominations": "20",
+      "grammyGeneralFieldTotal": "0",
+      "generalField": {
+        "albumOfTheYear": "0",
+        "recordOfTheYear": "0",
+        "songOfTheYear": "0",
+        "bestNewArtist": "0"
+      }
+    },
+    "sourcePlatform": "grammy",
+    "sourceUrl": "https://www.grammy.com/search/Ariana%20Grande",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "展示格式：wins / noms / GF(年专/年制/年歌/年新)。GF 只统计通类获奖数，不把提名算进去。"
+  },
+  {
+    "artistId": "olivia-rodrigo",
+    "metric": "reviews",
+    "value": {
+      "aotyCritical": "81",
+      "aotyUser": "76"
+    },
+    "sourcePlatform": "aoty",
+    "sourceUrl": "https://www.albumoftheyear.org/artist/114067-olivia-rodrigo/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "AOTY 乐评均分 / 用户均分。"
+  },
+  {
+    "artistId": "olivia-rodrigo",
+    "metric": "sales",
+    "value": {
+      "cmTotalSales": "36,732,000"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/best-selling-artists-of-all-time/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "CM 销量人工补录；所有艺人共用同一个 CM 总榜页面。"
+  },
+  {
+    "artistId": "olivia-rodrigo",
+    "metric": "streaming",
+    "value": {
+      "spotifyFollowers": "53,102,325"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/spotify-most-followed-artists/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "流媒体人气只看 Spotify Followers，用 CM followers 总榜人工补录。"
+  },
+  {
+    "artistId": "olivia-rodrigo",
+    "metric": "awards",
+    "value": {
+      "grammyWins": "3",
+      "grammyNominations": "14",
+      "grammyGeneralFieldTotal": "1",
+      "generalField": {
+        "albumOfTheYear": "0",
+        "recordOfTheYear": "0",
+        "songOfTheYear": "0",
+        "bestNewArtist": "1"
+      }
+    },
+    "sourcePlatform": "grammy",
+    "sourceUrl": "https://www.grammy.com/search/Olivia%20Rodrigo",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "展示格式：wins / noms / GF(年专/年制/年歌/年新)。GF 只统计通类获奖数，不把提名算进去。"
+  },
+  {
+    "artistId": "sabrina-carpenter",
+    "metric": "reviews",
+    "value": {
+      "aotyCritical": "71",
+      "aotyUser": "66"
+    },
+    "sourcePlatform": "aoty",
+    "sourceUrl": "https://www.albumoftheyear.org/artist/12237-sabrina-carpenter/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "AOTY 乐评均分 / 用户均分。"
+  },
+  {
+    "artistId": "sabrina-carpenter",
+    "metric": "sales",
+    "value": {
+      "cmTotalSales": "32,093,000"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/best-selling-artists-of-all-time/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "CM 销量人工补录；所有艺人共用同一个 CM 总榜页面。"
+  },
+  {
+    "artistId": "sabrina-carpenter",
+    "metric": "streaming",
+    "value": {
+      "spotifyFollowers": "32,012,003"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/spotify-most-followed-artists/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "流媒体人气只看 Spotify Followers，用 CM followers 总榜人工补录。"
+  },
+  {
+    "artistId": "sabrina-carpenter",
+    "metric": "awards",
+    "value": {
+      "grammyWins": "2",
+      "grammyNominations": "9",
+      "grammyGeneralFieldTotal": "0",
+      "generalField": {
+        "albumOfTheYear": "0",
+        "recordOfTheYear": "0",
+        "songOfTheYear": "0",
+        "bestNewArtist": "0"
+      }
+    },
+    "sourcePlatform": "grammy",
+    "sourceUrl": "https://www.grammy.com/search/Sabrina%20Carpenter",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "展示格式：wins / noms / GF(年专/年制/年歌/年新)。GF 只统计通类获奖数，不把提名算进去。"
+  },
+  {
+    "artistId": "billie-eilish",
+    "metric": "reviews",
+    "value": {
+      "aotyCritical": "81",
+      "aotyUser": "79"
+    },
+    "sourcePlatform": "aoty",
+    "sourceUrl": "https://www.albumoftheyear.org/artist/34105-billie-eilish/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "AOTY 乐评均分 / 用户均分。"
+  },
+  {
+    "artistId": "billie-eilish",
+    "metric": "sales",
+    "value": {
+      "cmTotalSales": "77,908,000"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/best-selling-artists-of-all-time/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "CM 销量人工补录；所有艺人共用同一个 CM 总榜页面。"
+  },
+  {
+    "artistId": "billie-eilish",
+    "metric": "streaming",
+    "value": {
+      "spotifyFollowers": "126,004,225"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/spotify-most-followed-artists/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "流媒体人气只看 Spotify Followers，用 CM followers 总榜人工补录。"
+  },
+  {
+    "artistId": "billie-eilish",
+    "metric": "awards",
+    "value": {
+      "grammyWins": "10",
+      "grammyNominations": "34",
+      "grammyGeneralFieldTotal": "7",
+      "generalField": {
+        "albumOfTheYear": "1",
+        "recordOfTheYear": "2",
+        "songOfTheYear": "3",
+        "bestNewArtist": "1"
+      }
+    },
+    "sourcePlatform": "grammy",
+    "sourceUrl": "https://www.grammy.com/search/Billie%20Eilish",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "展示格式：wins / noms / GF(年专/年制/年歌/年新)。GF 只统计通类获奖数，不把提名算进去。"
+  },
+  {
+    "artistId": "dua-lipa",
+    "metric": "reviews",
+    "value": {
+      "aotyCritical": "70",
+      "aotyUser": "74"
+    },
+    "sourcePlatform": "aoty",
+    "sourceUrl": "https://www.albumoftheyear.org/artist/20340-dua-lipa/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "AOTY 乐评均分 / 用户均分。"
+  },
+  {
+    "artistId": "dua-lipa",
+    "metric": "sales",
+    "value": {
+      "cmTotalSales": "53,573,000"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/best-selling-artists-of-all-time/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "CM 销量人工补录；所有艺人共用同一个 CM 总榜页面。"
+  },
+  {
+    "artistId": "dua-lipa",
+    "metric": "streaming",
+    "value": {
+      "spotifyFollowers": "47,983,375"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/spotify-most-followed-artists/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "流媒体人气只看 Spotify Followers，用 CM followers 总榜人工补录。"
+  },
+  {
+    "artistId": "dua-lipa",
+    "metric": "awards",
+    "value": {
+      "grammyWins": "3",
+      "grammyNominations": "10",
+      "grammyGeneralFieldTotal": "1",
+      "generalField": {
+        "albumOfTheYear": "0",
+        "recordOfTheYear": "0",
+        "songOfTheYear": "0",
+        "bestNewArtist": "1"
+      }
+    },
+    "sourcePlatform": "grammy",
+    "sourceUrl": "https://www.grammy.com/search/Dua%20Lipa",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "展示格式：wins / noms / GF(年专/年制/年歌/年新)。GF 只统计通类获奖数，不把提名算进去。"
+  },
+  {
+    "artistId": "celine-dion",
+    "metric": "reviews",
+    "value": {
+      "aotyCritical": "55",
+      "aotyUser": "58"
+    },
+    "sourcePlatform": "aoty",
+    "sourceUrl": "https://www.albumoftheyear.org/artist/4948-celine-dion/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "AOTY 乐评均分 / 用户均分。"
+  },
+  {
+    "artistId": "celine-dion",
+    "metric": "sales",
+    "value": {
+      "cmTotalSales": "203,779,000"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/best-selling-artists-of-all-time/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "CM 销量人工补录；所有艺人共用同一个 CM 总榜页面。"
+  },
+  {
+    "artistId": "celine-dion",
+    "metric": "streaming",
+    "value": {
+      "spotifyFollowers": "11,006,49"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/spotify-most-followed-artists/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "流媒体人气只看 Spotify Followers，用 CM followers 总榜人工补录。"
+  },
+  {
+    "artistId": "celine-dion",
+    "metric": "awards",
+    "value": {
+      "grammyWins": "56",
+      "grammyNominations": "1",
+      "grammyGeneralFieldTotal": "2",
+      "generalField": {
+        "albumOfTheYear": "1",
+        "recordOfTheYear": "1",
+        "songOfTheYear": "0",
+        "bestNewArtist": "0"
+      }
+    },
+    "sourcePlatform": "grammy",
+    "sourceUrl": "https://www.grammy.com/search/Celine%20Dion",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "展示格式：wins / noms / GF(年专/年制/年歌/年新)。GF 只统计通类获奖数，不把提名算进去。"
+  },
+  {
+    "artistId": "whitney-houston",
+    "metric": "reviews",
+    "value": {
+      "aotyCritical": "63",
+      "aotyUser": "76"
+    },
+    "sourcePlatform": "aoty",
+    "sourceUrl": "https://www.albumoftheyear.org/artist/4760-whitney-houston/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "AOTY 乐评均分 / 用户均分。"
+  },
+  {
+    "artistId": "whitney-houston",
+    "metric": "sales",
+    "value": {
+      "cmTotalSales": "163,626,000"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/best-selling-artists-of-all-time/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "CM 销量人工补录；所有艺人共用同一个 CM 总榜页面。"
+  },
+  {
+    "artistId": "whitney-houston",
+    "metric": "streaming",
+    "value": {
+      "spotifyFollowers": "12,253,552"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/spotify-most-followed-artists/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "流媒体人气只看 Spotify Followers，用 CM followers 总榜人工补录。"
+  },
+  {
+    "artistId": "whitney-houston",
+    "metric": "awards",
+    "value": {
+      "grammyWins": "6",
+      "grammyNominations": "25",
+      "grammyGeneralFieldTotal": "2",
+      "generalField": {
+        "albumOfTheYear": "1",
+        "recordOfTheYear": "1",
+        "songOfTheYear": "0",
+        "bestNewArtist": "0"
+      }
+    },
+    "sourcePlatform": "grammy",
+    "sourceUrl": "https://www.grammy.com/search/Whitney%20Houston",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "展示格式：wins / noms / GF(年专/年制/年歌/年新)。GF 只统计通类获奖数，不把提名算进去。"
+  },
+  {
+    "artistId": "mariah-carey",
+    "metric": "reviews",
+    "value": {
+      "aotyCritical": "64",
+      "aotyUser": "77"
+    },
+    "sourcePlatform": "aoty",
+    "sourceUrl": "https://www.albumoftheyear.org/artist/215-mariah-carey/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "AOTY 乐评均分 / 用户均分。"
+  },
+  {
+    "artistId": "mariah-carey",
+    "metric": "sales",
+    "value": {
+      "cmTotalSales": "199,930,000"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/best-selling-artists-of-all-time/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "CM 销量人工补录；所有艺人共用同一个 CM 总榜页面。"
+  },
+  {
+    "artistId": "mariah-carey",
+    "metric": "streaming",
+    "value": {
+      "spotifyFollowers": "12,825,371"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/spotify-most-followed-artists/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "流媒体人气只看 Spotify Followers，用 CM followers 总榜人工补录。"
+  },
+  {
+    "artistId": "mariah-carey",
+    "metric": "awards",
+    "value": {
+      "grammyWins": "5",
+      "grammyNominations": "34",
+      "grammyGeneralFieldTotal": "1",
+      "generalField": {
+        "albumOfTheYear": "0",
+        "recordOfTheYear": "0",
+        "songOfTheYear": "0",
+        "bestNewArtist": "1"
+      }
+    },
+    "sourcePlatform": "grammy",
+    "sourceUrl": "https://www.grammy.com/search/Mariah%20Carey",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "展示格式：wins / noms / GF(年专/年制/年歌/年新)。GF 只统计通类获奖数，不把提名算进去。"
+  },
+  {
+    "artistId": "charli-xcx",
+    "metric": "reviews",
+    "value": {
+      "aotyCritical": "77",
+      "aotyUser": "80"
+    },
+    "sourcePlatform": "aoty",
+    "sourceUrl": "https://www.albumoftheyear.org/artist/2255-charli-xcx/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "AOTY 乐评均分 / 用户均分。"
+  },
+  {
+    "artistId": "charli-xcx",
+    "metric": "sales",
+    "value": {
+      "cmTotalSales": "14,370,000"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/best-selling-artists-of-all-time/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "CM 销量人工补录；所有艺人共用同一个 CM 总榜页面。"
+  },
+  {
+    "artistId": "charli-xcx",
+    "metric": "streaming",
+    "value": {
+      "spotifyFollowers": "6,993,299"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/spotify-most-followed-artists/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "流媒体人气只看 Spotify Followers，用 CM followers 总榜人工补录。"
+  },
+  {
+    "artistId": "charli-xcx",
+    "metric": "awards",
+    "value": {
+      "grammyWins": "3",
+      "grammyNominations": "10",
+      "grammyGeneralFieldTotal": "0",
+      "generalField": {
+        "albumOfTheYear": "0",
+        "recordOfTheYear": "0",
+        "songOfTheYear": "0",
+        "bestNewArtist": "0"
+      }
+    },
+    "sourcePlatform": "grammy",
+    "sourceUrl": "https://www.grammy.com/search/Charli%20XCX",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "展示格式：wins / noms / GF(年专/年制/年歌/年新)。GF 只统计通类获奖数，不把提名算进去。"
+  },
+  {
+    "artistId": "madonna",
+    "metric": "reviews",
+    "value": {
+      "aotyCritical": "69",
+      "aotyUser": "78"
+    },
+    "sourcePlatform": "aoty",
+    "sourceUrl": "https://www.albumoftheyear.org/artist/2269-madonna/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "AOTY 乐评均分 / 用户均分。"
+  },
+  {
+    "artistId": "madonna",
+    "metric": "sales",
+    "value": {
+      "cmTotalSales": "257,777,00"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/best-selling-artists-of-all-time/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "CM 销量人工补录；所有艺人共用同一个 CM 总榜页面。"
+  },
+  {
+    "artistId": "madonna",
+    "metric": "streaming",
+    "value": {
+      "spotifyFollowers": "9,299,429"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/spotify-most-followed-artists/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "流媒体人气只看 Spotify Followers，用 CM followers 总榜人工补录。"
+  },
+  {
+    "artistId": "madonna",
+    "metric": "awards",
+    "value": {
+      "grammyWins": "7",
+      "grammyNominations": "28",
+      "grammyGeneralFieldTotal": "0",
+      "generalField": {
+        "albumOfTheYear": "0",
+        "recordOfTheYear": "0",
+        "songOfTheYear": "0",
+        "bestNewArtist": "0"
+      }
+    },
+    "sourcePlatform": "grammy",
+    "sourceUrl": "https://www.grammy.com/search/Madonna",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "展示格式：wins / noms / GF(年专/年制/年歌/年新)。GF 只统计通类获奖数，不把提名算进去。"
+  },
+  {
+    "artistId": "nicki-minaj",
+    "metric": "reviews",
+    "value": {
+      "aotyCritical": "64",
+      "aotyUser": "57"
+    },
+    "sourcePlatform": "aoty",
+    "sourceUrl": "https://www.albumoftheyear.org/artist/1375-nicki-minaj/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "AOTY 乐评均分 / 用户均分。"
+  },
+  {
+    "artistId": "nicki-minaj",
+    "metric": "sales",
+    "value": {
+      "cmTotalSales": "64,489,000"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/best-selling-artists-of-all-time/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "CM 销量人工补录；所有艺人共用同一个 CM 总榜页面。"
+  },
+  {
+    "artistId": "nicki-minaj",
+    "metric": "streaming",
+    "value": {
+      "spotifyFollowers": "34,708,715"
+    },
+    "sourcePlatform": "chartmasters",
+    "sourceUrl": "https://chartmasters.org/spotify-most-followed-artists/",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "流媒体人气只看 Spotify Followers，用 CM followers 总榜人工补录。"
+  },
+  {
+    "artistId": "nicki-minaj",
+    "metric": "awards",
+    "value": {
+      "grammyWins": "0",
+      "grammyNominations": "12",
+      "grammyGeneralFieldTotal": "0",
+      "generalField": {
+        "albumOfTheYear": "0",
+        "recordOfTheYear": "0",
+        "songOfTheYear": "0",
+        "bestNewArtist": "0"
+      }
+    },
+    "sourcePlatform": "grammy",
+    "sourceUrl": "https://www.grammy.com/search/Nicki%20Minaj",
+    "updatedAt": "2026/5/5",
+    "confidence": "manual",
+    "notes": "展示格式：wins / noms / GF(年专/年制/年歌/年新)。GF 只统计通类获奖数，不把提名算进去。"
+  }
+]

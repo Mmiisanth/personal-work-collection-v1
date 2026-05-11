@@ -1,0 +1,2001 @@
+[
+  {
+    "artistId": "taylor-swift",
+    "tags": [
+      "新生代五大第一"
+    ],
+    "profile": {
+      "styleTags": [],
+      "careerEras": [],
+      "publicImage": "",
+      "summary": "songwriter"
+    },
+    "names": {
+      "normal": [
+        {
+          "name": "泰勒斯"
+        },
+        {
+          "name": "霉霉"
+        },
+        {
+          "name": "霉女帝"
+        },
+        {
+          "name": "世女一"
+        }
+      ],
+      "shade": [
+        {
+          "name": "交姐",
+          "explanation": "公交车梗的称呼化版本"
+        },
+        {
+          "name": "公交车",
+          "explanation": "感情经历很多"
+        },
+        {
+          "name": "交瘤子",
+          "explanation": "腋下有葡萄瘤子"
+        }
+      ]
+    },
+    "fanbase": {
+      "name": "霉粉 / 小草莓",
+      "normalNames": [
+        "霉粉",
+        "小草莓"
+      ],
+      "notes": "",
+      "shadeNames": [
+        {
+          "name": "交迷"
+        },
+        {
+          "name": "车迷"
+        },
+        {
+          "name": "癌交瘤子"
+        }
+      ]
+    },
+    "rivals": [
+      {
+        "name": "lady gaga 粉丝",
+        "notes": "撕的最开 但两者一体两面 很好磕"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "时代巡演炙烤小草莓",
+        "summary": "时代巡演巴西场有粉丝中暑死去",
+        "verified": true,
+        "aggressive": true,
+        "defenseTalkingPoint": "主办方的锅不给水",
+        "attackAngle": "交姐我口渴",
+        "notes": ""
+      },
+      {
+        "title": "ttpd发行大量版本",
+        "summary": "ttpd数字版本发行84个版本",
+        "verified": true,
+        "aggressive": false,
+        "defenseTalkingPoint": "其他艺人为什么不发多版本是不想吗",
+        "attackAngle": "没有集齐所有版本我祝你生活一般",
+        "notes": ""
+      },
+      {
+        "title": "olivia rodrigo 的单曲drivers license事件",
+        "summary": "ts控诉olivia抄袭最终olivia给出了这首歌的百分之50版权",
+        "verified": true,
+        "aggressive": false,
+        "defenseTalkingPoint": "olivia一遍出道营销自己是小草莓一遍抄袭",
+        "attackAngle": "行业里有很多很mean的前辈",
+        "notes": ""
+      }
+    ],
+    "defenseTalkingPoints": [
+      "主办方的锅不给水",
+      "其他艺人为什么不发多版本是不想吗",
+      "olivia一遍出道营销自己是小草莓一遍抄袭"
+    ],
+    "honorPoints": [
+      {
+        "title": "销量女性艺人全时代第一完全是世女一",
+        "verified": true,
+        "fanPraise": "世女一饶命 她就是音乐产业本身",
+        "antiResponse": "130个版本刷出来的销量不要脸",
+        "notes": "专辑版本太多！"
+      },
+      {
+        "title": "the life of a showgirl美国首周销量400w世界第一",
+        "verified": true,
+        "fanPraise": "世女一饶命 她就是音乐产业本身",
+        "antiResponse": "版本数量和瘤子数量一样多，难听的要死心疼交瘤子耳朵",
+        "notes": "专辑版本太多！乐评极差"
+      },
+      {
+        "title": "时代巡演20e票房世界第一巡演",
+        "verified": true,
+        "fanPraise": "世女一饶命",
+        "antiResponse": "交姐我口渴",
+        "notes": "演唱会死了人"
+      },
+      {
+        "title": "folklore evermore民俗姐妹花艺术封神 red pitchfork 9.0",
+        "verified": true,
+        "fanPraise": "aoty双紫标 艺术女王",
+        "antiResponse": "忆往昔峥嵘岁月 一键查询ttpd midnights（物业大巴）the life of a showgirl最近三专的绝伦乐评",
+        "notes": "最近滥伐专辑评价很差"
+      }
+    ],
+    "titleMaterials": {
+      "mean": [
+        "交引出版本数量84"
+      ],
+      "neutral": [
+        "霉天尊商业封神"
+      ],
+      "banned": []
+    },
+    "wordplaySeeds": [
+      "交"
+    ],
+    "wordplayExamples": [
+      "交出完美的答卷",
+      "交姐交出一张商业成绩单",
+      "交引出版本数量84"
+    ]
+  },
+  {
+    "artistId": "lady-gaga",
+    "tags": [
+      "新生代五大第四"
+    ],
+    "profile": {
+      "styleTags": [],
+      "careerEras": [],
+      "publicImage": "",
+      "summary": "songwriter / performer"
+    },
+    "names": {
+      "normal": [
+        {
+          "name": "嘎天尊"
+        },
+        {
+          "name": "嘎嘎"
+        },
+        {
+          "name": "嘎女帝"
+        }
+      ],
+      "shade": [
+        {
+          "name": "尖姐",
+          "explanation": "尖梗的称呼化版本"
+        },
+        {
+          "name": "死胎尖",
+          "explanation": "曾经死过胎"
+        }
+      ]
+    },
+    "fanbase": {
+      "name": "嘎迷",
+      "normalNames": [
+        "嘎迷"
+      ],
+      "notes": "",
+      "shadeNames": [
+        {
+          "name": "死胎迷"
+        },
+        {
+          "name": "尖迷"
+        }
+      ]
+    },
+    "rivals": [
+      {
+        "name": "taylor swift",
+        "notes": "撕的最开但也最相似粉丝简直是一体两面"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "我不会说出他的名字",
+        "summary": "ladygaga多次提起自己被sex offensive的事件但是从未回答到底是谁rape了她",
+        "verified": true,
+        "aggressive": true,
+        "defenseTalkingPoint": "尊重创伤",
+        "attackAngle": "又要弹新琴了 首谈性情",
+        "notes": "谈新琴是一个谐音用来规避不好的内容"
+      },
+      {
+        "title": "半边身子疼",
+        "summary": "ladygaga发了30个疾病通告说自己身子疼支气管炎红斑狼疮等等疾病，一身84病",
+        "verified": true,
+        "aggressive": true,
+        "defenseTalkingPoint": "尊重创伤",
+        "attackAngle": "望疾病早日战胜嘎母",
+        "notes": ""
+      },
+      {
+        "title": "取消演唱会",
+        "summary": "ladygaga mayhem era 演唱会两次开唱前多次取消演唱会且没有给粉丝赔偿",
+        "verified": true,
+        "aggressive": false,
+        "defenseTalkingPoint": "希望嘎嘎健康",
+        "attackAngle": "提我们尖迷接了，花这么多钱机票住宿最后取消",
+        "notes": ""
+      },
+      {
+        "title": "老头乐",
+        "summary": "ladygaga与大量老头来往比如 托尼老爷子 拜登 等等甚至还有和敏感人员相关 支持不好的行为 三毒艺人",
+        "verified": true,
+        "aggressive": false,
+        "defenseTalkingPoint": "那咋了",
+        "attackAngle": "老头乐",
+        "notes": ""
+      },
+      {
+        "title": "with queen",
+        "summary": "ladygaga solo发行的单曲大多迅速飞榜上一首solo冠单要到born this way时期后续所有冠单都是和他人合作",
+        "verified": true,
+        "aggressive": false,
+        "defenseTalkingPoint": "那咋了，只有嘎女帝合作这么成功 die with smile再怎么样都是我嘎的歌",
+        "attackAngle": "独立行走很难",
+        "notes": ""
+      }
+    ],
+    "defenseTalkingPoints": [
+      "尊重创伤",
+      "尊重创伤",
+      "希望嘎嘎健康",
+      "那咋了",
+      "那咋了，只有嘎女帝合作这么成功 die with smile再怎么样都是我嘎的歌"
+    ],
+    "honorPoints": [
+      {
+        "title": "五大格莱美第一",
+        "verified": true,
+        "fanPraise": "再不好过如今也好过了嘎天尊流行类格莱美大满贯，格莱美wins五大第一",
+        "antiResponse": "尖引出通类挂0全是边角料",
+        "notes": "只有数量没有通类"
+      },
+      {
+        "title": "巴西户外演唱会到场人数超过20w",
+        "verified": true,
+        "fanPraise": "嘎天尊的影响力",
+        "antiResponse": "演唱会后淹死一个粉丝，淹老鼠了 / 演唱会不用门票我尖免费女人",
+        "notes": "人多免费"
+      },
+      {
+        "title": "ladygaga喊话奥巴马推动lgbt平权",
+        "verified": true,
+        "fanPraise": "奥巴马你在听吗！我嘎iconic",
+        "antiResponse": "同性恋之母死胎尖创办基金会说帮助少数群体结果诈捐",
+        "notes": ""
+      },
+      {
+        "title": "the fame + the fame monster 五大销量第一专辑",
+        "verified": true,
+        "fanPraise": "嘎天尊出道星光无限",
+        "antiResponse": "灵巧把两个专辑放在一起统计销量 灵巧 二合一  而且born this way这专为了冲击销量0.99美元大甩卖",
+        "notes": ""
+      }
+    ],
+    "titleMaterials": {
+      "mean": [
+        "四台尖半边身子疼"
+      ],
+      "neutral": [
+        "嘎嘎爱with"
+      ],
+      "banned": []
+    },
+    "wordplaySeeds": [
+      "尖"
+    ],
+    "wordplayExamples": [
+      "尖出冠单",
+      "尖姐尖叫式挽尊",
+      "尖椒炒猪肉这种多家混战梗只能轻用"
+    ]
+  },
+  {
+    "artistId": "katy-perry",
+    "tags": [
+      "新生代五大第五",
+      "即将被踢出五大！"
+    ],
+    "profile": {
+      "styleTags": [],
+      "careerEras": [],
+      "publicImage": "",
+      "summary": "songwriter"
+    },
+    "names": {
+      "normal": [
+        {
+          "name": "果"
+        },
+        {
+          "name": "水果姐"
+        }
+      ],
+      "shade": [
+        {
+          "name": "厕姐",
+          "explanation": "厕梗的称呼化版本"
+        },
+        {
+          "name": "粿姐"
+        }
+      ]
+    },
+    "fanbase": {
+      "name": "果迷",
+      "normalNames": [
+        "果迷"
+      ],
+      "notes": "",
+      "shadeNames": [
+        {
+          "name": "果蛆"
+        }
+      ]
+    },
+    "rivals": [
+      {
+        "name": "lady gaga",
+        "notes": "五大第四争夺"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "修女事件 katy perry 请停下",
+        "summary": "katyperry要买一栋房结果修女不同意上诉过程中修女晕倒死去了",
+        "verified": true,
+        "aggressive": false,
+        "defenseTalkingPoint": "绞杀保守派支持果天尊了",
+        "attackAngle": "我果害死人",
+        "notes": ""
+      },
+      {
+        "title": "回冬素人",
+        "summary": "katyperry自从teenage dream专辑后一路走下坡路现在专辑成绩已经变成素人了",
+        "verified": true,
+        "aggressive": false,
+        "defenseTalkingPoint": "那咋了只要我果还有一专六冠我果还是贵为皇后",
+        "attackAngle": "我果灵气素人",
+        "notes": ""
+      }
+    ],
+    "defenseTalkingPoints": [
+      "绞杀保守派支持果天尊了",
+      "那咋了只要我果还有一专六冠我果还是贵为皇后"
+    ],
+    "honorPoints": [
+      {
+        "title": "teenage dream一转六冠军打破记录",
+        "verified": true,
+        "fanPraise": "春梦是ladygaga的一辈子的噩梦",
+        "antiResponse": "忆往昔峥嵘岁月",
+        "notes": ""
+      }
+    ],
+    "titleMaterials": {
+      "mean": [
+        "我果回冬"
+      ],
+      "neutral": [
+        "- 禁止使用的说法："
+      ],
+      "banned": []
+    },
+    "wordplaySeeds": [
+      "厕",
+      "粿"
+    ],
+    "wordplayExamples": [
+      "厕出回冬味",
+      "粿姐粿然又开始忆往昔峥嵘岁月"
+    ]
+  },
+  {
+    "artistId": "adele",
+    "tags": [
+      "新生代五大第二"
+    ],
+    "profile": {
+      "styleTags": [],
+      "careerEras": [],
+      "publicImage": "",
+      "summary": "vocalist / songwriter"
+    },
+    "names": {
+      "normal": [
+        {
+          "name": "呆"
+        },
+        {
+          "name": "流行至尊"
+        },
+        {
+          "name": "A-D-E-L-E"
+        }
+      ],
+      "shade": [
+        {
+          "name": "猪戴尔",
+          "explanation": "体重高"
+        }
+      ]
+    },
+    "fanbase": {
+      "name": "呆迷",
+      "normalNames": [
+        "呆迷"
+      ],
+      "notes": "",
+      "shadeNames": [
+        {
+          "name": "猪仔"
+        }
+      ]
+    },
+    "rivals": [],
+    "controversies": [
+      {
+        "title": "adele - 30 黑胶填海 流媒体暴死",
+        "summary": "adele 4年回归大作黑胶大量滞销 67周专辑30从billboard出榜 “六年便秘作，一年无人听，67周出榜的流行至尊”",
+        "verified": true,
+        "aggressive": false,
+        "defenseTalkingPoint": "不妨碍ifpi销量冠军",
+        "attackAngle": "百万吨的黑胶直销在大西洋海底污染环境很想你！",
+        "notes": ""
+      },
+      {
+        "title": "adele - 30 提前占用黑胶产量",
+        "summary": "为赶上30发行黑脚工厂全力生产30把其他小众艺人发行耽误了 “黑胶工厂，唯至尊命”",
+        "verified": true,
+        "aggressive": false,
+        "defenseTalkingPoint": "anything for you",
+        "attackAngle": "行业里有一些很mean的前辈",
+        "notes": ""
+      },
+      {
+        "title": "adele 离婚被分家产，男朋友全是黑人",
+        "summary": "离婚被分家产 “谈情黑哥进，往来无白丁”",
+        "verified": true,
+        "aggressive": false,
+        "defenseTalkingPoint": "那咋了",
+        "attackAngle": "我猪爱吃黑巧",
+        "notes": ""
+      },
+      {
+        "title": "爸爸的癌症不给钱治疗",
+        "summary": "“无爱爹之孝女”",
+        "verified": true,
+        "aggressive": false,
+        "defenseTalkingPoint": "首谈原生家庭",
+        "attackAngle": "猪孝顺",
+        "notes": ""
+      }
+    ],
+    "defenseTalkingPoints": [
+      "不妨碍ifpi销量冠军",
+      "anything for you",
+      "那咋了",
+      "首谈原生家庭"
+    ],
+    "honorPoints": [
+      {
+        "title": "adele in Munich 演唱会座无虚席，演唱会场均价极高",
+        "verified": true,
+        "fanPraise": "A D E L E （adele就是高级的代表）",
+        "antiResponse": "我猪嗓子不是之前不是废了吗",
+        "notes": ""
+      },
+      {
+        "title": "专辑21，25两次横扫格莱美通类",
+        "verified": true,
+        "fanPraise": "流行至尊adele",
+        "antiResponse": "25偷奖！",
+        "notes": ""
+      },
+      {
+        "title": "专辑25首周338w打破多年的首周记录",
+        "verified": true,
+        "fanPraise": "流行至尊adele，单版本发行的25首周338w，第四周还能逆跌",
+        "antiResponse": "不如霉霉姐400w（虽然有很多版本次周销量跳水）",
+        "notes": ""
+      }
+    ],
+    "titleMaterials": {
+      "mean": [
+        "流行至尊"
+      ],
+      "neutral": [
+        "67周出榜的流行至尊"
+      ],
+      "banned": []
+    },
+    "wordplaySeeds": [
+      "猪"
+    ],
+    "wordplayExamples": [
+      "猪突猛进的销量",
+      "尖椒炒猪肉这种多家混战梗只能轻用"
+    ]
+  },
+  {
+    "artistId": "rihanna",
+    "tags": [
+      "新生代五大第三"
+    ],
+    "profile": {
+      "styleTags": [],
+      "careerEras": [],
+      "publicImage": "",
+      "summary": "singer / performer"
+    },
+    "names": {
+      "normal": [
+        {
+          "name": "日"
+        },
+        {
+          "name": "日婆"
+        },
+        {
+          "name": "美妆博主"
+        }
+      ],
+      "shade": [
+        {
+          "name": "沙包",
+          "explanation": "被男友家暴打成沙包"
+        }
+      ]
+    },
+    "fanbase": {
+      "name": "日迷",
+      "normalNames": [
+        "日迷"
+      ],
+      "notes": "",
+      "shadeNames": [
+        {
+          "name": "小沙粒"
+        }
+      ]
+    },
+    "rivals": [
+      {
+        "name": "ladygaga",
+        "notes": "争抢五大第三"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "美妆博主",
+        "summary": "多年专注美妆事业不发新专辑",
+        "verified": true,
+        "aggressive": true,
+        "defenseTalkingPoint": "支持女帝事业“who sent you”",
+        "attackAngle": "- 备注：",
+        "notes": ""
+      }
+    ],
+    "defenseTalkingPoints": [
+      "支持女帝事业“who sent you”"
+    ],
+    "honorPoints": [
+      {
+        "title": "最保值的艺人之一",
+        "verified": true,
+        "fanPraise": "即使转生美妆行业多年，过去的专辑和单曲流媒体热度依然很高",
+        "antiResponse": "都是with的别的歌手",
+        "notes": ""
+      }
+    ],
+    "titleMaterials": {
+      "mean": [
+        "沙包第三胎不发专辑"
+      ],
+      "neutral": [
+        "专注美妆商人"
+      ],
+      "banned": []
+    },
+    "wordplaySeeds": [
+      "沙",
+      "日"
+    ],
+    "wordplayExamples": [
+      "沙出一条美妆赛道",
+      "日婆不发歌也能靠旧账压人"
+    ]
+  },
+  {
+    "artistId": "lana-del-rey",
+    "tags": [
+      "另类女帝"
+    ],
+    "profile": {
+      "styleTags": [],
+      "careerEras": [],
+      "publicImage": "",
+      "summary": "songwriter / singer"
+    },
+    "names": {
+      "normal": [
+        {
+          "name": "雷妈妈"
+        },
+        {
+          "name": "雷天尊"
+        }
+      ],
+      "shade": [
+        {
+          "name": "鳄鱼",
+          "explanation": "嫁个了养殖鳄鱼的老头"
+        },
+        {
+          "name": "火葬场天后",
+          "explanation": "歌太丧了"
+        },
+        {
+          "name": "雷母猪",
+          "explanation": "有段时间很胖"
+        }
+      ]
+    },
+    "fanbase": {
+      "name": "雷迷",
+      "normalNames": [
+        "雷迷"
+      ],
+      "notes": "",
+      "shadeNames": [
+        {
+          "name": "锅盔"
+        },
+        {
+          "name": "小鳄鱼"
+        },
+        {
+          "name": "小骨灰"
+        }
+      ]
+    },
+    "rivals": [
+      {
+        "name": "lorde",
+        "notes": "竞争另类女帝"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "嫁给鳄鱼老头",
+        "summary": "自降身段嫁给年龄很大很老的养殖鳄鱼的老头",
+        "verified": true,
+        "aggressive": false,
+        "defenseTalkingPoint": "尊重感情",
+        "attackAngle": "雷母猪保守主义藏不住了",
+        "notes": ""
+      },
+      {
+        "title": "0格莱美",
+        "summary": "粉丝吹艺术女帝至今0格莱美",
+        "verified": true,
+        "aggressive": false,
+        "defenseTalkingPoint": "不为奖项写歌",
+        "attackAngle": "格莱美很难",
+        "notes": ""
+      }
+    ],
+    "defenseTalkingPoints": [
+      "尊重感情",
+      "不为奖项写歌"
+    ],
+    "honorPoints": [
+      {
+        "title": "nfr封神",
+        "verified": true,
+        "fanPraise": "nfr 封神 pitchfork 9.4推动世界进步",
+        "antiResponse": "nfr pitchfork 9.4然后pitchfork十年榜不如melodrama，aoty才87",
+        "notes": ""
+      }
+    ],
+    "titleMaterials": {
+      "mean": [
+        "鳄鱼养殖场"
+      ],
+      "neutral": [
+        "- 禁止使用的说法："
+      ],
+      "banned": []
+    },
+    "wordplaySeeds": [
+      "鳄",
+      "雷"
+    ],
+    "wordplayExamples": [
+      "鳄出一条婚恋新闻线",
+      "锅盔出一张高分艺术牌"
+    ]
+  },
+  {
+    "artistId": "lorde",
+    "tags": [
+      "另类女帝"
+    ],
+    "profile": {
+      "styleTags": [],
+      "careerEras": [],
+      "publicImage": "",
+      "summary": "songwriter"
+    },
+    "names": {
+      "normal": [
+        {
+          "name": "洛神"
+        },
+        {
+          "name": "洛女帝"
+        },
+        {
+          "name": "洛奶"
+        }
+      ],
+      "shade": [
+        {
+          "name": "lowde",
+          "explanation": "很low"
+        },
+        {
+          "name": "low干尸",
+          "explanation": "身材纤细且长相很显老"
+        },
+        {
+          "name": "埃及法老",
+          "explanation": "像埃及法老"
+        }
+      ]
+    },
+    "fanbase": {
+      "name": "洛迷",
+      "normalNames": [
+        "洛迷"
+      ],
+      "notes": "",
+      "shadeNames": [
+        {
+          "name": "小干尸"
+        }
+      ]
+    },
+    "rivals": [
+      {
+        "name": "lana del rey",
+        "notes": "另类女帝之争"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "low3",
+        "summary": "lorde被指擦足别人婚内感情当小三",
+        "verified": false,
+        "aggressive": true,
+        "defenseTalkingPoint": "那咋了洛女帝是清白的",
+        "attackAngle": "low3",
+        "notes": ""
+      }
+    ],
+    "defenseTalkingPoints": [
+      "那咋了洛女帝是清白的"
+    ],
+    "honorPoints": [
+      {
+        "title": "出道巅峰最年轻格莱美年歌",
+        "verified": "出道巅峰 royals 9周冠 夺下格莱美年歌 成为最小的年歌获得者",
+        "fanPraise": "洛女帝封神",
+        "antiResponse": "忆往昔峥嵘岁月 一步一步糊成素人",
+        "notes": ""
+      },
+      {
+        "title": "melodrama 艺术专辑",
+        "verified": "年歌提名 口碑极佳 aoty critical 91是另类女性专辑最高的分数",
+        "fanPraise": "melodrama 封神",
+        "antiResponse": "一键查询单曲peak",
+        "notes": ""
+      }
+    ],
+    "titleMaterials": {
+      "mean": [
+        "lowde摸霉女帝脚踝"
+      ],
+      "neutral": [
+        "洛女帝封神"
+      ],
+      "banned": []
+    },
+    "wordplaySeeds": [
+      "洛",
+      "low"
+    ],
+    "wordplayExamples": [
+      "洛出一张艺术神专",
+      "low到只能靠忆往昔续命"
+    ]
+  },
+  {
+    "artistId": "beyonce",
+    "tags": [
+      "中生代第一"
+    ],
+    "profile": {
+      "styleTags": [],
+      "careerEras": [],
+      "publicImage": "",
+      "summary": "performer / songwriter / producer"
+    },
+    "names": {
+      "normal": [
+        {
+          "name": "碧昂斯"
+        },
+        {
+          "name": "碧神"
+        }
+      ],
+      "shade": [
+        {
+          "name": "母星",
+          "explanation": "有点像大猩猩"
+        },
+        {
+          "name": "碧母猩",
+          "explanation": "大猩猩"
+        }
+      ]
+    },
+    "fanbase": {
+      "name": "碧粉",
+      "normalNames": [
+        "碧粉"
+      ],
+      "notes": "",
+      "shadeNames": [
+        {
+          "name": "猩崽子"
+        }
+      ]
+    },
+    "rivals": [
+      {
+        "name": "britney spears",
+        "notes": "争夺中生代第一"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "被christina aguilera赶出化妆间",
+        "summary": "被擦妈赶出化妆间",
+        "verified": true,
+        "aggressive": false,
+        "defenseTalkingPoint": "- 黑粉攻击角度：擦妈干的好",
+        "attackAngle": "擦妈干的好",
+        "notes": ""
+      },
+      {
+        "title": "彩铃天后",
+        "summary": "被曝出在韩国的千万销量都是销售电话彩铃",
+        "verified": true,
+        "aggressive": false,
+        "defenseTalkingPoint": "那咋了",
+        "attackAngle": "比木星不要脸",
+        "notes": ""
+      },
+      {
+        "title": "lemonade偷25第二年ifpi年冠",
+        "summary": "lemonade发行当年 25次年本身能再次拿ifpi冠军 结果最后几个月lemonade通果beyonce老公的jayz的流媒体平台注水了很多销量最后抢了年冠军",
+        "verified": true,
+        "aggressive": false,
+        "defenseTalkingPoint": "那咋了",
+        "attackAngle": "比木星不要脸，最水年冠",
+        "notes": ""
+      },
+      {
+        "title": "通稿封神",
+        "summary": "Beyonce经常在各种媒体乐评等买大量封神自己作品的通稿但最后没人愿意听这些所谓高质量的作品",
+        "verified": true,
+        "aggressive": false,
+        "defenseTalkingPoint": "那咋了 星女帝文艺复兴",
+        "attackAngle": "猩崽子自己听吗",
+        "notes": ""
+      }
+    ],
+    "defenseTalkingPoints": [
+      "- 黑粉攻击角度：擦妈干的好",
+      "那咋了",
+      "那咋了",
+      "那咋了 星女帝文艺复兴"
+    ],
+    "honorPoints": [
+      {
+        "title": "格莱美提名获奖全部第一",
+        "verified": true,
+        "fanPraise": "碧天尊奖项封神 rc（前滚石杂志主编）给出a的评价",
+        "antiResponse": "年转cowboy carter猩崽子自己听吗 pay的！ 一堆边角料",
+        "notes": "全是pay的边角料"
+      },
+      {
+        "title": "高质量作品 renaissance",
+        "verified": true,
+        "fanPraise": "碧天尊文艺复兴封神 rc 给出a+的极高评价",
+        "antiResponse": "瘟疫复兴差不多！根本没人听",
+        "notes": "太过艺术没人听"
+      },
+      {
+        "title": "巡演女帝",
+        "verified": true,
+        "fanPraise": "仅次于时代巡演的巡演 最好的舞美艺术性 场均过1e美元",
+        "antiResponse": "全球巡演只在北美",
+        "notes": ""
+      }
+    ],
+    "titleMaterials": {
+      "mean": [
+        "开榜封神"
+      ],
+      "neutral": [
+        "- 禁止使用的说法："
+      ],
+      "banned": []
+    },
+    "wordplaySeeds": [
+      "猩"
+    ],
+    "wordplayExamples": [
+      "猩味十足的奖项统治",
+      "猩崽子先解释播放量再封神"
+    ]
+  },
+  {
+    "artistId": "britney-spears",
+    "tags": [
+      "星光出道"
+    ],
+    "profile": {
+      "styleTags": [],
+      "careerEras": [],
+      "publicImage": "",
+      "summary": "sperformer / singer"
+    },
+    "names": {
+      "normal": [
+        {
+          "name": "小甜甜"
+        },
+        {
+          "name": "布兰妮"
+        }
+      ],
+      "shade": [
+        {
+          "name": "光头",
+          "explanation": "发疯之后把自己头发剃了"
+        },
+        {
+          "name": "双刀流",
+          "explanation": "在家拿着菜刀舞动"
+        }
+      ]
+    },
+    "fanbase": {
+      "name": "妮粉",
+      "normalNames": [
+        "妮粉"
+      ],
+      "notes": "",
+      "shadeNames": [
+        {
+          "name": "头屑"
+        },
+        {
+          "name": "头迷"
+        }
+      ]
+    },
+    "rivals": [
+      {
+        "name": "beyonce",
+        "notes": "争夺中生代第一"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "光头",
+        "summary": "被记者逼疯把自己头发剃光",
+        "verified": true,
+        "aggressive": true,
+        "defenseTalkingPoint": "心疼",
+        "attackAngle": "- 备注：",
+        "notes": ""
+      },
+      {
+        "title": "双刀流",
+        "summary": "在家精神状态不好拿着刀旋转飞舞",
+        "verified": true,
+        "aggressive": true,
+        "defenseTalkingPoint": "心疼",
+        "attackAngle": "- 备注：",
+        "notes": ""
+      }
+    ],
+    "defenseTalkingPoints": [
+      "心疼",
+      "心疼"
+    ],
+    "honorPoints": [
+      {
+        "title": "出道星光",
+        "verified": true,
+        "fanPraise": "继迈克尔杰克逊以来最火的全球明星",
+        "antiResponse": "不如嘎天尊",
+        "notes": ""
+      }
+    ],
+    "titleMaterials": {
+      "mean": [
+        "卡特琳娜双刀舞饶命"
+      ],
+      "neutral": [
+        "- 禁止使用的说法："
+      ],
+      "banned": []
+    },
+    "wordplaySeeds": [
+      "头"
+    ],
+    "wordplayExamples": [
+      "头也不回地吃老本",
+      "头号星光出道牌还能打"
+    ]
+  },
+  {
+    "artistId": "ariana-grande",
+    "tags": [
+      "超声代"
+    ],
+    "profile": {
+      "styleTags": [],
+      "careerEras": [],
+      "publicImage": "",
+      "summary": "vocalist / songwriter"
+    },
+    "names": {
+      "normal": [
+        {
+          "name": "a妹"
+        }
+      ],
+      "shade": [
+        {
+          "name": "炸姐",
+          "explanation": "Manchester演唱会死人"
+        },
+        {
+          "name": "炸干尸",
+          "explanation": "吃素之后身体很纤细"
+        }
+      ]
+    },
+    "fanbase": {
+      "name": "a粉",
+      "normalNames": [
+        "a粉"
+      ],
+      "notes": "",
+      "shadeNames": [
+        {
+          "name": "炸蛆"
+        }
+      ]
+    },
+    "rivals": [
+      {
+        "name": "- 对家关系说明：",
+        "notes": "## 黑点 / 争议 / 名场面"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "Manchester",
+        "summary": "遇到恐怖袭击",
+        "verified": true,
+        "aggressive": true,
+        "defenseTalkingPoint": "这种玩笑太过分",
+        "attackAngle": "炸迷攻击别人的时候好像也喜欢说时代巡演烤死人",
+        "notes": ""
+      }
+    ],
+    "defenseTalkingPoints": [
+      "这种玩笑太过分"
+    ],
+    "honorPoints": [
+      {
+        "title": "单曲天后",
+        "verified": true,
+        "fanPraise": "单曲成绩秒了",
+        "antiResponse": "专辑惨死",
+        "notes": ""
+      }
+    ],
+    "titleMaterials": {
+      "mean": [
+        "- 适合 Neutral 的标题："
+      ],
+      "neutral": [
+        "- 禁止使用的说法："
+      ],
+      "banned": []
+    },
+    "wordplaySeeds": [
+      "炸"
+    ],
+    "wordplayExamples": [
+      "炸姐炸裂的成绩",
+      "炸出一串单曲数据",
+      "炸蛆别只拿单曲遮专辑短板"
+    ]
+  },
+  {
+    "artistId": "olivia-rodrigo",
+    "tags": [
+      "超生代"
+    ],
+    "profile": {
+      "styleTags": [],
+      "careerEras": [],
+      "publicImage": "",
+      "summary": "songwriter / singer"
+    },
+    "names": {
+      "normal": [
+        {
+          "name": "娅娅"
+        }
+      ],
+      "shade": [
+        {
+          "name": "聋姐",
+          "explanation": "聋梗的称呼化版本"
+        },
+        {
+          "name": "窑鸡",
+          "explanation": "窑鸡王"
+        },
+        {
+          "name": "菲律宾一只耳",
+          "explanation": "来自菲律宾自曝自己有一只耳朵有听力问题"
+        }
+      ]
+    },
+    "fanbase": {
+      "name": "小棉花",
+      "normalNames": [
+        "小棉花"
+      ],
+      "notes": "",
+      "shadeNames": [
+        {
+          "name": "窑鸡迷"
+        }
+      ]
+    },
+    "rivals": [
+      {
+        "name": "Sabrina",
+        "notes": "绯闻Sabrina透了olivia的男友"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "造谣我国的新疆棉花",
+        "summary": "olivia在不了解我国的情况下转发抹黑我国新疆棉花的帖子",
+        "verified": true,
+        "aggressive": false,
+        "defenseTalkingPoint": "年纪小不懂事",
+        "attackAngle": "olivia乳华！坚决抵制",
+        "notes": ""
+      },
+      {
+        "title": "她是一只爱撒谎的鸡",
+        "summary": "olivia出道以来多次首谈自己是taylor粉丝但是从未转发过任何资料也不去看时代巡演",
+        "verified": true,
+        "aggressive": false,
+        "defenseTalkingPoint": "行业里有一些很mean的前辈",
+        "attackAngle": "她是一只撒谎的鸡",
+        "notes": ""
+      }
+    ],
+    "defenseTalkingPoints": [
+      "年纪小不懂事",
+      "行业里有一些很mean的前辈"
+    ],
+    "honorPoints": [
+      {
+        "title": "sour出道巅峰",
+        "verified": true,
+        "fanPraise": "娅女帝出道冠单，一度拿下年新",
+        "antiResponse": "抄袭霉霉姐cruel summer",
+        "notes": ""
+      }
+    ],
+    "titleMaterials": {
+      "mean": [
+        "- 适合 Neutral 的标题："
+      ],
+      "neutral": [
+        "- 禁止使用的说法："
+      ],
+      "banned": []
+    },
+    "wordplaySeeds": [
+      "窑",
+      "聋"
+    ],
+    "wordplayExamples": [
+      "聋不是劣势，龙可是帝王之相",
+      "聋姐窑出一张青春疼痛成绩单"
+    ]
+  },
+  {
+    "artistId": "sabrina-carpenter",
+    "tags": [
+      "新生代"
+    ],
+    "profile": {
+      "styleTags": [],
+      "careerEras": [],
+      "publicImage": "",
+      "summary": "singer / songwriter"
+    },
+    "names": {
+      "normal": [
+        {
+          "name": "匠妹"
+        }
+      ],
+      "shade": [
+        {
+          "name": "匠三",
+          "explanation": "疑似抢了olivia男友"
+        }
+      ]
+    },
+    "fanbase": {
+      "name": "匠迷",
+      "normalNames": [
+        "匠迷"
+      ],
+      "notes": "",
+      "shadeNames": [
+        {
+          "name": "小三迷"
+        }
+      ]
+    },
+    "rivals": [
+      {
+        "name": "olivia",
+        "notes": "抢男友"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "当小三",
+        "summary": "从olivia drivers license歌词说自己男友被一个blonde女孩抢了结果对上了sabrina",
+        "verified": false,
+        "aggressive": false,
+        "defenseTalkingPoint": "那咋了三就三了女王行为",
+        "attackAngle": "当三恶心",
+        "notes": ""
+      }
+    ],
+    "defenseTalkingPoints": [
+      "那咋了三就三了女王行为"
+    ],
+    "honorPoints": [
+      {
+        "title": "shorn sweet短甜开始一路封神",
+        "verified": true,
+        "fanPraise": "匠女帝",
+        "antiResponse": "前三张专辑不算了吗",
+        "notes": ""
+      }
+    ],
+    "titleMaterials": {
+      "mean": [
+        "- 适合 Neutral 的标题："
+      ],
+      "neutral": [
+        "- 禁止使用的说法："
+      ],
+      "banned": []
+    },
+    "wordplaySeeds": [
+      "三"
+    ],
+    "wordplayExamples": [
+      "三出一条上升曲线",
+      "三分天下先把成绩摆出来"
+    ]
+  },
+  {
+    "artistId": "billie-eilish",
+    "tags": [
+      "超生代"
+    ],
+    "profile": {
+      "styleTags": [],
+      "careerEras": [],
+      "publicImage": "",
+      "summary": "songwriter / singer"
+    },
+    "names": {
+      "normal": [
+        {
+          "name": "碧梨"
+        }
+      ],
+      "shade": [
+        {
+          "name": "死蚊子",
+          "explanation": "唱歌声音像蚊子叫"
+        },
+        {
+          "name": "伦妹",
+          "explanation": "疑似与哥哥incest"
+        }
+      ]
+    },
+    "fanbase": {
+      "name": "梨粉",
+      "normalNames": [
+        "梨粉"
+      ],
+      "notes": "",
+      "shadeNames": [
+        {
+          "name": "孑孓（文字幼虫）"
+        },
+        {
+          "name": "伦迷"
+        }
+      ]
+    },
+    "rivals": [
+      {
+        "name": "taylor swift",
+        "notes": "被霉霉多次踩头拿不到冠军专辑"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "环保蚊",
+        "summary": "采访中抨击音乐行业滥发黑胶唱片污染环境但自己发了一堆版本的黑胶",
+        "verified": true,
+        "aggressive": false,
+        "defenseTalkingPoint": "那咋了我们是环保材料",
+        "attackAngle": "谁买黑胶回来用来回收",
+        "notes": ""
+      },
+      {
+        "title": "伦",
+        "summary": "被怀疑和哥哥有亲密关系",
+        "verified": false,
+        "aggressive": true,
+        "defenseTalkingPoint": "接着造谣",
+        "attackAngle": "哈雷彗星这首歌自己都写了",
+        "notes": ""
+      },
+      {
+        "title": "如果badguy没有改规则 出道十年没有冠单",
+        "summary": "全生涯仅有badguy一首冠单，还是借助改规则拿到的",
+        "verified": true,
+        "aggressive": true,
+        "defenseTalkingPoint": "那咋了后劲有",
+        "attackAngle": "大机器灌水，冠单很难",
+        "notes": ""
+      }
+    ],
+    "defenseTalkingPoints": [
+      "那咋了我们是环保材料",
+      "接着造谣",
+      "那咋了后劲有"
+    ],
+    "honorPoints": [
+      {
+        "title": "作品优质",
+        "verified": true,
+        "fanPraise": "aoty高分 rc三张专辑全给了a 梦游十年年榜第十",
+        "antiResponse": "pay的 一键查询pitchfork评分上8很难",
+        "notes": ""
+      },
+      {
+        "title": "格莱美",
+        "verified": true,
+        "fanPraise": "梦游第一章专辑横扫所有格莱美通类 后又三封年歌",
+        "antiResponse": "死蚊子偷奖",
+        "notes": ""
+      }
+    ],
+    "titleMaterials": {
+      "mean": [
+        "我伦冠单很难"
+      ],
+      "neutral": [
+        "- 禁止使用的说法："
+      ],
+      "banned": []
+    },
+    "wordplaySeeds": [
+      "伦"
+    ],
+    "wordplayExamples": [
+      "伦出绝伦的成绩",
+      "伦妹再怎么压嗓也压不住奖项"
+    ]
+  },
+  {
+    "artistId": "dua-lipa",
+    "tags": [
+      "超生代"
+    ],
+    "profile": {
+      "styleTags": [],
+      "careerEras": [],
+      "publicImage": "",
+      "summary": "singer / performer"
+    },
+    "names": {
+      "normal": [
+        {
+          "name": "帕姐"
+        }
+      ],
+      "shade": [
+        {
+          "name": "dua jiba",
+          "explanation": "长相像男生"
+        },
+        {
+          "name": "帕人妖",
+          "explanation": "像男生"
+        }
+      ]
+    },
+    "fanbase": {
+      "name": "帕迷",
+      "normalNames": [
+        "帕迷"
+      ],
+      "notes": "",
+      "shadeNames": [
+        {
+          "name": "妖迷"
+        }
+      ]
+    },
+    "rivals": [
+      {
+        "name": "- 对家关系说明：",
+        "notes": "## 黑点 / 争议 / 名场面"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "三专回冬",
+        "summary": "radical optimism",
+        "verified": true,
+        "aggressive": false,
+        "defenseTalkingPoint": "那咋了",
+        "attackAngle": "一键糊了",
+        "notes": ""
+      }
+    ],
+    "defenseTalkingPoints": [
+      "那咋了"
+    ],
+    "honorPoints": [
+      {
+        "title": "出道巅峰，未来乡愁流行艺术均有成就",
+        "verified": true,
+        "fanPraise": "未来乡愁封神",
+        "antiResponse": "三专糊了",
+        "notes": ""
+      }
+    ],
+    "titleMaterials": {
+      "mean": [
+        "- 适合 Neutral 的标题："
+      ],
+      "neutral": [
+        "- 禁止使用的说法："
+      ],
+      "banned": []
+    },
+    "wordplaySeeds": [
+      "妖"
+    ],
+    "wordplayExamples": [
+      "妖出未来乡愁的流行盘",
+      "妖迷先别急，三专成绩自己会说话"
+    ]
+  },
+  {
+    "artistId": "celine-dion",
+    "tags": [
+      "老生代"
+    ],
+    "profile": {
+      "styleTags": [],
+      "careerEras": [],
+      "publicImage": "",
+      "summary": "vocalist / singer"
+    },
+    "names": {
+      "normal": [
+        {
+          "name": "时代之声"
+        }
+      ],
+      "shade": [
+        {
+          "name": "席干尸",
+          "explanation": "瘦成干尸"
+        }
+      ]
+    },
+    "fanbase": {
+      "name": "席林迷",
+      "normalNames": [
+        "席林迷"
+      ],
+      "notes": "",
+      "shadeNames": [
+        {
+          "name": "干尸迷"
+        }
+      ]
+    },
+    "rivals": [
+      {
+        "name": "- 对家关系说明：",
+        "notes": "## 黑点 / 争议 / 名场面"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "炒作疾病",
+        "summary": "患上全世界医学界都没听说过的，仅声带抽筋的僵人症，随即取消巡演 招商引入Amazon Prime为其拍摄24小时不间断纪录片治疗过程中，按摩师为其量个血压，马上开始鬼哭狼嚎声泪俱下，但鼻子里喷一下喷雾瞬间就好了 因落选百大音乐【艺术家】，8位粉丝包机从魁北克乘坐吉祥航空转机到美国洛杉矶Rolling Stone总部门口为其打抱不平，2小时后返程2023年位居全球私人飞机碳排放量第十，在声带抽搐的情况下出行次数高达70次，仅次于十亿身家的美妆大亨Kylie Jenner",
+        "verified": "- 是否有很强攻击性：",
+        "aggressive": "- 粉丝挽尊话术：",
+        "defenseTalkingPoint": "- 黑粉攻击角度：",
+        "attackAngle": "- 备注：",
+        "notes": ""
+      }
+    ],
+    "defenseTalkingPoints": [
+      "- 黑粉攻击角度："
+    ],
+    "honorPoints": [
+      {
+        "title": "嗓音很好",
+        "verified": "- 粉丝怎么夸：",
+        "fanPraise": "- 黑粉怎么反驳：",
+        "antiResponse": "- 备注：",
+        "notes": ""
+      }
+    ],
+    "titleMaterials": {
+      "mean": [
+        "- 适合 Neutral 的标题："
+      ],
+      "neutral": [
+        "- 禁止使用的说法："
+      ],
+      "banned": []
+    }
+  },
+  {
+    "artistId": "whitney-houston",
+    "tags": [
+      "老生代"
+    ],
+    "profile": {
+      "styleTags": [],
+      "careerEras": [],
+      "publicImage": "",
+      "summary": "vocalist / singer"
+    },
+    "names": {
+      "normal": [
+        {
+          "name": "休斯顿惠妮"
+        }
+      ],
+      "shade": [
+        {
+          "name": "毒浴缸",
+          "explanation": "吸毒过量死去"
+        }
+      ]
+    },
+    "fanbase": {
+      "name": "浴缸迷",
+      "normalNames": [
+        "浴缸迷"
+      ],
+      "notes": "",
+      "shadeNames": [
+        {
+          "name": "毒迷"
+        }
+      ]
+    },
+    "rivals": [
+      {
+        "name": "- 对家关系说明：",
+        "notes": "## 黑点 / 争议 / 名场面"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "- 事件简介：",
+        "summary": "- 是否可验证：",
+        "verified": "- 是否有很强攻击性：",
+        "aggressive": "- 粉丝挽尊话术：",
+        "defenseTalkingPoint": "- 黑粉攻击角度：",
+        "attackAngle": "- 备注：",
+        "notes": ""
+      }
+    ],
+    "defenseTalkingPoints": [
+      "- 黑粉攻击角度："
+    ],
+    "honorPoints": [
+      {
+        "title": "- 是否可验证：",
+        "verified": "- 粉丝怎么夸：",
+        "fanPraise": "- 黑粉怎么反驳：",
+        "antiResponse": "- 备注：",
+        "notes": ""
+      }
+    ],
+    "titleMaterials": {
+      "mean": [
+        "- 适合 Neutral 的标题："
+      ],
+      "neutral": [
+        "- 禁止使用的说法："
+      ],
+      "banned": []
+    }
+  },
+  {
+    "artistId": "mariah-carey",
+    "tags": [
+      "老生代"
+    ],
+    "profile": {
+      "styleTags": [],
+      "careerEras": [],
+      "publicImage": "",
+      "summary": "songwriter / vocalist"
+    },
+    "names": {
+      "normal": [
+        {
+          "name": "牛姐"
+        }
+      ],
+      "shade": [
+        {
+          "name": "猪咪",
+          "explanation": "太胖了"
+        }
+      ]
+    },
+    "fanbase": {
+      "name": "牛粪",
+      "normalNames": [
+        "牛粪"
+      ],
+      "notes": "",
+      "shadeNames": [
+        {
+          "name": "猪迷"
+        }
+      ]
+    },
+    "rivals": [
+      {
+        "name": "- 对家关系说明：",
+        "notes": "## 黑点 / 争议 / 名场面"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "假唱",
+        "summary": "在多次演唱会假唱",
+        "verified": true,
+        "aggressive": false,
+        "defenseTalkingPoint": "打假",
+        "attackAngle": "猪咪嗓子报废",
+        "notes": ""
+      }
+    ],
+    "defenseTalkingPoints": [
+      "打假"
+    ],
+    "honorPoints": [
+      {
+        "title": "圣诞单曲荣华富贵",
+        "verified": true,
+        "fanPraise": "每年圣代必拿冠单",
+        "antiResponse": "- 备注：",
+        "notes": ""
+      }
+    ],
+    "titleMaterials": {
+      "mean": [
+        "- 适合 Neutral 的标题："
+      ],
+      "neutral": [
+        "- 禁止使用的说法："
+      ],
+      "banned": []
+    },
+    "wordplaySeeds": [
+      "猪"
+    ],
+    "wordplayExamples": [
+      "猪咪靠圣诞账本回血",
+      "猪出一条年末冠单路"
+    ]
+  },
+  {
+    "artistId": "charli-xcx",
+    "tags": [
+      "另类女帝"
+    ],
+    "profile": {
+      "styleTags": [],
+      "careerEras": [],
+      "publicImage": "",
+      "summary": "songwriter / producer"
+    },
+    "names": {
+      "normal": [
+        {
+          "name": "查理小程序"
+        }
+      ],
+      "shade": [
+        {
+          "name": "茶木沟",
+          "explanation": "茶垢"
+        }
+      ]
+    },
+    "fanbase": {
+      "name": "茶粉",
+      "normalNames": [
+        "茶粉"
+      ],
+      "notes": "",
+      "shadeNames": [
+        {
+          "name": "茶垢"
+        }
+      ]
+    },
+    "rivals": [
+      {
+        "name": "taylor swift",
+        "notes": "everything is romantic vs taylor - actually romantic beef"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "拿taylor在粉丝收到交通事故开玩笑",
+        "summary": "taylor的粉丝遇到交通事故她却在网上暗指这件事",
+        "verified": true,
+        "aggressive": true,
+        "defenseTalkingPoint": "支持女帝打脸交引出",
+        "attackAngle": "恶毒",
+        "notes": ""
+      }
+    ],
+    "defenseTalkingPoints": [
+      "支持女帝打脸交引出"
+    ],
+    "honorPoints": [
+      {
+        "title": "brat专辑打开bratsummer艺术",
+        "verified": true,
+        "fanPraise": "brat艺术",
+        "antiResponse": "小众逼有人听吗",
+        "notes": ""
+      }
+    ],
+    "titleMaterials": {
+      "mean": [
+        "- 适合 Neutral 的标题："
+      ],
+      "neutral": [
+        "- 禁止使用的说法："
+      ],
+      "banned": []
+    }
+  },
+  {
+    "artistId": "madonna",
+    "tags": [
+      "老生代"
+    ],
+    "profile": {
+      "styleTags": [],
+      "careerEras": [],
+      "publicImage": "",
+      "summary": "performer / songwriter / producer"
+    },
+    "names": {
+      "normal": [
+        {
+          "name": "麦女帝"
+        }
+      ],
+      "shade": [
+        {
+          "name": "红枣",
+          "explanation": "在一次大型舞台上露出自己的胸部"
+        }
+      ]
+    },
+    "fanbase": {
+      "name": "麦迷",
+      "normalNames": [
+        "麦迷"
+      ],
+      "notes": "",
+      "shadeNames": [
+        {
+          "name": "红枣迷"
+        }
+      ]
+    },
+    "rivals": [
+      {
+        "name": "- 对家关系说明：",
+        "notes": "## 黑点 / 争议 / 名场面"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "- 事件简介：",
+        "summary": "- 是否可验证：",
+        "verified": "- 是否有很强攻击性：",
+        "aggressive": "- 粉丝挽尊话术：",
+        "defenseTalkingPoint": "- 黑粉攻击角度：",
+        "attackAngle": "- 备注：",
+        "notes": ""
+      }
+    ],
+    "defenseTalkingPoints": [
+      "- 黑粉攻击角度："
+    ],
+    "honorPoints": [
+      {
+        "title": "除开Taylorswift 是销量最高的流行歌手 而且完全推动了社会进步",
+        "verified": true,
+        "fanPraise": "女帝",
+        "antiResponse": "红枣",
+        "notes": ""
+      }
+    ],
+    "titleMaterials": {
+      "mean": [
+        "- 适合 Neutral 的标题："
+      ],
+      "neutral": [
+        "- 禁止使用的说法："
+      ],
+      "banned": []
+    }
+  },
+  {
+    "artistId": "nicki-minaj",
+    "tags": [
+      "饶舌女"
+    ],
+    "profile": {
+      "styleTags": [],
+      "careerEras": [],
+      "publicImage": "",
+      "summary": "rapper / songwriter"
+    },
+    "names": {
+      "normal": [
+        {
+          "name": "麻辣鸡"
+        }
+      ],
+      "shade": [
+        {
+          "name": "马垃圾",
+          "explanation": "谐音"
+        }
+      ]
+    },
+    "fanbase": {
+      "name": "鸡迷",
+      "normalNames": [
+        "鸡迷"
+      ],
+      "notes": "",
+      "shadeNames": [
+        {
+          "name": "圾迷"
+        }
+      ]
+    },
+    "rivals": [
+      {
+        "name": "cardib",
+        "notes": "冤家"
+      }
+    ],
+    "controversies": [
+      {
+        "title": "下跪Lauryn hill女帝",
+        "summary": "下跪说唱天后",
+        "verified": true,
+        "aggressive": false,
+        "defenseTalkingPoint": "Laurynhill税务问题还完了吗",
+        "attackAngle": "Lauryn hill女帝",
+        "notes": "- 事件名：老公是pedophile"
+      }
+    ],
+    "defenseTalkingPoints": [
+      "Laurynhill税务问题还完了吗"
+    ],
+    "honorPoints": [
+      {
+        "title": "- 是否可验证：",
+        "verified": "- 粉丝怎么夸：",
+        "fanPraise": "- 黑粉怎么反驳：",
+        "antiResponse": "- 备注：",
+        "notes": ""
+      }
+    ],
+    "titleMaterials": {
+      "mean": [
+        "- 适合 Neutral 的标题："
+      ],
+      "neutral": [
+        "- 禁止使用的说法："
+      ],
+      "banned": []
+    }
+  }
+]
