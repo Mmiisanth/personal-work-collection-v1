@@ -1,6 +1,6 @@
 {
   "installCommand": "cd riotbus && npm install",
   "buildCommand": "cd riotbus && npm run build",
-  "outputDirectory": "riotbus/.next",
+  "outputDirectory": "riotbus/out",
   "nodeVersion": "22.17.1"
 }
