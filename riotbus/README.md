@@ -62,6 +62,37 @@ npm run dev
 http://localhost:3000
 ```
 
+## Cloudflare 部署
+
+这个项目不是纯静态站，推荐用 OpenNext + Cloudflare Workers 部署。
+
+安装依赖后先本地验证：
+
+```bash
+npm run typecheck
+npm run build
+```
+
+本地预览 Cloudflare 产物：
+
+```bash
+npm run preview:cloudflare
+```
+
+发布到 Cloudflare：
+
+```bash
+npm run deploy:cloudflare
+```
+
+如果需要补 Cloudflare 环境类型：
+
+```bash
+npm run cf-typegen
+```
+
+Cloudflare 上运行时只依赖线上 API 和已经构建好的静态资产；`public/assets/artists/source/`、`data/rag/index/rag-embeddings.json`、`data/rag/index/chroma-export.json` 这类本地素材不应作为部署前提。
+
 ## 常用命令
 
 ```bash
@@ -130,6 +161,13 @@ npm run rag:chroma
 ## 资产注意
 
 `public/assets/artists/source` 是本地参考图目录，不建议上传公开仓库。公开仓库只需要提交生成后的 `mean` / `neutral` 头像和 Banner 图。
+
+Cloudflare 部署只需要：
+
+- `public/assets/banners`
+- `public/assets/artists/mean`
+- `public/assets/artists/neutral`
+- 代码、JSON seed、文档
 
 ## 文档
 

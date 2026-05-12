@@ -72,7 +72,7 @@ function DynamicSlopeBackgroundBase({ mode }: DynamicSlopeBackgroundProps) {
         window.innerWidth * Math.sin(STRIP_ANGLE_RADIANS) +
         window.innerHeight * Math.cos(STRIP_ANGLE_RADIANS);
 
-      setStripCount(Math.ceil(viewportCoverage / STRIP_HEIGHT) + 5);
+      setStripCount(Math.ceil(viewportCoverage / STRIP_HEIGHT) + 3);
     };
     const scheduleUpdateStripCount = () => {
       if (resizeFrame) {

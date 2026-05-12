@@ -129,23 +129,23 @@ export function FilterModal({
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/18 p-5 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/18 p-5 backdrop-blur-sm max-sm:items-end max-sm:p-3">
       <motion.div
-        className="glass-strong relative flex max-h-[min(92dvh,920px)] w-full max-w-6xl flex-col overflow-hidden rounded-[34px] p-8"
+        className="glass-strong relative flex max-h-[min(92dvh,920px)] w-full max-w-6xl flex-col overflow-hidden rounded-[34px] p-8 max-sm:max-h-[min(94dvh,920px)] max-sm:rounded-[28px] max-sm:p-4"
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.22 }}
       >
         <button
           aria-label="Close filter modal"
-          className="absolute right-8 top-8 flex size-12 items-center justify-center rounded-full bg-black/10 transition-transform hover:scale-105"
+          className="absolute right-8 top-8 flex size-12 items-center justify-center rounded-full bg-black/10 transition-transform hover:scale-105 max-sm:right-4 max-sm:top-4"
           onClick={onClose}
           type="button"
         >
           <X strokeWidth={4} />
         </button>
-        <div className="min-h-0 overflow-y-auto pr-2">
-          <div className={`display-font inline-flex rounded-2xl px-7 py-4 text-3xl ${accentClass}`}>
+        <div className="min-h-0 overflow-y-auto pr-2 max-sm:pr-1">
+          <div className={`display-font inline-flex rounded-2xl px-7 py-4 text-3xl max-sm:px-5 max-sm:py-3 max-sm:text-2xl ${accentClass}`}>
             {mode === "mean" ? "刻薄到底" : "清清白白"}
           </div>
           <div className="mt-5 flex flex-wrap gap-3">
@@ -164,13 +164,13 @@ export function FilterModal({
           </div>
           <div className="mt-6 grid grid-cols-[0.9fr_1.1fr] gap-10 max-lg:grid-cols-1">
             <section>
-              <div className="mb-4 flex items-end justify-between">
-                <h2 className="display-font text-4xl">artists</h2>
-                <span className="rounded-full bg-white/50 px-4 py-2 font-bold">
+              <div className="mb-4 flex items-end justify-between gap-3">
+                <h2 className="display-font text-4xl max-sm:text-3xl">artists</h2>
+                <span className="rounded-full bg-white/50 px-4 py-2 font-bold max-sm:px-3 max-sm:py-1.5">
                   已选 {selectedArtists.length}/2
                 </span>
               </div>
-              <div className="grid grid-cols-5 gap-4 max-sm:grid-cols-3">
+              <div className="grid grid-cols-5 gap-4 max-sm:grid-cols-3 max-sm:gap-3">
                 {artists.map((artist) => {
                   const selected = selectedArtists.includes(artist.id);
                   return (
@@ -197,8 +197,8 @@ export function FilterModal({
               </div>
             </section>
             <section>
-              <h2 className="display-font mb-4 text-4xl">维度</h2>
-              <div className="grid grid-cols-2 gap-4 max-sm:grid-cols-1">
+              <h2 className="display-font mb-4 text-4xl max-sm:text-3xl">维度</h2>
+              <div className="grid grid-cols-2 gap-4 max-sm:grid-cols-1 max-sm:gap-3">
                 {metrics.map((metric) => {
                   const selected = selectedMetrics.includes(metric.key);
                   return (
@@ -227,8 +227,8 @@ export function FilterModal({
                   );
                 })}
               </div>
-              <div className="mt-7 rounded-[24px] bg-white/35 p-5">
-                <div className="mb-4 inline-grid max-w-full grid-cols-2 overflow-hidden rounded-full border-2 border-black bg-white/35 p-1">
+              <div className="mt-7 rounded-[24px] bg-white/35 p-5 max-sm:mt-5 max-sm:p-4">
+                <div className="mb-4 inline-grid max-w-full grid-cols-2 overflow-hidden rounded-full border-2 border-black bg-white/35 p-1 max-sm:mb-3">
                   {(["default", "custom"] as const).map((item) => (
                     <button
                       className={`rounded-full px-5 py-2 font-black transition ${
@@ -249,13 +249,13 @@ export function FilterModal({
                 {apiMode === "custom" ? (
                   <div className="grid gap-3">
                     <input
-                      className="rounded-full border border-black/25 bg-white/60 px-5 py-3 outline-none focus:border-brat-hot"
+                      className="rounded-full border border-black/25 bg-white/60 px-5 py-3 outline-none focus:border-brat-hot max-sm:px-4 max-sm:py-2.5"
                       onChange={(event) => setBaseUrl(event.target.value)}
                       placeholder="base_url"
                       value={baseUrl}
                     />
                     <input
-                      className="rounded-full border border-black/25 bg-white/60 px-5 py-3 outline-none focus:border-brat-hot"
+                      className="rounded-full border border-black/25 bg-white/60 px-5 py-3 outline-none focus:border-brat-hot max-sm:px-4 max-sm:py-2.5"
                       onChange={(event) => setApiKey(event.target.value)}
                       placeholder="api_key"
                       type="password"
@@ -263,13 +263,13 @@ export function FilterModal({
                     />
                     <div className="flex items-center gap-3">
                       <input
-                        className="min-w-0 flex-1 rounded-full border border-black/25 bg-white/60 px-5 py-3 outline-none focus:border-brat-hot"
+                        className="min-w-0 flex-1 rounded-full border border-black/25 bg-white/60 px-5 py-3 outline-none focus:border-brat-hot max-sm:px-4 max-sm:py-2.5"
                         onChange={(event) => setModel(event.target.value)}
                         placeholder="model"
                         value={model}
                       />
                       <button
-                        className="display-font rounded-full bg-black px-6 py-3 text-white"
+                        className="display-font rounded-full bg-black px-6 py-3 text-white max-sm:px-4 max-sm:py-2.5"
                         disabled={checking}
                         onClick={checkCustomApi}
                         type="button"
@@ -298,7 +298,7 @@ export function FilterModal({
           </div>
         </div>
         <button
-          className="display-font mx-auto mt-6 block w-full max-w-md shrink-0 rounded-full bg-black px-8 py-4 text-3xl text-white disabled:cursor-not-allowed disabled:bg-black/20 disabled:text-black/35"
+          className="display-font mx-auto mt-6 block w-full max-w-md shrink-0 rounded-full bg-black px-8 py-4 text-3xl text-white disabled:cursor-not-allowed disabled:bg-black/20 disabled:text-black/35 max-sm:mt-4 max-sm:px-6 max-sm:py-3 max-sm:text-2xl"
           disabled={!canSubmit}
           onClick={submit}
           type="button"

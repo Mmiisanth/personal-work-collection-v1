@@ -3,6 +3,8 @@
 import { Fragment, useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { Download, Send, X } from "lucide-react";
+import { toPng } from "html-to-image";
+import QRCode from "qrcode";
 import type { AiProvider, BattleMode, MetricKey } from "@/lib/types";
 import { artists } from "@/data/artists";
 
@@ -430,8 +432,8 @@ function ExportModal({
   const [background, setBackground] = useState("#8CFF4F");
   const [exporting, setExporting] = useState(false);
   const [portalElement, setPortalElement] = useState<HTMLDivElement | null>(null);
-  const shareUrl =
-    typeof window === "undefined" ? "riotbus.local" : window.location.origin;
+  const posterRef = useRef<HTMLDivElement | null>(null);
+  const shareUrl = "https://riotbus.onrender.com";
   const displayTitle = cleanExportTitle(title, `${artistA} vs ${artistB}`);
   const displayContent = loading
     ? "总结乱斗中。。。"
@@ -474,15 +476,16 @@ function ExportModal({
   async function exportShareImage() {
     setExporting(true);
     try {
-      downloadShareImage({
-        artistA,
-        artistB,
-        background,
-        content: displayContent,
-        mode,
-        shareUrl,
-        title: displayTitle,
+      const node = posterRef.current;
+      if (!node) return;
+      await document.fonts?.ready;
+      await waitForPosterAssets(node);
+      const dataUrl = await toPng(node, {
+        cacheBust: true,
+        pixelRatio: 2,
+        backgroundColor: background,
       });
+      await downloadDataUrl(dataUrl, `riotbus-${slugify(`${artistA}-${artistB}`)}.png`);
     } finally {
       window.setTimeout(() => setExporting(false), 450);
     }
@@ -519,53 +522,14 @@ function ExportModal({
     <div className="h-full w-full bg-black/24 p-4 backdrop-blur-md max-sm:p-2">
       <div className="glass-strong grid h-full w-full grid-cols-[minmax(0,1fr)_320px] gap-4 overflow-hidden rounded-[30px] p-4 max-md:auto-rows-max max-md:grid-cols-1 max-md:items-start max-md:overflow-y-auto max-sm:rounded-[22px] max-sm:p-2">
         <section className="min-h-0 rounded-[26px] border border-black/10 bg-white/28 p-3 max-md:h-auto">
-          <div
-            className="flex h-full min-h-0 flex-col overflow-hidden rounded-[26px] border-2 border-black p-[clamp(18px,2.1vw,30px)] shadow-[0_24px_60px_rgba(0,0,0,0.18)] max-md:h-auto max-md:min-h-[680px] max-sm:min-h-[620px]"
-            style={{ background }}
-          >
-            <div className="flex items-start justify-between gap-6">
-              <div>
-                <p className="display-font inline-flex rounded-full bg-black px-4 py-2 text-[clamp(12px,1.1vw,16px)] uppercase text-white">
-                  RiotBus Report
-                </p>
-                <h2
-                  className="display-font mt-4 max-w-3xl text-[clamp(34px,4.6vw,64px)] leading-[0.92]"
-                  style={{
-                    display: "-webkit-box",
-                    maxHeight: "calc(3 * 0.92em)",
-                    overflow: "hidden",
-                    WebkitBoxOrient: "vertical",
-                    WebkitLineClamp: 3,
-                  }}
-                >
-                  {displayTitle}
-                </h2>
-              </div>
-              <div className="shrink-0 rounded-[22px] border-2 border-black bg-white/68 px-4 py-3 text-right font-black max-sm:hidden">
-                <p className="text-[10px] uppercase">mode</p>
-                <p className="display-font whitespace-nowrap text-xl">
-                  {mode === "mean" ? "刻薄到底" : "清清白白"}
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-5 min-h-0 flex-1 overflow-y-auto rounded-[24px] border border-black/15 bg-white/72 p-[clamp(18px,2vw,28px)] text-[clamp(15px,1.25vw,18px)] font-bold leading-relaxed">
-              <MarkdownMessage content={displayContent} />
-            </div>
-
-            <div className="mt-4 grid shrink-0 grid-cols-[1fr_112px] gap-4 max-sm:grid-cols-[1fr_88px]">
-              <div className="rounded-[22px] border border-black/15 bg-white/70 p-4 font-black">
-                <p className="display-font text-[clamp(24px,2.4vw,34px)] leading-none">上车地址</p>
-                <p className="mt-2 break-all text-[clamp(13px,1.15vw,16px)]">{shareUrl}</p>
-                <p className="mt-2 text-xs text-black/55 max-sm:hidden">
-                  二维码
-                </p>
-              </div>
-              <div className="flex items-center justify-center rounded-[22px] border border-black/15 bg-white/78 p-3">
-                <QrPlaceholder value={shareUrl} />
-              </div>
-            </div>
-          </div>
+          <PosterCard
+            background={background}
+            displayContent={displayContent}
+            displayTitle={displayTitle}
+            mode={mode}
+            posterRef={posterRef}
+            shareUrl={shareUrl}
+          />
         </section>
 
         <section className="flex min-h-0 flex-col rounded-[26px] border border-black/10 bg-white/32 p-5 max-md:min-h-[520px]">
@@ -600,28 +564,25 @@ function ExportModal({
           </div>
 
           <div className="mt-4 rounded-[26px] border border-black/10 bg-white/42 p-5">
-            <p className="display-font text-3xl leading-none">分析方式</p>
-            <div className="mt-4 rounded-[18px] bg-white/65 p-3 text-sm font-black">
-              <p>网站链接</p>
-              <p className="mt-1 break-all text-xs text-black/62">{shareUrl}</p>
+            <p className="display-font text-3xl leading-none">分享方式</p>
+            <div className="mt-4 rounded-[18px] bg-white/72 p-3 text-sm font-black">
+              <p className="break-all text-base leading-snug">link: {shareUrl}</p>
             </div>
-            <div className="mt-3 flex items-center gap-3 rounded-[18px] bg-white/65 p-3 text-sm font-black">
-              <QrPlaceholder value={shareUrl} size={56} />
-              <p>二维码位置已预留，MVP 先用站点码样式占位。</p>
+            <div className="mt-3 grid grid-cols-1 gap-3">
+              <button
+                className="display-font flex w-full items-center justify-center whitespace-nowrap rounded-[24px] border-2 border-black bg-[#2f7c2d] px-5 py-5 text-[clamp(22px,2vw,30px)] text-black shadow-[0_12px_24px_rgba(0,0,0,0.16)] transition hover:-translate-y-0.5 disabled:cursor-wait disabled:opacity-60"
+                disabled={exporting}
+                onClick={exportShareImage}
+                type="button"
+              >
+                <Download className="mr-2" strokeWidth={3} />
+                {exporting ? "生成中" : "生成宣传图"}
+              </button>
             </div>
           </div>
 
-          <button
-            className="display-font mt-auto flex w-full items-center justify-center rounded-[24px] border-2 border-black bg-[#2f7c2d] px-5 py-5 text-3xl text-black shadow-[0_12px_24px_rgba(0,0,0,0.16)] transition hover:-translate-y-0.5 disabled:cursor-wait disabled:opacity-60"
-            disabled={exporting}
-            onClick={exportShareImage}
-            type="button"
-          >
-            <Download className="mr-2" strokeWidth={3} />
-            {exporting ? "生成中" : "生成PDF图"}
-          </button>
           <p className="mt-3 text-center text-xs font-bold text-black/55">
-            当前先保存 PNG 分享图；PDF 可在下一步接 jsPDF 或浏览器打印。
+            手机优先走系统分享保存图片，电脑会直接下载图片文件。
           </p>
         </section>
       </div>
@@ -630,252 +591,179 @@ function ExportModal({
   );
 }
 
-function QrPlaceholder({
+function PosterCard({
+  background,
+  displayContent,
+  displayTitle,
+  mode,
+  posterRef,
+  shareUrl,
+}: {
+  background: string;
+  displayContent: string;
+  displayTitle: string;
+  mode: BattleMode;
+  posterRef: React.RefObject<HTMLDivElement | null>;
+  shareUrl: string;
+}) {
+  return (
+    <div
+      ref={posterRef}
+      className="flex h-full min-h-0 flex-col overflow-hidden rounded-[26px] border-2 border-black p-[clamp(14px,1.8vw,24px)] shadow-[0_24px_60px_rgba(0,0,0,0.18)] max-md:h-auto max-md:min-h-[680px] max-sm:min-h-[620px]"
+      style={{ background }}
+    >
+      <div className="flex items-start justify-between gap-4">
+        <div className="min-w-0">
+          <p className="display-font inline-flex rounded-full bg-black px-4 py-2 text-[clamp(12px,1.1vw,15px)] uppercase text-white">
+            RiotBus Report
+          </p>
+          <h2
+            className="display-font mt-3 max-w-3xl text-[clamp(30px,4.1vw,56px)] leading-[0.9]"
+            style={{
+              display: "-webkit-box",
+              maxHeight: "calc(3 * 0.9em)",
+              overflow: "hidden",
+              WebkitBoxOrient: "vertical",
+              WebkitLineClamp: 3,
+            }}
+          >
+            {displayTitle}
+          </h2>
+        </div>
+        <div className="shrink-0 rounded-[22px] border-2 border-black bg-white/68 px-4 py-3 font-black text-center max-sm:hidden">
+          <p className="text-[10px] uppercase">mode</p>
+          <p className="display-font whitespace-nowrap text-xl leading-none">
+            {mode === "mean" ? "刻薄到底" : "清清白白"}
+          </p>
+        </div>
+      </div>
+
+      <div className="relative mt-4 flex min-h-0 flex-1 flex-col overflow-hidden rounded-[24px] border border-black/15 bg-white/72 p-[clamp(16px,1.8vw,24px)] text-[clamp(15px,1.25vw,19px)] font-bold leading-[1.42]">
+        <div className="min-h-0 flex-1 overflow-hidden">
+          <MarkdownMessage content={displayContent} />
+        </div>
+        <div className="mt-4 shrink-0 border-t border-black/10 pt-4">
+          <div className="grid grid-cols-[minmax(0,1fr)_184px] items-stretch gap-4 max-sm:grid-cols-1">
+            <div className="flex h-full min-h-[184px] min-w-0 rounded-[22px] border-2 border-black bg-white p-3 max-sm:min-h-0">
+              <div className="flex h-full w-full flex-col rounded-[18px] border border-black/10 bg-white px-5 py-4 font-black text-black">
+                <p className="display-font text-[clamp(20px,2vw,28px)] leading-none">
+                  上车地址
+                </p>
+                <p className="mt-2 break-all text-[clamp(14px,1.15vw,16px)] leading-snug">
+                  link: {shareUrl}
+                </p>
+                <div className="mt-4 flex-1 rounded-[18px] border border-black/10 bg-[radial-gradient(circle_at_18%_14%,rgba(0,0,0,0.16)_1px,transparent_1.7px),radial-gradient(circle_at_72%_26%,rgba(0,0,0,0.12)_1px,transparent_1.7px)] bg-[length:14px_14px] bg-white/95 p-4">
+                  <div className="grid grid-cols-2 gap-x-10 gap-y-4 text-[clamp(16px,1.25vw,20px)] leading-none text-black/90 max-sm:grid-cols-1">
+                    {[
+                      "明星黑话 battle",
+                      "数据查询",
+                      "新闻速递",
+                      "一键生成海报",
+                    ].map((item) => (
+                      <p className="flex items-center gap-2" key={item}>
+                        <span className="inline-flex size-2 shrink-0 rounded-full bg-black" />
+                        <span>{item}</span>
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex h-full justify-end max-sm:h-auto max-sm:justify-start">
+              <div className="flex h-full min-h-[184px] items-center justify-center rounded-[22px] border-2 border-black bg-white p-3 max-sm:min-h-0">
+                <QrCodeSvg value={shareUrl} size={156} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function QrCodeSvg({
   value,
   size = 88,
 }: {
   value: string;
   size?: number;
 }) {
-  const cells = Array.from({ length: 49 }, (_, index) => {
-    const code = value.charCodeAt(index % Math.max(value.length, 1)) || 1;
-    return (code + index * 7) % 5 < 2 || index % 8 === 0;
-  });
+  const [dataUrl, setDataUrl] = useState<string>("");
+
+  useEffect(() => {
+    let ignore = false;
+    QRCode.toDataURL(value, {
+      errorCorrectionLevel: "M",
+      margin: 1,
+      color: {
+        dark: "#050505",
+        light: "#FFFFFF",
+      },
+      width: size * 4,
+    })
+      .then((url) => {
+        if (!ignore) setDataUrl(url);
+      })
+      .catch(() => {
+        if (!ignore) setDataUrl("");
+      });
+
+    return () => {
+      ignore = true;
+    };
+  }, [size, value]);
 
   return (
     <div
-      className="grid rounded-[12px] border-2 border-black bg-white p-1"
+      className="overflow-hidden rounded-[12px] border-2 border-black bg-white p-1 box-border"
       style={{
-        gap: 2,
-        gridTemplateColumns: "repeat(7, minmax(0, 1fr))",
         height: size,
         width: size,
       }}
     >
-      {cells.map((filled, index) => (
-        <span
-          className={filled ? "rounded-[2px] bg-black" : "rounded-[2px] bg-transparent"}
-          key={index}
-        />
-      ))}
+      {dataUrl ? (
+        <img alt="分享二维码" className="h-full w-full" src={dataUrl} />
+      ) : (
+        <div className="flex h-full w-full items-center justify-center text-[10px] font-black">
+          QR
+        </div>
+      )}
     </div>
   );
 }
 
 function cleanExportTitle(value: string | undefined, fallback: string) {
-  const raw = (value || fallback)
-    .replace(/^\s*标题[:：]\s*/u, "")
-    .replace(/^\s*(正文|正文内容)[:：]\s*/u, "")
-    .replace(/\s+/g, " ")
-    .trim();
-  const title = stripMarkdown(raw || fallback).trim() || fallback;
-
-  return title.length > 32 ? `${title.slice(0, 31)}…` : title;
+  const trimmed = (value || "").trim();
+  return trimmed || fallback;
 }
 
-function cleanExportContent(value: string) {
-  const cleaned = value
-    .replace(/\\n/g, "\n")
-    .replace(/^\s*(正文|正文内容)[:：]\s*/u, "")
-    .replace(/\n\s*(正文|正文内容)[:：]\s*/gu, "\n")
-    .replace(/(^|\n)\s*(总结|判词|数据|总结)[:：]\s*/gu, "$1")
-    .trim();
-
-  return cleaned.length > 260 ? `${cleaned.slice(0, 255)}…` : cleaned;
+function cleanExportContent(value: string | undefined) {
+  const trimmed = (value || "").trim();
+  return trimmed || "AI 没写出正文，稍后再试。";
 }
 
-function downloadShareImage({
-  artistA,
-  artistB,
-  background,
-  content,
-  mode,
-  shareUrl,
-  title,
-}: {
-  artistA: string;
-  artistB: string;
-  background: string;
-  content: string;
-  mode: BattleMode;
-  shareUrl: string;
-  title: string;
-}) {
-  const canvas = document.createElement("canvas");
-  const width = 1200;
-  const height = 1600;
-  canvas.width = width;
-  canvas.height = height;
-  const context = canvas.getContext("2d");
-
-  if (!context) return;
-
-  context.fillStyle = background;
-  context.fillRect(0, 0, width, height);
-  drawNoise(context, width, height);
-  drawRoundedRect(context, 80, 80, width - 160, height - 160, 48, "rgba(255,255,245,0.82)", "#050505", 4);
-  drawPill(context, 128, 128, 280, 64, "#050505", "RIOTBUS REPORT", "#ffffff", 24);
-
-  context.fillStyle = "#050505";
-  context.font = "900 86px Helvetica Neue, Arial, sans-serif";
-  wrapCanvasText(context, title, 128, 270, 944, 92, 2);
-
-  drawPill(
-    context,
-    128,
-    450,
-    mode === "mean" ? 210 : 230,
-    58,
-    mode === "mean" ? "#8CFF4F" : "#FF7AC8",
-    mode === "mean" ? "刻薄到底" : "清清白白",
-    "#050505",
-    26,
-  );
-
-  context.fillStyle = "#050505";
-  context.font = "800 30px Helvetica Neue, Arial, sans-serif";
-  context.fillText(`${artistA} vs ${artistB}`, 128, 570);
-
-  drawRoundedRect(context, 128, 620, 944, 650, 34, "rgba(255,255,255,0.72)", "rgba(0,0,0,0.14)", 2);
-  context.fillStyle = "#111111";
-  context.font = "700 30px Helvetica Neue, Arial, sans-serif";
-  wrapCanvasText(context, stripMarkdown(content), 168, 690, 864, 46, 12);
-
-  drawRoundedRect(context, 128, 1320, 694, 150, 30, "rgba(255,255,255,0.74)", "rgba(0,0,0,0.14)", 2);
-  context.fillStyle = "#050505";
-  context.font = "900 36px Helvetica Neue, Arial, sans-serif";
-  context.fillText("上车地址", 168, 1380);
-  context.font = "800 25px Helvetica Neue, Arial, sans-serif";
-  wrapCanvasText(context, shareUrl, 168, 1430, 600, 34, 2);
-
-  drawRoundedRect(context, 850, 1320, 222, 150, 30, "rgba(255,255,255,0.78)", "rgba(0,0,0,0.14)", 2);
-  drawQrOnCanvas(context, shareUrl, 900, 1345, 100);
-  context.font = "800 22px Helvetica Neue, Arial, sans-serif";
-  context.fillStyle = "#050505";
-  context.fillText("RiotBus", 908, 1468);
-
+async function downloadDataUrl(dataUrl: string, filename: string) {
   const link = document.createElement("a");
-  link.download = `riotbus-${slugify(`${artistA}-${artistB}`)}.png`;
-  link.href = canvas.toDataURL("image/png");
+  link.download = filename;
+  link.href = dataUrl;
   link.click();
 }
 
-function drawRoundedRect(
-  context: CanvasRenderingContext2D,
-  x: number,
-  y: number,
-  width: number,
-  height: number,
-  radius: number,
-  fill: string,
-  stroke?: string,
-  lineWidth = 1,
-) {
-  context.beginPath();
-  context.roundRect(x, y, width, height, radius);
-  context.fillStyle = fill;
-  context.fill();
-  if (stroke) {
-    context.strokeStyle = stroke;
-    context.lineWidth = lineWidth;
-    context.stroke();
-  }
-}
-
-function drawPill(
-  context: CanvasRenderingContext2D,
-  x: number,
-  y: number,
-  width: number,
-  height: number,
-  fill: string,
-  text: string,
-  textColor: string,
-  fontSize: number,
-) {
-  drawRoundedRect(context, x, y, width, height, height / 2, fill);
-  context.fillStyle = textColor;
-  context.font = `900 ${fontSize}px Helvetica Neue, Arial, sans-serif`;
-  context.textBaseline = "middle";
-  context.fillText(text, x + 26, y + height / 2 + 1);
-  context.textBaseline = "alphabetic";
-}
-
-function wrapCanvasText(
-  context: CanvasRenderingContext2D,
-  text: string,
-  x: number,
-  y: number,
-  maxWidth: number,
-  lineHeight: number,
-  maxLines: number,
-) {
-  const chars = text.replace(/\s+/g, " ").split("");
-  let line = "";
-  let lines = 0;
-
-  for (const char of chars) {
-    const testLine = line + char;
-    if (context.measureText(testLine).width > maxWidth && line) {
-      context.fillText(lines === maxLines - 1 ? `${line.slice(0, -1)}...` : line, x, y);
-      y += lineHeight;
-      lines += 1;
-      line = char;
-      if (lines >= maxLines) return;
-    } else {
-      line = testLine;
-    }
-  }
-
-  if (line && lines < maxLines) {
-    context.fillText(line, x, y);
-  }
-}
-
-function drawQrOnCanvas(
-  context: CanvasRenderingContext2D,
-  value: string,
-  x: number,
-  y: number,
-  size: number,
-) {
-  const cell = size / 7;
-  context.fillStyle = "#ffffff";
-  context.fillRect(x - 8, y - 8, size + 16, size + 16);
-  context.fillStyle = "#050505";
-  for (let index = 0; index < 49; index += 1) {
-    const code = value.charCodeAt(index % Math.max(value.length, 1)) || 1;
-    if ((code + index * 7) % 5 < 2 || index % 8 === 0) {
-      context.fillRect(
-        x + (index % 7) * cell + 2,
-        y + Math.floor(index / 7) * cell + 2,
-        cell - 4,
-        cell - 4,
-      );
-    }
-  }
-}
-
-function drawNoise(
-  context: CanvasRenderingContext2D,
-  width: number,
-  height: number,
-) {
-  context.fillStyle = "rgba(0,0,0,0.018)";
-  for (let index = 0; index < 1800; index += 1) {
-    context.fillRect(Math.random() * width, Math.random() * height, 1, 1);
-  }
-}
-
-function stripMarkdown(content: string) {
-  return content
-    .replace(/#{1,6}\s+/g, "")
-    .replace(/\*\*([^*]+)\*\*/g, "$1")
-    .replace(/<shade>([\s\S]+?)<\/shade>/g, "$1")
-    .replace(/~~([^~]+)~~/g, "$1")
-    .replace(/\*([^*]+)\*/g, "$1")
-    .replace(/`([^`]+)`/g, "$1")
-    .replace(/\n+/g, " ");
+async function waitForPosterAssets(node: HTMLElement) {
+  const images = Array.from(node.querySelectorAll("img"));
+  await Promise.all(
+    images.map(
+      (image) =>
+        new Promise<void>((resolve) => {
+          if (image.complete) {
+            resolve();
+            return;
+          }
+          image.addEventListener("load", () => resolve(), { once: true });
+          image.addEventListener("error", () => resolve(), { once: true });
+        }),
+    ),
+  );
 }
 
 function slugify(value: string) {

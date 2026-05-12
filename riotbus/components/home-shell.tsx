@@ -1,6 +1,6 @@
 "use client";
 
-import { useDeferredValue, useState } from "react";
+import { useDeferredValue, useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { banners } from "@/data/banners";
 import type { Banner, BattleMode } from "@/lib/types";
@@ -16,6 +16,20 @@ export function HomeShell() {
   const backgroundMode = useDeferredValue(mode);
   const [newsModal, setNewsModal] = useState<Banner | null>(null);
   const [filterOpen, setFilterOpen] = useState(false);
+  const [introOpen, setIntroOpen] = useState(false);
+
+  useEffect(() => {
+    const introSeen = window.localStorage.getItem("riotbus.introSeen");
+
+    if (!introSeen) {
+      setIntroOpen(true);
+    }
+  }, []);
+
+  function closeIntroModal() {
+    window.localStorage.setItem("riotbus.introSeen", "1");
+    setIntroOpen(false);
+  }
 
   return (
     <main
@@ -36,7 +50,7 @@ export function HomeShell() {
         />
       </section>
 
-      <section className="relative z-10 shrink-0 px-[clamp(18px,4vw,58px)] pb-[clamp(14px,2dvh,24px)] pt-[clamp(10px,1.6dvh,18px)]">
+      <section className="relative z-10 shrink-0 px-[clamp(18px,4vw,58px)] pb-[calc(clamp(14px,2dvh,24px)+env(safe-area-inset-bottom))] pt-[clamp(10px,1.6dvh,18px)] max-sm:pb-[calc(18px+env(safe-area-inset-bottom))]">
         <div
           className="mx-auto w-full max-w-[1180px] rounded-[30px] border border-black/50 bg-white/50 px-[clamp(16px,2vw,28px)] py-[clamp(12px,1.8dvh,20px)] shadow-[inset_0_1px_0_rgba(255,255,255,0.62),0_18px_46px_rgba(0,0,0,0.08)] backdrop-blur-2xl [--switch-width:470px] max-md:[--switch-width:64vw]"
         >
@@ -71,10 +85,63 @@ export function HomeShell() {
       </section>
 
       <NewsModal banner={newsModal} onClose={() => setNewsModal(null)} />
+      {introOpen ? (
+        <IntroModal onClose={closeIntroModal} />
+      ) : null}
       {filterOpen ? (
         <FilterModal mode={mode} onClose={() => setFilterOpen(false)} />
       ) : null}
     </main>
+  );
+}
+
+function IntroModal({ onClose }: { onClose: () => void }) {
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/18 p-5 backdrop-blur-sm">
+      <div className="glass-strong w-full max-w-2xl rounded-[34px] p-7">
+        <div className="flex items-start justify-between gap-4">
+          <div className="display-font text-4xl leading-none">RiotBus Beta</div>
+          <button
+            className="flex size-12 shrink-0 items-center justify-center rounded-full bg-black/10 transition-transform hover:scale-105"
+            onClick={onClose}
+            type="button"
+          >
+            ×
+          </button>
+        </div>
+        <div className="mt-5 space-y-4 text-[clamp(15px,1.4vw,18px)] font-bold leading-snug text-black/80">
+          <p>这是 RiotBus 的最小可运行版本，当前仍在内测中。</p>
+          <p>
+            如果你有问题或建议，可以发邮件到
+            <span className="mx-1 font-black text-black">soeuriours@outlook.com</span>
+            反馈。
+          </p>
+          <p>
+            GitHub 仓库：
+            <a
+              className="ml-1 underline"
+              href="https://github.com/Mmiisanth/personal-work-collection-v1/tree/main/riotbus"
+              rel="noreferrer"
+              target="_blank"
+            >
+              riotbus
+            </a>
+          </p>
+          <p>
+            目前默认 token 会持续维持服务，具体使用方式请按你能接受的成本和体验选择。
+          </p>
+        </div>
+        <div className="mt-6 flex justify-end">
+          <button
+            className="display-font rounded-full bg-black px-6 py-3 text-lg text-white"
+            onClick={onClose}
+            type="button"
+          >
+            知道了
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }
 

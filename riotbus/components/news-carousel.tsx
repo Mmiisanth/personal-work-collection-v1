@@ -30,26 +30,7 @@ export function NewsCarousel({
     cardWidth: 640,
     viewportWidth: 1024,
   });
-  const trackItems =
-    banners.length > 0
-      ? [
-          {
-            banner: banners[banners.length - 1],
-            key: `clone-left-${banners[banners.length - 1].id}`,
-            realIndex: banners.length - 1,
-          },
-          ...banners.map((banner, index) => ({
-            banner,
-            key: banner.id,
-            realIndex: index,
-          })),
-          {
-            banner: banners[0],
-            key: `clone-right-${banners[0].id}`,
-            realIndex: 0,
-          },
-        ]
-      : [];
+  const trackItems = banners.length > 0 ? [banners[banners.length - 1], ...banners, banners[0]] : [];
   const trackX =
     metrics.viewportWidth / 2 -
     metrics.cardWidth / 2 -
@@ -70,11 +51,12 @@ export function NewsCarousel({
   }, [active, banners.length, onActiveChange]);
 
   useEffect(() => {
+    let resizeTimer: number | undefined;
+
     const updateMetrics = () => {
       const width = window.innerWidth;
       const height = window.innerHeight;
-
-      setMetrics({
+      const nextMetrics = {
         cardGap: Math.round(Math.min(Math.max(width * 0.02, 16), 28)),
         cardHeight: Math.round(Math.min(Math.max(height * 0.36, 248), 380)),
         cardWidth:
@@ -82,13 +64,36 @@ export function NewsCarousel({
             ? Math.round(width * 0.86)
             : Math.round(Math.min(Math.max(width * 0.68, 680), 880)),
         viewportWidth: width,
-      });
+      };
+
+      setMetrics((current) =>
+        current.cardGap === nextMetrics.cardGap &&
+        current.cardHeight === nextMetrics.cardHeight &&
+        current.cardWidth === nextMetrics.cardWidth &&
+        current.viewportWidth === nextMetrics.viewportWidth
+          ? current
+          : nextMetrics,
+      );
+    };
+
+    const scheduleUpdateMetrics = () => {
+      if (resizeTimer) {
+        window.clearTimeout(resizeTimer);
+      }
+
+      resizeTimer = window.setTimeout(updateMetrics, 120);
     };
 
     updateMetrics();
-    window.addEventListener("resize", updateMetrics);
+    window.addEventListener("resize", scheduleUpdateMetrics);
 
-    return () => window.removeEventListener("resize", updateMetrics);
+    return () => {
+      window.removeEventListener("resize", scheduleUpdateMetrics);
+
+      if (resizeTimer) {
+        window.clearTimeout(resizeTimer);
+      }
+    };
   }, []);
 
   useEffect(() => {
@@ -132,7 +137,7 @@ export function NewsCarousel({
   return (
     <section className="flex w-full flex-col items-center gap-[clamp(8px,1.1vh,14px)]">
       <div
-        className="relative w-screen overflow-hidden border-y border-black/55 bg-white/30 py-[clamp(10px,1.8vh,18px)] shadow-[inset_0_1px_0_rgba(255,255,255,0.55),0_18px_50px_rgba(0,0,0,0.05)] backdrop-blur-2xl"
+        className="relative w-screen overflow-hidden border-y border-black/55 bg-white/30 py-[clamp(10px,1.8vh,18px)] shadow-[inset_0_1px_0_rgba(255,255,255,0.55),0_18px_50px_rgba(0,0,0,0.05)] backdrop-blur-xl"
         style={{ height: metrics.cardHeight + 40 }}
       >
         <div
@@ -145,12 +150,15 @@ export function NewsCarousel({
               : `transform ${SLIDE_MS}ms cubic-bezier(0.22, 1, 0.36, 1)`,
           }}
         >
-          {trackItems.map(({ banner, key, realIndex }) => {
+          {trackItems.map((banner, index) => {
+            const realIndex =
+              index === 0 ? banners.length - 1 : index === trackItems.length - 1 ? 0 : index - 1;
             const isActive = realIndex === active;
+            const key = index === 0 ? `clone-left-${banner.id}` : index === trackItems.length - 1 ? `clone-right-${banner.id}` : banner.id;
 
             return (
               <button
-                className={`relative shrink-0 overflow-hidden rounded-[24px] border text-black shadow-[0_18px_34px_rgba(0,0,0,0.12)] backdrop-blur-2xl transition-[border-color,box-shadow,opacity,transform] duration-300 hover:-translate-y-1 ${
+                className={`relative shrink-0 overflow-hidden rounded-[24px] border text-black shadow-[0_18px_34px_rgba(0,0,0,0.12)] backdrop-blur-xl transition-[border-color,box-shadow,opacity,transform] duration-300 hover:-translate-y-1 ${
                   isActive
                     ? "border-black/80 bg-white/45"
                     : "border-black/55 bg-white/35"
@@ -177,7 +185,7 @@ export function NewsCarousel({
         </div>
       </div>
 
-      <div className="relative h-8 w-[min(344px,42vw)] rounded-full border border-black bg-white/25 p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.7),0_8px_16px_rgba(0,0,0,0.14)] backdrop-blur-2xl max-sm:w-[58vw]">
+      <div className="relative h-8 w-[min(344px,42vw)] rounded-full border border-black bg-white/25 p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.7),0_8px_16px_rgba(0,0,0,0.14)] backdrop-blur-xl max-sm:w-[58vw]">
         <div className="relative h-full overflow-hidden rounded-full">
           <motion.div
             animate={{ x: `${active * 100}%` }}
@@ -222,14 +230,12 @@ function CenterBanner({
   banner: Banner;
   compact?: boolean;
 }) {
+  const isProminent = !compact;
+
   return (
-    <article
-      className={`grid h-full grid-cols-[0.76fr_1.24fr] ${
-        compact ? "pointer-events-none opacity-100" : ""
-      }`}
-    >
-      <div className="relative flex min-w-0 flex-col justify-between border-r-2 border-black bg-white/45 p-[clamp(10px,1.1vw,16px)]">
-        <div className="flex items-center justify-between gap-2">
+    <article className={`grid h-full grid-cols-[0.82fr_1.18fr] ${compact ? "pointer-events-none opacity-100" : ""}`}>
+      <div className="relative flex min-w-0 flex-col overflow-hidden border-r-2 border-black bg-white/45">
+        <div className="flex shrink-0 items-center justify-between gap-2 border-b border-black/15 p-[clamp(8px,0.9vw,12px)]">
           <span className="display-font whitespace-nowrap rounded-full bg-black px-2.5 py-1.5 text-[clamp(8px,0.72vw,11px)] uppercase text-white">
             RiotBus News
           </span>
@@ -237,43 +243,46 @@ function CenterBanner({
             live-ish
           </span>
         </div>
-        <div className="my-2.5 flex flex-1 items-center justify-center overflow-hidden rounded-[20px] border-2 border-black/25 shadow-inner">
+        <div className="relative flex min-h-0 flex-1 items-center justify-center overflow-hidden bg-black/5">
           <img
             alt={`${banner.title} banner image`}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover object-center"
+            decoding="async"
+            fetchPriority={isProminent ? "high" : "low"}
+            loading={isProminent ? "eager" : "lazy"}
+            width={960}
+            height={1200}
             src={banner.imageSrc}
           />
         </div>
-        <div className="flex items-center gap-1.5 text-[clamp(9px,0.8vw,12px)] font-black">
+        <div className="banner-copy-fade flex shrink-0 items-center gap-1.5 border-t border-black/15 p-[clamp(8px,0.9vw,12px)] text-[clamp(9px,0.8vw,12px)] font-black">
           <ExternalLink size={12} strokeWidth={3} />
-          <span className="truncate">{banner.sourceLabel}</span>
+          <span className="min-w-0 whitespace-nowrap">{banner.sourceLabel}</span>
         </div>
       </div>
-      <div className="relative flex min-w-0 flex-col justify-between p-[clamp(14px,1.8vw,24px)] text-left">
-        <div>
-          <div className="mb-2.5 flex flex-nowrap gap-2 overflow-hidden">
-            <span className="whitespace-nowrap rounded-full bg-brat-green px-2.5 py-1.5 text-[clamp(8px,0.72vw,11px)] font-black uppercase">
-              pop emergency
-            </span>
-            <span className="whitespace-nowrap rounded-full bg-riot-pink/70 px-2.5 py-1.5 text-[clamp(8px,0.72vw,11px)] font-black uppercase">
-              messy but cute
-            </span>
-          </div>
-          <h2 className="display-font text-[clamp(24px,3vw,40px)] leading-[0.94]">
-            {banner.title}
-          </h2>
-          <p className="mt-2 line-clamp-2 text-[clamp(12px,1.18vw,16px)] font-black leading-tight text-black/78">
-            {banner.dek}
-          </p>
-          <p className="mt-3 line-clamp-2 rounded-[15px] bg-white/62 p-2.5 text-[clamp(10px,0.92vw,13px)] font-bold leading-snug text-black/75">
-            {banner.body}
-          </p>
+      <div className="relative flex min-w-0 flex-col overflow-hidden bg-white/35 p-[clamp(12px,1.4vw,20px)] text-left">
+        <div className="banner-copy-fade flex shrink-0 max-h-9 flex-nowrap gap-2 overflow-hidden">
+          <span className="whitespace-nowrap rounded-full bg-brat-green px-2.5 py-1.5 text-[clamp(8px,0.72vw,11px)] font-black uppercase">
+            pop emergency
+          </span>
+          <span className="whitespace-nowrap rounded-full bg-riot-pink/70 px-2.5 py-1.5 text-[clamp(8px,0.72vw,11px)] font-black uppercase">
+            messy but cute
+          </span>
         </div>
-        <div className="mt-3 flex items-center justify-between border-t-2 border-black/20 pt-3">
+        <h2 className="display-font mt-2 text-[clamp(20px,2.3vw,32px)] leading-[0.95]">
+          {banner.title}
+        </h2>
+        <p className="banner-copy-fade mt-1.5 line-clamp-4 max-h-[7.2em] overflow-hidden text-[clamp(11px,1vw,14px)] font-black leading-[1.8] text-black/78">
+          {banner.dek}
+        </p>
+        <p className="banner-copy-fade mt-2 line-clamp-4 max-h-[7.8em] overflow-hidden rounded-[15px] bg-white/62 p-2.5 text-[clamp(10px,0.82vw,12px)] font-bold leading-[1.7] text-black/75">
+          {banner.body}
+        </p>
+        <div className="mt-auto flex items-center justify-between gap-3 border-t-2 border-black/20 pt-3">
           <span className="display-font text-[clamp(12px,1vw,15px)]">
             click for details
           </span>
-          <span className="display-font rounded-full bg-black px-4 py-2 text-[clamp(10px,0.9vw,13px)] text-white">
+          <span className="display-font whitespace-nowrap rounded-full bg-black px-4 py-2 text-[clamp(10px,0.9vw,13px)] text-white">
             open
           </span>
         </div>
