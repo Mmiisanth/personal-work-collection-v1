@@ -13,7 +13,7 @@ export const banners: Banner[] = [
   },
   {
     id: "olivia-dropdead",
-    title: "窑母鸡为聋冠单不折手段",
+    title: "窑母鸡为聋冠单不择手段",
     dek: "行业里有一些很mean的前辈",
     body: "新人热单选择德州与olivia三年回归便秘作首单dropdead摔死对撞，窑鸡官方下场求药剂迷粉丝购买单曲以夺冠单，官方下场欺负后辈恭喜窑母鸡reputation有",
     imageSrc: "/assets/banners/olivia-dropdead.png",
