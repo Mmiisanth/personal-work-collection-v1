@@ -431,6 +431,7 @@ function ExportModal({
   const [content, setContent] = useState("总结中");
   const [background, setBackground] = useState("#8CFF4F");
   const [exporting, setExporting] = useState(false);
+  const [qrReady, setQrReady] = useState(false);
   const [portalElement, setPortalElement] = useState<HTMLDivElement | null>(null);
   const posterRef = useRef<HTMLDivElement | null>(null);
   const shareUrl = "https://riotbus.onrender.com";
@@ -479,6 +480,7 @@ function ExportModal({
       const node = posterRef.current;
       if (!node) return;
       await document.fonts?.ready;
+      await waitForPosterReady(node);
       await waitForPosterAssets(node);
       const dataUrl = await toPng(node, {
         cacheBust: true,
@@ -528,6 +530,7 @@ function ExportModal({
             displayTitle={displayTitle}
             mode={mode}
             posterRef={posterRef}
+            onQrReadyChange={setQrReady}
             shareUrl={shareUrl}
           />
         </section>
@@ -571,12 +574,12 @@ function ExportModal({
             <div className="mt-3 grid grid-cols-1 gap-3">
               <button
                 className="display-font flex w-full items-center justify-center whitespace-nowrap rounded-[24px] border-2 border-black bg-[#2f7c2d] px-5 py-5 text-[clamp(22px,2vw,30px)] text-black shadow-[0_12px_24px_rgba(0,0,0,0.16)] transition hover:-translate-y-0.5 disabled:cursor-wait disabled:opacity-60"
-                disabled={exporting}
+                disabled={exporting || loading || !qrReady}
                 onClick={exportShareImage}
                 type="button"
               >
                 <Download className="mr-2" strokeWidth={3} />
-                {exporting ? "生成中" : "生成宣传图"}
+                {exporting ? "生成中" : !qrReady ? "二维码加载中" : "生成宣传图"}
               </button>
             </div>
           </div>
@@ -596,6 +599,7 @@ function PosterCard({
   displayContent,
   displayTitle,
   mode,
+  onQrReadyChange,
   posterRef,
   shareUrl,
 }: {
@@ -603,6 +607,7 @@ function PosterCard({
   displayContent: string;
   displayTitle: string;
   mode: BattleMode;
+  onQrReadyChange: (ready: boolean) => void;
   posterRef: React.RefObject<HTMLDivElement | null>;
   shareUrl: string;
 }) {
@@ -671,7 +676,7 @@ function PosterCard({
             </div>
             <div className="flex h-full justify-end max-sm:h-auto max-sm:justify-start">
               <div className="flex h-full min-h-[184px] items-center justify-center rounded-[22px] border-2 border-black bg-white p-3 max-sm:min-h-0">
-                <QrCodeSvg value={shareUrl} size={156} />
+                <QrCodeSvg value={shareUrl} size={156} onReadyChange={onQrReadyChange} />
               </div>
             </div>
           </div>
@@ -684,9 +689,11 @@ function PosterCard({
 function QrCodeSvg({
   value,
   size = 88,
+  onReadyChange,
 }: {
   value: string;
   size?: number;
+  onReadyChange?: (ready: boolean) => void;
 }) {
   const [dataUrl, setDataUrl] = useState<string>("");
 
@@ -702,16 +709,22 @@ function QrCodeSvg({
       width: size * 4,
     })
       .then((url) => {
-        if (!ignore) setDataUrl(url);
+        if (!ignore) {
+          setDataUrl(url);
+          onReadyChange?.(true);
+        }
       })
       .catch(() => {
-        if (!ignore) setDataUrl("");
+        if (!ignore) {
+          setDataUrl("");
+          onReadyChange?.(false);
+        }
       });
 
     return () => {
       ignore = true;
     };
-  }, [size, value]);
+  }, [onReadyChange, size, value]);
 
   return (
     <div
@@ -764,6 +777,14 @@ async function waitForPosterAssets(node: HTMLElement) {
         }),
     ),
   );
+}
+
+async function waitForPosterReady(node: HTMLElement) {
+  const deadline = Date.now() + 5000;
+  while (Date.now() < deadline) {
+    if (node.querySelector('img[alt="分享二维码"]')) return;
+    await new Promise((resolve) => window.requestAnimationFrame(() => resolve(null)));
+  }
 }
 
 function slugify(value: string) {
