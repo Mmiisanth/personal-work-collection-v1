@@ -15,6 +15,7 @@ type NewsCarouselProps = {
 const AUTOPLAY_MS = 4300;
 const SLIDE_MS = 640;
 const SNAP_MS = 80;
+const TRACK_CYCLES = 3;
 
 export function NewsCarousel({
   banners,
@@ -22,7 +23,8 @@ export function NewsCarousel({
   onActiveChange,
   onOpen,
 }: NewsCarouselProps) {
-  const [trackIndex, setTrackIndex] = useState(active + 1);
+  const middleCycle = Math.floor(TRACK_CYCLES / 2);
+  const [trackIndex, setTrackIndex] = useState(active + banners.length * middleCycle);
   const [isSnapping, setIsSnapping] = useState(false);
   const [metrics, setMetrics] = useState({
     cardGap: 24,
@@ -30,11 +32,27 @@ export function NewsCarousel({
     cardWidth: 640,
     viewportWidth: 1024,
   });
-  const trackItems = banners.length > 0 ? [banners[banners.length - 1], ...banners, banners[0]] : [];
+  const trackItems =
+    banners.length > 0
+      ? Array.from({ length: banners.length * TRACK_CYCLES }, (_, index) => banners[index % banners.length])
+      : [];
+  const canonicalTrackIndex = active + banners.length * middleCycle;
   const trackX =
     metrics.viewportWidth / 2 -
     metrics.cardWidth / 2 -
     trackIndex * (metrics.cardWidth + metrics.cardGap);
+
+  useEffect(() => {
+    if (banners.length <= 0) return;
+    setIsSnapping(true);
+    setTrackIndex(canonicalTrackIndex);
+
+    const timer = window.setTimeout(() => {
+      setIsSnapping(false);
+    }, SNAP_MS);
+
+    return () => window.clearTimeout(timer);
+  }, [banners.length]);
 
   useEffect(() => {
     if (banners.length <= 1) return;
@@ -43,12 +61,12 @@ export function NewsCarousel({
       const nextIndex = (active + 1) % banners.length;
 
       setIsSnapping(false);
-      setTrackIndex(active === banners.length - 1 ? banners.length + 1 : nextIndex + 1);
+      setTrackIndex(trackIndex + 1);
       onActiveChange(nextIndex);
     }, AUTOPLAY_MS);
 
     return () => window.clearInterval(timer);
-  }, [active, banners.length, onActiveChange]);
+  }, [active, banners.length, onActiveChange, trackIndex]);
 
   useEffect(() => {
     let resizeTimer: number | undefined;
@@ -97,12 +115,14 @@ export function NewsCarousel({
   }, []);
 
   useEffect(() => {
-    if (trackIndex !== banners.length + 1 && trackIndex !== 0) return;
+    if (banners.length <= 0) return;
+    if (trackIndex >= banners.length && trackIndex < banners.length * 2) return;
+
     let releaseTimer: number | undefined;
 
     const snapTimer = window.setTimeout(() => {
       setIsSnapping(true);
-      setTrackIndex(trackIndex === 0 ? banners.length : 1);
+      setTrackIndex(canonicalTrackIndex);
 
       releaseTimer = window.setTimeout(() => {
         setIsSnapping(false);
@@ -116,20 +136,21 @@ export function NewsCarousel({
         window.clearTimeout(releaseTimer);
       }
     };
-  }, [banners.length, trackIndex]);
+  }, [banners.length, canonicalTrackIndex, trackIndex]);
 
   function goToBanner(index: number) {
     if (banners.length <= 0) return;
 
     setIsSnapping(false);
 
-    if (active === banners.length - 1 && index === 0) {
-      setTrackIndex(banners.length + 1);
-    } else if (active === 0 && index === banners.length - 1) {
-      setTrackIndex(0);
-    } else {
-      setTrackIndex(index + 1);
-    }
+    const directDelta = index - active;
+    const wrappedForwardDelta = directDelta + banners.length;
+    const wrappedBackwardDelta = directDelta - banners.length;
+    const delta = [directDelta, wrappedForwardDelta, wrappedBackwardDelta].sort(
+      (a, b) => Math.abs(a) - Math.abs(b),
+    )[0];
+
+    setTrackIndex(trackIndex + delta);
 
     onActiveChange(index);
   }
@@ -151,20 +172,19 @@ export function NewsCarousel({
           }}
         >
           {trackItems.map((banner, index) => {
-            const realIndex =
-              index === 0 ? banners.length - 1 : index === trackItems.length - 1 ? 0 : index - 1;
-            const isActive = realIndex === active;
-            const key = index === 0 ? `clone-left-${banner.id}` : index === trackItems.length - 1 ? `clone-right-${banner.id}` : banner.id;
+            const realIndex = index % banners.length;
+            const isCentered = index === trackIndex;
+            const key = `${banner.id}-${index}`;
 
             return (
               <button
                 className={`relative shrink-0 overflow-hidden rounded-[24px] border text-black shadow-[0_18px_34px_rgba(0,0,0,0.12)] backdrop-blur-xl transition-[border-color,box-shadow,opacity,transform] duration-300 hover:-translate-y-1 ${
-                  isActive
+                  isCentered
                     ? "border-black/80 bg-white/45"
                     : "border-black/55 bg-white/35"
                 }`}
                 onClick={() => {
-                  if (isActive) {
+                  if (isCentered) {
                     onOpen(banner);
                     return;
                   }
@@ -175,8 +195,8 @@ export function NewsCarousel({
                 style={{ height: metrics.cardHeight, width: metrics.cardWidth }}
                 type="button"
               >
-                <CenterBanner banner={banner} compact={!isActive} />
-                {!isActive ? (
+                <CenterBanner banner={banner} compact={!isCentered} />
+                {!isCentered ? (
                   <span className="pointer-events-none absolute inset-0 bg-white/[0.03]" />
                 ) : null}
               </button>
