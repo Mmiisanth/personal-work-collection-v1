@@ -1,11 +1,11 @@
 ## Banner
 
 id: gaga-cancel
-标题：死胎尖再次临开场取消演唱会
-副标题：首谈支气管炎尖黑上嘴脸尖迷挽尊
-正文：美国迈阿密原定9月3日晚，Lady Gaga「Mayhem Ball」巡演重磅开唱，全城粉丝满怀期待、氛围沸腾。开场仅剩5分钟之际，Lady Gaga突发官宣紧急取消本场演出，并向全球歌迷诚挚致歉。她坦言声带负荷严重超标，经医生与声乐教练专业评估，严禁登台演出。秉持现场真唱的艺术坚守，为避免声带造成永久性损伤，无奈忍痛取消巡演。
+标题：Lady gaga再次临开场取消演唱会
+副标题：首谈支气管炎 不管粉丝钱包死活！
+正文：美国迈阿密原定4月18日晚，Lady Gaga「Mayhem Ball」巡演重磅开唱，全城粉丝满怀期待、氛围沸腾。开场仅剩5分钟之际，Lady Gaga突发官宣紧急取消本场演出，并向全球歌迷诚挚致歉。她坦言声带负荷严重超标，经医生与声乐教练专业评估，严禁登台演出。秉持现场真唱的艺术坚守，为避免声带造成永久性损伤，无奈忍痛取消巡演。
 图片文件名：gaga-cancel.png
-来源标签：尖引出遛粉
+来源标签：怪兽之母再次遛粉
 来源链接：https://www.google.com/search?q=Lady+Gaga+cancelled+concert+illness
 颜色：#b8ff9c
 是否启用：是
@@ -14,11 +14,11 @@ id: gaga-cancel
 ## Banner
 
 id: olivia-dropdead
-标题：窑母鸡为聋冠单不择手段
+标题：Olivia为窑冠单不择手段
 副标题：行业里有一些很mean的前辈
 正文：新人热单选择德州与olivia三年回归便秘作首单dropdead摔死对撞，窑鸡官方下场求药剂迷粉丝购买单曲以夺冠单，官方下场欺负后辈恭喜窑母鸡reputation有
 图片文件名：olivia-dropdead.png
-来源标签：聋母鸡不要脸
+来源标签：新疆棉不要脸
 来源链接：https://www.google.com/search?q=Olivia+Rodrigo+new+single+Dropdead+Choosing+Texas
 颜色：#ffd2ea
 是否启用：是
@@ -31,7 +31,7 @@ id: ariana-petal
 副标题：AG8《Petal》官宣择日开炸
 正文：AG8《Petal》定档 7.31全世界的小炸弹都来支持啦，炸天尊开榜封神！超高人气天后Ariana定于7月31日强势回归，暌违许久再度站上舞台，牵动全球歌迷目光。粉丝早早守候蹲守官宣，全网话题热度飙升，一场视听盛宴即将如约而至
 图片文件名：ariana-petal.png
-来源标签：炸女帝新专
+来源标签：A女帝新专
 来源链接：https://www.universalmusic.ca/press-releases/ariana-grande-announces-eighth-studio-album-petal-to-be-released-july-31/
 颜色：#eaff3d
 是否启用：是

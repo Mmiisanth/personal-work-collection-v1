@@ -9,7 +9,7 @@ type CapsuleSwitchProps = {
 };
 
 const modes: Array<{ value: BattleMode; label: string; color: string }> = [
-  { value: "mean", label: "刻薄女孩", color: "#8CFF4F" },
+  { value: "mean", label: "刻薄到底", color: "#8CFF4F" },
   { value: "neutral", label: "清清白白", color: "#FF7AC8" },
 ];
 
