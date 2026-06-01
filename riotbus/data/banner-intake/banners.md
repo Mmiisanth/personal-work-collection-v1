@@ -13,26 +13,26 @@ id: gaga-cancel
 
 ## Banner
 
-id: olivia-dropdead
-标题：Olivia为窑冠单不择手段
-副标题：行业里有一些很mean的前辈
-正文：新人热单选择德州与olivia三年回归便秘作首单dropdead摔死对撞，窑鸡官方下场求药剂迷粉丝购买单曲以夺冠单，官方下场欺负后辈恭喜窑母鸡reputation有
-图片文件名：olivia-dropdead.png
-来源标签：新疆棉不要脸
-来源链接：https://www.google.com/search?q=Olivia+Rodrigo+new+single+Dropdead+Choosing+Texas
+id: olivia-the-cure
+标题：the cure艺术已成！Pitchfork给出Best New Track
+副标题：窑姐这次不是抢冠，是拿乐评打脸
+正文：Olivia Rodrigo 新单《the cure》正式上线，Pitchfork 直接给出 Best New Track，评价其作为新专《You Seem Pretty Sad for a Girl So in Love》里的成熟推进。前作还在被嘲抢冠，这次窑姐干脆换赛道：不靠嘴硬，直接拿乐评和首日热度说话。《the cure》首日登顶 Spotify Global 和 US 榜，Pitchfork 也盖章艺术进化，同辈还在营销“回归”，窑姐已经把新声代作业本翻到下一页。
+图片文件名：olivia-the-cure.png
+来源标签：Pitchfork盖章艺术已成
+来源链接：https://pitchfork.com/reviews/tracks/olivia-rodrigo-the-cure/
 颜色：#ffd2ea
 是否启用：是
 排序：20
 
 ## Banner
 
-id: ariana-petal
-标题：Ariana 7.31 回归
-副标题：AG8《Petal》官宣择日开炸
-正文：AG8《Petal》定档 7.31全世界的小炸弹都来支持啦，炸天尊开榜封神！超高人气天后Ariana定于7月31日强势回归，暌违许久再度站上舞台，牵动全球歌迷目光。粉丝早早守候蹲守官宣，全网话题热度飙升，一场视听盛宴即将如约而至
-图片文件名：ariana-petal.png
-来源标签：A女帝新专
-来源链接：https://www.universalmusic.ca/press-releases/ariana-grande-announces-eighth-studio-album-petal-to-be-released-july-31/
+id: ariana-hate-love-me
+标题：Ariana新单上线，冠单梦先碎一地
+副标题：贷款第八冠，结果榜单不听粉丝祈福
+正文：Ariana Grande 新单《hate that i made you love me》上线，作为《petal》预热单，Official Charts 还提前写着她要冲击第八支英国冠单，粉丝已经把花瓣铺到王座边。结果 Big Top 40 首周只落在第 5，连单曲冠军都没摸到，贷款“Chart Queen”当场变成花瓣掉地。Spotify 数据确实能打，但如果要拿“冠单回归”当叙事，那炸姐这次只能先把皇冠放回购物车。
+图片文件名：ariana-hate-love-me.png
+来源标签：贷款第八冠失败样本
+来源链接：https://www.officialcharts.com/chart-news/new-music-friday-songs-single-albums-may-29-2026/
 颜色：#eaff3d
 是否启用：是
 排序：30
