@@ -4,6 +4,8 @@
 
 项目当前重点不是做一个传统音乐资料站，而是把“查数据、看对比、生成有传播感的报告”这条链路跑通。
 
+正式访问地址：[https://riotbus.soeuriours.com](https://riotbus.soeuriours.com)
+
 ## 当前能力
 
 - 首页动态斜线背景，支持 `刻薄女孩` / `清清白白` 双主题切换。
@@ -14,6 +16,7 @@
 - 对比页支持销量、Spotify followers、Grammy、AOTY 乐评四类数据。
 - AI 面板支持首轮报告、追问回复和分享图/PDF 文案生成。
 - RAG 内容库支持艺人画像、黑称黑话、粉丝称呼、争议、荣誉、标题素材。
+- AOTY 专辑级 Agent 支持手动更新专辑乐评缓存，并在用户追问具体专辑时注入 AI 上下文。
 - 可选 DashScope/Qwen `text-embedding-v4` embedding 流程，可导入 Chroma。
 
 ## 技术栈
@@ -62,12 +65,45 @@ npm run dev
 http://localhost:3000
 ```
 
+## Cloudflare 部署
+
+这个项目不是纯静态站，推荐用 OpenNext + Cloudflare Workers 部署。
+
+安装依赖后先本地验证：
+
+```bash
+npm run typecheck
+npm run build
+```
+
+本地预览 Cloudflare 产物：
+
+```bash
+npm run preview:cloudflare
+```
+
+发布到 Cloudflare：
+
+```bash
+npm run deploy:cloudflare
+```
+
+如果需要补 Cloudflare 环境类型：
+
+```bash
+npm run cf-typegen
+```
+
+Cloudflare 上运行时只依赖线上 API 和已经构建好的静态资产；`public/assets/artists/source/`、`data/rag/index/rag-embeddings.json`、`data/rag/index/chroma-export.json` 这类本地素材不应作为部署前提。
+
 ## 常用命令
 
 ```bash
 npm run dev
 npm run typecheck
 npm run build
+npm run agent:aoty:update
+npm run agent:aoty:query -- --artist taylor-swift
 npm run rag:chunks
 npm run rag:embed
 npm run rag:search -- "Taylor Swift vs Lady Gaga"
@@ -81,6 +117,7 @@ npm run rag:chroma
 - AI prompt：[lib/prompts.ts](lib/prompts.ts)
 - RAG 知识库：[data/rag/knowledge/artist-knowledge.json](data/rag/knowledge/artist-knowledge.json)
 - 结构化指标：[data/rag/structured/artist-metrics.json](data/rag/structured/artist-metrics.json)
+- AOTY 专辑级缓存：[data/rag/structured/aoty-albums.json](data/rag/structured/aoty-albums.json)
 - Banner 图片：[public/assets/banners](public/assets/banners)
 - 生成头像：[public/assets/artists/mean](public/assets/artists/mean) 和 [public/assets/artists/neutral](public/assets/artists/neutral)
 
@@ -127,9 +164,56 @@ npm run rag:search -- "尖姐和交姐谁赢" -- --mode mean --artist lady-gaga
 npm run rag:chroma
 ```
 
+## AOTY Agent
+
+手动更新 AOTY 专辑级缓存：
+
+```bash
+npm run agent:aoty:update
+```
+
+这个 Agent 会按 `data/rag/sources/artist-sources.json` 的 AOTY 艺人主页执行 `plan -> tool -> execute -> validate -> write` 流程，并写入 `data/rag/structured/aoty-albums.json`。如果 AOTY 返回 Cloudflare challenge，脚本会记录失败原因并保留旧缓存，不会清空已有数据。
+
+只更新单个艺人：
+
+```bash
+npm run agent:aoty:update -- --artist taylor-swift
+```
+
+查询缓存里的艺人专辑结果：
+
+```bash
+npm run agent:aoty:query -- --artist taylor-swift
+```
+
+使用本地 HTML 作为 fallback：
+
+```bash
+npm run agent:aoty:update -- --source-dir data/agent-cache/aoty-html
+```
+
+如果浏览器能打开 AOTY，但脚本直连被 Cloudflare 拦截，也可以把浏览器里复制出的可见文本保存为：
+
+```text
+data/agent-cache/aoty-browser-text/taylor-swift.txt
+```
+
+然后运行：
+
+```bash
+npm run agent:aoty:update -- --artist taylor-swift --browser-text-dir data/agent-cache/aoty-browser-text
+```
+
 ## 资产注意
 
 `public/assets/artists/source` 是本地参考图目录，不建议上传公开仓库。公开仓库只需要提交生成后的 `mean` / `neutral` 头像和 Banner 图。
+
+Cloudflare 部署只需要：
+
+- `public/assets/banners`
+- `public/assets/artists/mean`
+- `public/assets/artists/neutral`
+- 代码、JSON seed、文档
 
 ## 文档
 

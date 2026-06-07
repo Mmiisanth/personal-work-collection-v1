@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": null,
+  "agent": {
+    "name": "aoty-album-agent",
+    "status": "empty",
+    "notes": [
+      "Run npm run agent:aoty:update to refresh album-level AOTY cache.",
+      "AOTY may return Cloudflare challenge pages. The updater preserves old cache and records fetch errors instead of deleting data."
+    ]
+  },
+  "artists": []
+}

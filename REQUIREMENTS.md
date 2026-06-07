@@ -6,6 +6,16 @@
 - npm `>= 10`
 - Modern browser: Chrome, Edge, Safari, or Firefox
 
+Cloudflare 部署额外要求：
+
+- 一个 Cloudflare 账号
+- `wrangler` 可用
+- OpenNext Cloudflare 适配构建链路可用
+
+正式线上域名：
+
+- `https://riotbus.soeuriours.com`
+
 ## Required npm dependencies
 
 Installed through `package.json`:
@@ -14,6 +24,9 @@ Installed through `package.json`:
 - `react`
 - `react-dom`
 - `framer-motion`
+- `gsap`
+- `html-to-image`
+- `qrcode`
 - `lucide-react`
 
 Development dependencies:
@@ -99,6 +112,12 @@ Run:
 ```bash
 npm run typecheck
 npm run build
+```
+
+Cloudflare 发布前再跑：
+
+```bash
+npm run preview:cloudflare
 ```
 
 If RAG content changed, also run:
