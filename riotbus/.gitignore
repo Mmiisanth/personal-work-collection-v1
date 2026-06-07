@@ -14,5 +14,6 @@ __pycache__/
 *.pyc
 data/rag/index/rag-embeddings.json
 data/rag/index/chroma-export.json
+data/agent-cache/
 public/assets/artists/source/
 cloudflare-env.d.ts

@@ -20,6 +20,20 @@ const metricLabels: Record<MetricKey, string> = {
   reviews: "乐评",
 };
 
+const SITE_URL = "https://riotbus.soeuriours.com";
+
+type QrCodeRuntime = {
+  create: (
+    value: string,
+    options: { errorCorrectionLevel: "L" | "M" | "Q" | "H" },
+  ) => {
+    modules: {
+      data: boolean[];
+      size: number;
+    };
+  };
+};
+
 export function AiPanel({
   artistAId,
   artistBId,
@@ -145,6 +159,7 @@ export function AiPanel({
           metrics,
           dataSummary,
           userQuestion: userMessage,
+          conversation: messages,
           provider: getStoredProvider(),
         }),
       });
@@ -432,9 +447,10 @@ function ExportModal({
   const [background, setBackground] = useState("#8CFF4F");
   const [exporting, setExporting] = useState(false);
   const [qrReady, setQrReady] = useState(false);
+  const [copied, setCopied] = useState(false);
   const [portalElement, setPortalElement] = useState<HTMLDivElement | null>(null);
   const posterRef = useRef<HTMLDivElement | null>(null);
-  const shareUrl = "https://riotbus.onrender.com";
+  const shareUrl = SITE_URL;
   const displayTitle = cleanExportTitle(title, `${artistA} vs ${artistB}`);
   const displayContent = loading
     ? "总结乱斗中。。。"
@@ -490,6 +506,16 @@ function ExportModal({
       await downloadDataUrl(dataUrl, `riotbus-${slugify(`${artistA}-${artistB}`)}.png`);
     } finally {
       window.setTimeout(() => setExporting(false), 450);
+    }
+  }
+
+  async function copyShareUrl() {
+    try {
+      await navigator.clipboard?.writeText(shareUrl);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1400);
+    } catch {
+      setCopied(false);
     }
   }
 
@@ -568,8 +594,15 @@ function ExportModal({
 
           <div className="mt-4 rounded-[26px] border border-black/10 bg-white/42 p-5">
             <p className="display-font text-3xl leading-none">分享方式</p>
-            <div className="mt-4 rounded-[18px] bg-white/72 p-3 text-sm font-black">
-              <p className="break-all text-base leading-snug">link: {shareUrl}</p>
+            <div className="mt-4 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 rounded-[18px] bg-white/78 p-3 text-sm font-black">
+              <p className="min-w-0 break-all text-base leading-snug">link: {shareUrl}</p>
+              <button
+                className="rounded-full border border-black/20 bg-black px-4 py-2 text-xs font-black text-white transition hover:-translate-y-0.5"
+                onClick={copyShareUrl}
+                type="button"
+              >
+                {copied ? "已复制" : "复制"}
+              </button>
             </div>
             <div className="mt-3 grid grid-cols-1 gap-3">
               <button
@@ -695,31 +728,38 @@ function QrCodeSvg({
   size?: number;
   onReadyChange?: (ready: boolean) => void;
 }) {
-  const [dataUrl, setDataUrl] = useState<string>("");
+  const [svgMarkup, setSvgMarkup] = useState<string>("");
 
   useEffect(() => {
     let ignore = false;
-    QRCode.toDataURL(value, {
-      errorCorrectionLevel: "M",
-      margin: 1,
-      color: {
-        dark: "#050505",
-        light: "#FFFFFF",
-      },
-      width: size * 4,
-    })
-      .then((url) => {
-        if (!ignore) {
-          setDataUrl(url);
-          onReadyChange?.(true);
-        }
-      })
-      .catch(() => {
-        if (!ignore) {
-          setDataUrl("");
-          onReadyChange?.(false);
-        }
+    onReadyChange?.(false);
+    try {
+      const qr = (QRCode as unknown as QrCodeRuntime).create(value, {
+        errorCorrectionLevel: "M",
       });
+      const moduleSize = qr.modules.size;
+      const margin = 1;
+      const viewBoxSize = moduleSize + margin * 2;
+      const cells = qr.modules.data
+        .map((filled: boolean, index: number) => {
+          if (!filled) return "";
+          const x = (index % moduleSize) + margin;
+          const y = Math.floor(index / moduleSize) + margin;
+          return `<rect x="${x}" y="${y}" width="1" height="1" />`;
+        })
+        .join("");
+      const markup = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${viewBoxSize} ${viewBoxSize}" shape-rendering="crispEdges"><rect width="100%" height="100%" fill="#FFFFFF"/><g fill="#050505">${cells}</g></svg>`;
+
+      if (!ignore) {
+        setSvgMarkup(markup);
+        onReadyChange?.(true);
+      }
+    } catch {
+      if (!ignore) {
+        setSvgMarkup("");
+        onReadyChange?.(false);
+      }
+    }
 
     return () => {
       ignore = true;
@@ -734,8 +774,14 @@ function QrCodeSvg({
         width: size,
       }}
     >
-      {dataUrl ? (
-        <img alt="分享二维码" className="h-full w-full" src={dataUrl} />
+      {svgMarkup ? (
+        <div
+          aria-label="分享二维码"
+          className="h-full w-full [&_svg]:block [&_svg]:h-full [&_svg]:w-full"
+          data-qr-ready="true"
+          dangerouslySetInnerHTML={{ __html: svgMarkup }}
+          role="img"
+        />
       ) : (
         <div className="flex h-full w-full items-center justify-center text-[10px] font-black">
           QR
@@ -782,9 +828,10 @@ async function waitForPosterAssets(node: HTMLElement) {
 async function waitForPosterReady(node: HTMLElement) {
   const deadline = Date.now() + 5000;
   while (Date.now() < deadline) {
-    if (node.querySelector('img[alt="分享二维码"]')) return;
+    if (node.querySelector('[data-qr-ready="true"] svg')) return;
     await new Promise((resolve) => window.requestAnimationFrame(() => resolve(null)));
   }
+  throw new Error("QR code is not ready");
 }
 
 function slugify(value: string) {

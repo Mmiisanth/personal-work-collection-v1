@@ -12,6 +12,10 @@ Cloudflare 部署额外要求：
 - `wrangler` 可用
 - OpenNext Cloudflare 适配构建链路可用
 
+正式线上域名：
+
+- `https://riotbus.soeuriours.com`
+
 ## Required npm dependencies
 
 Installed through `package.json`:
@@ -20,6 +24,9 @@ Installed through `package.json`:
 - `react`
 - `react-dom`
 - `framer-motion`
+- `gsap`
+- `html-to-image`
+- `qrcode`
 - `lucide-react`
 
 Development dependencies:

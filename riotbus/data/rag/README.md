@@ -45,6 +45,65 @@
 - 当前素材规模不大，本地 JSON 向量检索已经足够做 MVP 和简历展示。
 - Chroma 需要额外服务和部署配置，适合放在 RAG v2，而不是阻塞当前网站主流程。
 
+## AOTY 专辑级 Agent
+
+`artist-metrics.json` 只保存艺人级 AOTY 均分；如果用户追问某一张专辑，应该优先读取专辑级缓存：
+
+```bash
+npm run agent:aoty:update
+```
+
+这个命令会按 `sources/artist-sources.json` 里的 AOTY 艺人主页执行一轮手动 Agent 更新：
+
+- `plan`：读取 20 位艺人的 AOTY 主页，决定本轮更新目标。
+- `tool`：抓取 AOTY 页面、解析专辑链接、提取专辑分数和评论数量。
+- `execute`：逐个艺人执行，记录成功、失败、更新时间。
+- `validate`：过滤没有标题或没有 AOTY 专辑链接的异常条目。
+- `write`：写入 `structured/aoty-albums.json`。
+
+AOTY 可能返回 Cloudflare challenge。脚本不会因此清空旧数据；如果在线抓取失败，会保留旧缓存并记录错误。后续如果需要人工下载 HTML，可以放到本地目录后运行：
+
+```bash
+npm run agent:aoty:update -- --source-dir data/agent-cache/aoty-html
+```
+
+本地 HTML 命名规则：
+
+```text
+data/agent-cache/aoty-html/taylor-swift.html
+data/agent-cache/aoty-html/lady-gaga.html
+```
+
+如果使用 browser-use 或外部浏览器读取页面文本，可以把可见文本保存到：
+
+```text
+data/agent-cache/aoty-browser-text/taylor-swift.txt
+```
+
+再运行：
+
+```bash
+npm run agent:aoty:update -- --artist taylor-swift --browser-text-dir data/agent-cache/aoty-browser-text
+```
+
+AI 生成接口会在用户追问包含“专辑 / 乐评 / AOTY / 评分 / 口碑”等关键词时，自动把 `structured/aoty-albums.json` 中命中的专辑级事实加入 prompt。
+
+查询当前缓存：
+
+```bash
+npm run agent:aoty:query -- --artist taylor-swift
+npm run agent:aoty:query -- --artist taylor-swift --album folklore
+```
+
+专辑质量标签由 Agent 执行阶段计算，不交给大模型猜：
+
+- 蓝标：AOTY critic score >= 80。
+- 橙标：AOTY user score >= 80。
+- 紫标：critic score 和 user score 都 >= 80。
+- Must Hear：页面文本出现 Must Hear label。
+
+AI 对话还会携带一层短期 `Agent Memory`：前端把上一轮对话传给 `/api/ai/generate`，后端识别上一轮赢家和用户当前是赞同、反驳还是中性，再把策略写入 prompt。这样用户追问时，AI 会优先延续上一轮判决，并用专辑级 AOTY 证据补强或反击。
+
 ## 文件分工
 
 | 文件 | 类型 | 你主要填写什么 | 当前用途 |
@@ -52,6 +111,7 @@
 | `sources/artist-sources.json` | 艺人级链接库 | AOTY 艺人主页、RYM 艺人主页、RC 艺人页 | 生成报告时提供艺人专属来源入口，后续 agent 抓页面也从这里取 URL |
 | `sources/platform-sources.json` | 平台级来源库 | CM 总销量榜、CM Spotify followers 榜这种所有艺人共用的页面 | 避免在 20 个艺人下面重复填同一个页面 |
 | `structured/artist-metrics.json` | 硬数据表 | CM 总销量、Spotify followers、Grammy wins/noms/GF、AOTY 乐评/用户分 | 作为事实数据补录进 prompt，比向量匹配优先级更高 |
+| `structured/aoty-albums.json` | AOTY 专辑级缓存 | 每位艺人的专辑标题、年份、AOTY 链接、乐评均分、用户均分、评论数量 | 用户问具体专辑时由 AOTY Agent 注入 prompt |
 | `knowledge/artist-knowledge.json` | RAG 知识库 | 艺人标签、艺人画像、黑称、美称、粉丝名、粉丝黑称、对家、争议点、挽尊话术、荣誉点 | 给 AI 报告提供圈内语气和上下文 |
 | `templates/title-patterns.json` | 标题模板库 | 分享图标题规则、句式、示例标题 | 生成分享图/PDF 标题时使用 |
 | `intake-template.md` | 自然语言录入模板 | 你可以按这个格式把资料发给 Codex | Codex 负责把自然语言转成 JSON |

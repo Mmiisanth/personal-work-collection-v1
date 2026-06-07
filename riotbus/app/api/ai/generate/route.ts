@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
+import { buildAgentMemoryContext, type ConversationMessage } from "@/lib/agent-memory";
 import { callOpenAICompatible } from "@/lib/ai";
+import { buildAotyAgentContext } from "@/lib/aoty-agent";
 import { buildReportPrompt } from "@/lib/prompts";
 import { buildRagContext } from "@/lib/rag";
 import type { BattleMode, MetricKey } from "@/lib/types";
@@ -18,6 +20,7 @@ export async function POST(request: Request) {
         };
         dataSummary?: string;
         userQuestion?: string;
+        conversation?: ConversationMessage[];
       }
     | null;
   const mode = body?.mode ?? "mean";
@@ -39,7 +42,23 @@ export async function POST(request: Request) {
         metrics,
         dataSummary: body?.dataSummary ?? "暂无结构化数据。",
         userQuestion: body?.userQuestion,
-        ragContext: buildRagContext({ artistA, artistB, mode }),
+        ragContext: [
+          buildRagContext({ artistA, artistB, mode }),
+          buildAotyAgentContext({
+            artistA,
+            artistB,
+            userQuestion: body?.userQuestion,
+          }),
+          buildAgentMemoryContext({
+            artistA,
+            artistB,
+            mode,
+            userQuestion: body?.userQuestion,
+            conversation: body?.conversation,
+          }),
+        ]
+          .filter(Boolean)
+          .join("\n\n"),
       }),
       temperature: mode === "mean" ? 0.9 : 0.5,
     });

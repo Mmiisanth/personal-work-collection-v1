@@ -17,6 +17,8 @@
     "pretypecheck": "npm run banners:build",
     "typecheck": "next typegen && tsc --noEmit --incremental false",
     "banners:build": "node scripts/build-banners.mjs",
+    "agent:aoty:update": "node scripts/aoty-agent-update.mjs",
+    "agent:aoty:query": "node scripts/aoty-agent-query.mjs",
     "rag:chunks": "node scripts/rag-build-chunks.mjs",
     "rag:embed": "node scripts/rag-embed.mjs",
     "rag:search": "node scripts/rag-search.mjs",
@@ -24,6 +26,7 @@
   },
   "dependencies": {
     "framer-motion": "^12.23.24",
+    "gsap": "^3.15.0",
     "html-to-image": "^1.11.13",
     "jspdf": "^4.2.1",
     "lucide-react": "^0.468.0",

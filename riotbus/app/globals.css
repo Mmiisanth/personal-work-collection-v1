@@ -95,6 +95,16 @@ button {
   -webkit-line-clamp: 4;
 }
 
+.carousel-progress-fill {
+  animation: carousel-progress-fill 4300ms linear forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-progress-fill {
+    animation-duration: 1ms;
+  }
+}
+
 @media (max-width: 768px) {
   .banner-copy-fade {
     -webkit-mask-image: linear-gradient(
@@ -111,6 +121,16 @@ button {
       #000 86%,
       transparent 100%
     );
+  }
+}
+
+@keyframes carousel-progress-fill {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
   }
 }
 
