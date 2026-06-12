@@ -2,8 +2,9 @@ import { NextResponse } from "next/server";
 import { buildAgentMemoryContext, type ConversationMessage } from "@/lib/agent-memory";
 import { callOpenAICompatible } from "@/lib/ai";
 import { buildAotyAgentContext } from "@/lib/aoty-agent";
-import { buildReportPrompt } from "@/lib/prompts";
+import { buildReportPrompt, buildSlangPrompt } from "@/lib/prompts";
 import { buildRagContext } from "@/lib/rag";
+import { buildSlangContext, isSlangQuery } from "@/lib/slang-agent";
 import type { BattleMode, MetricKey } from "@/lib/types";
 
 export async function POST(request: Request) {
@@ -19,6 +20,7 @@ export async function POST(request: Request) {
           model?: string;
         };
         dataSummary?: string;
+        agentContext?: string;
         userQuestion?: string;
         conversation?: ConversationMessage[];
       }
@@ -29,38 +31,57 @@ export async function POST(request: Request) {
   const metrics: MetricKey[] = body?.metrics?.length
     ? body.metrics
     : ["sales", "streaming"];
+  const requestType =
+    body?.userQuestion && isSlangQuery(body.userQuestion) ? "slang" : "battle";
 
   try {
     const message = await callOpenAICompatible({
       baseUrl: body?.provider?.baseUrl,
       apiKey: body?.provider?.apiKey,
       model: body?.provider?.model,
-      messages: buildReportPrompt({
-        mode,
-        artistA,
-        artistB,
-        metrics,
-        dataSummary: body?.dataSummary ?? "暂无结构化数据。",
-        userQuestion: body?.userQuestion,
-        ragContext: [
-          buildRagContext({ artistA, artistB, mode }),
-          buildAotyAgentContext({
-            artistA,
-            artistB,
-            userQuestion: body?.userQuestion,
-          }),
-          buildAgentMemoryContext({
-            artistA,
-            artistB,
-            mode,
-            userQuestion: body?.userQuestion,
-            conversation: body?.conversation,
-          }),
-        ]
-          .filter(Boolean)
-          .join("\n\n"),
-      }),
-      temperature: mode === "mean" ? 0.9 : 0.5,
+      messages:
+        requestType === "slang" && body?.userQuestion
+          ? buildSlangPrompt({
+              mode,
+              artistA,
+              artistB,
+              userQuestion: body.userQuestion,
+              slangContext: buildSlangContext({
+                query: body.userQuestion,
+                mode,
+                artistA,
+                artistB,
+              }),
+            })
+          : buildReportPrompt({
+              mode,
+              artistA,
+              artistB,
+              metrics,
+              dataSummary: body?.dataSummary ?? "暂无结构化数据。",
+              userQuestion: body?.userQuestion,
+              ragContext: [
+                body?.agentContext
+                  ? `## 左侧采集数据\n${body.agentContext}`
+                  : "",
+                buildRagContext({ artistA, artistB, mode }),
+                buildAotyAgentContext({
+                  artistA,
+                  artistB,
+                  userQuestion: body?.userQuestion,
+                }),
+                buildAgentMemoryContext({
+                  artistA,
+                  artistB,
+                  mode,
+                  userQuestion: body?.userQuestion,
+                  conversation: body?.conversation,
+                }),
+              ]
+                .filter(Boolean)
+                .join("\n\n"),
+            }),
+      temperature: requestType === "slang" ? 0.35 : mode === "mean" ? 0.9 : 0.5,
     });
 
     const cleanedMessage = message
@@ -72,7 +93,7 @@ export async function POST(request: Request) {
       )
       .trim();
 
-    return NextResponse.json({ message: cleanedMessage });
+    return NextResponse.json({ message: cleanedMessage, requestType });
   } catch (error) {
     return NextResponse.json(
       {

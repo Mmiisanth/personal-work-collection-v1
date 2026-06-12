@@ -1,13 +1,86 @@
 {
   "schemaVersion": 1,
-  "generatedAt": null,
+  "generatedAt": "2026-06-12T15:38:21.110Z",
   "agent": {
     "name": "aoty-album-agent",
-    "status": "empty",
+    "status": "updated",
+    "plan": {
+      "mode": "manual-update",
+      "targetCount": 1,
+      "tools": [
+        "loadCachedAotyAlbums",
+        "fetchAotyArtistPage",
+        "loadBrowserExtractedText",
+        "parseAotyAlbumList",
+        "classifyAotyQualityLabels",
+        "validateAotyAlbums",
+        "writeAotyAlbumCache"
+      ]
+    },
     "notes": [
-      "Run npm run agent:aoty:update to refresh album-level AOTY cache.",
-      "AOTY may return Cloudflare challenge pages. The updater preserves old cache and records fetch errors instead of deleting data."
+      "Manual Agent updater for album-level AOTY data.",
+      "If AOTY blocks HTTP fetch, old album cache is preserved and the error is recorded.",
+      "Optional local HTML fallback: npm run agent:aoty:update -- --source-dir data/agent-cache/aoty-html",
+      "Optional browser text fallback: save visible page text to data/agent-cache/aoty-browser-text/{artistId}.txt"
     ]
   },
-  "artists": []
+  "artists": [
+    {
+      "artistId": "taylor-swift",
+      "artistName": "Taylor Swift",
+      "sourceArtistUrl": "https://www.albumoftheyear.org/artist/323-taylor-swift/",
+      "updatedAt": "2026-06-12T15:38:20.432Z",
+      "lastAttemptAt": "2026-06-12T15:38:20.432Z",
+      "status": "ok",
+      "fetchMode": "browser-text",
+      "error": "http fallback failed: HTTP 403 Cloudflare challenge",
+      "albums": [
+        {
+          "title": "folklore",
+          "year": "2020",
+          "aotyUrl": "https://www.albumoftheyear.org/album/123-taylor-swift-folklore.php",
+          "criticScore": 88,
+          "userScore": 82,
+          "criticReviewCount": 27,
+          "userRatingCount": 12000,
+          "qualityLabels": [
+            {
+              "code": "purple",
+              "label": "紫标",
+              "reason": "AOTY critic score >= 80 and user score >= 80"
+            },
+            {
+              "code": "must-hear",
+              "label": "Must Hear",
+              "reason": "AOTY page contains Must Hear label"
+            }
+          ],
+          "matchKeys": [
+            "folklore"
+          ],
+          "sourceArtistUrl": "https://www.albumoftheyear.org/artist/323-taylor-swift/"
+        },
+        {
+          "title": "evermore",
+          "year": "2020",
+          "aotyUrl": "https://www.albumoftheyear.org/album/124-taylor-swift-evermore.php",
+          "criticScore": 85,
+          "userScore": 79,
+          "criticReviewCount": 30,
+          "userRatingCount": null,
+          "qualityLabels": [
+            {
+              "code": "blue",
+              "label": "蓝标",
+              "reason": "AOTY critic score >= 80"
+            }
+          ],
+          "matchKeys": [
+            "evermore"
+          ],
+          "sourceArtistUrl": "https://www.albumoftheyear.org/artist/323-taylor-swift/"
+        }
+      ]
+    }
+  ]
 }

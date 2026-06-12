@@ -37,6 +37,9 @@ export function NewsModal({
           >
             {banner.sourceLabel}
           </a>
+          <p className="mt-2 text-sm font-black text-black/55">
+            Updated {banner.updatedAt}
+          </p>
         </div>
         <div className="relative pr-10 max-md:pr-0">
           <button

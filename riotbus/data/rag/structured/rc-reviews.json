@@ -1,0 +1,1195 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-06-12T16:06:41.345Z",
+  "agent": {
+    "name": "rc-review-agent",
+    "status": "updated",
+    "gradeGuide": "RC 评分体系：A+ 基本可视为神专；A 是相当强的专辑；A- 很优秀；B+ 值得肯定；B/B-/C 依次走低；*** / ** / * 属于星标/雪花类提示，数量越多越好但通常不是完整高分专辑；Choice Cuts / ✂️ 表示只推荐列出的几首歌；炸弹/💣 表示很差。",
+    "plan": {
+      "targetCount": 20,
+      "tools": [
+        "loadArtistSources",
+        "fetchRcArtistPage",
+        "parseRcReviewList",
+        "parseRcReviewText",
+        "writeRcReviewCache"
+      ]
+    }
+  },
+  "artists": [
+    {
+      "artistId": "adele",
+      "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=adele",
+      "updatedAt": "2026-06-12T16:06:31.153Z",
+      "lastAttemptAt": "2026-06-12T16:06:31.153Z",
+      "status": "ok",
+      "error": null,
+      "gradeGuide": "RC 评分体系：A+ 基本可视为神专；A 是相当强的专辑；A- 很优秀；B+ 值得肯定；B/B-/C 依次走低；*** / ** / * 属于星标/雪花类提示，数量越多越好但通常不是完整高分专辑；Choice Cuts / ✂️ 表示只推荐列出的几首歌；炸弹/💣 表示很差。",
+      "reviews": [
+        {
+          "title": "19",
+          "label": "XL/Columbia, 2008",
+          "year": "2008",
+          "grade": "*",
+          "gradeLabel": "Neither",
+          "reviewText": "Still just a teenager, a practical romantic gets by without acting cheeky (\"Daydreamer,\" \"Tired\").",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=adele"
+        },
+        {
+          "title": "21",
+          "label": "XL/Columbia, 2011",
+          "year": "2011",
+          "grade": "**",
+          "gradeLabel": "Honorable Mention",
+          "reviewText": "Part of me likes how many albums this proud white-soul normal has sold, but the part that likes fast ones wins (\"Rolling in the Deep,\" \"Rumour Has It\")",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=adele"
+        },
+        {
+          "title": "25",
+          "label": "XL/Columbia, 2015",
+          "year": "2015",
+          "grade": "**",
+          "gradeLabel": "Honorable Mention",
+          "reviewText": "Warm, thoughtful human being bestows a voice capable of enlarging those virtues without melodrama--without boatloads of melodrama, anyway. (\"Hello,\" \"Million Years Ago\")",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=adele"
+        },
+        {
+          "title": "30",
+          "label": "Columbia, 2021",
+          "year": "2021",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "Curious, I Googled \"Adele haters\" and was naive enough to be surprised by how many there were--because she's too sad, because she's too proud, because her sincerity isn't clever, because she hondled a weekends-only Vegas deal that let her spend time with her family, because she lost weight . Of course she has haters, her level of celebrity guarantees it, but that's just too bad for them. Album four is a breakthrough I initially put aside on the shotgun assumption that she was merely repeating herself when in fact it explores new vistas of virtuosity, subtly because subtlety is her thing. More than on her 2008, 2011, and 2016 megahits, she's texturing and shading her mezzo on an album a step up variety-wise from its predecessors, conversational here and climactic there but natural or rather \"natural\" either way and all the stops in between (although note that the twin closers are both almost seven minutes long). Casting about for an all-inclusive adjective I arrived at \"trustworthy,\" which I like because it's not the kind of word you apply to superstars yet serves the purpose of bringing her down to earth, where more than most superstars she belongs. And let the record show that I'm a proud sucker for the snatches of recorded conversation with her young son, who it's hard to believe is now 10 years old.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=adele"
+        }
+      ]
+    },
+    {
+      "artistId": "ariana-grande",
+      "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Ariana+Grande",
+      "updatedAt": "2026-06-12T16:06:34.509Z",
+      "lastAttemptAt": "2026-06-12T16:06:34.509Z",
+      "status": "ok",
+      "error": null,
+      "gradeGuide": "RC 评分体系：A+ 基本可视为神专；A 是相当强的专辑；A- 很优秀；B+ 值得肯定；B/B-/C 依次走低；*** / ** / * 属于星标/雪花类提示，数量越多越好但通常不是完整高分专辑；Choice Cuts / ✂️ 表示只推荐列出的几首歌；炸弹/💣 表示很差。",
+      "reviews": [
+        {
+          "title": "Sweetener",
+          "label": "Republic, 2018",
+          "year": "2018",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "Since my secondhand teenpop fandom dried up well before my daughter's enthusiasms dwindled down to One Direction, I ignored Grande until a mixed phalanx of market analysts and poptimist diehards declared this 2018 album pure pop for track-and-hook people. This consensus motivated me to replicate saturation airplay my way--shelling out for the CD and sticking it in the changer until I was ready to cry uncle. A similar ploy got me nowhere with One Direction, their albums so bland I quickly forgot they existed. But Grande is pleasant in such a physically uncommon and technically astute way. Her pure, precise soprano is warm without burr or melisma, its mellow sweetness never saccharine or showy as it strolls through a front-loaded garden of sonic delights where Nicki Minaj outgrowls Missy Elliott and Pharrell Williams's inventions are more subtle yet also more thrilling than Max Martin's. And as she shares self-healing advisories like \"No Tears Left to Cry,\" \"Get Well Soon,\" and especially \"Breathin\" with all the fans who lived through her terrorized 2017 Manchester concert, you never doubt that the details of the healing are sharpened by own earned traumas.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Ariana+Grande"
+        },
+        {
+          "title": "Thank U, Next",
+          "label": "Republic, 2019",
+          "year": "2019",
+          "grade": "***",
+          "gradeLabel": "Choice Cuts",
+          "reviewText": "Maturing from multitracked studio trickeration to straight love songs--love songs an old grouch might complain are all too superstar-specific. (\"Thank U, Next,\" \"Ghostin\")",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Ariana+Grande"
+        }
+      ]
+    },
+    {
+      "artistId": "beyonce",
+      "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Beyonce",
+      "updatedAt": "2026-06-12T16:06:32.976Z",
+      "lastAttemptAt": "2026-06-12T16:06:32.976Z",
+      "status": "ok",
+      "error": null,
+      "gradeGuide": "RC 评分体系：A+ 基本可视为神专；A 是相当强的专辑；A- 很优秀；B+ 值得肯定；B/B-/C 依次走低；*** / ** / * 属于星标/雪花类提示，数量越多越好但通常不是完整高分专辑；Choice Cuts / ✂️ 表示只推荐列出的几首歌；炸弹/💣 表示很差。",
+      "reviews": [
+        {
+          "title": "Dangerously in Love",
+          "label": "Columbia, 2003",
+          "year": "2003",
+          "grade": "*",
+          "gradeLabel": "Neither",
+          "reviewText": "With her daddy, the bonus cut reveals--as if we didn't know (\"Yes,\" \"Baby Boy\").",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Beyonce"
+        },
+        {
+          "title": "B'Day",
+          "label": "Columbia, 2006",
+          "year": "2006",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "If opulence can signify liberation in this grotesquely materialistic time, as in hip-hop it can, then Beyonc� earns her props with a bunch of songs she says were inspired all in a rush by her Dreamgirls character. Many suspect they were actually inspired by Jay-Z, who has the noblesse oblige to save the only expression of erotic longing on the record. I don't. But I admire her for opening the possibility, which leaves Hova with his hands full whether he's a thousand miles away or getting one-upped on \"Upgrade U.\" Not counting \"Irreplaceable,\" where hook subsumes meaning anyway, the key track is \"Suga Mama,\" which ends with Beyonc� ordering her boy toy to remove the duds she just bought him--real slow. On most of them she's wronged yet still in control because she's got so much money.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Beyonce"
+        },
+        {
+          "title": "I Am . . . Sasha Fierce",
+          "label": "Music World/Columbia, 2008",
+          "year": "2008",
+          "grade": "B",
+          "gradeLabel": "B",
+          "reviewText": "In truth, there are three good songs on this 11-track artifact, and deeply vapid though the split-personality bit is, the trick of dividing the album into two CDs does leave a 17-minute dance disc that can be played without gastric distress by any purchaser who isn't picky about diva gangstaism or videophone porn. But me, I'm a hater, and thus I'm something like outraged, by not just those two pimp-outs but an \"Ave Maria\" lacking even the dumbstruck literalism of Pink's rendition or the grotesque conversion of \"Umbrella\" into \"Halo.\" Interpreted autobiographically, this halo seems to adorn Jay-Z, who elsewhere inspires little romantic realism or romantic bliss in his bride. In fact, two of the good songs are rather hard on Jeezy's gender, and mine. When in the third Be claims she's in love with her radio, you can only wonder at her determination to live in the past.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Beyonce"
+        },
+        {
+          "title": "Beyonc&eacute; (Platinum Edition)",
+          "label": "Columbia, 2014",
+          "year": "2014",
+          "grade": "A",
+          "gradeLabel": "A",
+          "reviewText": "Set me back 30 bucks, but shit--the box itself has a nice velvety feel. True, the booklet collects 20 video stills that squeeze the credits onto a single pink-on-black page, the 2015 calendar shows off a mostly b&w pin-up girl whose cunningly unkempt designer outfits we'll meet again when we get to the videos, and the elaborately overworked videos themselves should be approached with extreme caution--after you know the music, please. But where most live DVDs are de trop, this one rules, not just for Ms. Knowles's legendary stage discipline and expert dance routines but for a star-time visage further beautified by how readily it projects empathy, humor, and fun to fans who get it all. And of course, the reason to forswear the videos is to give the songs time to breathe, which they will--especially but not exclusively the sex sequence, which over seven well-differentiated tracks performs the unlikely feat of conveying an open-ended eroticism that varies because Mrs. Carter knows eroticism does, for each of us in our individual responses as well as for her. So let's agree that Queen Bey is at best a useful metaphor--when she tries to sing the part and gets all regal on our ass, her majesty quickly becomes a bore. Representing lust, on the other hand, loosens her up. Enter the bonus disc called \"More\": filthier \"Drunk in Love,\" nastier \"Flawless,\" cuter \"Blow,\" high-rolling party song \"7/11,\" Caribbean outtake \"Standing in the Sun,\" and the sisterly, daughterly \"Ring Off,\" in which the queen mother leaves her doggish husband and about time too. Best Bey ever.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Beyonce"
+        },
+        {
+          "title": "Lemonade",
+          "label": "Columbia, 2016",
+          "year": "2016",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "So we know this would-be soundtrack functions musically as an art-soul concept album, right? Groove, flow, funk, that stuff? Present, sure, but only as part of ye olde aesthetic whole, and not the fundamental part. Nor, for that matter, are songs the fundamental part, because they're all also dramas, performances, LP-�-clef puzzle pieces. In fact, with the artist injecting a thought-through quantum of pained, proud, gritty, airy, furious, nostalgic, or conciliatory \"feeling\" into each line, the songwriting per se can seem like a stitched-together afterthought. So it's to Beyonc�'s credit that only in the pivotal big ballad, which really is called \"Sandcastles,\" plus maybe the loving midtempo de facto finale \"All Night,\" does all this overstatement become too much for a Billie Holiday fan like me. Less to her credit is that said fan spent a solid week reaching this conclusion. He doesn't deny it was worth it. But Beyonc� itself he got quicker and will always prefer.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Beyonce"
+        },
+        {
+          "title": "Renaissance",
+          "label": "Parkwood Entertainment/Columbia, 2022",
+          "year": "2022",
+          "grade": "A+",
+          "gradeLabel": "A+",
+          "reviewText": "I first heard the album of the year on a clogged Merritt Parkway in the rented Corolla that conveyed my family to our overdue vacation on the Connecticut shore. By the time I'd bought it at the Westbrook Wal-Mart two days later (\"What's a CD?\" the clerk asked), the Bluetooth-enabled car stereo version had sufficed to knock me out, and not because I instantly grokked its range of reference to the queer-identified dance effects my daughter hipped me to. I'd just had my spirits lifted nonstop by one shrewdly differentiated pop smash after another, and back in New York it connected even louder on a real sound system. Despite one that begins \"I just fell in love/And I just quit my job\" and stray references to \"45\" and \"Karens just turned into terrorists,\" this is not a conventionally political album. It's Beyonc� as the \"sexy bitch\" and super-rich Basquiat owner she is, buttressed by an array of house, rap, and disco legends both cult and famed who add crucial flavor here and there--I've never enjoyed Grace Jones more. Erotically explicit, knowledgeable, and felt, with \"Plastic Off the Sofa\" as lubricious a married sex song as you could hope to hear, it's clearly designed as an antidote to pandemic weariness and historic despair. \"Have you ever had fun like this?\" Bey asks. She recommends it, and believes her finest album will generate that precious gift big-time.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Beyonce"
+        },
+        {
+          "title": "Cowboy Carter",
+          "label": "Parkwood/Columbia, 2024",
+          "year": "2024",
+          "grade": "A",
+          "gradeLabel": "A",
+          "reviewText": "Not a country album--without too much fuss we've gotten that straight. Just a confidently eclectic pop album with countryish flavorings and countryish provocations that claims and indeed establishes that our greatest female pop singer, who we know is also a pretty darn good songwriter, has a fair claim on that fiefdom. Her songwriting does peter out slightly for the last five or so of 25 (CD!) tracks, but for the most part the impressive variety of these songs only strengthens her not so audacious claim. She sings as a mother, a daughter, a sister, a descendant, an inheritor, and a sexpot. She enlists ever-obliging 90-year-old Willie Nelson, outclassed 28-year-old Post Malone, a sexy Miley Cyrus, a delighted Dolly Parton, and Paul McCartney's \"Blackbird\" in her quest and gives ample room to 81-year-old special guest Linda Martel, who became the first Black woman to (briefly) crack the Grand Old Opry half a century ago. Epochal? Maybe, maybe not. But a hell of a good record.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Beyonce"
+        }
+      ]
+    },
+    {
+      "artistId": "billie-eilish",
+      "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Billie+Eilish",
+      "updatedAt": "2026-06-12T16:06:35.598Z",
+      "lastAttemptAt": "2026-06-12T16:06:35.598Z",
+      "status": "ok",
+      "error": null,
+      "gradeGuide": "RC 评分体系：A+ 基本可视为神专；A 是相当强的专辑；A- 很优秀；B+ 值得肯定；B/B-/C 依次走低；*** / ** / * 属于星标/雪花类提示，数量越多越好但通常不是完整高分专辑；Choice Cuts / ✂️ 表示只推荐列出的几首歌；炸弹/💣 表示很差。",
+      "reviews": [
+        {
+          "title": "Dont Smile at Me",
+          "label": "Darkroom/Interscope EP, 2017",
+          "year": "2017",
+          "grade": "B+",
+          "gradeLabel": "B+",
+          "reviewText": "Billie's songwriting is still juvey here, Finneas's production still in the learning stage. Yet those gobsmacked by the album are now equipped to go back to first appreciate and then savor Eilish's RIAA-certified singles and their EP pals. I doubt I'll ever find the quietly murderous \"Bellyache,\" say, much more than a sublimated tantrum, bummer, existentialist gesture, whatever. But none of these interpretations render it anything close to unlistenable, carried as it is, like the whole wittingly makeshift collection, by her still-fragile melodies and still-pure voice.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Billie+Eilish"
+        },
+        {
+          "title": "When We All Fall Asleep, Where Do We Go?",
+          "label": "Darkroom/Interscope, 2019",
+          "year": "2019",
+          "grade": "A",
+          "gradeLabel": "A",
+          "reviewText": "Slotting this self-created 17-year-old as pop computes musically and commercially while reminding us how amorphous that once snappy term has become. Her soprano too diminutive for vocal calisthenics, her sensibility too impressionistic to bother mapping out track-and-hook bliss points, Eilish is a home-schooled Highland Park weirdo whose darkly playful version of teen-goth angst had already captivated millions of young weirdos-in-potentia before this electro-saturated debut album put in its bid for the rest of us. Seldom catchy in any conventional sense, every one of these 14 tracks entices the ear anyway, from \"Bad Guy\"'s \"duh\"s to \"Xanny\"'s blown speaker cone to the shuddering sound-pit that swallows \"You Should See Me in a Crown\" to the plinked piano of \"All the Good Girls Go to Hell\" to the tunefully cooed \"Wish You Were Gay,\" and it keeps going. Only then it closes shut when one of the least self-glorifying suicide songs ever sets up a finale comprising songs titled simply \"I Love You\" and \"Goodbye\"--each quiet, each pretty, each what it says, each sad without ever turning gruesome or crossing its fingers.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Billie+Eilish"
+        },
+        {
+          "title": "Happier Than Ever",
+          "label": "Darkroom/Interscope, 2021",
+          "year": "2021",
+          "grade": "A",
+          "gradeLabel": "A",
+          "reviewText": "Because she enjoyed the incomparable distinction and suffered the incomprehensible burden of sweeping the Grammys at 17, ordinary life will be out of her reach for a long time. So unless and until she elects to go public with romantic encounters I hope she enjoys and applaud her for concealing via \"NDA,\" quote unquote because \"NDA\" is an actual song title here, that leaves her with one subject: stardom and its discontents, a privilege and dilemma it would seem impossible to say anything new much less interesting about. Only then out of sheer candor she does. \"Things I once enjoyed/Just keep me employed now/Things I'm longing for/Someday I'll be bored of/It's so weird/That we care so much until we don't.\" Nor is this the only new truism she pulls out of her thoughtstream. How about \"I sure have a knack for seeing life more like a child\"? Or the meditation on the objectified female body that is \"Not My Responsibility\"? No wonder the music Finneas comes up with for her is calmer and less sprightly than the stuff that converted the world. But because I'm old enough to feel both concern for a youngster's well-being and awe at her unguarded resourcefulness, that's fine with me. Let's hope her fellow teens feel the same.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Billie+Eilish"
+        },
+        {
+          "title": "Hit Me Hard and Soft",
+          "label": "Darkroom/Interscope, 2024",
+          "year": "2024",
+          "grade": "A",
+          "gradeLabel": "A",
+          "reviewText": "I prepped by listening with half an ear, a proven way to find out whether music has the power to grab you even when you've slanted your consciousness elsewhere. And somehow I came away nursing the all too vague conclusion that Finneas had convinced his sister to subjugate her uncanny pop hookiness to his home-schooled avant ambitions--to put their pop-tune hooks on hold and make an album where the musical gestalt was fundamentally textural. Closer listening, however, revealed that textures or no textures this missed the point. Tunefully enough and much more decisively, it's an album that explores in shifting detail both stardom and one's early twenties as hotbeds of erotic and existential turmoil--sometimes ecstatic, sometimes fraught, sometimes joined at the hip if stardom happens to be your achievement or fate, sometimes a web of mutually exclusive imponderables. So say it's a 22-year-old seeking true love and a superstar ditto. \"I could eat that girl for lunch,\" a lip-smacking Billie tells the world. So \"Pulling up a chair/And putting up my hair,\" she awaits a visit. \"You say no one knows you so well/But every time you touch me/I just wonder how she felt,\" she frets. \"Good things don't last,\" she concludes. \"So you found her/Now go fall in love/Just like we were/If I ever was,\" she advises. \"I'm trying my best,\" she avers. And at 82, I believe every word.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Billie+Eilish"
+        }
+      ]
+    },
+    {
+      "artistId": "britney-spears",
+      "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Britney+Spears",
+      "updatedAt": "2026-06-12T16:06:34.176Z",
+      "lastAttemptAt": "2026-06-12T16:06:34.176Z",
+      "status": "ok",
+      "error": null,
+      "gradeGuide": "RC 评分体系：A+ 基本可视为神专；A 是相当强的专辑；A- 很优秀；B+ 值得肯定；B/B-/C 依次走低；*** / ** / * 属于星标/雪花类提示，数量越多越好但通常不是完整高分专辑；Choice Cuts / ✂️ 表示只推荐列出的几首歌；炸弹/💣 表示很差。",
+      "reviews": [
+        {
+          "title": ". . . Baby One More Time",
+          "label": "Jive, 1999",
+          "year": "1999",
+          "grade": "*",
+          "gradeLabel": "Neither",
+          "reviewText": "Madonna next door (\". . . Baby One More Time,\" \"Soda Pop\").",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Britney+Spears"
+        },
+        {
+          "title": "Oops! . . . I Did It Again",
+          "label": "Jive, 2000",
+          "year": "2000",
+          "grade": "***",
+          "gradeLabel": "Choice Cuts",
+          "reviewText": "\"Oops! . . . I Did It Again\"; \"(I Can't Get No) Satisfaction\" Choice Cuts",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Britney+Spears"
+        },
+        {
+          "title": "Britney",
+          "label": "Jive, 2001",
+          "year": "2001",
+          "grade": "**",
+          "gradeLabel": "Honorable Mention",
+          "reviewText": "hardly the first not-terribly-bright teenager to approach self-knowledge via the words of others (\"Overprotected,\" \"Cinderella\")",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Britney+Spears"
+        },
+        {
+          "title": "Greatest Hits: My Prerogative",
+          "label": "Jive/Zomba, 2004",
+          "year": "2004",
+          "grade": "**",
+          "gradeLabel": "Honorable Mention",
+          "reviewText": "Her heart, her soul, her aesthetic maturation (\"Oops . . . I Did It Again,\" \" . . . Baby One More Time\").",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Britney+Spears"
+        },
+        {
+          "title": "Blackout",
+          "label": "Jive, 2007",
+          "year": "2007",
+          "grade": "B+",
+          "gradeLabel": "B+",
+          "reviewText": "I swear I'm not being perverse--she's such a sad case it took me a week to get up the guts to play this. But she's sure put some benwa balls into a slut act only wankers took literally, and now the balls have beats. From \"Gimme More\"'s \"It's Britney bitch\" hiya to \"Piece of Me\"'s single-of-the-year sonics, from \"Ooh Ooh Baby\"'s \"feel you deep inside\" to \"Perfect Lover\"'s \"touch me there,\" this album is pure, juicy, plastic get-naked. When she closes by dissing Kevvy Kev, it's like she's spoiling the concept with a protest song.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Britney+Spears"
+        },
+        {
+          "title": "Circus",
+          "label": "Jive, 2008",
+          "year": "2008",
+          "grade": "**",
+          "gradeLabel": "Honorable Mention",
+          "reviewText": "As in \"media circus,\" but still fun more often than not, which is more than she could manage from on top of the world (\"Womanizer,\" \"Blur\").",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Britney+Spears"
+        },
+        {
+          "title": "Femme Fatale (Deluxe Edition)",
+          "label": "Jive, 2011",
+          "year": "2011",
+          "grade": "B+",
+          "gradeLabel": "B+",
+          "reviewText": "The pitch-corrected giggle \"I think I like you\" and the straightforward proposition \"You can be my fuck tonight\" pack an amyl nitrite charge it would be pretentious to deny, and the poppers keep on coming right through the bonus tracks of porn-lite funk-lite that's quirky and clever front to back. Moreover, it's possible the stupidity of the sex symbol up front is an illusion exploited by her legal guardians and maybe even the symbol herself. But it's such a convincing illusion that any guy who goes all the way with it has too much libido invested in the bimbo fantasy. She's just too straight-faced with the botched Bellamy Brothers joke, the nauseous \"Your body look so sick I think I got the flu,\" the abstemious \"Steaming like a pot full of vegetables,\" the concupiscent \"I'm a little selfish\" become the childish \"I'm a little sailfish.\" As for her female fans, let's call the attraction the bimbo strategy--the slut who calls the shots. Good luck with that one, ladies. I mean it.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Britney+Spears"
+        },
+        {
+          "title": "Glory (Deluxe Edition)",
+          "label": "RCA, 2016",
+          "year": "2016",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "Not much music that aspires to pornography achieves the purity of its pleasure principle, and not much pornography does either--not if the ideal isphysical sensation undiluted by either the distractions of romance or the power trips of big-dick netsmut. So Glory 's fast-tracked eroticism is an unprecedented achievement even for this longtime professional sex toy. If she has \"personal\" issues, and why shouldn't she, they go unaddressed. But that doesn't mean there are no signs of growth here. Never has she slammed less or cooed more, and never has she seemed so in command of her desires, or so comfortable with them. She always likes her partners and sometimes loves them, but only three of the 17 songs go off message unless you count the voyeuristic one where she catches her doppelganger atop the cad she's driven 250 miles to dump. My favorite sequence tops the single \"Clumsy,\" where they're banging all over the bedroom, with the single \"Do You Wanna Come Over?,\" where she promises not to start kissing and touching without his go-ahead. But since tastes in sex differ radically, you may have your own.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Britney+Spears"
+        }
+      ]
+    },
+    {
+      "artistId": "celine-dion",
+      "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Celine+Dion",
+      "updatedAt": "2026-06-12T16:06:36.573Z",
+      "lastAttemptAt": "2026-06-12T16:06:36.573Z",
+      "status": "ok",
+      "error": null,
+      "gradeGuide": "RC 评分体系：A+ 基本可视为神专；A 是相当强的专辑；A- 很优秀；B+ 值得肯定；B/B-/C 依次走低；*** / ** / * 属于星标/雪花类提示，数量越多越好但通常不是完整高分专辑；Choice Cuts / ✂️ 表示只推荐列出的几首歌；炸弹/💣 表示很差。",
+      "reviews": [
+        {
+          "title": "Celine Dion",
+          "label": "Epic, 1992",
+          "year": "1992",
+          "grade": "D+",
+          "gradeLabel": "D+",
+          "reviewText": "Montreal chanteuse goes gold Stateside, and I'm thinking, hey, North American Eurodisco for Anglophones, could be OK. Not hardly. Though the two Ric Wake productions lilt sweetly enough, she's a creature of the power ballad, with tympani all over her drum pads and Diane Warren hand-me-downs for hooks. Worst album of the year--that I can remember.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Celine+Dion"
+        }
+      ]
+    },
+    {
+      "artistId": "charli-xcx",
+      "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Charli+XCX",
+      "updatedAt": "2026-06-12T16:06:37.555Z",
+      "lastAttemptAt": "2026-06-12T16:06:37.555Z",
+      "status": "ok",
+      "error": null,
+      "gradeGuide": "RC 评分体系：A+ 基本可视为神专；A 是相当强的专辑；A- 很优秀；B+ 值得肯定；B/B-/C 依次走低；*** / ** / * 属于星标/雪花类提示，数量越多越好但通常不是完整高分专辑；Choice Cuts / ✂️ 表示只推荐列出的几首歌；炸弹/💣 表示很差。",
+      "reviews": [
+        {
+          "title": "Crash",
+          "label": "Atlantic, 2022",
+          "year": "2022",
+          "grade": "***",
+          "gradeLabel": "Choice Cuts",
+          "reviewText": "Quintessentially minor teenpop prediva closes out her five-album label deal like the effervescent champion post-teenpop you-know-what she needs to prove she can be (\"Beg for You,\" \"Crash\")",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Charli+XCX"
+        },
+        {
+          "title": "Brat",
+          "label": "Atlantic, 2024",
+          "year": "2024",
+          "grade": "B+",
+          "gradeLabel": "B+",
+          "reviewText": "No matter what the gossip sheets are selling, this is not where Scottish-Gujarati-Ugandan beatmaker-in-spite-of-herself XCX buries the figurative hatchet with Irish-Croatian-Kiwi singer-songwriter-if-you-insist Ella Marija Lani Yelich-O'Connor d/b/a Lorde. That hatchet was imaginary, just for show. Instead this is where Charlotte Emma Aitchison d/b/a Charli XCX and also as the one-woman embodiment of everything we mean by \"novelty act\" arrays a bleeping nosegay of the kind of sound-effect hooks she's been known to apologize for when she was in a bad mood and put her own name or \"name\" on an album constructed from dance or \"dance\" tracks whose charm is a beaty artificiality that surpasseth understanding. After all, understanding is a bore.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Charli+XCX"
+        }
+      ]
+    },
+    {
+      "artistId": "dua-lipa",
+      "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Dua+Lipa",
+      "updatedAt": "2026-06-12T16:06:36.259Z",
+      "lastAttemptAt": "2026-06-12T16:06:36.259Z",
+      "status": "ok",
+      "error": null,
+      "gradeGuide": "RC 评分体系：A+ 基本可视为神专；A 是相当强的专辑；A- 很优秀；B+ 值得肯定；B/B-/C 依次走低；*** / ** / * 属于星标/雪花类提示，数量越多越好但通常不是完整高分专辑；Choice Cuts / ✂️ 表示只推荐列出的几首歌；炸弹/💣 表示很差。",
+      "reviews": [
+        {
+          "title": "Future Nostalgia",
+          "label": "Warner, 2020",
+          "year": "2020",
+          "grade": "***",
+          "gradeLabel": "Choice Cuts",
+          "reviewText": "Olivia Newton-John tribute as dance smash as what-me-despair placebo, that deserves props for adding two keepers to that canon (\"Good in Bed,\" \"Future Nostalgia\")",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Dua+Lipa"
+        }
+      ]
+    },
+    {
+      "artistId": "katy-perry",
+      "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=katy+perry",
+      "updatedAt": "2026-06-12T16:06:30.840Z",
+      "lastAttemptAt": "2026-06-12T16:06:30.840Z",
+      "status": "ok",
+      "error": null,
+      "gradeGuide": "RC 评分体系：A+ 基本可视为神专；A 是相当强的专辑；A- 很优秀；B+ 值得肯定；B/B-/C 依次走低；*** / ** / * 属于星标/雪花类提示，数量越多越好但通常不是完整高分专辑；Choice Cuts / ✂️ 表示只推荐列出的几首歌；炸弹/💣 表示很差。",
+      "reviews": [
+        {
+          "title": "One of the Boys",
+          "label": "Capitol, 2008",
+          "year": "2008",
+          "grade": "**",
+          "gradeLabel": "Honorable Mention",
+          "reviewText": "She stopped taping her \"suckers\" down, and kissing her girlfriend was just an experiment, but trumpeting her vulnerability she's as loud and laddish as a hockey fan (\"I Kissed a Girl,\" \"One of the Boys\").",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=katy+perry"
+        }
+      ]
+    },
+    {
+      "artistId": "lady-gaga",
+      "sourceUrl": "https://www.robertchristgau.com/get_artist2.php?id=6176",
+      "updatedAt": "2026-06-12T16:06:30.535Z",
+      "lastAttemptAt": "2026-06-12T16:06:30.535Z",
+      "status": "ok",
+      "error": null,
+      "gradeGuide": "RC 评分体系：A+ 基本可视为神专；A 是相当强的专辑；A- 很优秀；B+ 值得肯定；B/B-/C 依次走低；*** / ** / * 属于星标/雪花类提示，数量越多越好但通常不是完整高分专辑；Choice Cuts / ✂️ 表示只推荐列出的几首歌；炸弹/💣 表示很差。",
+      "reviews": [
+        {
+          "title": "The Fame",
+          "label": "Interscope, 2009",
+          "year": "2009",
+          "grade": "*",
+          "gradeLabel": "Neither",
+          "reviewText": "Shallowness at its most principled (\"Just Dance,\" \"Paper Gangsta\").",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist2.php?id=6176"
+        },
+        {
+          "title": "The Fame Monster",
+          "label": "Interscope, 2009",
+          "year": "2009",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "I liked the 14-track 2008 version of this album, augmented in this two-CD set by an eight-song EP of comparable quality. But only after being overwhelmed by the sheer visibility of her warp-speed relaunch did I realize how enjoyable and inescapable her hooks and snatches had turned out to be. Even if you consider her videos and such overelaborate, as I do, her songs are streamlined pop machines. Some are more efficient than others--I prefer the \"Poker Face\" hook as jacked by Kid Cudi and Lil Wayne to Gaga's sandbagging original. But even the slower ones have a way of taking off, in part because she writes lyrics like a paper gangster. The tell is \"Money Honey,\" an apparent descent into ever crasser materialism that instead revives a short-lived slang usage of \"money.\" His Jag, enjoyable. His kisses, money.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist2.php?id=6176"
+        },
+        {
+          "title": "Born This Way",
+          "label": "Streamline/Interscope/KonLive, 2011",
+          "year": "2011",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "First of all, avoid the \"Special Edition.\" Of the three extra songs, only \"The Queen\" would be a decent B side, and the remixes are as unnecessary as usual. Even at normal length, moreover, this isn't up to The Fame or The Fame Monster . But both of those keep growing, and with its mad momentum and nutty thematics, this one could too--despite being laid down on tour trailed by 28 semis. Ever the non-Catholic, I let \"Judas\" and \"Bloody Mary\" slide while going all googly-eared for the hilarious \"Hair,\" where the nimbus of every woman's vanity becomes the cutting edge of every woman's freedom, and \"Americano,\" a marriage proposal to a Chicana in a flowered skirt that's as sincere and unreliable as The Fame Monster 's \"Alejandro,\" where the title inamorato keeps morphing into Fernando and Roberto. This lags seriously only on the one with unicorns in it, a no-no not even Gaga can safely defy, and a big closer that just doesn't take the whole effort over the top where it belongs. The country song in particular is a hoot, which reminds me that the title track wasn't inspired solely by \"Express Yourself.\" Close your eyes on the refrain and you can almost hear Carl Perkins lining out \"You've got the right string baby but the wrong yo-yo.\"",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist2.php?id=6176"
+        },
+        {
+          "title": "Artpop",
+          "label": "Streamline/Interscope, 2013",
+          "year": "2013",
+          "grade": "A",
+          "gradeLabel": "A",
+          "reviewText": "\"My artpop could mean anything,\" the title song boasts proudly. So as befits the dilemma our self-made superceleb's hype overkill and musical overproduction have gotten her into, Gaga's fourth album in five years was both grossly grotesque, as in \"Swine\"'s \"You're just a pig inside a human body,\" and aptly cartoonish, long on bright, brash, overstated outlines. In \"We could, we could belong together,\" the \"we\" is in fact art and pop. But this being Lady Gaga it's also S-E-X. It's \"Venus\" connecting rocket ships to both oysters and Uranus. It's \"GUY\" standing for Girl Under You. It's \"Sexxx Dreams\"'s sex dreams. It's songs and conceits that pop all over the place.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist2.php?id=6176"
+        },
+        {
+          "title": "Cheek to Cheek",
+          "label": "Streamline/Columbia/Interscope, 2014",
+          "year": "2014",
+          "grade": "B+",
+          "gradeLabel": "B+",
+          "reviewText": "I'm agnostic at best as regards the urban legend of Bennett's ageless cool. It's too classy on his end and too voguish on that of his eager young admirers. But this guy isn't just 80--he's 88 , old enough to awaken in a 72-year-old like myself something approaching the dreams of immortality he instills his thirtysomething partisans. Granted, it's his twentysomething partner who provides the elan vital here. Gaga grabs these standards as Linda Ronstadt never did and Annie Lennox should be tried for trying--rock-'em sock-'em uptempo, not quite overripe on ballads, and having a ball both ways. In a true collaboration--both solo turns fall flat--it's her enthusiasm, her vulgarity, and the liberties she takes with the tunes that make the concept sing. That said, however, Bennett always sounds like he has some left in the tank. It's inspirational, I admit.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist2.php?id=6176"
+        },
+        {
+          "title": "Joanne (Deluxe Edition)",
+          "label": "Streamline/Interscope, 2016",
+          "year": "2016",
+          "grade": "*",
+          "gradeLabel": "Neither",
+          "reviewText": "It's definitely not the best way to prove you're a Real Girl to reserve the three Realest songs on the album for fans so besotted they'll pay extra for them (\"Grigio Girls,\" \"Just Another Day,\" \"Angel Down [Work Tape]\")",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist2.php?id=6176"
+        },
+        {
+          "title": "Chromatica",
+          "label": "Interscope, 2020",
+          "year": "2020",
+          "grade": "**",
+          "gradeLabel": "Honorable Mention",
+          "reviewText": "Lop off the first four tracks and you'll end up with a pretty good album about a talented singer, songwriter, and actress who once upon a time was an elaborate cartoon (\"Babylon,\" \"Free Woman,\" \"Fun Tonight\")",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist2.php?id=6176"
+        },
+        {
+          "title": "Love for Sale",
+          "label": "Columbia/Interscope, 2021",
+          "year": "2021",
+          "grade": "A",
+          "gradeLabel": "A",
+          "reviewText": "The news that this pair were revisiting their cross-generational gimmick seven years after its launch got no rise out of me, because while Cheek to Cheek was definitely enjoyable, it was often no more than that. And while the duo's young distaff half had since emerged from her shrewdly individualized carapace of glam-pop celebrity to prove a gifted actress and adaptable all-around entertainer with a high alto of near-Ella sweetness and definition and the brains to begin the \"It's De-Lovely\" opener with its semi-recitative \"tinpantithesis\" prologue, her senior partner had not only turned 95 but been diagnosed with Alzheimer's way back in in 2016. But I failed to register two things. First, all 12 titles are by pantheon wit-and-a-half Cole Porter, who not only devised the term \"tinpantithesis\" but festooned \"Let's Do It\" with \"Lithuanians and Letts do it.\" Second, Alzheimer's has been found to be much easier on your verbal memory if you are singing, at which point lyrics you could once recite verbatim pour past your vocal cords and into the air as if they were notes on a scale, as they also are. Of course, this assumes you retain a larynx worthy of the name, which not every singer of 75 much less 95 can claim. Anthony Dominick Benedetto still has one--he sounds leaner, a bit drier, but also capable of enunciating every word in a long-cultivated New York accent whose miraculous juice and intuitive smarts could make an 80-year-old hope for a longer life than many would consider seemly.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist2.php?id=6176"
+        }
+      ]
+    },
+    {
+      "artistId": "lana-del-rey",
+      "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Lana+Del+Rey",
+      "updatedAt": "2026-06-12T16:06:32.359Z",
+      "lastAttemptAt": "2026-06-12T16:06:32.359Z",
+      "status": "ok",
+      "error": null,
+      "gradeGuide": "RC 评分体系：A+ 基本可视为神专；A 是相当强的专辑；A- 很优秀；B+ 值得肯定；B/B-/C 依次走低；*** / ** / * 属于星标/雪花类提示，数量越多越好但通常不是完整高分专辑；Choice Cuts / ✂️ 表示只推荐列出的几首歌；炸弹/💣 表示很差。",
+      "reviews": [
+        {
+          "title": "Born to Die",
+          "label": "Polydor, 2012",
+          "year": "2012",
+          "grade": "*",
+          "gradeLabel": "Neither",
+          "reviewText": "Convincing and occasionally compelling proof that money can't buy happiness (\"Video Games,\" \"This Is What Makes Us Girls\")",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Lana+Del+Rey"
+        },
+        {
+          "title": "Paradise",
+          "label": "Interscope, 2012",
+          "year": "2012",
+          "grade": "**",
+          "gradeLabel": "Honorable Mention",
+          "reviewText": "Continues to project a hedonistic lassitude and desperate edge you wish you could warn your buddy off (\"American,\" \"Body Electric\")",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Lana+Del+Rey"
+        },
+        {
+          "title": "Ultraviolence",
+          "label": "Polydor/Interscope, 2014",
+          "year": "2014",
+          "grade": "***",
+          "gradeLabel": "Choice Cuts",
+          "reviewText": "Self-made sad girl celebrates self-caricaturing sex appeal of self-fulfilling bad love. (\"Cruel World,\" \"Ultraviolence\")",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Lana+Del+Rey"
+        },
+        {
+          "title": "Honeymoon",
+          "label": "Polydor/Interscope, 2015",
+          "year": "2015",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "Presumably anybody who thinks her shtick has stagnated is too embarrassed to pay attention, because without doubt it's evolved. Subtly, OK, but the slowing tempos at least are hard to miss, and they go with the subtle part: the changing ways she's portrayed both herself and the objects of her affection over the past four years. Initially she enacted rockish boy-toy masochism--a pretty girl who got wet for an entire casting call of rough trade sugar daddies. But the third album of her tuneful, bonus-studded catalogue stars the torchy femme fatale who always lurked underneath, and by now half the objects of her exploitation are pretty clearly jerks. Born-to-lie Mr. Born to Lose is a game to her--she never bought into his bullshit. \"Salvatore,\" who could be based on her real-life Italian boyfriend for all I know, is auto-crooned so close to the edge of parody I wish she'd figured out how to sneak in the moon hitting her eye like a big pizza pie. But the biggest breakthrough is Lana herself on \"God Knows I Tried,\" where the artist born Lizzy Grant cops to her real-life fame and interrupts the come-ons to swear, \"I feel free when I see no one.\" You never know--this dame might write a love song we can believe in someday. \"Freak\" and \"Blackest Day\" come fairly close.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Lana+Del+Rey"
+        },
+        {
+          "title": "Lust for Life",
+          "label": "Interscope/Polydor, 2017",
+          "year": "2017",
+          "grade": "***",
+          "gradeLabel": "Choice Cuts",
+          "reviewText": "Languid self-expressions of considerable theoretical interest, just like the Lana Del Rey character's sexual proclivities used to be (\"When the World Was at War We Kept Dancing,\" \"13 Beaches\")",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Lana+Del+Rey"
+        },
+        {
+          "title": "Norman Fucking Rockwell!",
+          "label": "Interscope, 2019",
+          "year": "2019",
+          "grade": "***",
+          "gradeLabel": "Choice Cuts",
+          "reviewText": "American studies paper on the late '60s fused with soft-core porn whose erotic charge is the deeper part of the synthesis (\"Hope is a dangerous thing to for a woman like me to have--but I have it,\" \"Love Song\")",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Lana+Del+Rey"
+        },
+        {
+          "title": "Chemtrails Over the Country Club",
+          "label": "Polydor/Interscope, 2021",
+          "year": "2021",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "As an LDR agnostic who's felt uneasy about failing to find the so-called NFR! a masterpiece or LDR sexually alluring as ice queen, hot number, intellectual, or any combination of same, I was delighted to be humming in my head before I'd gotten through this Jack Antonoff production twice. Hooks are far more plentiful here than on most LDR albums, the Antonoff-fueled NFR! included, and unusual ones at that. My favorite is \"Down in the Men in Music Business Conference\" (FYI there is no such thing--with that literal a name, anyway). Runner-up: \"We did it for fun/We did it for free/I did it for you/You did if for me\"--and then, right on time, \"We did it for the right reasons.\" But also \"I left Calabasas, escaped all the ashes\" and \"I'm coverin' Joni and I'm dancin' with Joan/Stevie is callin' on the telephone\" and \"Breakin' up slowly is a hard thing to do\" and \"I don't wanna live with a life of regret/I don't want to end up like Tammy Wynette.\" Now that she's connected A-list name-dropping to a love life normal humans can recognize, I can see where guys and gals might get off imagining a dreamy soprano \"wearin' the same damn clothes forthree damn days\" because \"Lincoln, Nebraska got me in a haze.\" But the humming in my head thing is what matters to me.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Lana+Del+Rey"
+        }
+      ]
+    },
+    {
+      "artistId": "lorde",
+      "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Lorde",
+      "updatedAt": "2026-06-12T16:06:32.678Z",
+      "lastAttemptAt": "2026-06-12T16:06:32.678Z",
+      "status": "ok",
+      "error": null,
+      "gradeGuide": "RC 评分体系：A+ 基本可视为神专；A 是相当强的专辑；A- 很优秀；B+ 值得肯定；B/B-/C 依次走低；*** / ** / * 属于星标/雪花类提示，数量越多越好但通常不是完整高分专辑；Choice Cuts / ✂️ 表示只推荐列出的几首歌；炸弹/💣 表示很差。",
+      "reviews": [
+        {
+          "title": "Pure Heroine",
+          "label": "Lava/Republic, 2013",
+          "year": "2013",
+          "grade": "**",
+          "gradeLabel": "Honorable Mention",
+          "reviewText": "Her ambition's in the right place, but the reason she always co-writes is that 16-year-olds don't just crank out hits (\"Royals,\" \"Tennis\")",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Lorde"
+        },
+        {
+          "title": "Melodrama",
+          "label": "Lava/Republic, 2017",
+          "year": "2017",
+          "grade": "B+",
+          "gradeLabel": "B+",
+          "reviewText": "Having achieved world renown as a 16-year-old innocent with a throaty voice, a head on her shoulders, and the nerve to dissent from a style of upward mobility invented by black people a pole away, she returns four years later as what else--a pop property with a sex life. Thus her chief musical collaborator is Taylor/Sia/Carly Rae helpmeet Jack Antonoff rather than New Zealand svengali Joel Little, and it's Antonoff plus the extra grain in her voice that make the difference here. For me, the most meaningful line is \"Put my hands under your T-shirt,\" because it suggests someone who's thought about how this sex thing works. Deep, no. Real, in theory. Sex life, presumably. Pop property, absolutely.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Lorde"
+        }
+      ]
+    },
+    {
+      "artistId": "madonna",
+      "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Madonna",
+      "updatedAt": "2026-06-12T16:06:37.862Z",
+      "lastAttemptAt": "2026-06-12T16:06:37.862Z",
+      "status": "ok",
+      "error": null,
+      "gradeGuide": "RC 评分体系：A+ 基本可视为神专；A 是相当强的专辑；A- 很优秀；B+ 值得肯定；B/B-/C 依次走低；*** / ** / * 属于星标/雪花类提示，数量越多越好但通常不是完整高分专辑；Choice Cuts / ✂️ 表示只推荐列出的几首歌；炸弹/💣 表示很差。",
+      "reviews": [
+        {
+          "title": "Madonna",
+          "label": "Sire, 1983",
+          "year": "1983",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "In case you bought the con, disco never died--just reverted to the crazies who thought it was worth living for. This shamelessly ersatz blonde is one of them, and with the craftily orchestrated help of a fine selection of producers, remixers, and DJs, she's come up with a shamelessly ersatz sound that's tighter than her tummy--essence of electro, the D in DOR. At first I thought the electroporn twelve-inch that pairs \"Burning Up\" with \"Physical Attraction\" was the way to go, but that was before she'd parlayed the don't-let-me-down vagueness of \"Borderline\" into a video about interracial love (sex, I mean) and a sneaky pop hook simultaneously. At one stiff per four-song side, smarter than Elvis Costello.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Madonna"
+        },
+        {
+          "title": "Like a Virgin",
+          "label": "Sire, 1984",
+          "year": "1984",
+          "grade": "B",
+          "gradeLabel": "B",
+          "reviewText": "If a woman wants to sell herself as a sex fantasy I'll take a free ride--as long as the fantasy of it remains out front, so I don't start confusing image with everyday life. But already she's so sure of herself she's asking men and women both to get the hots for the calculating bitch who sells the fantasy even while she bids for the sincerity market where long-term superstars ply their trade. And to make the music less mechanical (just like Bowie, right?), she's hired Nile Rodgers, who I won't blame for making it less catchy.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Madonna"
+        },
+        {
+          "title": "True Blue",
+          "label": "Sire, 1986",
+          "year": "1986",
+          "grade": "B",
+          "gradeLabel": "B",
+          "reviewText": "Critics flock to her uneven product the way liberal arts magnas flock to investment banking--so desperate are they to connect to a zeitgeist that has nothing to do with them that they decide a little glamour and the right numbers add up to meaningful work, or at least \"fun.\" I'm not saying her flair is pleasureless--the generosity she demands in the inexhaustible \"Open Your Heart\" is a two-way street and then some. But she doesn't speak for the ordinary teenaged stiff any more than Reagan speaks for union members (that's called \"selling to,\" folks). And while the antiabortion content of \"Papa Don't Preach\" isn't unequivocal, and wouldn't make the song bad by definition if it were, the ambiguity is a cop-out rather than an open door (or heart), which is bad. In a time of collective self-deception, we don't need another snow job.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Madonna"
+        },
+        {
+          "title": "You Can Dance",
+          "label": "Sire, 1987",
+          "year": "1987",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "Only two of the seven songs on her best LP haven't surfaced on an earlier album, but it's no best-of, and not just because she's saving her radio hits for yet another compilation. The effects, repeats, breaks, and segues added by a star crew of remixers headed by Jellybean Benitez and Shep Pettibone amount to new music--this time the songs don't surface, they reach out and grab you. Reminding us that her first and probably truest calling was disco dolly--before she stormed MTV, she had an audience that loved the way she sounded .",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Madonna"
+        },
+        {
+          "title": "Like a Prayer",
+          "label": "Sire, 1989",
+          "year": "1989",
+          "grade": "B+",
+          "gradeLabel": "B+",
+          "reviewText": "Three times I've mistaken her polymorphic promo and gross ambition for standard-issue lowest-common-denominator pandering, and three times her audience has disabused me in the months and years that followed. But though I swear I won't get fooled again, it's hard to hear an icon in the privacy of your own home, especially if you don't believe in her, and I won't sink that low or fly that high--I can't. So say the kiddie psychedelia is ick, the side-closers are over when they're over, and everything else sports some little touch to remember it by, Prince or musique concr�te or broken quote from the Association. The cocksucker's prayer is anybody's classic, but coming from, I don't know, Suzanne Vega, the declaration of filial independence and the recommendation of romantic independence would be uncharacteristically catchy cliches. Coming from an icon they're challenging, thrilling--and they'll get more thrilling.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Madonna"
+        },
+        {
+          "title": "I'm Breathless",
+          "label": "Sire/Warner Bros., 1990",
+          "year": "1990",
+          "grade": "A",
+          "gradeLabel": "A",
+          "reviewText": "There are no doubt hundreds of frustrated chorines who could sing the three Sondheim originals \"better\" than the most famous person in the world. But with its pedigree of wit and musicality, show-tune pop-schlock sure beats the direct-to-Vegas power ballads with which she's heretofore betrayed her dance-rock roots. Especially when she writes it herself--except for the \"Material Girl\"-inspired \"More,\" the Sondheim tunes are fussy and genteel (with Mandy Patinkin's \"well-sung\" cameo the nadir), but such fake period pieces as \"Cry Baby,\" \"He's a Man,\" and the risque s&m-lite \"Hanky Panky\" are all her. This is a woman whose great gift is for the mask. Camp isn't everything she can do, but she sure knows how to do it right.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Madonna"
+        },
+        {
+          "title": "The Immaculate Collection",
+          "label": "Sire, 1990",
+          "year": "1990",
+          "grade": "A+",
+          "gradeLabel": "A+",
+          "reviewText": "Seventeen hits, more than half of them indelible classics: \"Holiday\" (ebullient), \"Lucky Star\" (blessed), \"Like a Virgin\" (wicked), \"Papa Don't Preach\" (immoral), \"Express Yourself\" (feminist), \"Material Girl\" (dialectical), \"Vogue\" (expressive), \"Open Your Heart\" (naked), \"Justify My Love\" (erotica), \"Into the Groove\" (disco). Style-swallowing opportunist though she is, every one could have been cut yesterday--they're unified by the plastic practicality of her voice and the synthetic electricity of her groove. Right, she's all image. Couldn't have done it without MTV. Tell me about it.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Madonna"
+        },
+        {
+          "title": "Erotica",
+          "label": "Maverick/Sire, 1992",
+          "year": "1992",
+          "grade": "A",
+          "gradeLabel": "A",
+          "reviewText": "OK, everybody, let's use our imaginations , shall we? It may be a little hard at first, but if we try we can have lots of fun. To start, let's pretend that we have nothing against dance music--that instead of fixating on impersonal and mechanical and all those obvious things we can just enjoy it for what it is, as innocently as babes. Come on now, really try. Got it? Good. Because now I'm going to suggest something even harder--that we pretend we've never heard of Madonna. I know that's like asking you not to think of a purple polar bear, so just pretend to pretend, if you know what I mean, which as good postmodernist children you do. Now, put the record on. Hear those bass and synth beats? Sinuous and subtle and sexy, aren't they? How 'bout the faux-Arab electro on \"Words\"? And aren't the techno effects all nice and cheesy-futuristic? The singer doesn't have great pipes, but because she's too hip to belt (this time), she doesn't need them. She's in control, all understated presence and impersonal personality except when she's flashing some pink. Also, not counting that \"Love your sister, love your brother\" thing, the lyrics are not stupid. I love the rap where the boast turns out to be a lie. And whoever thought of recording the breakup song through the phone hookup was pretty smart, wasn't he or she? She, I bet. A find.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Madonna"
+        },
+        {
+          "title": "Bedtime Stories",
+          "label": "Maverick/Sire, 1994",
+          "year": "1994",
+          "grade": "**",
+          "gradeLabel": "Honorable Mention",
+          "reviewText": "seductive self-regard over the best tracks fame can buy (\"Don't Stop\")",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Madonna"
+        },
+        {
+          "title": "Something to Remember",
+          "label": "Maverick/Warner Bros., 1995",
+          "year": "1995",
+          "grade": "Dud",
+          "gradeLabel": "Dud",
+          "reviewText": "Something to Remember [Maverick/Warner Bros., 1995] Dud",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Madonna"
+        },
+        {
+          "title": "Ray of Light",
+          "label": "Maverick, 1998",
+          "year": "1998",
+          "grade": "*",
+          "gradeLabel": "Neither",
+          "reviewText": "Pretty sensual for pop enlightenment, thank God (\"Skin,\" \"Candy Perfume Girl\").",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Madonna"
+        },
+        {
+          "title": "Music",
+          "label": "Maverick, 2000",
+          "year": "2000",
+          "grade": "A",
+          "gradeLabel": "A",
+          "reviewText": "Anybody who denies that Madonna made great singles in the '80s is a boob. Run all together on The Immaculate Collection , they constitute the greatest album of her mortal life. But except for the debut, the albums per se from that period strove for schlock when they didn't stoop to filler. In the early '90s, she essayed great longforms--an ambition that presupposes good songs while cultivating consistency and flow. Then she got scared and discovered God, two not unrelated experiences that rendered her great singles and good songs more middlebrow. So rejoice that from Vocoder to cowgirl suit, she's got her sass back. Pretending to be cheap, she sometimes--as on my favorite moment, the processed-munchkin hook of the perfectly entitled \"Nobody's Perfect\"--really is cheap, which is essential to the illusion. All the songs are good, all chintzy. Which combo provides just the right consistency and flow.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Madonna"
+        },
+        {
+          "title": "GHV2: Greatest Hits Volume 2",
+          "label": "Maverick/Warner Bros., 2001",
+          "year": "2001",
+          "grade": "B+",
+          "gradeLabel": "B+",
+          "reviewText": "I prefer Erotica , the last time her shape-shifting audacity was more than a trope, and Music , the Mirwais-informed culmination of a period that could well last the rest of her career--could in the end be remembered as her career. Instead of playing at pop, using it as a platform from which to mount a fusillade of cultural challenges, she now is pop-blandness at its best, a model of a modern mental health, replete with ecumenical enlightenment, domestic contentment, liberal politics, and plenty of exercise. Not that she's limited to these themes; on the contrary, she role-plays as a matter of course, because (as she's long since established) that's what pop professionals do. And now it's time to sum up. So she gleans goodies from the overrated Bedtime Stories and Ray of Light , mixes in the glorious soundtrack-only \"Beautiful Stranger\" and the dismal soundtrack-only \"Don't Cry for Me Argentina,\" and hands it all over to Mirwais for sonic tweaking I'm not interested enough to pin down. An essential package.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Madonna"
+        },
+        {
+          "title": "American Life",
+          "label": "Maverick/Warner Bros., 2003",
+          "year": "2003",
+          "grade": "**",
+          "gradeLabel": "Honorable Mention",
+          "reviewText": "learning and adjusting like always, and no, stupid, not hypocritically--although maybe inattentively (\"Mother and Father,\" \"Nothing Fails\")",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Madonna"
+        },
+        {
+          "title": "Confessions on a Dance Floor",
+          "label": "Warner Bros., 2005",
+          "year": "2005",
+          "grade": "B+",
+          "gradeLabel": "B+",
+          "reviewText": "She did make an album like this before: her debut, where she flitted so astutely between producers that fools took her for a casting-couch queen. But where Madonna had a distinct feel, disco that partook simultaneously of electro minimalism and pop sellout, it also had distinct parts. Here she subs out the flitting to producer Stuart Price, who digests the entirety of '80s dance music into a flow that subsumes all details and referents. If anything, it's more a dance record, leaving those of us with a sentimental weakness for distinct parts a little lost. So not only am I glad she rhymes \"New York\" and \"dork,\" I'm glad she put her kabbalist on the guest list.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Madonna"
+        },
+        {
+          "title": "Hard Candy",
+          "label": "Warner Bros., 2008",
+          "year": "2008",
+          "grade": "**",
+          "gradeLabel": "Honorable Mention",
+          "reviewText": "OK, a middle-aged fitness nut can sing pop ditties just like middle-aged lushes could once sing pop standards, with this requirement--a little help from Timbo and Kanye (\"4 Minutes,\" \"Beat Goes On\").",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Madonna"
+        },
+        {
+          "title": "MDNA",
+          "label": "Interscope, 2012",
+          "year": "2012",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "Forget the four \"Deluxe\" extras, not one of which except maybe the pretty little \"I Fucked Up\" improves on the updated '90s arena-dance power tracks of the first 43 minutes, although they top the deadly-dreamy closer \"Falling Free\" as well as the penultimate \"Masterpiece,\" which begins \"If you were the Mona Lisa . . . .\" Granted, I could mock \"Ooh la la you're my superstar/Ooh la la that's what you are\" just as easily. But lyrics have never been where she showed off her gorgeous brains, and anyway, the 10-track mix I propose as an alternative goes out on a real song called \"Love Spent\": \"Hold me like your money/Tell me that you want me/Spend your love on me/Spend your love on me.\" Nikki Minaj shines bright, but she's no more crucial structurally than the cheerleaders who garnish \"I'm Addicted\" at its close and embellish \"Give Me All Your Luvin'\" throughout. Play loud. She's smart and she's proud.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Madonna"
+        },
+        {
+          "title": "Rebel Heart (Deluxe)",
+          "label": "Interscope, 2015",
+          "year": "2015",
+          "grade": "*",
+          "gradeLabel": "Neither",
+          "reviewText": "I grant her this--when she promises me my \"best night,\" I still wonder exactly what she has in mind. (\"Bitch I'm Madonna,\" \"Best Night\")",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Madonna"
+        },
+        {
+          "title": "Madame X",
+          "label": "Interscope, 2019",
+          "year": "2019",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "However much reviewers-come-lately mock the ones about forswearing dope and feeling the oppressed, these are well-intended ideas executed with the appropriate brio and calm, respectively. The nadirs are a \"far left\"/\"far right\" hedge and an over-cautious bid for divine mercy, both sequestered off on the \"deluxe\" version as a boon to the dollarwise consumer. Depending on your age, she's either your colorful Aunt Madge or a long-lost pal you ran into at a screening of Little Woods . For all of this century she's been a pro too old to conjure up the kind of sure shots that made The Immaculate Collection so no-fail yet too proud to sign off on two-tier albums like, for instance, 1986's True Blue , which begins with two songs far sharper than anything here but is back-ended by three out of five duller than any of the 13 brand-new non-deluxes. If you think Aunt Madge has become a bore, that's your petty right. If you remain fond of her, pour yourself a nice glass of chablis and listen.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Madonna"
+        }
+      ]
+    },
+    {
+      "artistId": "mariah-carey",
+      "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Mariah+Carey",
+      "updatedAt": "2026-06-12T16:06:37.249Z",
+      "lastAttemptAt": "2026-06-12T16:06:37.249Z",
+      "status": "ok",
+      "error": null,
+      "gradeGuide": "RC 评分体系：A+ 基本可视为神专；A 是相当强的专辑；A- 很优秀；B+ 值得肯定；B/B-/C 依次走低；*** / ** / * 属于星标/雪花类提示，数量越多越好但通常不是完整高分专辑；Choice Cuts / ✂️ 表示只推荐列出的几首歌；炸弹/💣 表示很差。",
+      "reviews": [
+        {
+          "title": "Mariah Carey",
+          "label": "Columbia, 1990",
+          "year": "1990",
+          "grade": "C",
+          "gradeLabel": "C",
+          "reviewText": "I swear I didn't know her mama was an opera singer, but I'm embarrassed that I didn't guess. She gets too political in her brave, young, idealistic attack on \"war, destitution and sorrow\": \"Couldn't we accept each other/Can't we make ourselves aware.\" Elsewhere she sticks to what she doesn't know--love. Debbie Gibson, all is forgiven.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Mariah+Carey"
+        },
+        {
+          "title": "Emotions",
+          "label": "Columbia, 1991",
+          "year": "1991",
+          "grade": "Dud",
+          "gradeLabel": "Dud",
+          "reviewText": "Emotions [Columbia, 1991] Dud",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Mariah+Carey"
+        },
+        {
+          "title": "Music Box",
+          "label": "Columbia, 1993",
+          "year": "1993",
+          "grade": "Dud",
+          "gradeLabel": "Dud",
+          "reviewText": "Music Box [Columbia, 1993] Dud",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Mariah+Carey"
+        },
+        {
+          "title": "Butterfly",
+          "label": "Columbia, 1997",
+          "year": "1997",
+          "grade": "Dud",
+          "gradeLabel": "Dud",
+          "reviewText": "Butterfly [Columbia, 1997] Dud",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Mariah+Carey"
+        },
+        {
+          "title": "#1's",
+          "label": "Columbia, 1998",
+          "year": "1998",
+          "grade": "***",
+          "gradeLabel": "Choice Cuts",
+          "reviewText": "\"Fantasy [Featuring ODB]\" Choice Cuts",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Mariah+Carey"
+        },
+        {
+          "title": "Rainbow",
+          "label": "Columbia, 1999",
+          "year": "1999",
+          "grade": "**",
+          "gradeLabel": "Honorable Mention",
+          "reviewText": "Not a \"real\" r&b thrush, but good enough to fake it (\"Heartbreaker,\" \"Crybaby\").",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Mariah+Carey"
+        },
+        {
+          "title": "E=MC2",
+          "label": "Island, 2008",
+          "year": "2008",
+          "grade": "***",
+          "gradeLabel": "Choice Cuts",
+          "reviewText": "\"Touch My Body\" Choice Cuts",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Mariah+Carey"
+        },
+        {
+          "title": "Memoirs of an Imperfect Angel",
+          "label": "Island, 2009",
+          "year": "2009",
+          "grade": "Dud",
+          "gradeLabel": "Dud",
+          "reviewText": "Memoirs of an Imperfect Angel [Island, 2009] Dud",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Mariah+Carey"
+        }
+      ]
+    },
+    {
+      "artistId": "nicki-minaj",
+      "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Nicki+Minaj",
+      "updatedAt": "2026-06-12T16:06:39.142Z",
+      "lastAttemptAt": "2026-06-12T16:06:39.142Z",
+      "status": "ok",
+      "error": null,
+      "gradeGuide": "RC 评分体系：A+ 基本可视为神专；A 是相当强的专辑；A- 很优秀；B+ 值得肯定；B/B-/C 依次走低；*** / ** / * 属于星标/雪花类提示，数量越多越好但通常不是完整高分专辑；Choice Cuts / ✂️ 表示只推荐列出的几首歌；炸弹/💣 表示很差。",
+      "reviews": [
+        {
+          "title": "Beam Me Up Scotty",
+          "label": "Trapaholics download, 2009",
+          "year": "2009",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "This 2009 mixtape, not the more recent Barbie World , is why if not where hards decided a biracial female was street enough. Without undue popping of coochie, she quickly establishes herself as a highly unsisterly, rabidly materialistic \"shopaholic\" set on becoming \"the black Hannah Montana.\" That way of putting it should have alerted hoodrats unworthy of her hiney implants to the scope of her ambitions; on the other hand, so should \"behind every bad bitch there's a really sweet girly-girl.\" Even her materialism is relative: \"Tell Michelle I got my eye on Barack Obama/Tryin' to get that Madonna/You know Hannah Montana [a theme?]/Could find me sittin' Indian-style with the Dalai Lama/I'm meditatin' I'm in cahoots with a higher power.\" One does wonder, though--once you rhyme \"Dalai Lama\" and \"higher power,\" do you need Hannah Montana anymore?",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Nicki+Minaj"
+        },
+        {
+          "title": "Pink Friday",
+          "label": "Young Money/Cash Money, 2010",
+          "year": "2010",
+          "grade": "A",
+          "gradeLabel": "A",
+          "reviewText": "Not only are those not her breasts, at least not the ones her biologicals gave her, but her hair isn't really pink or, wink wink, straight. Not only is the quick-lipped hoyden of the year all \"Young Money, Cash Money, yeah I'm Universal\" with every upper-case except the \"I\" discretionary, but she's consorting with Natasha Bedingfield and reminding will.i.am how he did it. Half rapping and half singing, half bragging and half kowtowing, brazening a \"punt\" rhyme here and proclaiming commonality with \"girls that never thought they could win\" there, she's proud to be shameless, with the hooks to back it up. She knows well the presumably stolen words of her male collaborator-counterpart Drake: \"Everybody dies but not everybody lives.\" And damn right she calls this living.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Nicki+Minaj"
+        },
+        {
+          "title": "Pink Friday: Roman Reloaded: Deluxe Edition",
+          "label": "Cash Money/Universal Republic, 2012",
+          "year": "2012",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "Since the positive and negative reviews say pretty much the same thing, we can agree that this is an overstuffed, musically manipulative, thematically directionless bid to put the pink-haired alien on the singles charts until Katy Perry absconds to rehab. She isn't \"the female Weezy\" or some ill-defined male alter ego. She's an aspiring and most likely inevitable pop queen who raps exceptionally well, sings quite well, rhymes inconsistently but sometimes superbly, and will do anything to be rich and famous. This obviously doesn't make her a heroine. But if you enjoy contemporary pop whose market-tested blare offends both rockist philistines and IDM aesthetes, her second album is a worthwhile investment. It begins strong and, counting the three bonus tracks, ends strong. In between it tends mawkish and loud, neither of which precludes fun, especially with the right cameos. There is, however, a Chris Brown track. (Hey--I said anything.)",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Nicki+Minaj"
+        },
+        {
+          "title": "The Pinkprint (Deluxe Edition)",
+          "label": "Cash Money/Republic, 2014",
+          "year": "2014",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "Sometimes gossip can be so enlightening. The reflective opener \"All Things Go\" is pretty solid on its own. But word that this particular best rapper alive just ended a 12-year relationship with her homeboy boyfriend renders the two ballads that work off that prologue touching. The bad part is that it doesn't render them major ballads, although she gets somewhat closer on \"Bed of Lies\" at the other end of the narrative arc before overblowing the supposedly climactic \"Grand Piano.\" Only then come three album-defining bonus tracks. The Meek Mill-assisted \"Big Daddy\" is so generic it establishes how ungeneric the Drake/Weezy-assisted \"Only\" and the Lunchmoney Lewis-assisted \"Trini Dem Girls\" were--makes you want to play them again, in fact. And on \"Shanghai\" and \"Win Again,\" Minaj returns to her triumphalist mode prepared to embrace the role of a 32-year-old woman ready for love--even, in both songs, the motherhood she reflects on as the record begins.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Nicki+Minaj"
+        },
+        {
+          "title": "Queen",
+          "label": "Young Money/Cash Money/Republic, 2018",
+          "year": "2018",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "I missed this August 2018 item while homing in on Eminem's September album because hip-hop's bureau of standards brushed hers aside as inconsequential while actively attacking his as an offense against the polity. In fact, both are quick-lipped, sharp-tongued arguments for the hip-hop they and I came up on and the endangered kind of flow both excel at. And both are funny, outrageous, self-confident announcements that neither artist has any intention of going away. Minaj articulates the stakes with the opening \"As the world turns, the blunt burns/Watch them cunts learn\" before reeling off three pointedly female, pointedly unfeminine sex songs so spectacular that the album never tops them. She also drops brand names like a good rap star should and shows off her connections with seven high-profile cameos, including godmother Foxy Brown, little sister Ariana Grande, postflow Swae Lee, and world speedster Eminem himself. And then there's the best touch--her hip-hop turf all too obviously contested, she doesn't sing a note.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Nicki+Minaj"
+        },
+        {
+          "title": "Pink Friday 2",
+          "label": "Young Money/Republic, 2023",
+          "year": "2023",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "I'm not sorry I sent Amazon 14 bucks for what turns out to be a 10-song CD with unreadable track listings that many report is better in its longer streamable and downloadable version. Musically, there is no more pleasurable female rapper, and while I wouldn't claim her first album since 2018 is on a par with Queen or The Pinkprint , it definitely adds to what we'll just call her oeuvre if it's OK with you. The pleasure she takes in her undaunted flow and soft yet flawless diction and the pride she takes in her opthamologically challenged young daughter are almost enough to tempt me not to mention her unrelinquished claim that some Covid vaccine or other left a cousin of hers impotent. So now I dare you to tell me how old she is without looking it up. Just short of 50 is the answer. Wow.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Nicki+Minaj"
+        }
+      ]
+    },
+    {
+      "artistId": "olivia-rodrigo",
+      "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Olivia+Rodrigo",
+      "updatedAt": "2026-06-12T16:06:34.823Z",
+      "lastAttemptAt": "2026-06-12T16:06:34.823Z",
+      "status": "ok",
+      "error": null,
+      "gradeGuide": "RC 评分体系：A+ 基本可视为神专；A 是相当强的专辑；A- 很优秀；B+ 值得肯定；B/B-/C 依次走低；*** / ** / * 属于星标/雪花类提示，数量越多越好但通常不是完整高分专辑；Choice Cuts / ✂️ 表示只推荐列出的几首歌；炸弹/💣 表示很差。",
+      "reviews": [
+        {
+          "title": "Sour",
+          "label": "Geffen, 2021",
+          "year": "2021",
+          "grade": "A",
+          "gradeLabel": "A",
+          "reviewText": "This manifestly competent 18-year-old actress has a two-boyfriend romantic history dating back to 2018 that pop aesthetes who avoid the Disney channel can just Google--both, unsurprisingly, with actors a year or two older than she is. Also unsurprisingly, she's gorgeous. But that's never stopped women from worrying that their bodies aren't \"perfect,\" which along with other inevitable insecurities was enough to fuel an exquisite teen-breakup concept album produced by 38-year-old helper bunny Daniel Nigro. Again and again dainty melodies meet big drums and are only stronger for it as every simple word comes clear. She doesn't drink yet but knows how he likes his coffee and let's bet her own; she says \"fuck\" and \"bullshit,\" the latter to modify \"eternal love.\" Though he did the driving let's also bet he gave her some of the lessons that flowered into her first megahit even if she still can't really, in everybody's favorite trope, parallel park. But when he transfers his attentions to \"someone more exciting,\" it's Olivia's jokes he's telling, Olivia's Billy Joel he's playing. And for a transcendent finale she leaves her own pain behind and sends her very best to an abused boy she knew when they were small and a middle school friend with parents who \"hated who she loved.\"",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Olivia+Rodrigo"
+        },
+        {
+          "title": "Guts",
+          "label": "Geffen, 2023",
+          "year": "2023",
+          "grade": "A",
+          "gradeLabel": "A",
+          "reviewText": "An aesthetic triumph that deepens its psychological complexity with diverting jokes by establishing that love comes even harder to 20-year-old pop phenoms than to less extraordinary humans, or do I just mean extraordinary females? Either way, only someone as gifted, famous, and likable as Rodrigo has much chance of launching lovequests as worthy of your attention as these. Seldom if ever have the romantic tribulations of a young superstarlet been laid out in such credible detail, their defining complication the extreme unlikelihood that she'll meet anyone as smart, decent, successful, and hilarious as she is on the party circuit her well-earned fame opens up to her and sticks her with. With special respect for the perfect double entendre \"Get Him Back!\" and the well-schooled rhyme \"Dazzling starlet/Bardot incarnate,\" I hereby swear that these 12 catchy, hyperintelligent, self-penned songs should be committed to memory by any up-and-coming entertainer ready to admit that it may be the better part of discretion to love someone who is in some crucial respect an equal from another sphere--an up-and-coming climate scientist, say. Showbiz hopefuls however gifted are too likely to succumb to jealousy just because she's so damn good at what she does.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Olivia+Rodrigo"
+        }
+      ]
+    },
+    {
+      "artistId": "rihanna",
+      "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Rihanna",
+      "updatedAt": "2026-06-12T16:06:31.450Z",
+      "lastAttemptAt": "2026-06-12T16:06:31.450Z",
+      "status": "ok",
+      "error": null,
+      "gradeGuide": "RC 评分体系：A+ 基本可视为神专；A 是相当强的专辑；A- 很优秀；B+ 值得肯定；B/B-/C 依次走低；*** / ** / * 属于星标/雪花类提示，数量越多越好但通常不是完整高分专辑；Choice Cuts / ✂️ 表示只推荐列出的几首歌；炸弹/💣 表示很差。",
+      "reviews": [
+        {
+          "title": "Music of the Sun",
+          "label": "Def Jam, 2005",
+          "year": "2005",
+          "grade": "Dud",
+          "gradeLabel": "Dud",
+          "reviewText": "Music of the Sun [Def Jam, 2005] Dud",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Rihanna"
+        },
+        {
+          "title": "A Girl Like Me",
+          "label": "Def Jam, 2006",
+          "year": "2006",
+          "grade": "Dud",
+          "gradeLabel": "Dud",
+          "reviewText": "A Girl Like Me [Def Jam, 2006] Dud",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Rihanna"
+        },
+        {
+          "title": "Good Girl Gone Bad",
+          "label": "Def Jam, 2007",
+          "year": "2007",
+          "grade": "***",
+          "gradeLabel": "Choice Cuts",
+          "reviewText": "\"Umbrella\" Choice Cuts",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Rihanna"
+        },
+        {
+          "title": "Good Girl Gone Bad: Reloaded",
+          "label": "Def Jam, 2008",
+          "year": "2008",
+          "grade": "***",
+          "gradeLabel": "Choice Cuts",
+          "reviewText": "\"Disturbia\" Choice Cuts",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Rihanna"
+        },
+        {
+          "title": "Rated R",
+          "label": "Def Jam, 2009",
+          "year": "2009",
+          "grade": "**",
+          "gradeLabel": "Honorable Mention",
+          "reviewText": "Concocting a persona of interest out of one dynamite musical trick and a bad patch I wouldn't wish on Lindsay Lohan (\"Hard,\" \"Rude Boy\").",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Rihanna"
+        },
+        {
+          "title": "Talk That Talk (Deluxe Edition)",
+          "label": "Def Jam, 2011",
+          "year": "2011",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "Musically, this is pop without shame--her hookiest and most dance-targeted album, decorated with a thoughtful assortment of suitably titillating blats, noodles, dubs, groans, hiccups, boom-booms, cut-ups, speed-ups, xx samples, and spoken-word bits. Lyrically, it celebrates the relationship of sex to love rather than pain, dipping predictably on the heart songs and theme statements that slow down the second half, especially on the standard edition. Associating carnality with love as I do, I prefer it to her earlier albums because I find its many porny moments titillating. Sure Beyonc� is sexier in principle--I like smart girls, not bad girls, especially bad girls with a thing for worse men. But I believe in taking my titillation wherever it raises its spongy head.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Rihanna"
+        },
+        {
+          "title": "Unapologetic",
+          "label": "Def Jam, 2012",
+          "year": "2012",
+          "grade": "***",
+          "gradeLabel": "Choice Cuts",
+          "reviewText": "So much more provocative as an android than as a human being (\"Phresh Out the Runway,\" \"Diamonds,\" \"Numb\")",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Rihanna"
+        },
+        {
+          "title": "Anti (Deluxe Edition)",
+          "label": "Westbury Road/Roc Nation, 2016",
+          "year": "2016",
+          "grade": "A",
+          "gradeLabel": "A",
+          "reviewText": "The reason I like this record beginning to end has zip to do with whether it documents her sexual mood swings more proudly or soulfully. The presentational Rihanna is so unlike anyone I know that she can say anything she wants about her musical punany as long as she leaves Chris Brown out of it--with this artist, sex is figurative, symbolic, the mark of a pleasure taker turned pleasure provider. So Anti is her best album for a reason so simple it's tautological--despite its supposed rejection of track-and-hook mechanics, it features catchier songs. True, the main time they really make me go woo is when she breaks into gibberish at the end of \"Work.\" But then some German hands her \"Love on the Brain,\" the best new doowop song in decades, which segues perfectly to a power entreaty avec drunk violins, after which the album proper goes out on a piano-enhanced coda that adds a nice sweetness. Only instead of savoring this narrative arc, why don't you just proceed to the three bonus tracks, which top an M.I.A. move with none other than \"Sex With Me\"?",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Rihanna"
+        }
+      ]
+    },
+    {
+      "artistId": "sabrina-carpenter",
+      "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Sabrina+Carpenter",
+      "updatedAt": "2026-06-12T16:06:35.289Z",
+      "lastAttemptAt": "2026-06-12T16:06:35.289Z",
+      "status": "ok",
+      "error": null,
+      "gradeGuide": "RC 评分体系：A+ 基本可视为神专；A 是相当强的专辑；A- 很优秀；B+ 值得肯定；B/B-/C 依次走低；*** / ** / * 属于星标/雪花类提示，数量越多越好但通常不是完整高分专辑；Choice Cuts / ✂️ 表示只推荐列出的几首歌；炸弹/💣 表示很差。",
+      "reviews": [
+        {
+          "title": "Short 'N' Sweet",
+          "label": "Island, 2024",
+          "year": "2024",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "Maybe because I've been married forever, I found it hard time to get into this widely respected, fetchingly tuneful, consistently articulate pop album with a beautiful blonde looking over her naked shoulder on the cover. But I've made my breakthrough. Not only is Short 'N' Sweet intelligent and enjoyable, it has a worthy theme&mdash;a smart and sexy woman's frustrating quest for true love, as in \"Guess I'll end this life alone. . . /All the douchebags in my phone/Play em like a slot machine/If they're winning I'm just losing.\" Really, I grant how often her \"You're so dumb and poetic. It's just what I fall for, I like the aesthetic\" is doomed to lead to his&mdash;and here I'll interject my own interpretation&mdash;\"You're so horny and hooky/Just what I look for when I'm hunting new nookie.\" But because she's laid some excellent groundwork, allow me to state my belief that not every human male is doomed by the wrong chromosomes to be the kind of dickhead she's come to know too well. So I wish her a best I truly hope is yet to come.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Sabrina+Carpenter"
+        }
+      ]
+    },
+    {
+      "artistId": "taylor-swift",
+      "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Taylor+swift",
+      "updatedAt": "2026-06-12T16:06:28.390Z",
+      "lastAttemptAt": "2026-06-12T16:06:28.390Z",
+      "status": "ok",
+      "error": null,
+      "gradeGuide": "RC 评分体系：A+ 基本可视为神专；A 是相当强的专辑；A- 很优秀；B+ 值得肯定；B/B-/C 依次走低；*** / ** / * 属于星标/雪花类提示，数量越多越好但通常不是完整高分专辑；Choice Cuts / ✂️ 表示只推荐列出的几首歌；炸弹/💣 表示很差。",
+      "reviews": [
+        {
+          "title": "Taylor Swift",
+          "label": "Big Machine, 2006",
+          "year": "2006",
+          "grade": "***",
+          "gradeLabel": "Choice Cuts",
+          "reviewText": "\"Tim McGraw,\" \"Picture to Burn\" Choice Cuts",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Taylor+swift"
+        },
+        {
+          "title": "Fearless",
+          "label": "Big Machine, 2008",
+          "year": "2008",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "\"You have to believe in love stories and prince charmings and happily ever after,\" declares the 18-year-old Nashville careerist. You can tell me that's worse than icky if you like; I believe in two of the three (prince charmings, no), and I think it's kind of icky myself. But I'm moved nevertheless by what can pass for a concept album about the romantic life of an uncommonly-to-impossibly strong and gifted teenage girl, starting on the first day of high school and gradually shedding naivet� without approaching misery or neurosis. Partly it's the tunes. Partly it's the musical restraint of a strain of Nashville bigpop that avoids muscle-flexing rockism. Partly it's the diaristic realism she imparts to her idealized tales. And partly it's how much she loves her mom. Swift sets the bar too high. But as role models go, she's pretty sweet.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Taylor+swift"
+        },
+        {
+          "title": "Fearless: Platinum Edition",
+          "label": "Big Machine, 2009",
+          "year": "2009",
+          "grade": "***",
+          "gradeLabel": "Choice Cuts",
+          "reviewText": "\"Jump Then Fall\" Choice Cuts",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Taylor+swift"
+        },
+        {
+          "title": "Speak Now",
+          "label": "Big Machine, 2010",
+          "year": "2010",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "The 14 songs last upwards of 67 minutes, some 4:45 apiece; they're overlong and overworked. And I believe what I read about their origins in the romantic and other feelings of America's Ingenue for identifiable major and minor celebrities, which may thrill her fanbase but means approximately nothing to me. Even in their overwork, however, they evince an effort that bears a remarkable resemblance to care--that is, to caring in the best, broadest, and most emotional sense. I even like the one about Kanye West--including when I remember that it's about Kanye West, which usually I don't.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Taylor+swift"
+        },
+        {
+          "title": "Red",
+          "label": "Big Machine, 2012",
+          "year": "2012",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "So if Stephin Merritt can make a big deal out of 69 love songs, why can't Taylor Swift make a fairly big deal out of 16? His being formally savvy in his pop-polymath way and hers being formally voracious in her pop-bestseller way? Need either deal be autobiographical? One hopes not in both cases, although verisimilitude has its formal aspects for bestsellers. Swift hits the mark less often than Merritt--65 or 70 percent, I'd say. But one could argue that the verisimilitude requirement forces her to aim higher. I like the feisty ones, as I generally do. But \"Begin Again\" and especially \"Stay Stay Stay\" stay happy and hit just as hard. That's hard.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Taylor+swift"
+        },
+        {
+          "title": "1989",
+          "label": "Big Machine, 2014",
+          "year": "2014",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "The NYC tourist jingle everybody hates on to prove they're not her shills is my favorite thing here. Having emigrated to Manhattan myself, albeit from Queens, I think it's silly to demand sociology from someone who can't stroll Central Park without bodyguards. I note that even from a limo you can tell that the \"everyone\" here who \"was someone else before\" includes many immigrants of color. And I credit its gay-curious moment even if she ends up with a banker like her dad. All that said, however, there's a big difference between Swift's Manhattan and the one I can afford only due to real estate laws as vestigial as the family grocery that just closed up across the street, and you can hear that difference in the music. In principle I'm down with the treated hooks and doctored vocals with which Swift makes herself at home. Freed of Nashville's myth of the natural, she echoes and double-tracks and backs herself up, confides with soft-edged subtlety and fuses the breathy with the guttural. But I have less use for the cyborg with feelings she's playing now than for the gawky 15-year-old she created on Fearless--the one who was a hundredth as talented and a tenth as self-possessed as the 18-year-old who imagined her, the one who gathered an audience of country fangirls Nashville didn't know existed. That fifteen-year-old obviously isn't much like me. But she's more like I was when I got here than the cyborg will ever be, or most bankers either.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Taylor+swift"
+        },
+        {
+          "title": "Reputation",
+          "label": "Big Machine, 2017",
+          "year": "2017",
+          "grade": "***",
+          "gradeLabel": "Choice Cuts",
+          "reviewText": "It isn't that she completely sounds like a pop star, it's that she completely identifies as one (\"This Is Why We Can't Have Nice Things,\" \"Call It What You Want\")",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Taylor+swift"
+        },
+        {
+          "title": "Lover",
+          "label": "Republic, 2019",
+          "year": "2019",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "It's not just that Swift knows even more about having lovers, the concept here, than she does about being a star, the concept of Reputation . It's that for female pop fans with their own lives, not just unfortunates ensnared by the vicarious vagaries of celebrity culture, lover is a more relatable concept than star. A romantic history as footloose as Swift's comes easier to a gal with unlimited access to desirable men. But even so there are millions of women who manage serial relationships, and this one's for them. Swift has earned the right to assemble \"a love letter to love itself\" more ways than anyone can count, including a romance with a British actor I wouldn't know from Joe Jonas that is now well into its record-breaking third year. I wish the tunecraft here retained the lightness of the mean yet hopeful \"I Forgot That You Existed,\" an opener that seems to promise a keyb-based pure pop of Motownish allure that does not in fact ensue. I also wish I hadn't learned that the romantic pied-a-terre of \"Cornelia Street\" is actually a mansion with a pool. But Swift's formidable skill set has seldom served more likable or admirable ends.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Taylor+swift"
+        },
+        {
+          "title": "Folklore",
+          "label": "Republic, 2020",
+          "year": "2020",
+          "grade": "B+",
+          "gradeLabel": "B+",
+          "reviewText": "Since her actually existing life doesn't interest me, the news that these songs break her autobiographical mold signifies for me only insofar as I wish the two I find touching as well as admirable were the reminiscences they pretend to be: the childhood memory \"Seven,\" which I bet is, and the teen memory \"Betty,\" which I assume isn't. As someone who's loved kids since he wasn't one himself, I'm pleased that these two tunes are at least not adult, hence not about Swift the professional wonder--the one who made National headman Aaron Dessner rich for life just for helping her do what she's been doing forever: manufacturing yet another bunch of melodically fetching, lyrically deft pop songs that are fine as far as they go. The only one I can't stand anymore is the striking \"The Last Great American Dynasty,\" which reminds me all too much of Taylor Swift the showbiz plutocrat.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Taylor+swift"
+        },
+        {
+          "title": "Evermore",
+          "label": "Republic, 2020",
+          "year": "2020",
+          "grade": "A-",
+          "gradeLabel": "A-",
+          "reviewText": "The theory that this second album of manifestly unautobiographical Aaron Dessner-etc. collabs in six months is by definition less inspired than the one they put out in July isn't what I hear here, which is that they kept going because they were just getting their groove on. Oddly, the song I noticed first is the one I now like least--the super-hooky but pat police procedural \"No Body, No Crime.\" I mean, who needs hooks when melody is a given? So instead try \"Champagne Problems,\" in which he's all set to ask her to marry him the same night she's all set to ditch him. Or the future Christmas classic \"'Tis the Damn Season,\" a cheating song about the Taylor who got away. Or \"Cowboy Like Me,\" in which she turns out to be the cowgirl after all. Or \"Marjorie\" with Swift's \"Never be so kind you forget to be clever/Never be so clever you forget to be kind.\" Or \"Coney Island\" with Dessner's \"Will you forgive my soul/When you're too wise to trust me/And too old to care?\" Or \"It's Time to Go,\" in which for 15 years \"I gave it my all, he gave me nothing at all/Then wondered why I left.\" Or \"Closure,\" which puts the title in quotes you can hear.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Taylor+swift"
+        },
+        {
+          "title": "Midnights",
+          "label": "Republic, 2022",
+          "year": "2022",
+          "grade": "***",
+          "gradeLabel": "Choice Cuts",
+          "reviewText": "As textural as anything this tunemaster has ever let out in public, and muzzier as a consequence, Jack Antonoff collab includes a cowrite with her longtime bf, which hints sweetly that many pseudo-autobiographical lyrics to the contrary she does actually have a longtime bf (\"Snow on the Beach,\" \"Mastermind,\" \"Sweet Nothing\")",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Taylor+swift"
+        },
+        {
+          "title": "The Tortured Poets Department: The Anthology",
+          "label": "Taylor Swift/Republic, 2024",
+          "year": "2024",
+          "grade": "*",
+          "gradeLabel": "Neither",
+          "reviewText": "I hereby swear on the collected works of Joel Whitburn that I have streamed these 31 echoey tracks more than once or twice, was most touched by the two indicated below though that's not saying much, grant that eventually there may be more, and firmly believe she can help Biden in November so you go girl (\"My Boy Only Breaks His Favorite Toy,\" \"But Daddy I Love Him\")",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Taylor+swift"
+        }
+      ]
+    },
+    {
+      "artistId": "whitney-houston",
+      "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Whitney+Houston",
+      "updatedAt": "2026-06-12T16:06:36.944Z",
+      "lastAttemptAt": "2026-06-12T16:06:36.944Z",
+      "status": "ok",
+      "error": null,
+      "gradeGuide": "RC 评分体系：A+ 基本可视为神专；A 是相当强的专辑；A- 很优秀；B+ 值得肯定；B/B-/C 依次走低；*** / ** / * 属于星标/雪花类提示，数量越多越好但通常不是完整高分专辑；Choice Cuts / ✂️ 表示只推荐列出的几首歌；炸弹/💣 表示很差。",
+      "reviews": [
+        {
+          "title": "Whitney Houston",
+          "label": "Arista, 1984",
+          "year": "1984",
+          "grade": "C",
+          "gradeLabel": "C",
+          "reviewText": "I'd never claim that this sweet, statuesque woman and her sweet, statuesque voice are victims of exploitation. She obviously believes in this schlock. But not counting the Jermaine Jackson duet from his own Arista debut, only one of the four producers puts any zip in--Narada Michael Walden, who goes one for one. And it could have been worse--they could have sicked Barry Manilow on her the way they did with cousin Dionne. Then the credits could have read: \"To Barry Manilow, It was a privilege to work with a talented professional who's made so many millions of dollars for Clive Davis. Together, we can make many millions more.\"",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Whitney+Houston"
+        },
+        {
+          "title": "Whitney",
+          "label": "Arista, 1987",
+          "year": "1987",
+          "grade": "C+",
+          "gradeLabel": "C+",
+          "reviewText": "It takes more than unsullied venality and the will to power to reign as the most revolting pop singer in Christendom. It takes active aesthetic miscalculation and, truth be told, more than a little luck. Like falling into the lame dance grooves of Jermaine Jackson and the odious megaschlock of Michael Masser, with Narada Michael Walden limited to \"How Will I Know\"--which becomes your breakthrough song as well as the only critically forgivable thing on your best-selling debut album in history. So this time Walden gets seven shots, with Masser down to two and Jermaine returned to the bosom of his family, and the results are forgivable--she does have a good voice, you know.",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Whitney+Houston"
+        },
+        {
+          "title": "I'm Your Baby Tonight",
+          "label": "Arista, 1990",
+          "year": "1990",
+          "grade": "Neither",
+          "gradeLabel": "Neither",
+          "reviewText": "I'm Your Baby Tonight [Arista, 1990] Neither",
+          "sourceUrl": "https://www.robertchristgau.com/get_artist.php?name=Whitney+Houston"
+        }
+      ]
+    }
+  ]
+}

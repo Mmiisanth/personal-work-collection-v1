@@ -34,5 +34,4 @@ imageSrc: "/assets/banners/gaga-cancel.png"
 npm run banners:build
 ```
 
-生成前会校验必填字段、图片文件是否存在、`id` 是否重复。
-
+生成前会校验必填字段、图片文件是否存在、`id` 是否重复、`更新日期` 是否为 `YYYY-MM-DD` 格式。

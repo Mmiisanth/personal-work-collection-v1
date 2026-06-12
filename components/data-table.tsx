@@ -1,6 +1,10 @@
+"use client";
+
+import { useRef } from "react";
 import { artists } from "@/data/artists";
 import { ArtistAvatar } from "@/components/artist-avatar";
 import { getArtistDisplayName } from "@/lib/artist-display";
+import { useGsapReveal } from "@/lib/use-gsap-reveal";
 import type { BattleMode, MetricKey } from "@/lib/types";
 
 const metricLabels: Record<MetricKey, string> = {
@@ -21,6 +25,7 @@ export function DataTable({
   metrics: MetricKey[];
   mode: BattleMode;
 }) {
+  const tableRef = useRef<HTMLDivElement | null>(null);
   const artistA = artists.find((artist) => artist.id === artistAId) ?? artists[0];
   const artistB = artists.find((artist) => artist.id === artistBId) ?? artists[1];
   const artistADisplayName = getArtistDisplayName(artistA, mode);
@@ -29,9 +34,18 @@ export function DataTable({
   const cardBg = isMean ? "bg-[#F1FFE5]/78" : "bg-[#FFF0FA]/82";
   const cellBg = isMean ? "bg-white/32" : "bg-[#FFF6FC]/62";
 
+  useGsapReveal(tableRef, {
+    selector: "[data-table-reveal]",
+    y: 18,
+    scale: 0.99,
+    stagger: 0.14,
+    duration: 1.18,
+    dependencies: [artistAId, artistBId, metrics.join(","), mode],
+  });
+
   return (
-    <div className={`rounded-[28px] border border-white/75 p-6 shadow-[0_22px_54px_rgba(0,0,0,0.12)] backdrop-blur-[12px] ${cardBg}`}>
-      <div className="mb-6 grid grid-cols-[0.8fr_1fr_1fr] items-end gap-4">
+    <div ref={tableRef} className={`rounded-[28px] border border-white/75 p-6 shadow-[0_22px_54px_rgba(0,0,0,0.12)] backdrop-blur-[12px] ${cardBg}`} data-table-reveal>
+      <div className="mb-6 grid grid-cols-[0.8fr_1fr_1fr] items-end gap-4" data-table-reveal>
         <div />
         {[artistA, artistB].map((artist) => (
           <div className="text-center" key={artist.id}>
@@ -40,10 +54,11 @@ export function DataTable({
           </div>
         ))}
       </div>
-      <div className="overflow-hidden rounded-2xl border border-black/30">
+      <div className="overflow-hidden rounded-2xl border border-black/30" data-table-reveal>
         {metrics.map((metric) => (
           <div
             className="grid grid-cols-[0.8fr_1fr_1fr] border-b border-black/25 last:border-b-0"
+            data-table-reveal
             key={metric}
           >
             <div className={`display-font break-keep p-4 text-[clamp(22px,2.1vw,30px)] leading-tight ${cellBg}`}>
@@ -57,7 +72,7 @@ export function DataTable({
             </div>
           </div>
         ))}
-        <div className="grid grid-cols-[0.8fr_2fr]">
+        <div className="grid grid-cols-[0.8fr_2fr]" data-table-reveal>
           <div className={`display-font p-4 text-2xl ${cellBg}`}>链接</div>
           <div className={`grid gap-2 p-4 text-sm font-bold ${cellBg}`}>
             <SourceLinks artistName={artistADisplayName} links={artistA.links} />

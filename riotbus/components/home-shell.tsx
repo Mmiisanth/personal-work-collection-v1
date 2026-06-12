@@ -249,13 +249,13 @@ function ModeNoticeModal({
         <div className="pointer-events-none absolute inset-0 opacity-[0.16] mix-blend-multiply [background-image:radial-gradient(circle,rgba(0,0,0,0.55)_1.2px,transparent_1.9px)] [background-size:13px_13px]" />
         <div className="relative">
           <p className="display-font inline-flex rounded-full bg-black px-5 py-2 text-sm uppercase text-white" data-mode-notice="item">
-            RiotBus V1.0
+            RiotBus V1.1
           </p>
           <h2 className="display-font mt-5 text-[clamp(38px,6vw,70px)] leading-[0.9]" data-mode-notice="item">
             先选上车模式
           </h2>
           <p className="mt-4 max-w-2xl text-[clamp(15px,1.5vw,19px)] font-black leading-relaxed text-black/75" data-mode-notice="item">
-            RiotBus 正式版本 V1.0 已上线。你可以先选择自己能接受的游玩方式；如有建议，请反馈到 soeuriours@outlook.com。
+            RiotBus 正式版本 V1.1 已上线，新增多智能体协同功能和优化动效设计。你可以先选择自己能接受的游玩方式；如有建议，请反馈到 soeuriours@outlook.com。
           </p>
 
           <div className="mt-7 grid grid-cols-2 gap-4 max-sm:grid-cols-1">

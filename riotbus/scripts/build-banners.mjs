@@ -15,6 +15,7 @@ const fieldMap = new Map([
   ["图片文件名", "imageFile"],
   ["来源标签", "sourceLabel"],
   ["来源链接", "sourceUrl"],
+  ["更新日期", "updatedAt"],
   ["颜色", "color"],
   ["是否启用", "enabled"],
   ["排序", "order"],
@@ -28,6 +29,7 @@ const requiredFields = [
   "imageFile",
   "sourceLabel",
   "sourceUrl",
+  "updatedAt",
   "color",
 ];
 
@@ -77,6 +79,10 @@ function assertValidBanners(banners) {
 
     ids.add(banner.id);
 
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(banner.updatedAt)) {
+      throw new Error(`Banner "${banner.id}" 更新日期格式必须是 YYYY-MM-DD：${banner.updatedAt}`);
+    }
+
     const imagePath = path.join(imageDir, banner.imageFile);
     if (!existsSync(imagePath)) {
       throw new Error(`Banner "${banner.id}" 图片不存在：${imagePath}`);
@@ -109,6 +115,7 @@ function renderBannersTs(banners) {
     imageSrc: ${toTsString(`/assets/banners/${banner.imageFile}`)},
     sourceLabel: ${toTsString(banner.sourceLabel)},
     sourceUrl: ${toTsString(banner.sourceUrl)},
+    updatedAt: ${toTsString(banner.updatedAt)},
     color: ${toTsString(banner.color)},
   }`,
     )

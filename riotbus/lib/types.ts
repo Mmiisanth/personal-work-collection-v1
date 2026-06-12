@@ -31,6 +31,7 @@ export type Banner = {
   imageSrc: string;
   sourceLabel: string;
   sourceUrl: string;
+  updatedAt: string;
   color: string;
 };
 

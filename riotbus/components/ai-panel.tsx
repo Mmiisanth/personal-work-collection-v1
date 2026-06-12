@@ -2,10 +2,11 @@
 
 import { Fragment, useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { Download, Send, X } from "lucide-react";
+import { Download, Search, Send, Sparkles, SquareDashedMousePointer, X } from "lucide-react";
 import { toPng } from "html-to-image";
 import QRCode from "qrcode";
 import type { AiProvider, BattleMode, MetricKey } from "@/lib/types";
+import { useGsapReveal } from "@/lib/use-gsap-reveal";
 import { artists } from "@/data/artists";
 
 type Message = {
@@ -39,26 +40,52 @@ export function AiPanel({
   artistBId,
   mode,
   metrics,
+  agentContext = "",
 }: {
   artistAId: string;
   artistBId: string;
   mode: BattleMode;
   metrics: MetricKey[];
+  agentContext?: string;
 }) {
   const artistA = artists.find((artist) => artist.id === artistAId) ?? artists[0];
   const artistB = artists.find((artist) => artist.id === artistBId) ?? artists[1];
   const [input, setInput] = useState("");
   const [exportOpen, setExportOpen] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [sending, setSending] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
+  const panelRef = useRef<HTMLDivElement | null>(null);
   const messageEndRef = useRef<HTMLDivElement | null>(null);
+  const chatInputRef = useRef<HTMLTextAreaElement | null>(null);
   const isMean = mode === "mean";
   const accentClass = isMean ? "bg-[#9DFF55]" : "bg-[#FF8AD7]";
   const highlightClass = isMean ? "bg-[#9DFF55]/55" : "bg-[#FF8AD7]/62";
   const shellTintClass = isMean ? "bg-[#F1FFE5]/80" : "bg-[#FFF0FA]/84";
   const panelTintClass = isMean ? "bg-[#F1FFE5]/45" : "bg-[#FFE1F3]/50";
   const aiBubbleClass = isMean ? "bg-white/66" : "bg-[#FFF6FC]/78";
+  const chatDisplayText = input || "接着挽尊:>";
+  const chatInputWidth = Math.min(
+    Math.max(chatDisplayText.length * 1.35 + 8, 14),
+    999,
+  );
+  const suggestions = [
+    {
+      icon: Sparkles,
+      title: "艺人对战查询",
+      body: "点击下方按钮生成当前 PK 报告",
+    },
+    {
+      icon: Search,
+      title: "相关数据检索",
+      body: "追问 RC 、Grammy、销量",
+    },
+    {
+      icon: SquareDashedMousePointer,
+      title: "圈内黑话释义",
+      body: "解释黑称和梗",
+    },
+  ];
 
   const dataSummary = useMemo(
     () =>
@@ -88,56 +115,67 @@ export function AiPanel({
   }
 
   useEffect(() => {
-    let ignore = false;
-
-    async function generateOpening() {
-      setLoading(true);
-      try {
-        const response = await fetch("/api/ai/generate", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            mode,
-            artistA: artistA.name,
-            artistB: artistB.name,
-            metrics,
-            dataSummary,
-            provider: getStoredProvider(),
-          }),
-        });
-        const data = (await response.json()) as { message?: string };
-        if (!ignore) {
-          setMessages([
-            {
-              role: "ai",
-              content: data.message || "AI 这次没憋出话，先看左边数据。",
-            },
-          ]);
-        }
-      } catch {
-        if (!ignore) {
-          setMessages([
-            {
-              role: "ai",
-              content: "AI 暂时掉线了，先看左边数据，等下再上车。",
-            },
-          ]);
-        }
-      } finally {
-        if (!ignore) setLoading(false);
-      }
-    }
-
-    generateOpening();
-
-    return () => {
-      ignore = true;
-    };
-  }, [artistA.name, artistB.name, dataSummary, metrics, mode]);
+    setMessages([]);
+    setInput("");
+    setLoading(false);
+    setSending(false);
+  }, [artistA.id, artistB.id, mode, metrics]);
 
   useEffect(() => {
     messageEndRef.current?.scrollIntoView({ block: "end", behavior: "smooth" });
   }, [loading, messages, sending]);
+
+  useEffect(() => {
+    const inputBox = chatInputRef.current;
+    if (!inputBox) return;
+    inputBox.style.height = "64px";
+    inputBox.style.height = `${Math.max(64, inputBox.scrollHeight)}px`;
+  }, [input, chatInputWidth]);
+
+  useGsapReveal(panelRef, {
+    selector: "[data-ai-reveal]",
+    y: 16,
+    scale: 0.99,
+    stagger: 0.13,
+    duration: 1.12,
+    dependencies: [messages.length, loading, sending],
+  });
+
+  async function generateOpening() {
+    if (loading || sending) return;
+    setLoading(true);
+    try {
+      const response = await fetch("/api/ai/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          mode,
+          artistA: artistA.name,
+          artistB: artistB.name,
+          metrics,
+          dataSummary,
+          agentContext,
+          provider: getStoredProvider(),
+        }),
+      });
+      const data = (await response.json()) as { message?: string };
+      setMessages([
+        {
+          role: "ai",
+          content: data.message || "AI 这次没憋出话，先看左边数据。",
+        },
+      ]);
+    } catch {
+      setMessages([
+        {
+          role: "ai",
+          content: "AI 暂时掉线了，先看左边数据，等下再上车。",
+        },
+      ]);
+    } finally {
+      setLoading(false);
+    }
+  }
 
   async function send() {
     if (!input.trim() || sending || loading) return;
@@ -158,6 +196,7 @@ export function AiPanel({
           artistB: artistB.name,
           metrics,
           dataSummary,
+          agentContext,
           userQuestion: userMessage,
           conversation: messages,
           provider: getStoredProvider(),
@@ -181,22 +220,70 @@ export function AiPanel({
     }
   }
 
+  function submitPrimaryAction() {
+    if (loading || sending) return;
+    if (input.trim()) {
+      void send();
+      return;
+    }
+    void generateOpening();
+  }
+
   return (
-    <div className={`flex h-[680px] max-h-[calc(100vh-92px)] min-h-[560px] flex-col rounded-[28px] border border-white/75 p-5 shadow-[0_24px_60px_rgba(0,0,0,0.13)] backdrop-blur-[14px] ${shellTintClass}`}>
-      <div className="mb-4 flex shrink-0 items-center justify-between gap-4">
-        <p className="display-font text-3xl max-sm:text-2xl">乱斗报告</p>
+    <div ref={panelRef} className={`flex h-[680px] max-h-[calc(100vh-92px)] min-h-[560px] flex-col rounded-[28px] border border-white/75 p-5 shadow-[0_24px_60px_rgba(0,0,0,0.13)] backdrop-blur-[14px] xl:sticky xl:top-8 xl:self-start ${shellTintClass}`} data-ai-reveal>
+      <div className="mb-4 flex shrink-0 items-center justify-between gap-4" data-ai-reveal>
+        <div>
+          <p className="display-font text-3xl max-sm:text-2xl">乱斗报告</p>
+          <p className="mt-1 text-xs font-black text-black/52">
+            {agentContext ? "左侧的内容已经记录了！" : "可先启动左侧数据查询哦！"}
+          </p>
+        </div>
         <button
           className={`display-font rounded-full px-5 py-2 text-sm ${accentClass}`}
+          disabled={!messages.length}
           onClick={() => setExportOpen(true)}
           type="button"
         >
           总结生成报告
         </button>
       </div>
-      <div className={`min-h-0 flex-1 space-y-3 overflow-y-auto rounded-[24px] border border-black/10 p-3 pr-2 ${panelTintClass}`}>
+      <div className={`min-h-0 flex-1 space-y-3 overflow-y-auto rounded-[24px] border border-black/10 p-3 pr-2 ${panelTintClass}`} data-ai-reveal>
+        {!messages.length && !loading ? (
+          <div className="flex min-h-full flex-col items-center justify-center gap-4 p-3" data-ai-reveal>
+            <div className="grid size-20 place-items-center rounded-full border border-black/10 bg-white/64 shadow-[inset_0_1px_0_rgba(255,255,255,0.7),0_12px_26px_rgba(0,0,0,0.08)]">
+              <Sparkles className="size-8" />
+            </div>
+            <div className="max-w-md text-center">
+              <p className="display-font text-3xl leading-none">等你发车</p>
+              <p className="mt-2 text-sm font-black leading-relaxed text-black/58">
+                可以先看看左边的RC老头评价～
+              </p>
+            </div>
+            <div className="grid w-full gap-3 md:grid-cols-3">
+              {suggestions.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    className="min-h-32 rounded-[24px] border border-black/10 bg-white/58 p-4 text-left text-sm font-black"
+                    data-ai-reveal
+                    key={item.title}
+                  >
+                    <span className="mb-3 grid size-10 place-items-center rounded-full bg-black text-white">
+                      <Icon className="size-5" />
+                    </span>
+                    <span className="block text-base">{item.title}</span>
+                    <span className="mt-1 block text-xs leading-snug text-black/56">
+                      {item.body}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        ) : null}
         {loading ? (
-          <div className={`${aiBubbleClass} rounded-[20px] p-4 text-sm font-bold leading-relaxed`}>
-            发车中先别急。
+          <div className={`${aiBubbleClass} rounded-[20px] p-4 text-sm font-bold leading-relaxed`} data-ai-reveal>
+            看什么看没看过四年发不出专辑吗！
           </div>
         ) : null}
         {messages.map((message, index) => (
@@ -206,33 +293,37 @@ export function AiPanel({
                 ? aiBubbleClass
                 : `ml-auto ${accentClass}`
             }`}
+            data-ai-reveal
             key={`${message.role}-${index}`}
           >
             <MarkdownMessage content={message.content} highlightClass={highlightClass} />
           </div>
         ))}
         {sending ? (
-          <div className={`${aiBubbleClass} rounded-[20px] p-4 text-sm font-bold leading-relaxed`}>
+          <div className={`${aiBubbleClass} rounded-[20px] p-4 text-sm font-bold leading-relaxed`} data-ai-reveal>
             挽尊中。。。
           </div>
         ) : null}
         <div ref={messageEndRef} />
       </div>
-      <div className="mt-4 flex shrink-0 items-end gap-3">
+      <div className="mt-4 flex shrink-0 items-center gap-3 px-6 max-sm:px-3" data-ai-reveal>
         <textarea
-          className={`max-h-28 min-h-14 min-w-0 flex-1 resize-none rounded-[22px] border border-black/20 bg-white/78 px-5 py-4 text-sm font-bold leading-snug outline-none ${
+          className={`min-h-16 max-w-[calc(100%-5rem)] resize-none overflow-hidden rounded-[32px] border border-black/15 bg-white/82 px-7 py-5 text-base font-black leading-6 outline-none transition-[width,border-color] duration-200 ${
             isMean ? "focus:border-[#7FFF00]" : "focus:border-[#FF4FD8]"
           }`}
           onChange={(event) => setInput(event.target.value)}
-          placeholder="接着问或者直接反驳... 点击右边按钮发送"
-          rows={2}
+          placeholder="接着挽尊:>"
+          ref={chatInputRef}
+          rows={1}
+          style={{ width: `min(calc(100% - 5rem), ${chatInputWidth}ch)` }}
           value={input}
         />
         <button
-          className="flex size-14 shrink-0 items-center justify-center rounded-full bg-black text-white transition disabled:cursor-not-allowed disabled:bg-black/35"
-          disabled={!input.trim() || sending || loading}
-          onClick={send}
+          className="flex size-16 shrink-0 items-center justify-center rounded-full bg-black text-white transition disabled:cursor-not-allowed disabled:bg-black/35"
+          disabled={sending || loading}
+          onClick={submitPrimaryAction}
           type="button"
+          title={input.trim() ? "发送追问" : "生成基础报告"}
         >
           <Send />
         </button>
@@ -449,6 +540,7 @@ function ExportModal({
   const [qrReady, setQrReady] = useState(false);
   const [copied, setCopied] = useState(false);
   const [portalElement, setPortalElement] = useState<HTMLDivElement | null>(null);
+  const modalRef = useRef<HTMLDivElement | null>(null);
   const posterRef = useRef<HTMLDivElement | null>(null);
   const shareUrl = SITE_URL;
   const displayTitle = cleanExportTitle(title, `${artistA} vs ${artistB}`);
@@ -544,12 +636,21 @@ function ExportModal({
     };
   }, []);
 
+  useGsapReveal(modalRef, {
+    selector: "[data-export-reveal]",
+    y: 20,
+    scale: 0.985,
+    stagger: 0.14,
+    duration: 1.18,
+    dependencies: [loading, qrReady],
+  });
+
   if (!portalElement) return null;
 
   return createPortal(
-    <div className="h-full w-full bg-black/24 p-4 backdrop-blur-md max-sm:p-2">
+    <div ref={modalRef} className="h-full w-full bg-black/24 p-4 backdrop-blur-md max-sm:p-2">
       <div className="glass-strong grid h-full w-full grid-cols-[minmax(0,1fr)_320px] gap-4 overflow-hidden rounded-[30px] p-4 max-md:auto-rows-max max-md:grid-cols-1 max-md:items-start max-md:overflow-y-auto max-sm:rounded-[22px] max-sm:p-2">
-        <section className="min-h-0 rounded-[26px] border border-black/10 bg-white/28 p-3 max-md:h-auto">
+        <section className="min-h-0 rounded-[26px] border border-black/10 bg-white/28 p-3 max-md:h-auto" data-export-reveal>
           <PosterCard
             background={background}
             displayContent={displayContent}
@@ -561,15 +662,16 @@ function ExportModal({
           />
         </section>
 
-        <section className="flex min-h-0 flex-col rounded-[26px] border border-black/10 bg-white/32 p-5 max-md:min-h-[520px]">
+        <section className="flex min-h-0 flex-col rounded-[26px] border border-black/10 bg-white/32 p-5 max-md:min-h-[520px]" data-export-reveal>
           <button
             className="ml-auto flex size-12 shrink-0 items-center justify-center rounded-full border border-black/10 bg-white/55"
+            data-export-reveal
             onClick={onClose}
             type="button"
           >
             <X strokeWidth={4} />
           </button>
-          <div className="mt-6 rounded-[26px] border border-black/10 bg-white/42 p-5">
+          <div className="mt-6 rounded-[26px] border border-black/10 bg-white/42 p-5" data-export-reveal>
             <p className="display-font text-4xl leading-none">背景颜色</p>
             <p className="mt-2 text-sm font-bold text-black/62">
               选择底色
@@ -583,6 +685,7 @@ function ExportModal({
                       ? "border-black shadow-[0_8px_18px_rgba(0,0,0,0.16)]"
                       : "border-black/16"
                   }`}
+                  data-export-reveal
                   key={color}
                   onClick={() => setBackground(color)}
                   style={{ background: color }}
@@ -592,12 +695,13 @@ function ExportModal({
             </div>
           </div>
 
-          <div className="mt-4 rounded-[26px] border border-black/10 bg-white/42 p-5">
+          <div className="mt-4 rounded-[26px] border border-black/10 bg-white/42 p-5" data-export-reveal>
             <p className="display-font text-3xl leading-none">分享方式</p>
             <div className="mt-4 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 rounded-[18px] bg-white/78 p-3 text-sm font-black">
               <p className="min-w-0 break-all text-base leading-snug">link: {shareUrl}</p>
               <button
                 className="rounded-full border border-black/20 bg-black px-4 py-2 text-xs font-black text-white transition hover:-translate-y-0.5"
+                data-export-reveal
                 onClick={copyShareUrl}
                 type="button"
               >
@@ -607,6 +711,7 @@ function ExportModal({
             <div className="mt-3 grid grid-cols-1 gap-3">
               <button
                 className="display-font flex w-full items-center justify-center whitespace-nowrap rounded-[24px] border-2 border-black bg-[#2f7c2d] px-5 py-5 text-[clamp(22px,2vw,30px)] text-black shadow-[0_12px_24px_rgba(0,0,0,0.16)] transition hover:-translate-y-0.5 disabled:cursor-wait disabled:opacity-60"
+                data-export-reveal
                 disabled={exporting || loading || !qrReady}
                 onClick={exportShareImage}
                 type="button"
@@ -617,8 +722,8 @@ function ExportModal({
             </div>
           </div>
 
-          <p className="mt-3 text-center text-xs font-bold text-black/55">
-            手机优先走系统分享保存图片，电脑会直接下载图片文件。
+          <p className="mt-3 text-center text-xs font-bold text-black/55" data-export-reveal>
+            图片可以保存啦！
           </p>
         </section>
       </div>

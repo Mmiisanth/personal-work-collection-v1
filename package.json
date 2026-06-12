@@ -19,6 +19,7 @@
     "banners:build": "node scripts/build-banners.mjs",
     "agent:aoty:update": "node scripts/aoty-agent-update.mjs",
     "agent:aoty:query": "node scripts/aoty-agent-query.mjs",
+    "agent:rc:update": "node scripts/rc-agent-update.mjs",
     "rag:chunks": "node scripts/rag-build-chunks.mjs",
     "rag:embed": "node scripts/rag-embed.mjs",
     "rag:search": "node scripts/rag-search.mjs",

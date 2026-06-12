@@ -79,12 +79,57 @@ ${userQuestion ? `用户追问：${userQuestion}` : ""}
 
 输出要求：
 - 页面“已提供数据”优先级最高，RiotBus 本地内容库只能作为补充上下文
+- 如果 RiotBus 本地内容库里出现“左侧采集数据”，必须优先使用其中的 RC 评价、Grammy 奖项和销量证据
+- 如果左侧采集数据里出现 RC 专辑评分与评语，可以把它作为专辑级乐评依据；必须遵守 RC 评分体系说明，不要把 *** 当作三星高分，它表示 Choice Cuts
+- 引用 RC 外文评语时必须翻译成中文输出，不要保留英文原文
 - 如果用户追问具体专辑乐评/AOTY 分数，优先使用“AOTY 专辑级 Agent 上下文”；不要用艺人总体 AOTY 均分冒充专辑分
 - 如果 RiotBus 本地内容库里出现“Agent Memory”，必须按其中的用户立场和回复策略延续上一轮判决
 - 结构化数据、来源链接、人工补录数据可以当作事实使用
 - 不要补充未出现在页面数据或本地内容库里的专辑、单曲、历史事件或销量事实
 - ${mode === "mean" ? "输出 3-5 个自然短段落。第一段直接定胜负，后面把每个已选维度自然写进去；不要用“判词/数据/本地库/补刀/总结”当小标题。" : "输出 2-4 个自然短段落，直接写结论和依据；不要写开场客套、不要写“总评/客观说明”小标题、不要编号。"}
 - 不要输出很长`,
+    },
+  ];
+}
+
+export function buildSlangPrompt({
+  mode,
+  artistA,
+  artistB,
+  userQuestion,
+  slangContext,
+}: {
+  mode: BattleMode;
+  artistA: string;
+  artistB: string;
+  userQuestion: string;
+  slangContext: string;
+}) {
+  const tone =
+    mode === "mean"
+      ? "可以解释黑称、粉丝黑称和圈内梗，但要明确这些是 RiotBus 词库里的圈层说法，不要把攻击性说法包装成客观事实。黑称输出时用 <shade>内容</shade> 包住。"
+      : "只解释正常含义和中性语境，禁止使用攻击性黑称进行扩写；如果词库命中的是攻击性说法，要降温说明这是圈层黑话。";
+
+  return [
+    {
+      role: "system" as const,
+      content:
+        "你是 RiotBus 的圈内黑话释义助手。你的任务是根据本地译文库解释用户问到的黑话、梗、粉丝称呼或艺人外号；禁止编造词库外的新解释。",
+    },
+    {
+      role: "user" as const,
+      content: `${tone}
+
+当前 PK：${artistA} vs ${artistB}
+用户问题：${userQuestion}
+
+${slangContext}
+
+输出要求：
+- 先直接回答这个词/梗大概指什么
+- 再说明它属于正常称呼、黑称、粉丝称呼、粉丝黑称、谐音造句还是战报梗
+- 如果没有明确命中，就说“本地词库暂时没有稳定解释”，不要硬编
+- 输出 1-3 个短段落，不要写“以下是”或编号`,
     },
   ];
 }

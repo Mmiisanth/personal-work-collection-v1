@@ -47,6 +47,36 @@
 
 ## AOTY 专辑级 Agent
 
+当前乐评主源优先级：
+
+- RC / Robert Christgau：自动采集主源，来自 `artist-sources.json` 的 `rc` 链接。
+- AOTY：可选缓存补充，遇到 Cloudflare 时使用浏览器文本导入。
+- RYM：V1 仅保留来源链接，不伪造评分。
+
+批量更新 RC 评分与评语：
+
+```bash
+npm run agent:rc:update
+npm run agent:rc:update -- --artist taylor-swift
+```
+
+输出文件：
+
+```text
+data/rag/structured/rc-reviews.json
+```
+
+RC 评分解释：
+
+- `A+`：基本可视为神专。
+- `A`：相当强的专辑。
+- `A-`：很优秀。
+- `B+`：值得肯定。
+- `B / B- / C`：依次走低。
+- `*** / ** / *`：星标/雪花类提示，数量越多越好，但通常不是完整高分专辑。
+- `Choice Cuts / ✂️`：只推荐列出的几首歌。
+- `Bomb / 💣`：很差。
+
 `artist-metrics.json` 只保存艺人级 AOTY 均分；如果用户追问某一张专辑，应该优先读取专辑级缓存：
 
 ```bash
@@ -78,6 +108,18 @@ data/agent-cache/aoty-html/lady-gaga.html
 
 ```text
 data/agent-cache/aoty-browser-text/taylor-swift.txt
+```
+
+推荐每张专辑保留一组可解析文本：
+
+```md
+[folklore](https://www.albumoftheyear.org/album/123-taylor-swift-folklore.php)
+2020
+Critic Score 88
+User Score 82
+27 critic reviews
+12,000 user ratings
+Must Hear
 ```
 
 再运行：

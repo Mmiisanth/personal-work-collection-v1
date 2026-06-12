@@ -435,7 +435,7 @@ function CenterBanner({
             RiotBus News
           </span>
           <span className="whitespace-nowrap rounded-full bg-white/70 px-2 py-1 text-[clamp(8px,0.68vw,10px)] font-black">
-            live-ish
+            {banner.updatedAt}
           </span>
         </div>
         <div
