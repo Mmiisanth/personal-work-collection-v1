@@ -494,7 +494,7 @@ function CenterBanner({
           {banner.dek}
         </p>
         <p
-          className="banner-copy-fade mt-2 line-clamp-4 max-h-[7.8em] overflow-hidden rounded-[15px] bg-white/62 p-2.5 text-[clamp(10px,0.82vw,12px)] font-bold leading-[1.7] text-black/75"
+          className="banner-copy-fade mt-2 min-h-0 flex-1 overflow-y-auto rounded-[15px] bg-white/62 p-2.5 text-[clamp(10px,0.82vw,12px)] font-bold leading-[1.7] text-black/75"
           ref={bodyRef}
         >
           {banner.body}
