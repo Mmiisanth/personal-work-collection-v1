@@ -1,55 +1,55 @@
 ## Banner
 
-id: taylor-toy-story-5-theme
-标题：Taylor进玩具箱，迪士尼也来坐大巴
-副标题：《Toy Story 5》主题曲到手，交姐开始给牛仔娃娃续命
-正文：Taylor Swift 为《Toy Story 5》写并演唱新歌《I Knew It, I Knew You》，Disney Press 还点名这是给 Jessie 的歌，6 月 5 日先发单曲，电影 6 月 19 日上。交姐这回不卖体育场烟花，转头给皮克斯玩具擦眼泪，粉丝可以说是回归 country roots，黑粉也能嘴一句“连玩具都要被她写进前任宇宙”。但迪士尼这张牌确实漂亮：小朋友听友情，大人听怀旧，Swiftie 听到最后还是会自动脑补彩蛋，玩具总动员还没上映，解读大军已经先开箱。
-图片文件名：taylor-toy-story-5.png
-来源标签：Disney Press官宣主题曲
-来源链接：https://press.disney.co.uk/news/taylor-swift-announces-new-song-i-knew-it-i-knew-you-for-toy-story-5-single-drops-june-5
-更新日期：2026-06-13
-颜色：#d9d0ff
+id: ariana-petal-hot100
+标题：petal有人等滑铁卢，结果12首全上榜
+副标题：Ariana新专首周直接杀进Hot 100前四
+正文：Ariana Grande 新专《petal》上线后，标题曲在 Billboard Hot 100 首周空降第 4，是她的第 24 个前十。更离谱的是 12 首歌全部进榜，她的 Hot 100 总入榜次数一下推到 110。有人想等着看滑铁卢，结果专辑被一路拉进榜单。黑粉可以继续说“靠的是版本多”，但 12 首全在榜上，这句话只能算嘴硬。前十只是门票，接下来能不能守住位置，才是真正的考题。
+图片文件名：ariana-petal-hot100.jpg
+来源标签：Billboard：12首全上 Hot 100
+来源链接：https://www.billboard.com/music/chart-beat/ariana-grande-charts-petal-songs-hot-100-1236312898/
+更新日期：2026-10-09
+颜色：#f5c6ff
 是否启用：是
 排序：10
 
 ## Banner
 
-id: olivia-pitchfork-83-bna
-标题：Olivia 8.3封神，Pitchfork递上王冠
-副标题：Best New Album到手，窑姐把乐评打服
-正文：Olivia Rodrigo 新专《you seem pretty sad for a girl so in love》拿到 Pitchfork 8.3，并被盖上 Best New Album。这个分数不是粉丝自封“艺术已成”，是乐评桌直接把章按脸上：从失恋小作文进化到 80 年代浪漫病房，把恋爱写成发烧、晕车和慢性消耗。之前还在嘲窑姐只会青春疼痛的人，现在要么承认她会写，要么继续嘴硬说 Pitchfork 也被收买。问题是 8.3 已经摆在桌上，嘴硬再大声，也只能算背景音。
-图片文件名：olivia-girl-so-in-love-vinyl.png
-来源标签：Pitchfork 8.3 Best New Album
-来源链接：https://pitchfork.com/reviews/albums/olivia-rodrigo-you-seem-pretty-sad-for-a-girl-so-in-love/
-更新日期：2026-06-13
-颜色：#ffd2ea
+id: taylor-showgirl-encore
+标题：交姐说舞女没新歌，转头加了四首
+副标题：《The Life of a Showgirl: The Encore》9月25日上线
+正文：交姐之前把话说得很满：《The Life of a Showgirl》只有 12 首，没有第 13 首，也没有后续。结果 9 月 23 日宣布推出扩展版《The Life of a Showgirl: The Encore》，多出四首新歌《Patient Zero》《Cleveland!》《Pink Clouding》《Babylon》，9 月 25 日上线。交姐的说法是“我们又写了更多歌”，理由是对粉丝反应的感激。嘴硬的人说这是打脸，粉丝说这叫加场安可，两边的说法都有道理，只是交姐这次选了安可那边。
+图片文件名：taylor-showgirl-encore.jpg
+来源标签：Billboard：Encore 豪华版上线
+来源链接：https://www.billboard.com/music/music-news/taylor-swift-life-showgirl-encore-listen-1236346593/
+更新日期：2026-10-09
+颜色：#d9d0ff
 是否启用：是
 排序：20
 
 ## Banner
 
-id: ariana-hate-love-me
-标题：Ariana贷款登基，榜单真给打款
-副标题：皇冠刚放进购物车，结果订单居然成交
-正文：Ariana Grande 新单《hate that i made you love me》上线前，Official Charts 已经把“冲击第八支英国冠单”的气氛铺到王座边，粉丝也早早把花瓣撒满红毯。最戏剧的是，这次榜单没有拆台，冠单真到账。炸姐不是没被贷款，是贷款竟然过审：粉丝立刻改口“女王回宫”，黑粉只能临时找补“含金量一般”。可榜首两个字已经落地，再嘴硬也只能站在门外说王冠不好看。
-图片文件名：ariana-hate-love-me.png
-来源标签：第八支英国冠单兑现
-来源链接：https://www.officialcharts.com/chart-news/new-music-friday-songs-single-albums-may-29-2026/
-更新日期：2026-06-13
-颜色：#eaff3d
+id: pitchfork-encore-40
+标题：Pitchfork给安可4.0，音乐质量往下掉
+副标题：基础版5.9，扩展版4.0，四首新歌没把下滑拉回来
+正文：Pitchfork 先给《The Life of a Showgirl》打了 5.9。这次安可版的四首新歌，据多家媒体转述，Pitchfork 给了 4.0 分，评语的大意是这四首歌没能扭转交姐近期作品的下滑。语气不是骂人，而是一句很冷的“她依然是全球最大的音乐人之一，但作品不在状态”。粉丝说 Pitchfork 从《Red》开始就针对她，黑粉说乐评人终于说对了一次，两边都拿分数当武器。注意：4.0 目前来自转述，原文还需要核对。
+图片文件名：taylor-showgirl-encore.jpg
+来源标签：Pitchfork 4.0（转述）
+来源链接：https://www.aol.com/articles/her-miserable-again-internet-reacts-072450000.html
+更新日期：2026-10-09
+颜色：#ffd2ea
 是否启用：是
 排序：30
 
 ## Banner
 
-id:shunyanzi
-标题：孙麻子被金曲奖婉拒
-副标题：Thank you chanel来到了金曲奖颁奖舞台
-正文：当年买榜诈骗的“天后”麻子，复出搞了张《跳舞的梵谷》，结果金曲奖连个通类提名都摸不到，就俩边角提名凑数，简直笑死人。麻子落选当晚直接破防发小作文，搁这卖惨说“我的努力不会因为落选被毁掉”，合着没拿奖全是金曲奖瞎了，跟专辑烂不烂半毛钱没有是吧？品味差的不得了，又喜欢装文艺，揭开遮羞布，归来还是素人麻子。乐评人都看不过去了，直接戳破她的矫情：这张专辑都烂到接二连三掉粪坑快埋脖子了，换我是她，躲都来不及，还好意思半夜出来哭唧唧？情怀滤镜碎得渣都不剩，这波纯纯是玻璃心+烂作品双翻车，笑不活了
-图片文件名：shunyanzi.png
-来源标签：麻子丢人
-来源链接：https://www.xiaohongshu.com/search_result?keyword=%25E5%25AD%2599%25E7%2587%2595%25E5%25A7%25BF%25E9%2587%2591%25E6%259B%25B2%25E5%25A5%2596&source=web_explore_feed
-更新日期：2026-06-01
-颜色：#ffd2ea
+id: olivia-cure-smith
+标题：Olivia巡演开跑，The Cure的Robert Smith同台
+副标题：Unraveled Tour 9月25日开巡，同台那段最有戏
+正文：Olivia Rodrigo 的 Unraveled Tour 9 月 25 日在哈特福德开场，新专《you seem pretty sad for a girl so in love》的歌单一路排到 2027 年。开巡之前，她先在 Primavera Sound 请来 The Cure 主唱 Robert Smith，合唱新专里的《What's Wrong With Me》。老牌乐队的怪味接到了她的歌里，她抱着吉他笑得停不下来，镜头里的画面比歌词还会讲故事。嘴硬的人说这是蹭大神，粉丝说这叫血统认证，两边吵完，最好看的还是舞台上那一秒。
+图片文件名：olivia-cure-smith.jpg
+来源标签：Variety：Robert Smith 同台
+来源链接：https://variety.com/2026/music/news/olivia-rodrigo-robert-smith-duet-whats-wrong-with-me-cure-1236768701/
+更新日期：2026-10-09
+颜色：#be9cff
 是否启用：是
 排序：40
