@@ -255,7 +255,7 @@ function ModeNoticeModal({
             先选上车模式
           </h2>
           <p className="mt-4 max-w-2xl text-[clamp(15px,1.5vw,19px)] font-black leading-relaxed text-black/75" data-mode-notice="item">
-            RiotBus 正式版本 V1.1 已上线，新增多智能体协同功能和优化动效设计。你可以先选择自己能接受的游玩方式；如有建议，请反馈到 soeuriours@outlook.com。
+            RiotBus 正式版本 V1.1 已上线，新增多智能体协同功能和优化动效设计。你可以先选择自己能接受的游玩方式。
           </p>
 
           <div className="mt-7 grid grid-cols-2 gap-4 max-sm:grid-cols-1">
